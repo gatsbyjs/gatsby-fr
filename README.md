@@ -18,7 +18,7 @@ Plusieurs possibilités s'offrent à vous.
 
 __Si vous n'avez jamais contribué à Gatsby__, faites un fork de ce répertoire. Vous pourrez ensuite éditer le fichier directement dans l'éditeur proposé par GitHub. 
 
-Une fois terminé, faites un _pull-request_. Votre traduction sera alors examinée par un ou plusieurs mainteneurs du projet qui pourront à ce moment-là proposer des modifications à apporter à votre traduction concernant l'orthographe, la syntaxe ou la terminologie qui peut parfois être complexe à traduire. 
+Une fois terminé, faites une _pull-request_. Votre traduction sera alors examinée par un ou plusieurs mainteneurs du projet qui pourront à ce moment-là proposer des modifications à apporter à votre traduction concernant l'orthographe, la syntaxe ou la terminologie qui peut parfois être complexe à traduire. 
 
 Une fois validée, votre traduction est intégrée à la branche principale !
 
