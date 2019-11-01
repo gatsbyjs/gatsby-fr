@@ -5,11 +5,11 @@ disableTableOfContents: true
 
 import EmailCaptureForm from "../../www/src/components/email-capture-form"
 
-Gatsby is a blazing fast modern site generator for React.
+Gatsby est un générateur de sites modernes et ultra rapide pour React.
 
 ## Get Started
 
-There are two main ways to get started with Gatsby:
+Il y a deux façons pricipales de commencer avec Gatsby :
 
 1. [Tutorial](/tutorial/): Step-by-step instructions on how to install Gatsby and start a project: written for people without Gatsby or web development experience, though these learning resources have helped developers of all skill levels.
 2. [Quick start](/docs/quick-start): One page summary of how to install Gatsby and start a new project.
