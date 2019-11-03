@@ -1,5 +1,5 @@
 ---
-title: Introduction to Styling in Gatsby
+title: Introduction à la mise en page avec Gatsby
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -14,32 +14,32 @@ disableTableOfContents: true
 
 -->
 
-Welcome to part two of the Gatsby tutorial!
+Bienvenue dans la partie deux de ce tutoriel Gatsby !
 
-## What's in this tutorial?
+## Que contient ce tutoriel ?
 
-In this part, you're going to explore options for styling Gatsby websites and dive deeper into using React components for building sites.
+Dans cette partie, vous allez explorer les différentes options à votre disposition pour mettre en page un site Gatsby et vous irez plus loin dans l'utilisation des composants React pour créer des sites.
 
-## Using global styles
+## Utiliser des styles globaux
 
-Every site has some sort of global style. This includes things like the site's typography and background colors. These styles set the overall feel of the site — much like the color and texture of a wall sets the overall feel of a room.
+Tout site dispose d'une sorte de style de mise en page globale. Cela peut inclure des choses comme la typographie et les couleurs de fond. Ces styles servent à créer l'ambiance générale du site — comme la couleur et la texture d'un mur donne une ambiance générale à une pièce.
 
-### Creating global styles with standard CSS files
+### Créer des styles globaux avec des fichiers CSS classiques
 
-One of the most straightforward ways to add global styles to a site is using a global `.css` stylesheet.
+La manière la plus simple d'ajouter des styles globaux est d'utiliser une feuille de style globale en `.css`
 
-#### ✋ Create a new Gatsby site
+#### ✋ Créer un nouveau site Gatsby
 
-Start by creating a new Gatsby site. It may be best (especially if you're new to the command line) to close the terminal windows you used for [part one](/tutorial/part-one/) and start a new terminal session for part two.
+Commencez par créer un nouveau site Gatsby. Il est peut-être judicieux (particulièrement si vous êtes débutant dans l'utilisation des lignes de commandes) de fermer la fenêtre du terminal que vous avez utilisé pour la [première partie](/tutorial/part-one/) et démarrer une nouvelle instance du terminal.
 
-Open a new terminal window, create a new "hello world" gatsby site, and start the development server:
+Ouvrez une nouvelle fenêtre de terminal, créez un nouveau site "hello world", et lancez le serveur de développement:
 
 ```shell
-gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
+gatsby new tutoriel-partie-deux https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd tutorial-part-two
 ```
 
-You now have a new Gatsby site (based on the Gatsby "hello world" starter) with the following structure:
+Vous avez maintenant un nouveau site Gatsby (basé sur le kit de démarrage "hello world") avec la structure suivante:
 
 ```text
 ├── package.json
@@ -48,9 +48,9 @@ You now have a new Gatsby site (based on the Gatsby "hello world" starter) with 
 │       └── index.js
 ```
 
-#### ✋ Add styles to a css file
+#### ✋ Ajoutez des styles à votre fichier `.css`
 
-1. Create a `.css` file in your new project:
+1. Créez un fichier `.css` dans votre nouveau projet :
 
 ```shell
 cd src
@@ -59,9 +59,9 @@ cd styles
 touch global.css
 ```
 
-> Note: Feel free to create these directories and files using your code editor, if you'd prefer.
+> Note : Vous êtes libre de créer ces dossiers et ces fichiers en utilisant votre éditeur de code si vous préférez.
 
-You should now have a structure like this:
+Maintenant, la structure de votre site doit être la suivante:
 
 ```text
 ├── package.json
@@ -72,7 +72,7 @@ You should now have a structure like this:
 │       └── global.css
 ```
 
-2. Define some styles in the `global.css` file:
+2. Définissez quelques styles dans le fichier `global.css` :
 
 ```css:title=src/styles/global.css
 html {
@@ -80,18 +80,18 @@ html {
 }
 ```
 
-> Note: The placement of the example css file in a `/src/styles/` folder is arbitrary.
+> Note : L'emplacement de ce fichier css d'exemple (dans le dossier`/src/styles/`) est purement arbitraire.
 
-#### ✋ Include the stylesheet in `gatsby-browser.js`
+#### ✋ Inclure votre feuille de style dans `gatsby-browser.js`
 
-1. Create the `gatsby-browser.js`
+1. Créez le fichier `gatsby-browser.js`
 
 ```shell
 cd ../..
 touch gatsby-browser.js
 ```
 
-Your project's file structure should now look like this:
+La structure de votre projet devrait maintenant ressembler à ça :
 
 ```text
 ├── package.json
@@ -103,9 +103,9 @@ Your project's file structure should now look like this:
 ├── gatsby-browser.js
 ```
 
-> 💡 What is `gatsby-browser.js`? Don't worry about this too much and for now, just know that `gatsby-browser.js` is one of a handful of special files that Gatsby looks for and uses (if they exist). Here, the naming of the file **is** important. If you do want to explore more now, check out [the docs](/docs/browser-apis/).
+> 💡 Qu'est-ce que `gatsby-browser.js`? Ne vous préoccupez pas trop de ça pour l'instant. Sachez simplement que `gatsby-browser.js` est l'un des quelques fichiers spéciaux que Gatsby recherche et utilise (s'ils existent). Ici, le nom du fichier **est** important. Si vous voulez en apprendre davantage maintenant, jetez un oeil à [la documentation](/docs/browser-apis/).
 
-2. Import your recently-created stylesheet in the `gatsby-browser.js` file:
+2. Importez votre toute nouvelle feuille de style dans le fichier `gatsby-browser.js` :
 
 ```javascript:title=gatsby-browser.js
 import "./src/styles/global.css"
@@ -114,43 +114,42 @@ import "./src/styles/global.css"
 // require('./src/styles/global.css')
 ```
 
-> Note: Both CommonJS (`require`) and ES Module (`import`) syntax work here. If you’re not sure which to choose, we use `import` most of the time.
+> Note : Les deux syntaxes (`require`) de CommonJS et (`import`) des modules ES fonctionnent ici. Si vous n'êtes pas sûr de laquelle choisir, nous utilisons la plupart du temps `import`.
 
-3. Start the development server:
+3. Lancez le serveur de développement:
 
 ```shell
 gatsby develop
 ```
 
-If you take a look at your project in the browser, you should see a lavender background applied to the "hello world" starter:
+Si vous jetez un oeil à votre projet dans votre navigateur, vous devriez voir un fond de page couleur lavande dans votre kit de démarrage.
 
-![Lavender Hello World!](global-css.png)
+![Hello World Lavande!](global-css.png)
 
-> Tip: This part of the tutorial has focused on the quickest and most straightforward way to get started styling a Gatsby site — importing standard CSS files directly, using `gatsby-browser.js`. In most cases, the best way to add global styles is with a shared layout component. [Check out the docs](/docs/global-css/) for more on that approach.
+> Astuce : Cette partie du tutoriel s'est concentrée sur la façon la plus rapide et la plus simple de commencer à mettre en page un site Gatsby — en important une feuille de style classique dans `gatsby-browser.js`. Dans la plupart des cas, la meilleure façon de rajouter des styles globaux est d'utiliser un composant de mise en page partagé. [Regardez la documentation](/docs/global-css/) pour plus d'information sur cette méthode.
 
-## Using component-scoped CSS
+## Utiliser du CSS limité à un composant
 
-So far, we've talked about the more traditional approach of using standard css stylesheets. Now, we'll talk about various methods of modularizing CSS to tackle styling in a component-oriented way.
+Jusqu'à maintenant nous avons parlé de la méthode la plus traditionnelle en utilisant une feuille de style CSS classique. Maintenant, nous allons parler des diverses méthodes pour modulariser du CSS et appréhender les mises en page du point de vue des composants.
 
-### CSS Modules
+### Modules CSS
 
-Let's explore **CSS Modules**. Quoting from
-[the CSS Module homepage](https://github.com/css-modules/css-modules):
+À la découverte des **Modules CSS**. Citation tirée de
+[la page d'accueil des modules CSS](https://github.com/css-modules/css-modules):
 
-> A **CSS Module** is a CSS file in which all class names and animation names
-> are scoped locally by default.
+> Un **Module CSS** est un fichier CSS où toutes les classes et animations ont une portée locale par défaut.
 
-CSS Modules are very popular because they let you write CSS normally but with a lot more safety. The tool automatically generates unique class and animation names, so you don't have to worry about selector name collisions.
+Les Modules CSS sont très populaires parce qu'ils vous permettent d'écrire du CSS normalement, mais avec plus de sûreté. Cet outil génère automatiquement des noms de classes et d'animations uniques, de sorte que vous n'ayez pas à vous soucier de conflits dans vos sélecteurs.
 
-Gatsby works out of the box with CSS Modules. This approach is highly recommended for those new to building with Gatsby (and React in general).
+Gatsby fonctionne directement avec les Modules CSS. Cette approche est véritablement recommandée à tous ceux qui utilisent Gatsby (et React en général) depuis peu de temps.
 
-#### ✋ Build a new page using CSS Modules
+#### ✋ Créer une nouvelle page avec les Modules CSS
 
-In this section, you'll create a new page component and style that page component using a CSS Module.
+Dans cette section vous allez créer une nouvelle page sous forme de composant et la mettre en page en utilisant les Modules CSS.
 
-First, create a new `Container` component.
+Tout d'abord, créez un nouveau composant `Container`.
 
-1. Create a new directory at `src/components` and then, in this new directory, create a file named `container.js` and paste the following:
+1. Créez un nouveau dossier `src/components` et créez-y un fichier `container.js` en copiant le contenu suivant:
 
 ```javascript:title=src/components/container.js
 import React from "react"
@@ -161,9 +160,9 @@ export default ({ children }) => (
 )
 ```
 
-You'll notice you imported a css module file named `container.module.css`. Let's create that file now.
+Comme vous pouvez le remarquer, vous avez importé un module CSS du nom de `container.module.css`. Créons ce fichier maintenant.
 
-2. In the same directory (`src/components`), create a `container.module.css` file and copy/paste the following:
+2. Dans ce même dossier (`src/components`), créez le fichier `container.module.css` et copiez le contenu suivant :
 
 ```css:title=src/components/container.module.css
 .container {
@@ -172,9 +171,9 @@ You'll notice you imported a css module file named `container.module.css`. Let's
 }
 ```
 
-You'll notice that the file name ends with `.module.css` instead of the usual `.css`. This is how you tell Gatsby that this CSS file should be processed as a CSS module rather than plain CSS.
+Vous remarquerez que le nom du fichier ce termine par `.module.css` à la place du traditionnel `.css`. C'est de cette manière que vous indiquez à Gatsby que votre fichier CSS doit être traité comme un Module CSS plutôt que comme un fichier CSS standard.
 
-3. Create a new page component by creating a file at
+3. Créez une nouvelle page sous forme de composant en créant ce fichier :
    `src/pages/about-css-modules.js`:
 
 ```javascript:title=src/pages/about-css-modules.js
@@ -184,23 +183,23 @@ import Container from "../components/container"
 
 export default () => (
   <Container>
-    <h1>About CSS Modules</h1>
-    <p>CSS Modules are cool</p>
+    <h1>A propos des Modules CSS</h1>
+    <p>Les Modules CSS sont cools</p>
   </Container>
 )
 ```
 
-Now, if you visit `http://localhost:8000/about-css-modules/`, your page should look something like this:
+Si vous visitez maintenant `http://localhost:8000/about-css-modules/`, votre page devrait ressembler à ça :
 
-![Page with CSS module styles](css-modules-basic.png)
+![page mise en page avec les Modules CSS](css-modules-basic.png)
 
-#### ✋ Style a component using CSS Modules
+#### ✋ Mettre en page un composant avec les Modules CSS.
 
-In this section, you'll create a list of people with names, avatars, and short Latin biographies. You'll create a `<User />` component and style that component using a CSS module.
+Dans cette section, vous allez créer une liste de personnes avec des noms, avatars, et une courte biographie latine. Vous allez créer un composant `<User />` et le mettre en page avec un Module CSS
 
-1. Create the file for the CSS at `src/pages/about-css-modules.module.css`.
+1. Créez le fichier pour le CSS ici : `src/pages/about-css-modules.module.css`.
 
-2. Paste the following into the new file:
+2. Copiez le contenu suivant dans ce nouveau fichier :
 
 ```css:title=src/pages/about-css-modules.module.css
 .user {
@@ -236,7 +235,7 @@ In this section, you'll create a list of people with names, avatars, and short L
 }
 ```
 
-3. Import the new `src/pages/about-css-modules.module.css` file into the `about-css-modules.js` page you created earlier by editing the first few lines of the file like so:
+3. Importez votre nouveau fichier `src/pages/about-css-modules.module.css` dans la page `about-css-modules.js` que vous aviez créé plus tôt en éditant les premières lignes du fichier comme suit :
 
 ```javascript:title=src/pages/about-css-modules.js
 import React from "react"
@@ -248,16 +247,15 @@ import Container from "../components/container"
 console.log(styles)
 ```
 
-The `console.log(styles)` code will log the resulting import so you can see the result of your processed `./about-css-modules.module.css` file. If you open the developer console (using e.g. Firefox or Chrome's developer tools) in your browser, you'll see:
+Le code `console.log(styles)` va logger le résultat de cet import de sorte que vous pouviez voir le résultat généré par le fichier `./about-css-modules.module.css`. Si vous ouvrez la console développeur (en utilisant par exemple l'outil de développement de Firefox ou de Chrome) dans votre navigateur, vous verrez :
 
-![Import result of CSS module in console](css-modules-console.png)
+![le résultat de votre import du Module CSS](css-modules-console.png)
 
-If you compare that to your CSS file, you'll see that each class is now a key in the imported object pointing to a long string e.g. `avatar` points to `src-pages----about-css-modules-module---avatar---2lRF7`. These are the class names CSS Modules generates. They're guaranteed to be unique across your site. And because you have to import them to use the classes, there's never any question about where some CSS is being used.
+Si vous comparez ce résultat avec votre fichier CSS, vous verrez que chaque classe dans l'objet que vous importez pointe vers une longue chaine de caractères. Par exemple: `avatar` pointe vers `src-pages----about-css-modules-module---avatar---2lRF7`. Ce sont les noms de classes générés par les Modules CSS. Ils garantissent leur unicité à travers tout votre site. Étant donné que vous les importez pour les utiliser, il n'y a jamais de doute quant à savoir où s'applique votre CSS.
 
-4. Create a `User` component.
+4. Créez un composant `User`.
 
-Create a new `<User />` component inline in the `about-css-modules.js` page
-component. Modify `about-css-modules.js` so it looks like the following:
+Créez un nouveau composant `<User />` dans votre composant de page `about-css-modules.js`. Modifiez `about-css-modules.js` afin qu'il ressemble à ça :
 
 ```jsx:title=src/pages/about-css-modules.js
 import React from "react"
@@ -298,27 +296,27 @@ export default () => (
 )
 ```
 
-> Tip: Generally, if you use a component in multiple places on a site, it should be in its own module file in the `components` directory. But, if it's used only in one file, create it inline.
+> Astuce: généralement, si vous utilisez un composant à de nombreux endroits sur votre site, il devrait être placé dans son propre fichier dans le dossier `components`. Cependant, s'il n'est utilisé que dans un fichier, créez-le directement dans ce dernier.
 
-The finished page should now look like:
+Votre page terminée devrait ressembler à ça:
 
-![User list page with CSS modules](css-modules-userlist.png)
+![page listant les utilisant avec les Modules CSS](css-modules-userlist.png)
 
-### CSS-in-JS
+### CSS-dans-JS
 
-CSS-in-JS is a component-oriented styling approach. Most generally, it is a pattern where [CSS is composed inline using JavaScript](https://reactjs.org/docs/faq-styling.html#what-is-css-in-js).
+CSS-dans-JS est une approche de mise en page orientée sur les composants. La plupart du temps, c'est une méthode où [le CSS est écrit directement dans le fichier JavaScript](https://reactjs.org/docs/faq-styling.html#what-is-css-in-js).
 
-#### Using CSS-in-JS with Gatsby
+#### Utiliser CSS-dans-JS avec Gatsby
 
-There are many different CSS-in-JS libraries and many of them have Gatsby plugins already. We won't cover an example of CSS-in-JS in this initial tutorial, but we encourage you to [explore](/docs/styling/) what the ecosystem has to offer. There are mini-tutorials for two libraries, in particular, [Emotion](/docs/emotion/) and [Styled Components](/docs/styled-components/).
+Il y a beaucoup de librairies de CSS-dans-JS et nombre d'entre elles dispose déjà d'un plug-in Gatsby. Nous ne traiterons pas d'un exemple de CSS-dans-JS dans ce tutoriel de base, mais nous vous encourageons à [explorer](/docs/styling/) ce que cet écosystème a à offrir. Il y a des mini tutoriels pour deux librairies en particulier [Emotion](/docs/emotion/) et [Styled Components](/docs/styled-components/).
 
-#### Suggested reading on CSS-in-JS
+#### Suggestion de lecture sur CSS-dans-JS
 
-If you're interested in further reading, check out [Christopher "vjeux" Chedeau's 2014 presentation that sparked this movement](https://speakerdeck.com/vjeux/react-css-in-js) as well as [Mark Dalgleish's more recent post "A Unified Styling Language"](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
+Si vous souhaitez en lire plus à ce sujet, regardez [la présentation de Christopher "vjeux" Chedeau en 2014 qui a initié ce mouvement](https://speakerdeck.com/vjeux/react-css-in-js) et aussi [le récent article de Mark Dalgleish "A Unified Styling Language"](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
 
 ### Other CSS options
 
-Gatsby supports almost every possible styling option (if there isn't a plugin yet for your favorite CSS option, [please contribute one!](/contributing/how-to-contribute/))
+Gatsby supporte pratiquement toutes les options de mise en page possible (s'il n'y a pas encore de plug-in pour votre méthode CSS favorite [s'il vous plaît, créez-en un!](/contributing/how-to-contribute/))
 
 - [Typography.js](/packages/gatsby-plugin-typography/)
 - [Sass](/packages/gatsby-plugin-sass/)
@@ -326,8 +324,8 @@ Gatsby supports almost every possible styling option (if there isn't a plugin ye
 - [Stylus](/packages/gatsby-plugin-stylus/)
 - [PostCSS](/packages/gatsby-plugin-postcss/)
 
-and more!
+Et plus !
 
-## What's coming next?
+## Quelle est la suite ?
 
-Now continue on to [part three of the tutorial](/tutorial/part-three/), where you'll learn about Gatsby plugins and layout components.
+Continuez maintenant sur [la partie trois de ce tutoriel](/tutorial/part-three/), où vous en apprendrez vous sur les plug-ins Gatsby et les composants de mise en page.
