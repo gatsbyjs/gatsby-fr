@@ -22,7 +22,7 @@ Dans cette partie, vous allez explorer les différentes options à votre disposi
 
 ## Utiliser des styles globaux
 
-Tout site dispose d'une sorte de style de mise en page globale. Cela peut inclure des choses comme la typographie et les couleurs de fond. Ces styles servent à créer l'ambiance générale du site — une comme la couleur et la texture d'un mur donne une ambiance générale à une pièce.
+Tout site dispose d'une sorte de style de mise en page globale. Cela peut inclure des choses comme la typographie et les couleurs de fond. Ces styles servent à créer l'ambiance générale du site — comme la couleur et la texture d'un mur donne une ambiance générale à une pièce.
 
 ### Créer des styles globaux avec des fichiers CSS standards
 
