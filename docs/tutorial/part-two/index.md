@@ -50,7 +50,7 @@ Vous avez maintenant un nouveau site Gatsby (basé sur le kit de démarrage "hel
 
 #### ✋ Ajoutez des styles à votre fichier `.css`
 
-1. Créez un fichier `.css` dans votre nouveau projet:
+1. Créez un fichier `.css` dans votre nouveau projet :
 
 ```shell
 cd src
@@ -59,7 +59,7 @@ cd styles
 touch global.css
 ```
 
-> Note: Vous êtes libre de créer ce dossier et ce fichier en utilisant votre éditeur de code si vous préférez.
+> Note : Vous êtes libre de créer ces dossiers et ces fichiers en utilisant votre éditeur de code si vous préférez.
 
 Maintenant, la structure de votre site doit être la suivante:
 
@@ -80,7 +80,7 @@ html {
 }
 ```
 
-> Note: L'emplacement de ce fichier css prit en exemple `/src/styles/` est purement arbitraire.
+> Note : L'emplacement de ce fichier css d'exemple (dans le dossier`/src/styles/`) est purement arbitraire.
 
 #### ✋ Inclure votre feuille de style dans `gatsby-browser.js`
 
@@ -114,7 +114,7 @@ import "./src/styles/global.css";
 // require('./src/styles/global.css')
 ```
 
-> Note: Les deux syntaxes (`require`) de JS Vanilla et (`import`) des modules ES fonctionnent ici. Si vous n'êtes pas sûr de laquelle choisir, nous utilisons la plupart du temps `import`.
+> Note : Les deux syntaxes (`require`) de CommonJS et (`import`) des modules ES fonctionnent ici. Si vous n'êtes pas sûr de laquelle choisir, nous utilisons la plupart du temps `import`.
 
 3. Lancez le serveur de développement:
 
@@ -126,22 +126,22 @@ Si vous jetez un oeil à votre projet dans votre navigateur, vous devriez voir u
 
 ![Hello World Lavande!](global-css.png)
 
-> Astuce: Cette partie du tutoriel s'est concentrée sur la façon la plus rapide et la plus simple de commencer à mettre en page un site Gatsby — en important une feuille de style classique dans `gatsby-browser.js`. Dans la plupart des cas, la meilleure façon de rajouter des styles globaux est d'utiliser un composant de mise en page partagé. [Regardez la documentation](/docs/global-css/) pour plus d'information sur cette méthode.
+> Astuce : Cette partie du tutoriel s'est concentrée sur la façon la plus rapide et la plus simple de commencer à mettre en page un site Gatsby — en important une feuille de style classique dans `gatsby-browser.js`. Dans la plupart des cas, la meilleure façon de rajouter des styles globaux est d'utiliser un composant de mise en page partagé. [Regardez la documentation](/docs/global-css/) pour plus d'information sur cette méthode.
 
-## Utiliser du CSS lié à un composant
+## Utiliser du CSS limité à un composant
 
-Jusqu'à maintenant nous avons parlé de la méthode la plus traditionnelle en utilisant une feuille de style CSS standard. Maintenant, nous allons parler des diverses méthodes pour modulariser du CSS et appréhender les mises en page du point de vue des composants.
+Jusqu'à maintenant nous avons parlé de la méthode la plus traditionnelle en utilisant une feuille de style CSS classique. Maintenant, nous allons parler des diverses méthodes pour modulariser du CSS et appréhender les mises en page du point de vue des composants.
 
 ### Modules CSS
 
-À la découverte des ** Modules CSS**. Citation tirée de
+À la découverte des **Modules CSS**. Citation tirée de
 [la page d'accueil des modules CSS](https://github.com/css-modules/css-modules):
 
 > Un **Module CSS** est un fichier CSS où toutes les classes et animations ont une portée locale par défaut.
 
-Les Modules CSS sont très populaires parce qu'ils vous permettent d'écrire du CSS normalement, mais avec plus sûreté. Cet outil génère automatiquement des noms de classes et d'animations uniques, de sorte que vous n'ayez pas à vous soucier de conflits dans vos sélecteurs.
+Les Modules CSS sont très populaires parce qu'ils vous permettent d'écrire du CSS normalement, mais avec plus de sûreté. Cet outil génère automatiquement des noms de classes et d'animations uniques, de sorte que vous n'ayez pas à vous soucier de conflits dans vos sélecteurs.
 
-Gatsby fonctionne directement avec les Modules CSS. Cette approche est véritablement recommandée à tous ceux qui utilisent Gatsby depuis peu de temps (et React en général).
+Gatsby fonctionne directement avec les Modules CSS. Cette approche est véritablement recommandée à tous ceux qui utilisent Gatsby (et React en général) depuis peu de temps.
 
 #### ✋ Créer une nouvelle page avec les Modules CSS
 
@@ -152,12 +152,12 @@ Tout d'abord, créez un nouveau composant `Container`.
 1. Créez un nouveau dossier `src/components` et créez-y un fichier `container.js` en copiant le contenu suivant:
 
 ```javascript:title=src/components/container.js
-import React from "react";
-import containerStyles from "./container.module.css";
+import React from "react"
+import containerStyles from "./container.module.css"
 
 export default ({ children }) => (
   <div className={containerStyles.container}>{children}</div>
-);
+)
 ```
 
 Comme vous pouvez le remarquer, vous avez importé un module CSS du nom de `container.module.css`. Créons ce fichier maintenant.
