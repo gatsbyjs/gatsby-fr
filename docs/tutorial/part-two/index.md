@@ -316,7 +316,7 @@ Si vous souhaitez en lire plus à ce sujet, regardez [la présentation de Christ
 
 ### Other CSS options
 
-Gatsby supporte pratiquement chaque option de mise en page possible (s'il n'y a pas encore de plug-in pour votre méthode CSS favorite [s'il vous plaît, créez-en un!](/contributing/how-to-contribute/))
+Gatsby supporte pratiquement toutes les options de mise en page possible (s'il n'y a pas encore de plug-in pour votre méthode CSS favorite [s'il vous plaît, créez-en un!](/contributing/how-to-contribute/))
 
 - [Typography.js](/packages/gatsby-plugin-typography/)
 - [Sass](/packages/gatsby-plugin-sass/)
@@ -328,4 +328,4 @@ Et plus !
 
 ## Quelle est la suite ?
 
-Continuez maintenant sur [la partie tois de ce tutoriel](/tutorial/part-three/), où vous en apprendrez vous sur les plug-ins Gatsby et les composants de mise en page.
+Continuez maintenant sur [la partie trois de ce tutoriel](/tutorial/part-three/), où vous en apprendrez vous sur les plug-ins Gatsby et les composants de mise en page.
