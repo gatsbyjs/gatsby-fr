@@ -5,182 +5,191 @@ disableTableOfContents: true
 
 import HorizontalNavList from "../../www/src/components/horizontal-nav-list.js"
 
-When you're new to Gatsby there can be a lot of words to learn. This glossary aims to give you a 10,000-foot overview of common terms and what they mean for Gatsby sites.
+Lorsque vous découvrez Gatsby pour la première fois, il peut y avoir beaucoup de mots à apprendre. Ce glossaire a pour but de vous donner un aperçu des termes courants et de leur signification pour les sites Gatsby.
 
 <HorizontalNavList
 items={"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")}
 slug={props.slug}
 />
 
-## A
+## UNE
 
 ### AST
 
-Abstract Syntax Tree: A tree representation of the source code that is found during a [compilation](#compiler) step between two languages. For example, [gatsby-transformer-remark](/packages/gatsby-transformer-remark/) will create an AST from [Markdown](#markdown) to describe a Markdown document in a tree structure using the [Remark](#remark) parser.
+Arbre de syntaxe abstraite: Représentation en arbre du code source trouvé lors d'une étape [compilation] (# compilateur) entre deux langues. Par exemple, [gatsby-transformer-remarque] (/ packages / gatsby-transformer-remarque /) créera un AST à partir de [Markdown] (# markdown) pour décrire un document de Markdown dans une arborescence en utilisant la [Remarque] (# remarque ) analyseur.
 
 ### API
 
-Application Programming Interface: A method for one application to communicate with another. For example, a [source plugin](#source-plugin) will often use an API to get its data.
+Interface de programmation d'application: Méthode permettant à une application de communiquer avec une autre. Par exemple, un [plugin source] (# source-plugin) utilisera souvent une API pour obtenir ses données.
 
-### Accessibility
+### Accessibilité
 
-The inclusive practice of removing barriers that prevent interaction with, or access to websites, by people with disabilities. When sites are correctly designed, developed and edited for accessibility, generally all users have equal access to information and functionality. Read about [Gatsby's Commitment to Accessibility](/blog/2019-04-18-gatsby-commitment-to-accessibility/).
+La pratique inclusive consistant à supprimer les obstacles qui empêchent les personnes handicapées d’interagir avec les sites Web ou d’y accéder. Lorsque les sites sont correctement conçus, développés et modifiés pour des raisons d'accessibilité, tous les utilisateurs ont généralement le même accès aux informations et aux fonctionnalités. Lisez à propos de [l'engagement en matière d'accessibilité de Gatsby] (/ blog / 2019-04-18-gatsby-engagement-en-accessibilité /).
+
 
 ## B
 
 ### Babel
 
-A tool that lets you write the most modern [JavaScript](#javascript), and on [build](#build) it gets [compiled](#compiler) to code that most web browsers can understand.
+Un outil qui vous permet d'écrire le plus moderne [JavaScript] (# javascript), et sur [build] (# build), il obtient [compilé] (# compilateur) pour coder de manière compréhensible pour la plupart des navigateurs Web.
 
 ### Backend
 
-The behind the scenes that the [public](#public) do not see. This often refers to the control panel of your [CMS](#cms). These are often powered by server-side programming languages such as Node.js, PHP, Go, ASP.net, Ruby, or Java.
+Les coulisses que le [public] (# public) ne voient pas. Cela fait souvent référence au panneau de configuration de votre [CMS] (# cms). Ceux-ci sont souvent alimentés par des langages de programmation côté serveur tels que Node.js, PHP, Go, ASP.net, Ruby ou Java.
 
-### Build
+### Construire
 
-In Gatsby, this is the process of taking your code and content and packaging it into a website that can be hosted and accessed. Commonly referred to as _build time_. See also: [backend](#backend) and [server-side](#server-side).
+Dans Gatsby, il s’agit du processus consistant à intégrer votre code et votre contenu à un site Web pouvant être hébergé et consulté. Communément appelé _build time_. Voir aussi: [backend] (# backend) et [côté serveur] (# côté serveur).
+
 
 ## C
 
 ### Cache
 
-A storage of information locally that might be used again, so computations and lookups can be retrieved faster from one place. Gatsby uses a cache to store information so it can build your site faster when you're developing without needing to do the same work twice.
+Stockage local d'informations pouvant être réutilisées afin que les calculs et les recherches puissent être récupérés plus rapidement à partir d'un endroit. Gatsby utilise un cache pour stocker des informations, ce qui lui permet de créer votre site plus rapidement lorsque vous développez sans avoir à refaire le même travail deux fois.
 
 ### CLI
 
-Command Line Interface: An application that runs on your computer through the [command line](#command-line) and interacted with your keyboard.
+Interface de ligne de commande: Une application qui s'exécute sur votre ordinateur via la [ligne de commande] (# ligne de commande) et qui interagit avec votre clavier.
 
-Gatsby has two command line interfaces. One, [`gatsby`](/docs/gatsby-cli/), for day-to-day development with Gatsby and another, [`gatsby-dev`](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions), for those who contribute to the Gatsby project.
+Gatsby a deux interfaces de ligne de commande. Un, [`gatsby`] (/ docs / gatsby-cli /), pour le développement quotidien avec Gatsby et un autre, [` gatsby-dev`] (/ contribuer / mettre en place votre local-dev- environnement / # gatsby-repo-install-instructions), pour ceux qui contribuent au projet Gatsby.
 
-### Client-side
+### Côté client
 
-Client-side refers to operations that are performed by the user's browser in a [client–server relationship](https://en.wikipedia.org/wiki/Client%E2%80%93server_model) in a computer network. In Gatsby, this is important when [working with packages](/docs/using-client-side-only-packages/) that rely on objects in the [browser DOM](#dom), such as `window` or `navigator`. See also: [server-side](#server-side), [frontend](#frontend), and [backend](#backend).
+Côté client, on entend les opérations effectuées par le navigateur de l'utilisateur dans une [relation client-serveur] (https://en.wikipedia.org/wiki/Client%E2%80%93server_model) sur un réseau informatique. Dans Gatsby, cela est important lorsque [travailler avec les packages] (/ docs / utiliser-client-side-only-packages /) qui reposent sur des objets du [DOM navigateur] (# dom), tels que `window` ou` navigator `. Voir aussi: [côté serveur] (# côté serveur), [frontend] (# frontend) et [backend] (# fond).
 
 ### CMS
 
-Content Management System: an application where you can manage your content and have it saved to a database or file for accessing later. Examples of Content Management Systems include WordPress, Drupal, Contentful, and Netlify CMS.
+Système de gestion de contenu: application dans laquelle vous pouvez gérer votre contenu et le sauvegarder dans une base de données ou un fichier pour y accéder ultérieurement. WordPress, Drupal, Contentful et Netlify CMS sont des exemples de systèmes de gestion de contenu.
 
-### Command Line
+### Ligne de commande
 
-A text-based interface to run commands on your computer. The default Command Line applications for Mac and Windows are `Terminal` and `Command Prompt` respectively.
+Une interface textuelle pour exécuter des commandes sur votre ordinateur. Les applications de ligne de commande par défaut pour Mac et Windows sont respectivement `Terminal` et` Invite de commandes`.
 
-### Compiler
+### Compilateur
 
-A compiler is a program that translates code written in one language to another language. For example [Gatsby](#gatsby) can compile [React](#react) applications into static [HTML](#html) files.
+Un compilateur est un programme qui traduit le code écrit dans une langue dans une autre langue. Par exemple, [Gatsby] (# gatsby) peut compiler des applications [React] (# rea) dans des fichiers [HTML] (# html) statiques.
 
-### Component
 
-Components are independent and re-usable chunks of code powered by [React](#react) that, when combined, make up your website or app.
+Composant ###
 
-A component can include components within it. In fact, [pages](#page) and [templates](#template) are examples of components.
+Les composants sont des fragments de code indépendants et réutilisables, générés par [React] (# react), qui, une fois combinés, constituent votre site Web ou votre application.
+
+Un composant peut inclure des composants en son sein. En fait, [pages] (# page) et [modèles] (# modèle) sont des exemples de composants.
 
 ### Config
 
-The configuration file, `gatsby-config.js` tells Gatsby information about your website. A common option set in config is your sites metadata that can power your SEO meta tags.
+Le fichier de configuration, `gatsby-config.js` indique à Gatsby des informations sur votre site Web. Une option commune définie dans config est la métadonnée de votre site qui peut propulser vos balises méta SEO.
 
 ### CSS
 
-[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) stands for Cascading Style Sheets, and it's a major part of the Web Platform with [HTML](#html) and [JavaScript](#javascript). CSS is a language for styling webpages designed to be highly backwards-compatible. As new features are rolled out to end-users, [CSS parsers](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#CSS_parsing) can safely ignore unsupported features and enhance with the properties they do support. CSS accomplishes this with its _cascading_ design, fundamental to styling with new techniques like [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) while providing fallbacks for older browsers. Gatsby supports multiple [approaches to styling](/docs/styling/), including regular CSS files, CSS modules, and CSS-in-JS.
+[CSS] (https://developer.mozilla.org/en-US/docs/Web/CSS) est l'abréviation de Cascading Style Sheets. Il s'agit d'un élément essentiel de la plate-forme Web avec [HTML] (# html) et [JavaScript. ] (# javascript). CSS est un langage de style conçu pour les pages Web hautement compatibles avec les versions antérieures. À mesure que de nouvelles fonctionnalités sont proposées aux utilisateurs finaux, les [analyseurs syntaxiques CSS] (https://www.html5rocks.com/fr/tutorials/internals/howbrowserswork/#CSS_parsing) peuvent en toute sécurité ignorer les fonctionnalités non prises en charge et améliorer les propriétés qu'ils prennent en charge. . CSS y parvient avec sa conception _cascading_, essentielle pour le style avec de nouvelles techniques telles que [CSS Grid] (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) tout en offrant des solutions de rechange aux navigateurs plus anciens. . Gatsby prend en charge plusieurs [approches de style] (/ docs / styling /), y compris des fichiers CSS normaux, des modules CSS et CSS-in-JS.
 
-## D
 
-### Data Source
 
-Content and data's origin point, typically integrated into Gatsby with [source plugins](#source-plugin). A data source is often a [Headless CMS](#headless-cms), but it could also include Markdown, JSON, or YAML files.
+## RÉ
 
-### Database
+### La source de données
 
-A database is a structured collection of data or content. Often a [CMS](#cms) will save to a database using [backend technologies](#backend). They're often accessed in Gatsby via a [source plugin](#source-plugin)
+Le point d'origine du contenu et des données, généralement intégré à Gatsby avec [plugins source] (# source-plugin). Une source de données est souvent un [CMS sans tête] (# headless-cms), mais elle peut également inclure des fichiers Markdown, JSON ou YAML.
 
-### Decoupled
+### Base de données
 
-Decoupling describes the separation of different concerns. With [Gatsby](#gatsby) this most commonly means decoupling the [frontend](#frontend) from the [backend](#backend), like with [Decoupled Drupal](https://dri.es/how-to-decouple-drupal-in-2019) or [Headless WordPress](https://www.smashingmagazine.com/2018/10/headless-wordpress-decoupled/).
+Une base de données est un ensemble structuré de données ou de contenu. Souvent, un [CMS] (# cms) sera sauvegardé dans une base de données utilisant [technologies de backend] (# backend). Ils sont souvent accédés dans Gatsby via un [plugin source] (# source-plugin)
 
-### Deploy
+### découplé
 
-The process of [building](#build) your website or app and uploading onto a [hosting provider](#hosting).
+Le découplage décrit la séparation des différentes préoccupations. Avec [Gatsby] (# gatsby), cela signifie généralement le découplage de [interface] (# interface) du [backend] (# backend), comme avec [Decoupled Drupal] (https://dri.es/how-to- decouple-drupal-in-2019) ou [WordPress headless] (https://www.smashingmagazine.com/2018/10/headless-wordpress-decoupled/).
 
-### Development Environment
+### Déployer
 
-The [environment](#environment) when you're developing your code. It's accessed through the [CLI](#cli) using `gatsby develop`, and provides extra error reporting and things to help you debug before building for [production](#production-environment).
+Le processus de [construction] (# construction) de votre site Web ou de votre application et de son téléchargement sur un [fournisseur d'hébergement] (# hébergement).
+
+### Environnement de développement
+
+Le [environnement] (# environnement) lorsque vous développez votre code. Il est accessible via [CLI] (# cli) en utilisant `gatsby develop` et fournit des rapports d'erreurs supplémentaires ainsi que des outils pour vous aider à déboguer avant de construire pour [production] (# production-environnement).
 
 ### DOM
 
-The Document Object Model, commonly referred to as "the DOM", is a standard browser API that connects web pages to scripts or programming languages by representing the structure of an HTML document in memory. Developers commonly interact with the DOM through [HTML](#html) markup (written in [JSX](#jsx) in Gatsby), as well as both [React](https://reactjs.org/docs/react-dom.html) and [vanilla JavaScript](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction#DOM_and_JavaScript) code. Another important aspect of utilizing the DOM to its full potential is writing [accessible](#accessibility) HTML markup to expose a page's structure to assistive technology.
+Le modèle d'objet de document, généralement appelé "DOM", est une API de navigateur standard qui connecte des pages Web à des scripts ou à des langages de programmation en représentant la structure d'un document HTML en mémoire. Les développeurs interagissent généralement avec le DOM via le balisage [HTML] (# html) (écrit en [JSX] (# jsx) dans Gatsby), ainsi que les deux [React] (https://reactjs.org/docs/react-dom .html) et [JavaScript vanille] (https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction#DOM_and_JavaScript). L’utilisation du balisage HTML [accessible] (# accessibilité) pour exposer la structure d’une page à la technologie d’assistance constitue un autre aspect important de l’exploitation optimale du DOM.
+
 
 ## E
 
 ### ECMAScript
 
-ECMAScript (often referred to as ES) is a specification for scripting languages. [JavaScript](#javascript) is an implementation of ECMAScript. Often developers will use [Babel](#babel) to [compile](#compiler) the latest ECMAScript code into more widely supported JavaScript.
+ECMAScript (souvent appelé ES) est une spécification pour les langages de script. [JavaScript] (# javascript) est une implémentation de ECMAScript. Les développeurs utilisent souvent [Babel] (# babel) pour [compiler] (# compilateur) le dernier code ECMAScript en JavaScript plus largement pris en charge.
 
-### Environment
+### Environnement
 
-The environment that Gatsby runs in. For example, when you are writing your code you probably want as much debugging as possible, but that's undesirable on the live website or app. As such, Gatsby can change its behavior depending on the environment it's in.
+Environnement dans lequel Gatsby est exécuté. Par exemple, lorsque vous écrivez votre code, vous souhaitez probablement effectuer le plus de débogage possible, mais cela n’est pas souhaitable sur le site Web ou l’application en direct. En tant que tel, Gatsby peut changer de comportement en fonction de l’environnement dans lequel il évolue.
 
-Gatsby supports two environments by default, the [development environment](#development-environment) and the [production environment](#production-environment).
+Gatsby prend en charge deux environnements par défaut, [environnement de développement] (# environnement de développement) et [environnement de production] (# environnement de production).
 
-### Environment Variables
+### Variables d'environnement
 
-[Environment Variables](/docs/environment-variables/) allow you to customize the behavior of your app depending on its [environment](#environment). For instance, you may wish to get content from a staging CMS during development and connect to your production CMS when you [build](#build) your site. With environment variables you can set a different URL for each environment.
+[Variables d'environnement] (/ docs / environment-variables /) vous permettent de personnaliser le comportement de votre application en fonction de son [environnement] (# environnement). Par exemple, vous souhaiterez peut-être obtenir le contenu d'un CMS intermédiaire pendant le développement et vous connecter à votre CMS de production lorsque vous [construisez] (# construisez) votre site. Avec les variables d'environnement, vous pouvez définir une URL différente pour chaque environnement.
+
 
 ## F
 
-### Filesystem
+### Système de fichiers
 
-The way files are organized. With Gatsby, it means having files in the same place as your website's or app's code instead of pulling data from an external [source](#data-source). Common filesystem usage in Gatsby includes Markdown content, images, data files, and other assets.
+La façon dont les fichiers sont organisés. Avec Gatsby, cela signifie que les fichiers se trouvent au même endroit que le code de votre site Web ou de votre application au lieu d'extraire des données d'une [source] externe (# source de données). L’utilisation courante du système de fichiers dans Gatsby inclut le contenu Markdown, des images, des fichiers de données et d’autres ressources.
 
-### Frontend
+### L'extrémité avant
 
-The [public-facing](#public) interface for your website or app, delivered using web technologies: HTML, CSS, and JavaScript. For more insight into how the Web Platform brings these technologies together, check out this article on [How Browsers Work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/).
+L'interface [publique] de votre site Web ou de votre application, livrée à l'aide des technologies Web: HTML, CSS et JavaScript. Pour en savoir plus sur la manière dont la plate-forme Web associe ces technologies, consultez cet article sur [Fonctionnement des navigateurs] (https://www.html5rocks.com/fr/tutorials/internals/howbrowserswork/).
 
 ## G
 
 ### Gatsby
 
-Gatsby is a modern website framework that builds performance into every website or app by leveraging the latest web technologies such as [React](#react), [GraphQL](#graphql), and modern [JavaScript](#javascript). Gatsby makes it easy to create blazing fast, compelling web experiences without needing to become a performance expert.
+Gatsby est un framework de site Web moderne qui optimise les performances de chaque site Web ou application en exploitant les dernières technologies Web telles que [React] (# react), [GraphQL] (# graphql) et moderne [JavaScript] (# javascript). Grâce à Gatsby, il est facile de créer des expériences Web fascinantes et convaincantes sans avoir à devenir un expert en performances.
 
-### GraphQL
+# # # GraphQL
 
-A [query](#query) language that allows you to pull data into your website or app. It’s the [interface that Gatsby uses](/docs/graphql/) for managing site data.
+Un langage [query] (# query) qui vous permet d'extraire des données sur votre site Web ou votre application. C’est l’interface que Gatsby utilise] (/ docs / graphql /) pour gérer les données du site.
+
 
 ## H
 
 ### HTML
 
-A markup language that every web browser is able to understand. It stands for Hypertext Markup Language. [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) gives your web content a universal informational structure, defining things like headings, paragraphs, and more. It is also key to providing an accessible website.
+Un langage de balisage que chaque navigateur Web est capable de comprendre. Il représente Hypertext Markup Language. [HTML] (https://developer.mozilla.org/en-US/docs/Web/HTML) donne à votre contenu Web une structure informative universelle, définissant des éléments tels que des en-têtes, des paragraphes, etc. C'est également essentiel pour fournir un site Web accessible.
 
-### Headless CMS
+### CMS sans tête
 
-A [CMS](#cms) that only handles the [backend](#backend) content management instead of handling both the backend and [frontend](#frontend). This type of setup is also referred to as [Decoupled](#decoupled).
+Un [CMS] (# cms) qui gère uniquement la gestion de contenu [backend] (# backend) au lieu de gérer à la fois le backend et le [frontend] (# frontend). Ce type de configuration est également appelé [Découplé] (# découplé).
 
-### Hosting
+### Hébergement
 
-A hosting provider keeps a copy of your website or app and makes it accessible to [the public](#public). [Common hosting providers for Gatsby](/docs/deploying-and-hosting/) projects include Netlify, AWS, S3, Surge, Heroku, and more.
+Un fournisseur d'hébergement conserve une copie de votre site Web ou de votre application et la rend accessible au [public] (# public). Les projets [fournisseurs d'hébergement courants pour Gatsby] (/ docs / deploying-and-hosting /) incluent Netlify, AWS, S3, Surge, Heroku, etc.
 
-### Hot module replacement
+### Remplacement du module chaud
 
-A feature in use when you run `gatsby develop` that live updates your site on save of code in a text editor by automatically replacing modules, or chunks of code, in an open browser window.
+Une fonctionnalité utilisée lorsque vous exécutez `gatsby develop` et qui met à jour en direct votre site sur la sauvegarde de code dans un éditeur de texte en remplaçant automatiquement les modules, ou des morceaux de code, dans une fenêtre de navigateur ouverte.
 
-### Hydration
+### Hydratation
 
-Once a site has been [built](#build) by Gatsby and loaded in a web browser, [client-side](#client-side) JavaScript assets will download and turn the site into a full React application that can manipulate the [DOM](#dom). This process is often called re-hydration as it runs some of the same JavaScript code used to generate Gatsby pages, but this time with browser DOM APIs like `window` available.
+Une fois qu'un site a été [construit] (# construit) par Gatsby et chargé dans un navigateur Web, les ressources JavaScript [côté client] (# côté client) seront téléchargées et transformées en une application React complète capable de manipuler le [ DOM] (# dom). Ce processus s'appelle souvent la réhydratation, car il exécute une partie du code JavaScript utilisé pour générer les pages Gatsby, mais cette fois avec des API DOM du navigateur comme `window` disponibles.
 
-## I
+## JE
+
 
 ## J
 
 ### JAMStack
 
-JAMStack refers to a modern web architecture using [JavaScript](#javascript), [APIs](#api), and ([HTML](#html)) markup. From [JAMStack.org](https://jamstack.org): "It’s a new way of building websites and apps that delivers better performance, higher security, lower cost of scaling, and a better developer experience."
+JAMStack fait référence à une architecture Web moderne utilisant les balises [JavaScript] (# javascript), [APIs] (# api) et ([HTML] (# html)). [JAMStack.org] (https://jamstack.org): "Il s’agit d’un nouveau moyen de créer des sites Web et des applications offrant de meilleures performances, une sécurité accrue, un coût de dimensionnement réduit et une meilleure expérience de développeur."
 
 ### JavaScript
 
-A programming language that helps us make the web dynamic and interactive. [JavaScript](https://developer.mozilla.org/en-US/docs/Web/Javascript) is a widely deployed web technology in browsers. It is also used on the server-side with [Node.js](#node). It is an implementation of the [ECMAScript](#ECMAScript) specification.
+Un langage de programmation qui nous aide à rendre le Web dynamique et interactif. [JavaScript] (https://developer.mozilla.org/en-US/docs/Web/Javascript) est une technologie Web largement déployée dans les navigateurs. Il est également utilisé côté serveur avec [Node.js] (# node). C'est une implémentation de la spécification [ECMAScript] (# ECMAScript).
 
 ### JSX
 
-JSX is an extension to JavaScript that allows developers to write HTML and custom components in the same piece of code. The [React team recommends](https://reactjs.org/docs/introducing-jsx.html) using it to describe what a [UI](#UI) should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript. Some important details to note are that because JSX uses JavaScript, some HTML attributes in your markup have to be swapped out to avoid reserved words in JavaScript (things like `htmlFor` and `className`).
+JSX est une extension de JavaScript qui permet aux développeurs d'écrire des composants HTML et personnalisés dans le même morceau de code. L'équipe [React recommande] (https://reactjs.org/docs/introducing-jsx.html) de l'utiliser pour décrire à quoi devrait ressembler une [UI] (# UI). JSX peut vous rappeler un langage de modèle, mais il est doté de toute la puissance de JavaScript. Certains détails importants à noter sont que, du fait que JSX utilise JavaScript, certains attributs HTML de votre balisage doivent être permutés pour éviter les mots réservés dans JavaScript (des éléments tels que `htmlFor` et` className`).
 
 ## K
 
@@ -188,139 +197,145 @@ JSX is an extension to JavaScript that allows developers to write HTML and custo
 
 ### Linting
 
-Linting is the process of running a program that will analyze code for potential errors. The Gatsby project uses [prettier](https://prettier.io/) to identify and fix common style issues. Another example of a linter commonly used in React projects is [eslint-jsx-plugin-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y), which checks for common [accessibility](#accessibility) issues in development.
+Linting est le processus d’exécution d’un programme qui analysera le code pour détecter les erreurs potentielles. Le projet Gatsby utilise [prettier] (https://prettier.io/) pour identifier et résoudre les problèmes de style courants. Un autre exemple de linter couramment utilisé dans les projets React est [eslint-jsx-plugin-a11y] (https://github.com/evcohen/eslint-plugin-jsx-a11y), qui vérifie les [accessibilité] courantes (accessibilité). ) problèmes en développement.
+
 
 ## M
 
 ### MDX
 
-Extends [Markdown](#markdown) to support [React](#react) [components](#component) within your content.
+Étend [Markdown] (# markdown) pour prendre en charge [React] (# react) [composants] (# composant) dans votre contenu.
 
 ### Markdown
 
-A way of writing HTML content with plain text, using special characters to denote content types such as hash symbols for [headings](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements), and underscores and asterisks for text emphasis.
+Une façon d'écrire du contenu HTML avec du texte brut, en utilisant des caractères spéciaux pour désigner des types de contenu tels que des symboles de hachage pour [en-têtes] (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements) et soulignés et astérisques pour mettre l’accent sur le texte.
 
 ## N
 
 ### NPM
 
-[Node](#node) [Package](#package) Manager. Allows you to install and update other packages that your project depends on. [Gatsby](#gatsby) and [React](#react) are examples of your project's dependencies. See also: [Yarn](#yarn).
+[Noeud] (# noeud) [Package] (# package) Gestionnaire. Vous permet d'installer et de mettre à jour d'autres packages dont dépend votre projet. [Gatsby] (# gatsby) et [React] (# react) sont des exemples des dépendances de votre projet. Voir aussi: [Fil] (# fil).
 
-### Node
+### Noeud
 
-Gatsby uses [data nodes](/docs/node-interface/) to represent a single piece of data. A [data source](#data-source) will create multiple nodes.
+Gatsby utilise [noeuds de données] (/ docs / node-interface /) pour représenter une seule donnée. Une [source de données] (# source de données) créera plusieurs nœuds.
 
 ### Node.js
 
-A program that lets you run [JavaScript](#javascript) on your computer. Gatsby is powered by Node.
+Un programme qui vous permet d’exécuter [JavaScript] (# javascript) sur votre ordinateur. Gatsby est alimenté par Node.
 
 ## O
 
+
 ## P
 
-### Package
+### Paquet
 
-A package usually describes a [JavaScript](#javascript) program that has additional information about how it should be distributed and used, such as its version number. [NPM](#npm) and [Yarn](#yarn) manages and installs the packages your project uses. [Gatsby](#gatsby) itself is a package.
+Un paquet décrit généralement un programme [JavaScript] (# javascript) qui contient des informations supplémentaires sur la manière dont il doit être distribué et utilisé, tel que son numéro de version. [NPM] (# npm) et [Yarn] (# yarn) gèrent et installent les packages utilisés par votre projet. [Gatsby] (# gatsby) est lui-même un paquet.
 
 ### Page
 
-An [HTML](#html) page.
+Une page [HTML] (# html).
 
-This also often refers to [components](#component) that live in `/src/pages/` and are converted to pages by [Gatsby](#gatsby), as well as [pages created dynamically](/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs) in your `gatsby-node.js` file.
+Cela fait aussi souvent référence aux [composants] (# composant) qui résident dans `/ src / pages /` et sont convertis en pages par [Gatsby] (# gatsby), ainsi que par des [pages créées dynamiquement] (/ docs / creation- and-modifying-pages / # creation-pages-in-gatsby-nodejs) dans votre fichier `gatsby-node.js`.
 
-### Plugin
+### Brancher
 
-Additional code that adds functionality to Gatsby that wasn't included out-of-the-box. Common [Gatsby plugins](/plugins/) include [source](#source-plugins) and [transformer](#transformer) plugins for pulling in and manipulating data, respectively.
+Code supplémentaire qui ajoute à Gatsby des fonctionnalités qui n'étaient pas incluses prêtes à l'emploi. Les [plugins Gatsby] courants (/ plugins /) incluent les plugins [source] (# source-plugins) et [transformer] (# transformer) pour extraire et manipuler des données, respectivement.
 
-### Production Environment
+### Environnement de production
 
-The [environment](#environment) for the [built](#build) website or app that users will experience when [deployed](#deploy). It can be accessed through the [CLI](#cli) using `gatsby build` or `gatsby serve`.
+[Environnement] (# environnement) du site Web ou de l'application [construit] (# construit) que les utilisateurs pourront utiliser lorsqu'ils [déployé] (# déploient). Vous pouvez y accéder via [CLI] (# cli) en utilisant `gatsby build` ou` gatsby serve`.
 
-### Programmatically
+### par programme
 
-Something that automatically happens based on your code and configuration. For example, you might [configure](#config) your project to create a [page](#page) for every blog post written, or read and display the current year as part of a copyright in your site footer.
+Quelque chose qui se produit automatiquement en fonction de votre code et de votre configuration. Par exemple, vous pouvez [configurer] (# config) votre projet pour créer une [page] (# page) pour chaque article de blog écrit ou lire et afficher l'année en cours avec le droit d'auteur sur le pied de page de votre site.
 
-### Progressive enhancement
+### Amélioration progressive
 
-Progressive enhancement is a strategy for the web that emphasizes core page content is loaded from a server before anything else, without [JavaScript](#javascript) as a requirement to load. This strategy then progressively adds more complex layers of presentation and features on top of the content as the end-user's browser/network connection allow. Gatsby's default approach to [building](#build) pages ahead-of-time means content will load first and enhance as scripts download and execute.
+L'amélioration progressive est une stratégie pour le Web qui met l'accent sur le fait que le contenu d'une page principale est chargé à partir d'un serveur avant toute autre chose, sans qu'il soit nécessaire de charger [JavaScript] (# javascript). Cette stratégie ajoute ensuite progressivement des couches de présentation et des fonctionnalités plus complexes en plus du contenu, dans la mesure où le navigateur / la connexion réseau de l'utilisateur final le permet. L'approche par défaut de Gatsby sur les pages [construction] (# construction) en avance signifie que le contenu sera chargé en premier et amélioré en même temps que le téléchargement et l'exécution des scripts.
 
-### Public
+### Publique
 
-This usually refers to either a member of the public (as opposed to your team) or the folder `/public` in which your [built](#build) website or app is saved.
+Cela fait généralement référence à un membre du public (par opposition à votre équipe) ou au dossier `/ public` dans lequel votre site Web ou votre application [construit] (# construit) est enregistré.
+
 
 ## Q
 
-### Query
+### Requete
 
-The process of requesting specific data from somewhere. With Gatsby you normally query with [GraphQL](#graphql).
+Le processus de demande de données spécifiques de quelque part. Avec Gatsby, vous interrogez normalement avec [GraphQL] (# graphql).
 
 ## R
 
-### React
+### Réagir
 
-A code library (written with [JavaScript](#javascript)) for building user interfaces. It’s the framework that [Gatsby](#gatsby) uses to build pages and structure content.
+Une bibliothèque de code (écrite avec [JavaScript] (# javascript)) pour créer des interfaces utilisateur. C’est le cadre que [Gatsby] (# gatsby) utilise pour créer des pages et structurer le contenu.
 
-### Remark
+### Remarque
 
-A parser to translate [Markdown](#markdown) to other formats like [HTML](#html) or [React](#react) code.
+Un analyseur syntaxique pour traduire le code [Markdown] (# markdown) en un autre format, tel que le code [HTML] (# html) ou le code [React] (# react).
 
 ### Runtime
 
-Runtime is when a program is running (or being executable); it can refer to a few things. [Node.js](#nodejs) is a [server-side](#server-side) runtime that executes JavaScript code. [Client-side JavaScript](#client-side), on the other hand, refers to the browser runtime where traditional JavaScript code executes. Gatsby compiles your site at [build time](#build) and [rehydrates with a React runtime](#hydration) to provide a fast, interactive, and dynamic user experience.
+Le temps d'exécution est quand un programme est en cours d'exécution (ou en cours d'exécution); cela peut faire référence à quelques choses. [Node.js] (# nodejs) est un environnement d'exécution [côté serveur] (# côté serveur) qui exécute le code JavaScript. [JavaScript côté client] (# côté client), quant à lui, fait référence au moteur d'exécution où le code JavaScript traditionnel s'exécute. Gatsby compile votre site à la [date de création] (# construction) et [se réhydrate avec un runtime de React] (# hydratation) pour offrir une expérience utilisateur rapide, interactive et dynamique.
 
 ### Routing
 
-Routing is the mechanism for loading the correct content in a website or app based on a network request - usually a URL. For example, it allows for routing URLs like `/about-us` to the appropriate [page](#page), [template](#template), or [component](#component).
+Le routage est le mécanisme permettant de charger le contenu correct dans un site Web ou une application en fonction d'une requête réseau, généralement une URL. Par exemple, il permet de router des URL telles que `/ about-us` vers la [page] (# page), le [modèle] (# modèle) ou le [composant] (# composant) approprié.
+
 
 ## S
 
 ### Schema
 
-An exact representation of how data is stored in a system, such as tables and fields in a database or a JSON file structure. In Gatsby, the GraphQL schema expresses all queryable data - or data that components can ask about as part of Gatsby's data layer.
+Représentation exacte de la manière dont les données sont stockées dans un système, telles que des tables et des champs dans une base de données ou une structure de fichier JSON. Dans Gatsby, le schéma GraphQL exprime toutes les données pouvant faire l'objet d'une requête, à savoir les données que les composants peuvent interroger dans le cadre de la couche de données de Gatsby.
 
-### Server-side
+### Du côté serveur
 
-The server-side part of the [client-server relationship](https://en.wikipedia.org/wiki/Client%E2%80%93server_model) refers to operations performed by a computer program which manages access to a centralized resource or service in a computer network. Gatsby uses the server-side technology [Node.js](#nodejs) to compile pages at build time, as opposed to serving them at [browser runtime](#runtime) with [client-side](#client-side) JavaScript. See also: [frontend](#frontend) and [backend](#backend).
+La partie serveur de la [relation client-serveur] (https://en.wikipedia.org/wiki/Client%E2%80%93server_model) fait référence à des opérations effectuées par un programme informatique qui gère l'accès à une ressource centralisée ou service dans un réseau informatique. Gatsby utilise la technologie côté serveur [Node.js] (# nodejs) pour compiler les pages au moment de la construction, par opposition à leur utilisation à [navigateur] (# runtime) avec JavaScript [client] (# client) . Voir aussi: [frontend] (# frontend) et [backend] (# backend).
 
-### Source Code
+### Code source
 
-Source code is your code that lives in `/src/` folder and makes up the unique aspects of your website or app. It is made up of [JavaScript](#javascript) and sometimes [CSS](#css) and other files.
+Le code source est votre code qui réside dans le dossier `/ src /` et constitue les aspects uniques de votre site Web ou de votre application. Il est composé de [JavaScript] (# javascript) et parfois de [CSS] (# css) et d'autres fichiers.
 
-The source code gets [built](#build) into the site the [public](#public) will see.
+Le code source obtient [build] (# build) dans le site visible par [public] (# public).
 
 ### Source Plugin
 
-A [plugin](#plugin) that adds additional [data sources](#data-source) to Gatsby that can then be [queried](#query) by your [pages](#page) and [components](#component).
+Un [plugin] (# plugin) qui ajoute des [sources de données] (# source de données) supplémentaires à Gatsby qui peut ensuite être [interrogé] (# requête) par vos [pages] (# page) et [composants] (# composant). ).
 
-### Starter
+### Entrée
 
-A pre-configured Gatsby project that can be used as a starting point for your project. They can be discovered using the [Gatsby Starter Library](/starters/) and installed using the [Gatsby CLI](/docs/starters/).
+Un projet Gatsby préconfiguré qui peut être utilisé comme point de départ pour votre projet. Ils peuvent être découverts à l’aide de la [Bibliothèque de démarrage Gatsby] (/ starters /) et installés à l’aide de [CLI Gatsby] (/ docs / starters /).
 
-### Static
+### Statique
 
-Gatsby [builds](#build) static versions of your page that can be easily [hosted](#hosting). This is in contrast to dynamic systems in which each page is generated on-the-fly. Being static affords major performance gains because the work only needs to be done once per content or code change.
+Gatsby [builds] (# build) versions statiques de votre page faciles à héberger (# hosting). Cela contraste avec les systèmes dynamiques dans lesquels chaque page est générée à la volée. Le fait d'être statique génère des gains de performances importants, car le travail ne doit être effectué qu'une fois par contenu ou changement de code.
 
-It also refers to the `/static` folder which is automatically copied into `/public` on each [build](#build) for files that don't need to be processed by Gatsby but do need to exist in [public](#public).
+Il fait également référence au dossier `/ static` qui est automatiquement copié dans` / public` sur chaque [build] (# build) pour les fichiers qui n'ont pas besoin d'être traités par Gatsby mais qui doivent exister dans [public] ( #Publique).
+
 
 ## T
 
-### Template
+### Modèle
 
-A [component](#component) that is [programmatically](#programmatically) turned into a page by Gatsby.
+Un [composant] (# composant) qui est [programmatiquement] (# programmatiquement) transformé en page par Gatsby.
 
-### Theme
+### Thème
 
-A Gatsby theme is like a WordPress theme that is composable (with other themes), extendable (with more logic), and replaceable ([shadowing](/blog/2019-04-29-component-shadowing/)). Gatsby themes can have any facet of a Gatsby app packaged inside of them, and can also offer any number of knobs to turn features on or off.
+Un thème Gatsby est comme un thème WordPress qui est composable (avec d'autres thèmes), extensible (avec plus de logique) et remplaçable ([shadowing] (/ blog / 2019-04-29-composant-shadowing /)). Les thèmes Gatsby peuvent contenir n'importe quelle facette d'une application Gatsby et peuvent également offrir un nombre quelconque de boutons permettant d'activer ou de désactiver des fonctionnalités.
 
-### Transformer
+### Transformateur
 
-A [plugin](#plugin) that transforms one type of data to another. For example you might transform a spreadsheet into a [JavaScript](#javascript) array.
+Un [plugin] (# plugin) qui transforme un type de données en un autre. Par exemple, vous pouvez transformer une feuille de calcul en un tableau [JavaScript] (# javascript).
 
 ## U
 
 ### UI
 
-A UI refers to a User Interface. In the field of human-computer interaction, a UI is a space where interactions between humans and machines occur. The goal of this interaction is to allow effective operation and control of the machine from the human end, while the machine simultaneously feeds back information that aids the user's decision-making process (such as error messages or notifications).
+Une interface utilisateur fait référence à une interface utilisateur. Dans le domaine de l'interaction homme-machine, une interface utilisateur est un espace où se produisent des interactions entre l'homme et les machines. Le but de cette interaction est de permettre un fonctionnement et un contrôle efficaces de la machine depuis le côté humain, tandis que la machine renvoie simultanément des informations qui facilitent le processus de prise de décision de l'utilisateur (telles que des messages d'erreur ou des notifications).
+
 
 ## V
 
@@ -328,14 +343,14 @@ A UI refers to a User Interface. In the field of human-computer interaction, a U
 
 ### Webpack
 
-A [JavaScript](#javascript) application that Gatsby uses to bundle your website's code up. This happens automatically on [build](#build).
+Une application [JavaScript] (# javascript) utilisée par Gatsby pour regrouper le code de votre site Web. Cela se produit automatiquement sur [build] (# build).
 
 ## X
 
 ## Y
 
-### Yarn
+### Fils
 
-A [package](#package) manager that some prefer to [NPM](#npm). It is also required for [developing Gatsby](/contributing/setting-up-your-local-dev-environment/#using-yarn).
+Un gestionnaire [package] (# package) que certains préfèrent [NPM] (# npm). Il est également requis pour [développer Gatsby] (/ contribuer / configurer-votre-environnement-dev-local / # using-yarn).
 
 ## Z
