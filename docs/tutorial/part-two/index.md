@@ -35,7 +35,7 @@ Commencez par créer un nouveau site Gatsby. Il est peut-être judicieux (partic
 Ouvrez une nouvelle fenêtre de terminal, créez un nouveau site "hello world", et lancez le serveur de développement:
 
 ```shell
-gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
+gatsby new tutoriel-partie-deux https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd tutorial-part-two
 ```
 
@@ -108,7 +108,7 @@ La structure de votre projet devrait maintenant ressembler à ça :
 2. Importez votre toute nouvelle feuille de style dans le fichier `gatsby-browser.js` :
 
 ```javascript:title=gatsby-browser.js
-import "./src/styles/global.css";
+import "./src/styles/global.css"
 
 // or:
 // require('./src/styles/global.css')
@@ -177,16 +177,16 @@ Vous remarquerez que le nom du fichier ce termine par `.module.css` à la place 
    `src/pages/about-css-modules.js`:
 
 ```javascript:title=src/pages/about-css-modules.js
-import React from "react";
+import React from "react"
 
-import Container from "../components/container";
+import Container from "../components/container"
 
 export default () => (
   <Container>
     <h1>A propos des Modules CSS</h1>
     <p>Les Modules CSS sont cools</p>
   </Container>
-);
+)
 ```
 
 Si vous visitez maintenant `http://localhost:8000/about-css-modules/`, votre page devrait ressembler à ça :
@@ -238,13 +238,13 @@ Dans cette section, vous allez créer une liste de personnes avec des noms, avat
 3. Importez votre nouveau fichier `src/pages/about-css-modules.module.css` dans la page `about-css-modules.js` que vous aviez créé plus tôt en éditant les premières lignes du fichier comme suit :
 
 ```javascript:title=src/pages/about-css-modules.js
-import React from "react";
+import React from "react"
 // highlight-next-line
-import styles from "./about-css-modules.module.css";
-import Container from "../components/container";
+import styles from "./about-css-modules.module.css"
+import Container from "../components/container"
 
 // highlight-next-line
-console.log(styles);
+console.log(styles)
 ```
 
 Le code `console.log(styles)` va logger le résultat de cet import de sorte que vous pouviez voir le résultat généré par le fichier `./about-css-modules.module.css`. Si vous ouvrez la console développeur (en utilisant par exemple l'outil de développement de Firefox ou de Chrome) dans votre navigateur, vous verrez :
@@ -258,11 +258,11 @@ Si vous comparez ce résultat avec votre fichier CSS, vous verrez que chaque cla
 Créez un nouveau composant `<User />` dans votre composant de page `about-css-modules.js`. Modifiez `about-css-modules.js` afin qu'il ressemble à ça :
 
 ```jsx:title=src/pages/about-css-modules.js
-import React from "react";
-import styles from "./about-css-modules.module.css";
-import Container from "../components/container";
+import React from "react"
+import styles from "./about-css-modules.module.css"
+import Container from "../components/container"
 
-console.log(styles);
+console.log(styles)
 
 // highlight-start
 const User = props => (
@@ -273,7 +273,7 @@ const User = props => (
       <p className={styles.excerpt}>{props.excerpt}</p>
     </div>
   </div>
-);
+)
 // highlight-end
 
 export default () => (
@@ -293,7 +293,7 @@ export default () => (
     />
     {/* highlight-end */}
   </Container>
-);
+)
 ```
 
 > Astuce: généralement, si vous utilisez un composant à de nombreux endroits sur votre site, il devrait être placé dans son propre fichier dans le dossier `components`. Cependant, s'il n'est utilisé que dans un fichier, créez-le directement dans ce dernier.
