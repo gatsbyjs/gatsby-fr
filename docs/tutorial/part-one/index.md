@@ -49,7 +49,7 @@ Ouvrez le fichier `src/pages/index.js`. Le code dans ce fichier crée un composa
   <p>Désolé ! Votre navigateur ne supporte pas cette vidéo.</p>
 </video>
 
-> 💡 Gatsby utilise le **reachargement immédiat** pour accélerer votre processus de développement. Lorsque vous exécutez un serveur de développement Gatsby, les fichiers du site Gatsby sont “surveillés” en arrière-plan - chaque fois que vous enregistrez un fichier, vos modifications sont immédiatement reflétées dans le navigateur. Vous n'avez pas besoin d'actualiser la page ou de redémarrer le serveur de développement, vos modifications apparaissent.
+> 💡 Gatsby utilise le **rechargement immédiat** pour accélerer votre processus de développement. Lorsque vous exécutez un serveur de développement Gatsby, les fichiers du site Gatsby sont “surveillés” en arrière-plan - chaque fois que vous enregistrez un fichier, vos modifications sont immédiatement reflétées dans le navigateur. Vous n'avez pas besoin d'actualiser la page ou de redémarrer le serveur de développement, vos modifications apparaissent.
 
 2.  Vous pouvez maintenant rendre vos modifications un peu plus visibles. Essayez de remplacer le code dans `src/pages/index.js` avec le code ci-dessous et enregistrez à nouveau. Vous verrez des modifications dans le texte - la couleur du texte sera violette et la taille de la police sera plus grande.
 
@@ -285,7 +285,7 @@ Vous allez souvent devoir lier des pages entre elles — Regardons d'un peu plus
 
 ### ✋ Utilisation du composant `<Link />`
 
-1.  Ouvrez le composant page index (`src/pages/index.js`), importez le componant `<Link />` depuis Gatsby, ajoutez un composant `<Link />` au-dessus de l'en-tête, et lui donner une propriété `to` avec la valeur `"/contact/"` pour le chemin :
+1.  Ouvrez le composant page index (`src/pages/index.js`), importez le composant `<Link />` depuis Gatsby, ajoutez un composant `<Link />` au-dessus de l'en-tête, et lui donner une propriété `to` avec la valeur `"/contact/"` pour le chemin :
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -301,7 +301,7 @@ export default () => (
   </div>
 )
 ```
-Lorsque vous allez cliquer sur le nouveau lien "Contact" sur la page d'acceuil, vous devriez voir...
+Lorsque vous allez cliquer sur le nouveau lien "Contact" sur la page d'accueil, vous devriez voir...
 
 ![Gatsby dev 404 page](09-dev-404.png)
 
@@ -347,7 +347,7 @@ npm install --global surge
 surge login
 ```
 
-Ensuite, construisez votre site en lancant ces commanes dans votre terminal à la racine de votre site (conseil: vérifiez que vous êtes à la racine de votre site, dans ce cas dans le dossier hello-world, ce que vous pouvez faire en un nouvel onglet dans la même fenêtre où vous aviez lancé `gatsby develop`):
+Ensuite, construisez votre site en lançant ces commandes dans votre terminal à la racine de votre site (conseil: vérifiez que vous êtes à la racine de votre site, dans ce cas dans le dossier hello-world, ce que vous pouvez faire en un nouvel onglet dans la même fenêtre où vous aviez lancé `gatsby develop`):
 
 ```shell
 gatsby build
@@ -355,7 +355,7 @@ gatsby build
 
 La génération devrait prendre 15-30 secondes. Dès que la génération est finie, il est intéressant d'aller voir aux fichiers que la commande `gatsby build` nous a préparé pour le déploiement.
 
-Jetez un coup d'oeil aux fichiers générés en tapant cette commande à la racine de votre site, ce qui vous permettra de voir le dossier `public` :
+Jetez un coup d'œil aux fichiers générés en tapant cette commande à la racine de votre site, ce qui vous permettra de voir le dossier `public` :
 
 ```shell
 ls public
