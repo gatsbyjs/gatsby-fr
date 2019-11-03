@@ -30,7 +30,7 @@ La manière la plus simple d'ajouter des styles globaux est d'utiliser une feuil
 
 #### ✋ Créer un nouveau site Gatsby
 
-Commencez par créer un nouveau site Gatsby. Il est peut-être judicieux (particulièrement si vous êtes débutant en lignes de commandes) de fermer la fenêtre du terminal que vous avez utilisé pour la [première partie](/tutorial/part-one/) et démarrer une nouvelle instance de terminal.
+Commencez par créer un nouveau site Gatsby. Il est peut-être judicieux (particulièrement si vous êtes débutant dans l'utilisation des lignes de commandes) de fermer la fenêtre du terminal que vous avez utilisé pour la [première partie](/tutorial/part-one/) et démarrer une nouvelle instance du terminal.
 
 Ouvrez une nouvelle fenêtre de terminal, créez un nouveau site "hello world", et lancez le serveur de développement:
 
