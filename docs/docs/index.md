@@ -7,12 +7,12 @@ import EmailCaptureForm from "../../www/src/components/email-capture-form"
 
 Gatsby est un générateur de sites modernes et ultra rapide pour React.
 
-## Get Started
+## Débuter
 
 Il y a deux façons pricipales de commencer avec Gatsby :
 
-1. [Tutorial](/tutorial/): Step-by-step instructions on how to install Gatsby and start a project: written for people without Gatsby or web development experience, though these learning resources have helped developers of all skill levels.
-2. [Quick start](/docs/quick-start): One page summary of how to install Gatsby and start a new project.
+1. [Tutoriel](/tutorial/) : Instructions étape par étape pour installer Gatsby et commencer un project (écrit pour les personnes qui n'ont pas de connaissances sur Gatsby ou le dévelopment web, même si ces ressources ont aidé des développeurs de tous niveaux).
+2. [Démarrage rapide](/docs/quick-start) : Une page qui résume comment installer Gatsby et commencer un projet.
 
 ## Go further
 
