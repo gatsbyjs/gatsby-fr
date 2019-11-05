@@ -24,7 +24,7 @@ Si vous oubliez l'URL à la fin, Gatsby générera automatiquement un site pour 
 
 ### ✋ Ouvrez le code
 
-Dans votre éditeur, ouvrez le code généré pour votre site “Hello World” et prenez connaissance des différents répertoires et fichiers contenu dans le projet ‘hello-world’. Ça devrait ressembler a quelque chose comme ça :
+Dans votre éditeur, ouvrez le code généré pour votre site “Hello World” et prenez connaissance des différents répertoires et fichiers contenus dans le projet ‘hello-world’. Ça devrait ressembler à quelque chose comme ça :
 
 ![Projet Hello World dans VS Code](01-hello-world-vscode.png)
 
@@ -49,7 +49,7 @@ Ouvrez le fichier `src/pages/index.js`. Le code dans ce fichier crée un composa
   <p>Désolé ! Votre navigateur ne supporte pas cette vidéo.</p>
 </video>
 
-> 💡 Gatsby utilise le **rechargement immédiat** pour accélerer votre processus de développement. Lorsque vous exécutez un serveur de développement Gatsby, les fichiers du site Gatsby sont “surveillés” en arrière-plan - chaque fois que vous enregistrez un fichier, vos modifications sont immédiatement reflétées dans le navigateur. Vous n'avez pas besoin d'actualiser la page ou de redémarrer le serveur de développement, vos modifications apparaissent.
+> 💡 Gatsby utilise le **rechargement immédiat** pour accélérer votre processus de développement. Lorsque vous exécutez un serveur de développement Gatsby, les fichiers du site Gatsby sont “surveillés” en arrière-plan - chaque fois que vous enregistrez un fichier, vos modifications sont immédiatement reflétées dans le navigateur. Vous n'avez pas besoin d'actualiser la page ou de redémarrer le serveur de développement, vos modifications apparaissent.
 
 2.  Vous pouvez maintenant rendre vos modifications un peu plus visibles. Essayez de remplacer le code dans `src/pages/index.js` avec le code ci-dessous et enregistrez à nouveau. Vous verrez des modifications dans le texte - la couleur du texte sera violette et la taille de la police sera plus grande.
 
@@ -99,7 +99,7 @@ export default () => (
 
 ### Attendez… De l'HTML dans notre JavaScript?
 
-_Si vous êtes familier avec React et JSX, n'hésitez pas alors à passer cette section.._ Si vous n’avez jamais utilisé le framework React auparavant, vous vous demandez peut-être ce que HTML fait dans une fonction JavaScript. Ou pourquoi nous importons `react` sur la première ligne mais ne l’utilisons apparemment pas nulle part. Cet façon hybride «HTML-in-JS» est en fait une extension de syntaxe de JavaScript pour React, appelée JSX. Vous pouvez suivre ce tutoriel sans expérience préalable de React, mais si vous êtes curieux, voici un bref aperçu…
+_Si vous êtes familier avec React et JSX, n'hésitez pas alors à passer cette section.._ Si vous n’avez jamais utilisé le framework React auparavant, vous vous demandez peut-être ce que HTML fait dans une fonction JavaScript. Ou pourquoi nous importons `react` sur la première ligne, mais ne l’utilisons apparemment pas nulle part. Cette façon hybride «HTML-in-JS» est en fait une extension de syntaxe de JavaScript pour React, appelée JSX. Vous pouvez suivre ce tutoriel sans expérience préalable de React, mais si vous êtes curieux, voici un bref aperçu…
 
 Considérons le contenu original du fichier `src/pages/index.js`:
 
@@ -117,7 +117,7 @@ import React from "react"
 export default () => React.createElement("div", null, "Hello world!")
 ```
 
-Vous pouvez maintenant voir l’utilisation de l’importation `'react'`! Mais attendez. Vous écrivez en JSX, et non pas en HTML pur et en JavaScript. Comment le navigateur lit-il cela? La réponse courte: ce n’est pas le cas. Les sites Gatsby sont fournis avec des outils déjà configurés pour convertir votre code source en quelque chose que les navigateurs peuvent interpréter.
+Vous pouvez maintenant voir l’utilisation de l’import `'react'`! Mais attendez. Vous écrivez en JSX, et non pas en HTML pur et en JavaScript. Comment le navigateur lit-il cela? La réponse courte: ce n’est pas le cas. Les sites Gatsby sont fournis avec des outils déjà configurés pour convertir votre code source en quelque chose que les navigateurs peuvent interpréter.
 
 ## Construire avec des composants
 
@@ -330,7 +330,7 @@ Après avoir enregistré le fichier, vous devriez voir la page de contact et êt
   <p>Désolé ! Votre navigateur ne supporte pas cette vidéo.</p>
 </video>
 
-Le component Gatsby `<Link />` permet de lier différentes pages de votre site. Pour les liens externes non géré par votre site Gatsby, utilisez la balise HTML par défaut `<a>`.
+Le composant Gatsby `<Link />` permet de lier différentes pages de votre site. Pour les liens externes non gérés par votre site Gatsby, utilisez la balise HTML par défaut `<a>`.
 
 ## Déployer un site Gatsby
 
@@ -377,10 +377,10 @@ Ouvrez l'adresse donnée sur la ligne du bas (`lowly-pain.surge.sh` dans ce cas)
 
 Dans cette section, vous :
 
-- Avez appris sur les générateurs de Gatsby, et comment les utiliser pour créer des nouveaux projets
-- Avez appris sur la syntaxe de JSX
-- Avez appris sur les composants
-- Avez appris sur les composants et sous-composants de pages Gatsby
-- Avez appris sur les “props” React et la réutilisation de composants React
+- Avez découvert les starters de Gatsby, et comment les utiliser pour créer des nouveaux projets
+- Avez découvert la syntaxe de JSX
+- Avez découvert les composants
+- Avez découvert les composants et sous-composants de pages Gatsby
+- Avez découvert les “props” React et la réutilisation de composants React
 
-Maintenant, continuez avec [**ajouter du styles à votre site**](/tutorial/part-two/)!
+Maintenant, continuez avec [**ajouter des styles à votre site**](/tutorial/part-two/)!
