@@ -28,8 +28,8 @@ Il y a deux façons pricipales de commencer avec Gatsby :
 
 3. Jetez un coup d'oeil à l'[eco-système](/ecosystem/) de bibliothèques de pack de démarrage Gatsby et de plugins, ainsi que les ressources externes de la communauté.
 
-## Start contributing
+## Commencez à contribuer
 
-Visit the [Contributing](/contributing/) section to find guides on the Gatsby community, code of conduct, and how to get started contributing to Gatsby.
+Visitez la section [Contribution](/contributing/) pour trouver des guides sur la communauté Gatsby, le code de conduite, et comment commencer à contribuer à gatsby.
 
-<EmailCaptureForm signupMessage="Want to keep up with the latest tips &amp; tricks? Subscribe to our newsletter!" />
+<EmailCaptureForm signupMessage="Vous souhaitez restez au courrant des derniers trucs et astuces ? Inscrivez-vous à la newsletter !" />
