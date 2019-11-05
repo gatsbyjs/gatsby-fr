@@ -32,4 +32,4 @@ Il y a deux façons principales de commencer avec Gatsby :
 
 Visitez la section [Contribution](/contributing/) pour trouver des guides sur la communauté Gatsby, le code de conduite, et comment commencer à contribuer à Gatsby.
 
-<EmailCaptureForm signupMessage="Vous souhaitez restez au courrant des derniers trucs et astuces ? Inscrivez-vous à la newsletter !" />
+<EmailCaptureForm signupMessage="Vous souhaitez restez au courant des derniers trucs et astuces ? Inscrivez-vous à la newsletter !" />
