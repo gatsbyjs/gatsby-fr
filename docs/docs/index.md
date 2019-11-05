@@ -26,7 +26,7 @@ Il y a deux façons pricipales de commencer avec Gatsby :
    - [Fonctionnement interne de Gatsby](/docs/gatsby-internals/) : Plongez dans le fonctionnement interne de Gatsby.
    - [Utiliser Gatsby de façon professionnelle](/docs/using-gatsby-professionally/) : Apprenez des trucs et astuces pour vous aider à expliquer Gatsby aux autres à votre travail pour que vous ayez plus d'opportunité d'utiliser Gatsby de façon professionnelle.
 
-3. Jetez un coup d'oeil à l'[eco-système](/ecosystem/) de library, de packs de démarrage Gatsby et de plugins, ainsi qu'aux ressources externes de la communauté.
+3. Jetez un coup d'oeil à l'[eco-système](/ecosystem/) de libraries, de starters Gatsby et de plugins, ainsi qu'aux ressources externes de la communauté.
 
 ## Commencez à contribuer
 
