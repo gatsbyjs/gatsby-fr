@@ -9,7 +9,7 @@ Gatsby est un générateur de sites modernes et ultra rapide pour React.
 
 ## Débuter
 
-Il y a deux façons pricipales de commencer avec Gatsby :
+Il y a deux façons principales de commencer avec Gatsby :
 
 1. [Tutoriel](/tutorial/) : Des instructions étape par étape pour installer Gatsby et commencer un project (écrit pour les personnes qui n'ont pas de connaissances sur Gatsby ou le dévelopment web, même si ces ressources ont aidé des développeurs de tous niveaux).
 2. [Démarrage rapide](/docs/quick-start) : Une page qui résume comment installer Gatsby et commencer un projet.
