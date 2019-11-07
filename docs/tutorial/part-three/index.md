@@ -1,34 +1,34 @@
 ---
-title: Creating Nested Layout Components
+title: Créer des composants de présentation imbriqués
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Welcome to part three!
+Bienvenue dans cette partie trois !
 
-## What's in this tutorial?
+## Que contient ce tutoriel ?
 
-In this part, you'll learn about Gatsby plugins and creating "layout" components.
+Dans cette partie vous allez apprendre ce que sont les plugins de Gatsby et comment créer des composants de "présentation" imbriqués.
 
-Gatsby plugins are JavaScript packages that help add functionality to a Gatsby site. Gatsby is designed to be extensible, which means plugins are able to extend and modify just about everything Gatsby does.
+Les plugins de Gatsby sont des packages JavaScript qui vous aident à rajouter des fonctionnalités à votre site Gatsby. Gatsby a été conçu pour être extensible, ce qui signifie que les plugins sont capables d'étendre ou modifier absolument tout ce que Gatsby peut faire.
 
-Layout components are for sections of your site that you want to share across multiple pages. For example, sites will commonly have a layout component with a shared header and footer. Other common things to add to layouts are a sidebar and/or navigation menu. On this page for example, the header at the top is part of gatsbyjs.org's layout component.
+Les composants de présentation sont destinés à des parties de votre site que vous voulez partager dans plusieurs pages. Par exemple, les sites vont souvent avoir un composant de présentation avec un en-tête et un pied de page partagé. D'autres choses sont couramment intégrées à des éléments de présentation comme les barres latérales et/ou les menus de navigation. Sur cette page par exemple, l'en-tête fait partie du composant de présentation de gatsby.org.
 
-Let's dive into part three.
+Attaquons-nous à cette partie trois.
 
-## Using plugins
+## Utiliser des plugins
 
-You’re probably familiar with the idea of plugins. Many software systems support adding custom plugins to add new functionality or even modify the core workings of the software. Gatsby plugins work the same way.
+Vous êtes très certainement familier avec cette idée de plugins. De nombreux logiciels supportent l'ajout de plugins personnalisés pour ajouter de nouvelles fonctionnalités ou même modifier le fonctionnement interne du logiciel. Les plugins de Gatsby fonctionnent de la même façon.
 
-Community members (like you!) can contribute plugins (small amounts of JavaScript code) that others can then use when building Gatsby sites.
+Des membres de la communauté (comme vous !) peuvent écrire des plugins (une petite quantité de code JavaScript) que d'autres peuvent alors utiliser lors de la création de sites Gatsby.
 
-> There are already hundreds of plugins! Explore the Gatsby [Plugin Library](/plugins/).
+> Il y a déjà des centaines de plugins ! Explorez la [librairie de plugins](/plugins/).
 
-Our goal with plugins is to make them straightforward to install and use. You will likely be using plugins in almost every Gatsby site you build. While working through the rest of the tutorial you’ll have many opportunities to practice installing and using plugins.
+Notre objectif est de rendre les plugins faciles à installer et à utiliser. Vous allez vraisemblablement utiliser des plugins dans chacun des sites Gatsby que vous allez créer. En travaillant sur le reste du tutoriel, vous aurez de nombreuses occasions de pratiquer l'installation et l'utilisation de plugins.
 
-For an initial introduction to using plugins, we'll install and implement the Gatsby plugin for Typography.js.
+Pour une première introduction à l'utilisation des plugins nous allons installer et implémenter le plugin Typography.js de Gatsby.
 
-[Typography.js](https://kyleamathews.github.io/typography.js/) is a JavaScript library which generates global base styles for your site's typography. The library has a [corresponding Gatsby plugin](/packages/gatsby-plugin-typography/) to streamline using it in a Gatsby site.
+[Typography.js](https://kyleamathews.github.io/typography.js/) est une librairie JavaScript qui génère un style global de base pour la typographie de votre site. La librairie a un [plugin Gqtsby correspondant](/packages/gatsby-plugin-typography/) pour faciliter son utilisation dans un site Gatsby.
 
 ### ✋ Create a new Gatsby site
 
