@@ -1,57 +1,57 @@
 ---
-title: Creating Nested Layout Components
+title: Créer des composants de présentation imbriqués
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Welcome to part three!
+Bienvenue dans cette partie trois !
 
-## What's in this tutorial?
+## Que contient ce tutoriel ?
 
-In this part, you'll learn about Gatsby plugins and creating "layout" components.
+Dans cette partie vous allez apprendre ce que sont les plugins de Gatsby et comment créer des composants de "présentation" imbriqués.
 
-Gatsby plugins are JavaScript packages that help add functionality to a Gatsby site. Gatsby is designed to be extensible, which means plugins are able to extend and modify just about everything Gatsby does.
+Les plugins de Gatsby sont des packages JavaScript qui vous aident à rajouter des fonctionnalités à votre site Gatsby. Gatsby a été conçu pour être extensible, ce qui signifie que les plugins sont capables d'étendre ou modifier absolument tout ce que Gatsby peut faire.
 
-Layout components are for sections of your site that you want to share across multiple pages. For example, sites will commonly have a layout component with a shared header and footer. Other common things to add to layouts are a sidebar and/or navigation menu. On this page for example, the header at the top is part of gatsbyjs.org's layout component.
+Les composants de présentation sont destinés à des parties de votre site que vous voulez partager dans plusieurs pages. Par exemple, les sites vont souvent avoir un composant de présentation avec un en-tête et un pied de page partagé. D'autres choses sont couramment intégrées à des éléments de présentation comme les barres latérales et/ou les menus de navigation. Sur cette page par exemple, l'en-tête fait partie du composant de présentation de gatsby.org.
 
-Let's dive into part three.
+Attaquons-nous à cette partie trois.
 
-## Using plugins
+## Utiliser des plugins
 
-You’re probably familiar with the idea of plugins. Many software systems support adding custom plugins to add new functionality or even modify the core workings of the software. Gatsby plugins work the same way.
+Vous êtes très certainement familier avec cette idée de plugins. De nombreux logiciels supportent l'ajout de plugins personnalisés pour ajouter de nouvelles fonctionnalités ou même modifier le fonctionnement interne du logiciel. Les plugins de Gatsby fonctionnent de la même façon.
 
-Community members (like you!) can contribute plugins (small amounts of JavaScript code) that others can then use when building Gatsby sites.
+Des membres de la communauté (comme vous !) peuvent écrire des plugins (une petite quantité de code JavaScript) que d'autres peuvent alors utiliser lors de la création de sites Gatsby.
 
-> There are already hundreds of plugins! Explore the Gatsby [Plugin Library](/plugins/).
+> Il y a déjà des centaines de plugins ! Explorez la [librairie de plugins](/plugins/).
 
-Our goal with plugins is to make them straightforward to install and use. You will likely be using plugins in almost every Gatsby site you build. While working through the rest of the tutorial you’ll have many opportunities to practice installing and using plugins.
+Notre objectif est de rendre les plugins faciles à installer et à utiliser. Vous allez vraisemblablement utiliser des plugins dans chacun des sites Gatsby que vous allez créer. En travaillant sur le reste du tutoriel, vous aurez de nombreuses occasions de pratiquer l'installation et l'utilisation de plugins.
 
-For an initial introduction to using plugins, we'll install and implement the Gatsby plugin for Typography.js.
+Pour une première introduction à l'utilisation des plugins nous allons installer et implémenter le plugin Typography.js de Gatsby.
 
-[Typography.js](https://kyleamathews.github.io/typography.js/) is a JavaScript library which generates global base styles for your site's typography. The library has a [corresponding Gatsby plugin](/packages/gatsby-plugin-typography/) to streamline using it in a Gatsby site.
+[Typography.js](https://kyleamathews.github.io/typography.js/) est une librairie JavaScript qui génère un style global de base pour la typographie de votre site. La librairie a un [plugin Gatsby correspondant](/packages/gatsby-plugin-typography/) pour faciliter son utilisation dans un site Gatsby.
 
-### ✋ Create a new Gatsby site
+### ✋ Créer un nouveau site Gatsby
 
-As we mentioned in [part two](/tutorial/part-two/), at this point it's probably a good idea to close the terminal window(s) and project files from previous parts of the tutorial, to keep things clean on your desktop. Then open a new terminal window and run the following commands to create a new Gatsby site in a directory called `tutorial-part-three` and then move to this new directory:
+Comme nous l'avons indiqué dans [la partie deux](/tutorial/part-two/), il est sans doute préférable de fermer la ou les fenêtres de votre terminal ainsi que les fichiers des projets des précédentes parties du tutoriel, pour faire le ménage sur votre poste de travail. Ouvrez ensuite une nouvelle fenêtre de terminal et lancez la commande suivante pour créer un nouveau dossier appelé `tutoriel-partie-trois` et entrer dans ce nouveau dossier.
 
 ```shell
-gatsby new tutorial-part-three https://github.com/gatsbyjs/gatsby-starter-hello-world
-cd tutorial-part-three
+gatsby new tutoriel-partie-trois https://github.com/gatsbyjs/gatsby-starter-hello-world
+cd tutoriel-partie-trois
 ```
 
-### ✋ Install and configure `gatsby-plugin-typography`
+### ✋ Installer et configurer `gatsby-plugin-typography`
 
-There are two main steps to using a plugin: Installing and configuring.
+Il y a deux étapes principales pour utiliser un plugin : l'installation et la configuration.
 
-1. Install the `gatsby-plugin-typography` NPM package.
+1. Installez le paquet NPM `gatsby-plugin-typography`.
 
 ```shell
 npm install --save gatsby-plugin-typography react-typography typography typography-theme-fairy-gates
 ```
 
-> Note: Typography.js requires a few additional packages, so those are included in the instructions. Additional requirements like this will be listed in the "install" instructions of each plugin.
+> Note: Typography.js nécessite quelques paquets additionnels qui sont intégrés dans cette commande. Les besoins additionnels de la sorte seront listés dans la commande "install" de chaque plugin.
 
-2. Edit the file `gatsby-config.js` at the root of your project to the following:
+2. Modifiez le fichier `gatsby-config.js` à la racine de votre dossier comme suit:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -66,11 +66,11 @@ module.exports = {
 }
 ```
 
-The `gatsby-config.js` is another special file that Gatsby will automatically recognize. This is where you add plugins and other site configuration.
+Le fichier `gatsby-config.js` est un autre de ces fichiers spéciaux que Gatsby va reconnaître automatiquement. C'est à cet endroit que vous ajoutez les plugins et autres configurations de votre site.
 
-> Check out the [doc on gatsby-config.js](/docs/gatsby-config/) to read more, if you wish.
+> Consultez la [doc sur gatsby-config.js](/docs/gatsby-config/) pour en lire davantage, si vous le souhaitez.
 
-3. Typography.js needs a configuration file. Create a new directory called `utils` in the `src` directory. Then add a new file called `typography.js` to `utils` and copy the following into the file:
+3. Typography.js a besoin d'un fichier de configuration. Créez un nouveau répertoire intitulé `utils` dans le dossier `src`. Ajoutez ensuite un nouveau fichier intitulé `typography.js` dans le dossier `utils` et copiez-y ce qui suit :
 
 ```javascript:title=src/utils/typography.js
 import Typography from "typography"
@@ -82,41 +82,42 @@ export const { scale, rhythm, options } = typography
 export default typography
 ```
 
-4. Start the development server.
+4. Démarrez votre serveur de développement.
 
 ```shell
 gatsby develop
 ```
 
-Once you load the site, if you inspect the generated HTML using the Chrome developer tools, you’ll see that the typography plugin added a `<style>` element to the `<head>` element with its generated CSS:
+Lorsque vous chargez votre site, si vous inspectez le fichier HTML généré en utilisant les outils de développement de Chrome, vous constaterez que le plugin typography a ajouté une balise `<style>` dans la balise `<head>` avec le CSS qui a été généré :
 
 ![typography-styles](typography-styles.png)
 
-### ✋ Make some content and style changes
+### ✋ Créer du contenu et changer les styles
 
-Copy the following into your `src/pages/index.js` so you can see the
-effect of the CSS generated by Typography.js better.
+Copiez ce qui suit dans votre fichier `src/pages/index.js` de sorte à ce que vous puissiez mieux constater les effets sur le CSS généré.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
 
 export default () => (
   <div>
-    <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
+    <h1>
+      Salut ! Je suis en train de créer un faux site Gatsby dans le cadre d'un
+      tutoriel !
+    </h1>
     <p>
-      What do I like to do? Lots of course but definitely enjoy building
-      websites.
+      Qu'est ce que j'aime faire ? C'est beaucoup de formations mais j'aime
+      vraiment créer des sites web.
     </p>
   </div>
 )
 ```
 
-Your site should now look like this:
+Votre site devrait ressembler à ça :
 
 ![no-layout](no-layout.png)
 
-Let's make a quick improvement. Many sites have a single column of text centered in the middle of the page. To create this, add the following styles to the
-`<div>` in `src/pages/index.js`.
+Faisons une rapide amélioration. De nombreux sites disposent d'une colonne de texte centrée au milieu de la page. Pour créer cela, ajoutez le style suivant à votre `<div>` dans `src/pages/index.js`.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -124,10 +125,13 @@ import React from "react"
 export default () => (
   // highlight-next-line
   <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
-    <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
+    <h1>
+      Salut ! Je suis en train de créer un faux site Gatsby dans le cadre d'un
+      tutoriel !
+    </h1>
     <p>
-      What do I like to do? Lots of course but definitely enjoy building
-      websites.
+      Qu'est ce que j'aime faire ? C'est beaucoup de formations mais j'aime
+      vraiment créer des sites web.
     </p>
   </div>
 )
@@ -135,19 +139,22 @@ export default () => (
 
 ![with-layout2](with-layout2.png)
 
-Sweet. You've installed and configured your very first Gatsby plugin!
+Super. Vous avez installé et configuré votre tout premier plugin Gatsby !
 
-## Creating layout components
+## Créer un composant de présentation
 
-Now let's move on to learning about layout components. To get ready for this part, add a couple new pages to your project: an about page and a contact page.
+Passons maintenant à l'apprentissage des composants de présentation. Pour vous préparer à cette partie, ajoutez quelques pages à votre projet : une page à propos et une page de contact.
 
 ```jsx:title=src/pages/about.js
 import React from "react"
 
 export default () => (
   <div>
-    <h1>About me</h1>
-    <p>I’m good enough, I’m smart enough, and gosh darn it, people like me!</p>
+    <h1>À propos de moi</h1>
+    <p>
+      Je suis plutôt bon, je suis plutôt intelligent, et bon sang, les gens
+      m'aiment !
+    </p>
   </div>
 )
 ```
@@ -157,7 +164,9 @@ import React from "react"
 
 export default () => (
   <div>
-    <h1>I'd love to talk! Email me at the address below</h1>
+    <h1>
+      J'aimerais beaucoup discuter ! Envoyez-moi vos messages à cette adresse.
+    </h1>
     <p>
       <a href="mailto:me@example.com">me@example.com</a>
     </p>
@@ -165,19 +174,19 @@ export default () => (
 )
 ```
 
-Let's see what the new about page looks like:
+Regardons à quoi ressemble cette nouvelle page "à propos" :
 
 ![about-uncentered](about-uncentered.png)
 
-Hmm. It would be nice if the content of the two new pages were centered like the index page. And it would be nice to have some sort of global navigation so it's easy for visitors to find and visit each of the sub-pages.
+Mmh. Cela serait bien si le contenu de nos deux nouvelles pages était centré comme sur notre page d'index. Cela serait également bien d'avoir une sorte de navigation globale de manière à ce qu'il soit facile pour les visiteurs de trouver et visiter chaque sous-page.
 
-You'll tackle these changes by creating your first layout component.
+Vous allez vous attaquer à ces changements en créant votre premier composant de présentation.
 
-### ✋ Create your first layout component
+### ✋ Créer votre premier composant de présentation
 
-1. Create a new directory at `src/components`.
+1. Créez un nouveau répertoire `src/components`.
 
-2. Create a very basic layout component at `src/components/layout.js`:
+2. Créez un composant de présentation très basique dans `src/components/layout.js`:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -189,7 +198,7 @@ export default ({ children }) => (
 )
 ```
 
-3. Import this new layout component into your `src/pages/index.js` page component:
+3. Importez ce nouveau composant de présentation dans votre composant de page `src/pages/index.js` :
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -197,10 +206,11 @@ import Layout from "../components/layout" // highlight-line
 
 export default () => (
   <Layout> {/* highlight-line */}
-    <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
+    <h1>Salut ! Je suis en train de créer un faux site Gatsby dans le cadre d'un
+              tutoriel !</h1>
     <p>
-      What do I like to do? Lots of course but definitely enjoy building
-      websites.
+      Qu'est ce que j'aime faire ? C'est beaucoup de formations mais j'aime vraiment créer des
+            sites web.
     </p>
   </Layout> {/* highlight-line */}
 )
@@ -208,36 +218,36 @@ export default () => (
 
 ![with-layout2](with-layout2.png)
 
-Sweet, the layout is working! The content of your index page is still centered.
+Super. La présentation marche ! Le contenu de votre page d'accueil est toujours centré.
 
-But try navigating to `/about/`, or `/contact/`. The content on those pages still won't be centered.
+Mais essayez d'aller sur `/about/`, ou `/contact/`. Le contenu de ces pages n'est toujours pas centré.
 
-4. Import the layout component in `about.js` and `contact.js` (as you did for `index.js` in the previous step).
+4. Importez le composant de mise en page dans `about.js` et `contact.js` (comme vous l'avez fait dans `index.js` à l'étape précédente).
 
-The content of all three of your pages is centered thanks to this single shared layout component!
+Le contenu de vos trois pages est maintenant centré grâce à cet unique composant de présentation partagé!
 
-### ✋ Add a site title
+### ✋ Ajouter un titre au site
 
-1. Add the following line to your new layout component:
+1. Ajoutez la ligne suivante dans votre composant de présentation :
 
 ```jsx:title=src/components/layout.js
 import React from "react"
 
 export default ({ children }) => (
   <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
-    <h3>MySweetSite</h3> {/* highlight-line */}
+    <h3>MonSuperSite</h3> {/* highlight-line */}
     {children}
   </div>
 )
 ```
 
-If you go to any of your three pages, you'll see the same title added, e.g. the `/about/` page:
+Si vous allez dans chacune de vos trois pages, vous verrez que le même titre a été ajouté, comme par exemple dans la page `/about/` :
 
 ![with-title](with-title.png)
 
-### ✋ Add navigation links between pages
+### ✋ Ajouter des liens de navigation entre les pages
 
-1. Copy the following into your layout component file:
+1. Copiez ce qui suit dans votre composant de présentation :
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -259,8 +269,8 @@ export default ({ children }) => (
         <h3 style={{ display: `inline` }}>MySweetSite</h3>
       </Link>
       <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/">Home</ListLink>
-        <ListLink to="/about/">About</ListLink>
+        <ListLink to="/">Accuei</ListLink>
+        <ListLink to="/about/">À propos</ListLink>
         <ListLink to="/contact/">Contact</ListLink>
       </ul>
     </header>
@@ -272,10 +282,10 @@ export default ({ children }) => (
 
 ![with-navigation2](with-navigation2.png)
 
-And there you have it! A three page site with basic global navigation.
+Et voilà ! Maintenant vous avez un site de trois pages avec un menu de navigation de base.
 
-_Challenge:_ With your new "layout component" powers, trying adding headers, footers, global navigation, sidebars, etc. to your Gatsby sites!
+_Challenge:_ Avec vos nouveaux pouvoirs de "composants de présentation", essayez d'ajouter à votre site Gatsby des en-têtes, pieds de page, menus de navigation, barres latérales, etc.
 
-## What's coming next?
+## Quelle est la suite ?
 
-Continue on to [part four of the tutorial](/tutorial/part-four/) where you'll start learning about Gatsby's data layer and programmatically creating pages!
+Continuez sur la [partie quatre de ce tutoriel](/tutorial/part-four/) où vous commencerez à en apprendre plus sur la couche de données de Gatsby et la création programmatique de pages !
