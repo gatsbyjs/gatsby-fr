@@ -1,33 +1,30 @@
 ---
-title: Data in Gatsby
+title: Données dans Gatsby
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Welcome to Part Four of the tutorial! Halfway through! Hope things are starting
-to feel pretty comfortable 😀
+Bienvenue dans la partie quatre du tutoriel ! Vous êtes à la moitié du chemin ! 
+J'espère que vous commencez à vous sentir assez à l'aise 😀
 
-## Recap of the first half of the tutorial
+## Récap de la première moitié du tutoriel
 
-So far, you've been learning how to use React.js—how powerful it is to be able to
-create your _own_ components to act as custom building blocks for websites.
+Jusqu'à maintenant, vous avez appris comment utiliser ReactJS — Comment ça peut-être puissant de créer _ses_ propres composants pour construire les blocs de construction de son site web.
 
-You’ve also explored styling components using CSS Modules.
+Vous avez également exploré les composants de style à l'aide de modules CSS.
 
-## What's in this tutorial?
+## Que contient ce tutoriel ?
 
-In the next four parts of the tutorial (including this one), you'll be diving into the Gatsby data layer, which is a powerful feature of Gatsby that lets you easily build sites from Markdown, WordPress, headless CMSs, and other data sources of all flavors.
+Dans les quatres prochaines parties de ce tutoriel (incluant celui-ci), vous allez découvrir la couche donnée de Gatsby, qui est une des puissantes fonctionnalités de Gatsby qui vous permet de construire des sites depuis du Markdown, WordPress, Headless CMS, et d'autres types de données venant de possiblement n'importe quelle source.
 
-**NOTE:** Gatsby’s data layer is powered by GraphQL. For an in-depth tutorial on
-GraphQL, we recommend [How to GraphQL](https://www.howtographql.com/).
+**NOTE:** La couche donnée de Gatsby est propulsée par GraphQL. Pour un tutoriel en profondeur sur GraphQL, nous vous recommandons [Comment GraphQL](https://www.howtographql.com/).
 
-## Data in Gatsby
+## Données dans Gatsby
 
-A website has four parts: HTML, CSS, JS, and data. The first half of the
-tutorial focused on the first three. Now let’s learn how to use data in Gatsby
-sites.
+Un site web possède quatres parties : HTML, CSS, JS, et les données. La première moitié du tutoriel est basée sur les trois premiers. Maintenant commençons à apprendre à utiliser les données dans les sites Gatsby.
 
-**What is data?**
+**Qu'est ce que c'est que les données?**
+
 
 A very computer science-y answer would be: data is things like `"strings"`,
 integers (`42`), objects (`{ pizza: true }`), etc.
