@@ -28,11 +28,11 @@ Notre objectif est de rendre les plugins faciles à installer et à utiliser. Vo
 
 Pour une première introduction à l'utilisation des plugins nous allons installer et implémenter le plugin Typography.js de Gatsby.
 
-[Typography.js](https://kyleamathews.github.io/typography.js/) est une librairie JavaScript qui génère un style global de base pour la typographie de votre site. La librairie a un [plugin Gqtsby correspondant](/packages/gatsby-plugin-typography/) pour faciliter son utilisation dans un site Gatsby.
+[Typography.js](https://kyleamathews.github.io/typography.js/) est une librairie JavaScript qui génère un style global de base pour la typographie de votre site. La librairie a un [plugin Gatsby correspondant](/packages/gatsby-plugin-typography/) pour faciliter son utilisation dans un site Gatsby.
 
 ### ✋ Créer un nouveau site Gatsby
 
-Comme nous l'avons indiqué dans [la partie deux](/tutorial/part-two/), à l'heure actuelle il est sans doute préférable de fermer la ou les fenêtres de votre terminal ainsi que les fichiers des projets des précédentes parties du tutoriel, pour faire le ménage sur votre poste de travail. Ouvrez ensuite une nouvelle fenêtre de terminal et lancez la commande suivante pour créer un nouveau dossier appelé `tutoriel-partie-trois` et entrer dans ce nouveau dossier.
+Comme nous l'avons indiqué dans [la partie deux](/tutorial/part-two/), il est sans doute préférable de fermer la ou les fenêtres de votre terminal ainsi que les fichiers des projets des précédentes parties du tutoriel, pour faire le ménage sur votre poste de travail. Ouvrez ensuite une nouvelle fenêtre de terminal et lancez la commande suivante pour créer un nouveau dossier appelé `tutoriel-partie-trois` et entrer dans ce nouveau dossier.
 
 ```shell
 gatsby new tutoriel-partie-trois https://github.com/gatsbyjs/gatsby-starter-hello-world
@@ -51,7 +51,7 @@ npm install --save gatsby-plugin-typography react-typography typography typograp
 
 > Note: Typography.js nécessite quelques paquets additionnels qui sont intégrés dans cette commande. Les besoins additionnels de la sorte seront listés dans la commande "install" de chaque plugin.
 
-2. Modifez le fichier `gatsby-config.js` à la racine de votre dossier comme suit:
+2. Modifiez le fichier `gatsby-config.js` à la racine de votre dossier comme suit:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -66,7 +66,7 @@ module.exports = {
 }
 ```
 
-Le fichier `gatsby-config.js` est un autre de ces fichiers spéciaux que Gatsby va reconnaître automatiquement. C'est à cette endroit que vous ajoutez les plugins et autres configurations de votre site.
+Le fichier `gatsby-config.js` est un autre de ces fichiers spéciaux que Gatsby va reconnaître automatiquement. C'est à cet endroit que vous ajoutez les plugins et autres configurations de votre site.
 
 > Consultez la [doc sur gatsby-config.js](/docs/gatsby-config/) pour en lire davantage, si vous le souhaitez.
 
@@ -106,8 +106,8 @@ export default () => (
       tutoriel !
     </h1>
     <p>
-      A quoi je ressemble ? Beaucoup de formation mais j'aime vraiment créer des
-      sites web.
+      Qu'est ce que j'aime faire ? C'est beaucoup de formations mais j'aime
+      vraiment créer des sites web.
     </p>
   </div>
 )
@@ -130,8 +130,8 @@ export default () => (
       tutoriel !
     </h1>
     <p>
-      A quoi je ressemble ? Beaucoup de formation mais j'aime vraiment créer des
-      sites web.
+      Qu'est ce que j'aime faire ? C'est beaucoup de formations mais j'aime
+      vraiment créer des sites web.
     </p>
   </div>
 )
@@ -143,7 +143,7 @@ Super. Vous avez installé et configuré votre tout premier plugin Gatsby !
 
 ## Créer un composant de présentation
 
-Passons maintenant à l'apprentissage des composants de presentation. Pour vous preparer à cette partie, ajoutez quelques pages à votre projet : une page à propos et une page de contact.
+Passons maintenant à l'apprentissage des composants de présentation. Pour vous préparer à cette partie, ajoutez quelques pages à votre projet : une page à propos et une page de contact.
 
 ```jsx:title=src/pages/about.js
 import React from "react"
@@ -152,7 +152,7 @@ export default () => (
   <div>
     <h1>À propos de moi</h1>
     <p>
-      Je suis plutôt bon, je suis plutôt intelligeant, et bon sang, les gens
+      Je suis plutôt bon, je suis plutôt intelligent, et bon sang, les gens
       m'aiment !
     </p>
   </div>
@@ -165,7 +165,7 @@ import React from "react"
 export default () => (
   <div>
     <h1>
-      J'aimerais beaucoup discuter ! Envoyez moi des mails à cette adresse.
+      J'aimerais beaucoup discuter ! Envoyez-moi vos messages à cette adresse.
     </h1>
     <p>
       <a href="mailto:me@example.com">me@example.com</a>
@@ -174,7 +174,7 @@ export default () => (
 )
 ```
 
-Regardons à quoi ressemble cette nouvelle page à propos :
+Regardons à quoi ressemble cette nouvelle page "à propos" :
 
 ![about-uncentered](about-uncentered.png)
 
@@ -209,7 +209,7 @@ export default () => (
     <h1>Salut ! Je suis en train de créer un faux site Gatsby dans le cadre d'un
               tutoriel !</h1>
     <p>
-      Qu'est ce que j'aime faire ? Beaucoup de formation mais j'aime vraiment créer des
+      Qu'est ce que j'aime faire ? C'est beaucoup de formations mais j'aime vraiment créer des
             sites web.
     </p>
   </Layout> {/* highlight-line */}
@@ -218,9 +218,9 @@ export default () => (
 
 ![with-layout2](with-layout2.png)
 
-Super. La présentation marche! Le contenu de votre page d'accueil est toujours centré.
+Super. La présentation marche ! Le contenu de votre page d'accueil est toujours centré.
 
-Mais essayez d'aller sur `/about/`, ou `/contact/`. Le contenu des ces pages n'est toujours pas centré.
+Mais essayez d'aller sur `/about/`, ou `/contact/`. Le contenu de ces pages n'est toujours pas centré.
 
 4. Importez le composant de mise en page dans `about.js` et `contact.js` (comme vous l'avez fait dans `index.js` à l'étape précédente).
 
@@ -241,7 +241,7 @@ export default ({ children }) => (
 )
 ```
 
-Si vous allez dans chacune de vos trois pages, vous verrez que le même titre a été ajouté, comme par exemple la page `/about/` :
+Si vous allez dans chacune de vos trois pages, vous verrez que le même titre a été ajouté, comme par exemple dans la page `/about/` :
 
 ![with-title](with-title.png)
 
@@ -282,10 +282,10 @@ export default ({ children }) => (
 
 ![with-navigation2](with-navigation2.png)
 
-Et voilà ! Maintenant vous avez un site de trois pages avec un ;enu de navigation de base.
+Et voilà ! Maintenant vous avez un site de trois pages avec un menu de navigation de base.
 
-_Challenge:_ Avec vos nouveaux pouvoirs de "composants de présentation", essayez d'ajouter à votre site Gqtsby des en-tête, pieds de pages, menus de navigation, barres latérales, etc.
+_Challenge:_ Avec vos nouveaux pouvoirs de "composants de présentation", essayez d'ajouter à votre site Gatsby des en-têtes, pieds de page, menus de navigation, barres latérales, etc.
 
 ## Quelle est la suite ?
 
-Continuez sur la [partie quatre de ce tutoriel](/tutorial/part-four/) où vous commencerez à en apprendre plus sur la couche de données de Gqtsby et la création programmatique de pages !
+Continuez sur la [partie quatre de ce tutoriel](/tutorial/part-four/) où vous commencerez à en apprendre plus sur la couche de données de Gatsby et la création programmatique de pages !
