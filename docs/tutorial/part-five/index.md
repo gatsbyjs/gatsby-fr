@@ -1,14 +1,14 @@
 ---
-title: Source Plugins
+title: Les plugins de source
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-> This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through [part 4](/tutorial/part-four/) before continuing here.
+> Ce tutoriel fait partie d'une série concernant la couche de données de Gatsby. Assurez-vous d'avoir suivi la [partie 4](/tutorial/part-four/) avant de poursuivre ici.
 
-## What's in this tutorial?
+## Que contient ce tutoriel ?
 
-In this tutorial, you'll be learning about how to pull data into your Gatsby site using GraphQL and source plugins. Before you learn about these plugins, however, you'll want to know how to use something called GraphiQL, a tool that helps you structure your queries correctly.
+Dans ce tutoriel, vous apprendrez comment intégrer des données dans votre site Gatsby en utilisant GraphQL et des plugins de source. Avant de vous pencher sur ces plugins cependant, vous devez apprendre à vous servir d'une chose qui s'appelle GraphiQL, un outil qui vous aide à structurer vos requêtes correctement.
 
 ## Introducing GraphiQL
 
