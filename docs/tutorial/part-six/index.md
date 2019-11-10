@@ -1,30 +1,29 @@
 ---
-title: Transformer plugins
+title: Plugins transformateurs
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-> This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through [part 4](/tutorial/part-four/) and [part 5](/tutorial/part-five/) before continuing here.
+> Ce tutoriel fait partie d’une série sur la couche de données de Gatsby. Assurez-vous d'avoir traversé la [partie 4](/tutorial/part-four/) et la [partie 5](/tutorial/part-five/) avant de continuer ici.
 
-## What's in this tutorial?
+## Que contient ce tutoriel ?
 
-The previous tutorial showed how source plugins bring data _into_ Gatsby’s data system. In this tutorial, you'll learn how transformer plugins _transform_ the raw content brought by source plugins. The combination of source plugins and transformer plugins can handle all data sourcing and data transformation you might need when building a Gatsby site.
+Le tutoriel précédent montrait comment les plugins source apportent les données _dans_ le système de données de Gatsby. Dans ce tutoriel, vous apprendrez comment les plugins transformateurs _transforment_ le contenu brut apporté par les plugins sources. La combinaison de plugins sources et de plugins transformateurs peut prendre en charge toutes les sources de données et la transformation de données dont vous pourriez avoir besoin lors de la construction d'un site Gatsby.
 
-## Transformer plugins
+## Plugins transformateurs
 
-Often, the format of the data you get from source plugins isn't what you want to
-use to build your website. The filesystem source plugin lets you query data
-_about_ files but what if you want to query data _inside_ files?
+Souvent, le format des données que vous obtenez des plugins sources n'est pas ce que vous voulez.
+pour construire votre site Web. Le plugin source du système de fichiers vous permet d'interroger les données
+_à propos_ des fichiers, mais que faire si vous voulez interroger des données _dans_ des fichiers?
 
-To make this possible, Gatsby supports transformer plugins which take raw
-content from source plugins and _transform_ it into something more usable.
+Pour rendre cela possible, Gatsby supporte les plugins transformateurs qui prennent le contenu brut des plugins 
+source et les _transforment_ en quelque chose de plus utilisable.
 
-For example, markdown files. Markdown is nice to write in but when you build a
-page with it, you need the markdown to be HTML.
+Par exemple, les fichiers markdown. Markdown est agréable à écrire, mais lorsque vous construisez une page avec lui, vous avez besoin que le markdowm soit du HTML.
 
-Add a markdown file to your site at
-`src/pages/sweet-pandas-eating-sweets.md` (This will become your first markdown
-blog post) and learn how to _transform_ it to HTML using transformer plugins and
+Ajoutez un fichier markdown à votre site à l'emplacement suivant :
+`src/pages/sweet-pandas-eating-sweets.md` (Ceci deviendra votre premier post de blog
+en markdown) et apprenez comment _transformer_ cela en HTML à l'aide de plugins transformateur et de
 GraphQL.
 
 ```markdown:title=src/pages/sweet-pandas-eating-sweets.md
@@ -40,19 +39,18 @@ Here's a video of a panda eating sweets.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>
 ```
 
-Once you save the file, look at `/my-files/` again—the new markdown file is in
-the table. This is a very powerful feature of Gatsby. Like the earlier
-`siteMetadata` example, source plugins can live-reload data.
-`gatsby-source-filesystem` is always scanning for new files to be added and when
-they are, re-runs your queries.
+Une fois que vous avez sauvegardé le fichier, regardez encore une fois `/my-files/`—le nouveau fichier markdown est dans
+la table. C'est une caractéristique très puissante de Gatsby. Comme le premier exemple de
+`siteMetadata`, les plugins sources peuvent recharger les données en direct.
+`gatsby-source-filesystem` est toujours à la recherche de nouveaux fichiers à ajouter et quand ils le sont, exécute à nouveau vos requêtes.
 
-Add a transformer plugin that can transform markdown files:
+Ajouter un plugin transformateur qui peut transformer les fichiers markdown:
 
 ```shell
 npm install --save gatsby-transformer-remark
 ```
 
-Then add it to the `gatsby-config.js` like normal:
+Ensuite, ajoutez-le au `gatsby-config.js` comme d'habitude:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -79,31 +77,29 @@ module.exports = {
 }
 ```
 
-Restart the development server then refresh (or open again) GraphiQL and look
-at the autocomplete:
+Redémarrez le serveur de développement puis rafraîchissez (ou ouvrez à nouveau) GraphiQL et regardez 
+à l'auto-complétion:
 
 ![markdown-autocomplete](markdown-autocomplete.png)
 
-Select `allMarkdownRemark` again and run it as you did for `allFile`. You'll
-see there the markdown file you recently added. Explore the fields that are
-available on the `MarkdownRemark` node.
+Sélectionnez à nouveau `allMarkdownRemark` et exécutez-le comme vous l'avez fait pour `allFile`. Vous allez
+y voir le fichier de démarque que vous avez récemment ajouté. Explorez les domaines qui sont
+disponibles sur le nœud `MarkdownRemark`.
 
 ![markdown-query](markdown-query.png)
 
-Ok! Hopefully, some basics are starting to fall into place. Source plugins bring
-data _into_ Gatsby's data system and _transformer_ plugins transform raw content
-brought by source plugins. This pattern can handle all data sourcing and
-data transformation you might need when building a Gatsby site.
+Ok ! Avec un peu de chance, les bases commencent à se mettre en place. Les plugins sources amènent les données
+_dans_ le système de données de Gatsby et les plugins _transformateurs_ transforment le contenu brut apporté par les plugins source. Ce modèle peut gérer toutes les sources de données et la transformation de données dont vous pourriez avoir besoin lors de la construction d'un site Gatsby.
 
-## Create a list of your site's markdown files in `src/pages/index.js`
+## Créez une liste des fichiers markdown de votre site dans `src/pages/index.js`
 
-Now you'll have to create a list of your markdown files on the front page. Like many
-blogs, you want to end up with a list of links on the front page pointing to each
-blog post. With GraphQL you can _query_ for the current list of markdown blog
-posts so you won't need to maintain the list manually.
+Vous devez maintenant créer une liste de vos fichiers markdown sur la page d'accueil. Comme beaucoup de blogs, vous 
+voulez finir avec une liste de liens sur la page d'accueil pointant vers chaque article du blog. Avec GraphQL 
+vous pouvez _interroger_ la liste courante des articles markdown du blog afin de ne pas avoir besoin de 
+maintenir la liste manuellement.
 
-Like with the `src/pages/my-files.js` page, replace `src/pages/index.js` with
-the following to add a GraphQL query with some initial HTML and styling.
+Comme pour la page `src/pages/my-files.js`, remplacez `src/pages/index.js` par
+ce qui suit pour ajouter une requête GraphQL avec du HTML et du style initial.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -169,11 +165,11 @@ export const query = graphql`
 `
 ```
 
-Now the frontpage should look like:
+Maintenant, la page d'accueil devrait ressembler à :
 
 ![frontpage](frontpage.png)
 
-But your one blog post looks a bit lonely. So let's add another one at
+Mais votre seul article du blog semble un peu isolé. Ajoutons-en un autre à l'emplacement
 `src/pages/pandas-and-bananas.md`
 
 ```markdown:title=src/pages/pandas-and-bananas.md
@@ -190,35 +186,30 @@ seem to really enjoy bananas!
 
 ![two-posts](two-posts.png)
 
-Which looks great! Except… the order of the posts is wrong.
+Ce qui est super ! Sauf que... l'ordre des messages est incorrect.
 
-But this is easy to fix. When querying a connection of some type, you can pass a
-variety of arguments to the GraphQL query. You can `sort` and `filter` nodes, set how
-many nodes to `skip`, and choose the `limit` of how many nodes to retrieve. With
-this powerful set of operators, you can select any data you want—in the format you
-need.
+Mais c'est facile à réparer. Lorsque vous interrogez une connexion d'un certain type, vous pouvez passer 
+une variété d'arguments à la requête GraphQL. Vous pouvez `trier` et `filtrer` les nœuds, définir le nombre 
+de nœuds à `sauter`, et choisir la `limite` du nombre de nœuds à récupérer. Grâce à ce puissant ensemble 
+d'opérateurs, vous pouvez sélectionner toutes les données que vous voulez—dans le format dont vous avez besoin.
 
-In your index page's GraphQL query, change `allMarkdownRemark` to
-`allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC })`. _Note: There are 3 underscores between `frontmatter` and `date`._ Save
-this and the sort order should be fixed.
+Dans la requête GraphQL de votre page d'index, changez `allMarkdownRemark` en
+`allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC })`. _Note: Il y a 3 soulignements entre `frontmatter` 
+et `date`._ Sauvegardez ceci et l'ordre de tri devrait être fixé.
 
-Try opening GraphiQL and playing with different sort options. You can sort the
-`allFile` connection along with other connections.
+Essayez d'ouvrir GraphiQL et de jouer avec différentes options de tri. Vous pouvez trier la connexion
+`allFile` avec d'autres connexions.
 
-For more documentation on our query operators, explore our [GraphQL reference guide.](/docs/graphql-reference/)
+Pour plus de documentation sur nos opérateurs de requêtes, consultez notre [guide de référence GraphQL.](/docs/graphql-reference/)
 
 ## Challenge
 
-Try creating a new page containing a blog post and see what happens to the list of blog posts on the homepage!
+Essayez de créer une nouvelle page contenant un article du blog et voyez ce qui arrive à la liste des articles du blog sur la page d'accueil !
 
-## What's coming next?
+## Quelle est la prochaine étape?
 
-This is great! You've just created a nice index page where you're querying your markdown
-files and producing a list of blog post titles and excerpts. But you don't want to just see excerpts, you want actual pages for your markdown files.
+C'est génial ! Vous venez de créer une belle page d'index où vous interrogez vos fichiers markdown et produisez une liste de titres d'articles du blog et d'extraits. Mais vous ne voulez pas seulement voir des extraits, vous voulez des pages réelles pour vos fichiers markdown.
 
-You could continue to create pages by placing React components in `src/pages`. However, you'll
-next learn how to _programmatically_ create pages from _data_. Gatsby is _not_
-limited to making pages from files like many static site generators. Gatsby lets
-you use GraphQL to query your _data_ and _map_ the query results to _pages_—all at build
-time. This is a really powerful idea. You'll be exploring its implications and
-ways to use it in the next tutorial, where you'll learn how to [programmatically create pages from data](/tutorial/part-seven/).
+Vous pouvez continuer à créer des pages en plaçant les composants React dans `src/pages`. Cependant, vous apprendrez ensuite comment créer des pages par _programmation_ à partir des _données_. Gatsby n'est _pas_
+limité à faire des pages à partir de fichiers comme beaucoup de générateurs de sites statiques. Gatsby vous permet d'utiliser GraphQL pour interroger vos _données_ et _schématise_ les résultats de la requête vers les _pages_—tout au build.
+C'est une idée très puissante. Vous explorerez ses implications et les façons de l'utiliser dans le prochain tutoriel, où vous apprendrez à [créer des pages par programmation à partir de données](/tutorial/part-seven/).
