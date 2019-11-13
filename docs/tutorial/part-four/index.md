@@ -15,9 +15,9 @@ Vous avez également exploré les composants de style à l'aide de modules CSS.
 
 ## Que contient ce tutoriel ?
 
-Dans les quatre prochaines parties de ce tutoriel (incluant celui-ci), vous allez découvrir la couche donnée de Gatsby, qui est une des puissantes fonctionnalités de Gatsby qui vous permet entre autres de construire des sites depuis du Markdown, WordPress, Headless CMS, et d'autres types de données venant de possiblement n'importe quelle source.
+Dans les quatre prochaines parties de ce tutoriel (incluant celui-ci), vous allez découvrir la couche données de Gatsby, qui est une des puissantes fonctionnalités de Gatsby qui vous permet entre autres de construire des sites depuis du Markdown, WordPress, Headless CMS, et d'autres types de données venant de possiblement n'importe quelle source.
 
-**NOTE:** La couche donnée de Gatsby est gérée par GraphQL. Pour un tutoriel en profondeur sur GraphQL, nous vous recommandons [Comment GraphQL](https://www.howtographql.com/).
+**NOTE:** La couche données de Gatsby est gérée par GraphQL. Pour un tutoriel en profondeur sur GraphQL, nous vous recommandons [Comment GraphQL](https://www.howtographql.com/).
 
 ## Données dans Gatsby
 
@@ -36,13 +36,13 @@ Si vous construisez un site avec WordPress (ainsi les autres contributeurs poss�
 
 Les données peut aussi vivre dans des fichiers du type Markdown, CSV, etc. ainsi que des bases de données et APIs de toute sorte.
 
-**La couche de donnée Gatsby vous permet de récupérer les données depuis ceux-ci (ainsi que toute autre source) directement dans vos composants** — dans la forme que vous voulez.
+**La couche données Gatsby vous permet de récupérer les données depuis ceux-ci (ainsi que toute autre source) directement dans vos composants** — dans la forme que vous voulez.
 
 ## Utilisation de données non structurée vs GraphQL
 
 ### Ai-je besoin d'utiliser GraphQL et d'autres plugins pour récupérer des données dans des sites Gatsby ?
 
-Absolument pas ! Vous pouvez utiliser l'API `createPages` pour récupérer les données dans un format non structuré dans des pages Gatsby directement, au lieu de passer par la couche de donnée GraphQL. C'est un bon choix pour les petits sites, pendant que GraphQL et les autres plugins vous permet de gagner du temps avec des sites plus complexes.
+Absolument pas ! Vous pouvez utiliser l'API `createPages` pour récupérer les données dans un format non structuré dans des pages Gatsby directement, au lieu de passer par la couche données GraphQL. C'est un bon choix pour les petits sites, pendant que GraphQL et les autres plugins vous permet de gagner du temps avec des sites plus complexes.
 
 Voir le guide [Utiliser Gatsby sans GraphQL](/docs/using-gatsby-without-graphql/) pour apprendre à récupérer des données dans votre site Gatsby en utilisant l'API `createPages` et voir un site type !
 
@@ -53,7 +53,7 @@ Si vous êtes en train de construire un petit site, une façon efficace de le co
 1.  Vérifier la [Bibliothèque des Plugins](/plugins/) pour voir si la source du plugin et/ou le plugin de transformation que vous souhaitez utiliser existe déjà
 2.  S'ils n'existent pas encore, lisez le guide sur la [Création de plugin](/docs/creating-plugins/) et envisager de construire le vôtre !
 
-### Comment la couche de donnée de Gatsby utilise GraphQL pour récupérer les données dans ses composants
+### Comment la couche données de Gatsby utilise GraphQL pour récupérer les données dans ses composants
 
 
 Il existe de nombreuses options pour charger les données dans les composants React. Une des plus populaires et puissantes de celle-ci est une technologie appelée [GraphQL](http://graphql.org/).
