@@ -81,7 +81,7 @@ Ensuite, installez d'autres dépendances nécessaires à la racine du projet. Vo
 npm install --save gatsby-plugin-typography typography react-typography typography-theme-kirkham gatsby-plugin-emotion @emotion/core
 ```
 
-Mettre en place un site similaire à ce que vous avez réalisé dans la [partie trois](/tutorial/part-three). Ce site aura un composant de mise en page et deux composants de page :
+Mettre en place un site similaire à ce que vous avez réalisé dans la [Partie Trois](/tutorial/part-three). Ce site aura un composant de mise en page et deux composants de page :
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -265,7 +265,7 @@ La requête GraphQL de base qui récupère le `title` dans vos changements sur l
 }
 ```
 
-> 💡 Dans la [partie cinq](/tutorial/part-five/#introducing-graphiql), vous allez rencontrer un outil qui vous permettra d'explorer de façon interactive les données disponibles dans GraphQL, et apprendre à écrire des requêtes comme celle ci-dessus.
+> 💡 Dans la [Partie Cinq](/tutorial/part-five/#introducing-graphiql), vous allez rencontrer un outil qui vous permettra d'explorer de façon interactive les données disponibles dans GraphQL, et apprendre à écrire des requêtes comme celle ci-dessus.
 
 Les requêtes de page vivent en dehors de la définition du composant - par convention, à la fin du fichier d'un composant de page - et sont uniquement disponibles sur les composants de page.
 
@@ -338,7 +338,7 @@ Une autre réussite ! 🎉
 ![Titre de page et le titre de la mise en page récupéré depuis siteMetadata](site-metadata-two-titles.png)
 
 
-Pourquoi utiliser deux requêtes différentes ici? Ces exemples étaient des introductions rapides aux types de requête, à leur formatage et à leur utilisation. Pour l'instant, garder à l'esprit que seules les pages peuvent faire des requêtes de page. Les composants non-page, comme le Layout, peuvent utiliser StaticQuery. La [Partie 7](/tutorial/part-seven/) du tutoriel explique ceux-ci en plus grande profondeur.
+Pourquoi utiliser deux requêtes différentes ici? Ces exemples étaient des introductions rapides aux types de requête, à leur formatage et à leur utilisation. Pour l'instant, garder à l'esprit que seules les pages peuvent faire des requêtes de page. Les composants non-page, comme le Layout, peuvent utiliser StaticQuery. La [Partie Sept](/tutorial/part-seven/) du tutoriel explique ceux-ci en plus grande profondeur.
 
 Mais rétablissons le vrai titre.
 
@@ -350,4 +350,4 @@ Donc presque partout, les changements que vous faites prendront effet. Editez en
 
 ## Qu'est-ce qui arrive ensuite ?
 
-Ensuite, vous apprendrez à extraire des données de votre site Gatsby en utilisant GraphQL avec des plugins dans la [partie cinq](/tutorial/part-five/) du tutoriel.
+Ensuite, vous apprendrez à extraire des données de votre site Gatsby en utilisant GraphQL avec des plugins dans la [Partie Cinq](/tutorial/part-five/) du tutoriel.
