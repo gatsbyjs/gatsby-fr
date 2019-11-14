@@ -9,21 +9,21 @@ J'espère que vous commencez à vous sentir à l'aise 😀
 
 ## Récap de la première moitié du tutoriel
 
-Jusqu'à maintenant, vous avez appris comment utiliser React — Ca peut-être puissant de créer _ses_ propres composants pour en faire des blocs de construction de son site web.
+Jusqu'à maintenant, vous avez appris comment utiliser React — et combien il peut être puissant de créer _ses_ propres composants pour en faire des blocs de construction de son site web.
 
 Vous avez également exploré les composants de style à l'aide de modules CSS.
 
 ## Que contient ce tutoriel ?
 
-Dans les quatre prochaines parties de ce tutoriel (incluant celui-ci), vous allez découvrir la couche données de Gatsby, qui est une des puissantes fonctionnalités de Gatsby qui vous permet entre autres de construire des sites depuis du Markdown, WordPress, Headless CMS, et d'autres types de données venant de possiblement n'importe quelle source.
+Dans les quatre prochaines parties de ce tutoriel (incluant celui-ci), vous allez découvrir la couche de données de Gatsby, qui est une des puissantes fonctionnalités de Gatsby qui vous permet entre autres de construire des sites depuis du Markdown, WordPress, Headless CMS, et d'autres types de données venant de possiblement n'importe quelle source.
 
-**NOTE:** La couche données de Gatsby est gérée par GraphQL. Pour un tutoriel en profondeur sur GraphQL, nous vous recommandons [Comment GraphQL](https://www.howtographql.com/).
+**NOTE:** La couche de données de Gatsby est gérée par GraphQL. Pour un tutoriel en profondeur sur GraphQL, nous vous recommandons [Comment GraphQL](https://www.howtographql.com/).
 
 ## Données dans Gatsby
 
 Un site web possède quatre parties : HTML, CSS, JS, et les données. La première moitié du tutoriel est basée sur les trois premiers. Maintenant commençons à apprendre à utiliser les données dans les sites Gatsby.
 
-**Qu'est ce que c'est que les données ?**
+**Que sont les données ?**
 
 Une réponse orientée sciences informatique serait : des données comme `"chaîne de caractères"`, entiers (`42`), objets (`{ pizza: true }`), etc.
 
@@ -32,28 +32,28 @@ Dans le but de travailler avec Gatsby, une réponse plus utile est "tout ce qui 
 Jusqu'à maintenant, vous avez écrit du texte et ajouté des images _directement_ dans les composants.
 Ce qui est un _excellent_ moyen de construire de nombreux sites web. Mais, souvent vous allez vouloir stocker _en dehors_ des composants et embarquer les données _dans_ les composants quand vous le souhaitez.
 
-Si vous construisez un site avec WordPress (ainsi les autres contributeurs possèdent une chouette interface pour ajouter & maintenir le contenu) et Gatsby, les _données_ pour le site (pages et articles) sont dans WordPres et vous _récupérez_ ces données, quand besoin, dans vos composants.
+Si vous construisez un site avec WordPress (de sorte que les autres contributeurs possèdent une chouette interface pour ajouter & maintenir le contenu) et Gatsby, les _données_ pour le site (pages et articles) sont dans WordPres et vous _récupérez_ ces données, quand besoin, dans vos composants.
 
-Les données peut aussi vivre dans des fichiers du type Markdown, CSV, etc. ainsi que des bases de données et APIs de toute sorte.
+Les données peuvent aussi vivre dans des fichiers du type Markdown, CSV, etc. ainsi que des bases de données et APIs de toute sorte.
 
-**La couche données Gatsby vous permet de récupérer les données depuis ceux-ci (ainsi que toute autre source) directement dans vos composants** — dans la forme que vous voulez.
+**La couche de données de Gatsby vous permet de récupérer les données depuis ceux-ci (ainsi que toute autre source) directement dans vos composants** — dans la forme que vous voulez.
 
 ## Utilisation de données non structurée vs GraphQL
 
 ### Ai-je besoin d'utiliser GraphQL et d'autres plugins pour récupérer des données dans des sites Gatsby ?
 
-Absolument pas ! Vous pouvez utiliser l'API `createPages` pour récupérer les données dans un format non structuré dans des pages Gatsby directement, au lieu de passer par la couche données GraphQL. C'est un bon choix pour les petits sites, pendant que GraphQL et les autres plugins vous permet de gagner du temps avec des sites plus complexes.
+Absolument pas ! Vous pouvez utiliser l'API `createPages` pour récupérer les données dans un format non structuré dans des pages Gatsby directement, au lieu de passer par la couche de données de GraphQL. C'est un bon choix pour les petits sites, alors que GraphQL et les autres plugins vous permet de gagner du temps avec des sites plus complexes.
 
 Voir le guide [Utiliser Gatsby sans GraphQL](/docs/using-gatsby-without-graphql/) pour apprendre à récupérer des données dans votre site Gatsby en utilisant l'API `createPages` et voir un site type !
 
 ### Quand utiliser les données non structurées vs GraphQL ?
 
-Si vous êtes en train de construire un petit site, une façon efficace de le construire est de récupérer les données comme présenté dans ce guide, en utilisant l'API  `createPages`, et ensuite si le site devient plus complexe par après, vous modifiez votre site pour une structure plus complexe, ou si vous vous voulez transformer vos données, suivez ces étapes :
+Si vous êtes en train de construire un petit site, une façon efficace de le construire est de récupérer les données comme présenté dans ce guide, en utilisant l'API  `createPages`, et ensuite si le site devient plus complexe, vous modifiez votre site pour une structure plus complexe, ou si vous vous voulez transformer vos données, suivez ces étapes :
 
 1.  Vérifier la [Bibliothèque des Plugins](/plugins/) pour voir si la source du plugin et/ou le plugin de transformation que vous souhaitez utiliser existe déjà
 2.  S'ils n'existent pas encore, lisez le guide sur la [Création de plugin](/docs/creating-plugins/) et envisager de construire le vôtre !
 
-### Comment la couche données de Gatsby utilise GraphQL pour récupérer les données dans ses composants
+### Comment la couche de données de Gatsby utilise GraphQL pour récupérer les données dans ses composants
 
 
 Il existe de nombreuses options pour charger les données dans les composants React. Une des plus populaires et puissantes de celle-ci est une technologie appelée [GraphQL](http://graphql.org/).
@@ -81,7 +81,7 @@ Ensuite, installez d'autres dépendances nécessaires à la racine du projet. Vo
 npm install --save gatsby-plugin-typography typography react-typography typography-theme-kirkham gatsby-plugin-emotion @emotion/core
 ```
 
-Mettre en place un site similaire à ce que vous avez fini avec en [Partie Trois](/tutorial/part-three). Ce site aura un composant de mise en page et deux composants de page :
+Mettre en place un site similaire à ce que vous avez réalisé dans la [partie trois](/tutorial/part-three). Ce site aura un composant de mise en page et deux composants de page :
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -192,7 +192,7 @@ Maintenant, vous pouvez commencer à interroger vos données 😋
 
 Lors de la construction de sites, vous voudrez probablement réutiliser des données courantes -- comme le _titre du site_ par exemple. Regardez la page `/about/`. Vous allez voir le titre du site (`Pandas Eating Lots`) dans les deux composants de mise en page (l'en-tête du site) ainsi que dans le tag `<h1 />` de la page `about.js` (la page d'en-tête).
 
-Mais que faire si vous voulez changer le titre du site à l'avenir? Vous devrez rechercher le titre dans tous vos composants et éditer chaque occurrence. Cela est à la fois fastidieux et source d’erreurs, en particulier pour les sites plus grands et plus complexes. Au lieu de cela, vous pouvez stocker le titre dans un emplacement et référencer cet emplacement à partir d'autres fichiers; changer le titre en un seul endroit, et Gatsby va _récupérer_ votre titre mis à jour dans des fichiers qui le référencent.
+Mais que faire si vous voulez changer le titre du site à l'avenir ? Vous devrez rechercher le titre dans tous vos composants et éditer chaque occurrence. Cela est à la fois fastidieux et source d’erreurs, en particulier pour les sites plus grands et plus complexes. Au lieu de cela, vous pouvez stocker le titre dans un emplacement et référencer cet emplacement à partir d'autres fichiers; changer le titre en un seul endroit, et Gatsby va _récupérer_ votre titre mis à jour dans des fichiers qui le référencent.
 
 La place pour ces données courantes est dans l'objet `siteMetadata` dans le fichier `gatsby-config.js`. Ajoutez votre titre de site dans le fichier `gatsby-config.js` :
 
