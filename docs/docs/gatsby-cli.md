@@ -1,19 +1,19 @@
 ---
-title: Commands (Gatsby CLI)
+title: Commandes (Gatsby CLI)
 tableOfContentsDepth: 2
 ---
 
-The Gatsby command line tool (CLI) is the main entry point for getting up and running with a Gatsby application and for using functionality including like running a development server and building out your Gatsby application for deployment.
+L'outil de ligne de commande Gatsby (CLI) est le principal point d'entrée pour démarrer une application Gatsby et pour utiliser des fonctionnalités telles que le lancement d'un serveur de développement et la création de votre application Gatsby pour le déploiement.
 
-_We provide similar documentation available with the gatsby-cli [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md), and our [cheat sheet](/docs/cheat-sheet/) has all the top CLI commands ready to print out._
+_Nous fournissons une documentation similaire disponible avec le gatsby-cli [LISEZ-MOI](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md), et notre [cheat sheet](/docs/cheat-sheet/) dispose de toutes les principales commandes CLI prêtes à être exécutées._
 
-## How to use gatsby-cli
+## Comment utiliser gatsby-cli
 
-The Gatsby CLI (`gatsby-cli`) is packaged as an executable that can be used globally. The Gatsby CLI is available via [npm](https://www.npmjs.com/) and should be installed globally by running `npm install -g gatsby-cli` to use it locally.
+Le Gatsby CLI (`gatsby-cli`) est un exécutable qui peut être utilisé globalement. Le Gatsby CLI est disponible via [npm](https://www.npmjs.com/) et devrait être installée globalement en exécutant `npm install -g gatsby-cli` pour l'utiliser localement.
 
-Run `gatsby --help` for full help.
+Exécutez `gatsby --help` pour une aide complète.
 
-You can also use the `package.json` script variant of these commands, typically exposed _for you_ with most [starters](/docs/starters/). For example, if you want to make the [`gatsby develop`](#develop) command available in your application, open up `package.json` and add a script like so:
+Vous pouvez aussi utiliser la variante de script `package.json` de ces commandes, typiquement exposées _pour vous_ avec la plupart des [starters](/docs/starters/). Par exemple, si vous voulez rendre la commande[`gatsby develop`](#develop) disponible dans votre application, ouvrez `package.json` et ajoutez un script comme ceci :
 
 ```json:title=package.json
 {
@@ -23,38 +23,38 @@ You can also use the `package.json` script variant of these commands, typically 
 }
 ```
 
-## API commands
+## Commandes API
 
 ### `new`
 
 ```
-gatsby new [<site-name> [<starter-url>]]
+gatsby new [<nom-de-site> [<url-de-départ>]]
 ```
 
 #### Arguments
 
 | Argument    | Description                                                                                                                                                                                                     |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| site-name   | Your Gatsby site name, which is also used to create a project directory.                                                                                                                                        |
-| starter-url | A Gatsby starter URL or local file path. Defaults to [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); see the [Gatsby starters](/docs/gatsby-starters/) docs for more information. |
+| nom-de-site   | Le nom de votre site Gatsby, qui est également utilisé pour créer un répertoire de projet.                                                                                                                                        |
+| url-de-départ | Une URL de démarrage Gatsby ou un chemin de fichier local. Par défaut :[gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); voir les docs [Gatsby starters](/docs/gatsby-starters/) pour plus d'informations. |
 
-> Note: The `site-name` should only consist of letters and numbers. If you specify a `.`, `./` or a `<space>` in the name, `gatsby new` will throw an error.
+> Note: Le `nom-de-site` ne doit être composé que de lettres et de chiffres. Si vous spécifiez un `.`, `./` ou un `<espace>` dans le nom, `gatsby new` provoquera une erreur.
 
-#### Examples
+#### Exemples
 
-- Create a Gatsby site named `my-awesome-site` using the default starter:
+- Créez un site Gatsby nommé `my-awesome-site` en utilisant le starter par défaut:
 
 ```shell
 gatsby new my-awesome-site
 ```
 
-- Create a Gatsby site named `my-awesome-blog-site`, using [gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/):
+- Créez un site Gatsby nommé `my-awesome-blog-site`, en utilisant [gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/):
 
 ```shell
 gatsby new my-awesome-blog-site https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
-- If you leave out both of the arguments, the CLI will run an interactive shell asking for these inputs:
+- Si vous omettez les deux arguments, le CLI lancera un shell interactif demandant ces entrées:
 
 ```shell
 gatsby new
@@ -66,11 +66,11 @@ gatsby new
    (Use a different starter)
 ```
 
-See the [Gatsby starters docs](https://www.gatsbyjs.org/docs/gatsby-starters/) for more details.
+Voir les [docs de Gatsby starters](https://www.gatsbyjs.org/docs/gatsby-starters/) pour plus de détails.
 
 ### `develop`
 
-Once you've installed a Gatsby site, go to the root directory of your project and start the development server:
+Une fois que vous avez installé un site Gatsby, allez dans le répertoire racine de votre projet et démarrez le serveur de développement:
 
 `gatsby develop`
 
@@ -78,36 +78,37 @@ Once you've installed a Gatsby site, go to the root directory of your project an
 
 |     Option      | Description                                     |
 | :-------------: | ----------------------------------------------- |
-| `-H`, `--host`  | Set host. Defaults to localhost                 |
-| `-p`, `--port`  | Set port. Defaults to 8000                      |
-| `-o`, `--open`  | Open the site in your (default) browser for you |
-| `-S`, `--https` | Use HTTPS                                       |
+| `-H`, `--host`  | Définit hôte. Par défaut à localhost            |
+| `-p`, `--port`  | Définit port. Par défaut à 8000                 |
+| `-o`, `--open`  | Ouvre le site dans votre navigateur (par défaut)|
+|                 | pour vous                                       |
+| `-S`, `--https` | Utilise HTTPS                                   |
 
-Follow the [Local HTTPS guide](/docs/local-https/)
-to find out how you can set up an HTTPS development server using Gatsby.
+Suivez le [Guide HTTPS local](/docs/local-https/)
+pour savoir comment configurer un serveur de développement HTTPS avec Gatsby.
 
-#### Preview changes on other devices
+#### Prévisualisation des modifications sur d'autres appareils
 
-You can use the Gatsby develop command with the host option to access your dev environment on other devices on the same network, run:
+Vous pouvez utiliser la commande Gatsby develop avec l'option host pour accéder à votre environnement dev sur d'autres périphériques du même réseau, lancez:
 
 ```shell
 gatsby develop -H 0.0.0.0
 ```
 
-Then the terminal will log information as usual, but will additionally include a URL that you can navigate to from a client on the same network to see how the site renders.
+Ensuite, le terminal enregistrera les informations comme d'habitude, mais inclura en plus une URL vers laquelle vous pouvez naviguer depuis un client sur le même réseau pour voir comment le site est rendu.
 
 ```
-You can now view gatsbyjs.org in the browser.
+Vous pouvez maintenant voir gatsbyjs.org dans le navigateur.
 ⠀
   Local:            http://0.0.0.0:8000/
-  On Your Network:  http://192.168.0.212:8000/ // highlight-line
+  Sur votre réseau:  http://192.168.0.212:8000/ // highlight-line
 ```
 
-**Note**: you can't visit 0.0.0.0:8000 on Windows (but things will work using either localhost:8000 or the "On Your Network" URL on Windows)
+**Note**: vous ne pouvez pas visiter 0.0.0.0:8000 sous Windows (mais les choses fonctionneront en utilisant soit localhost:8000 ou l'URL "Sur votre réseau" sous Windows)
 
 ### `build`
 
-At the root of a Gatsby site, compile your application and make it ready for deployment:
+A la racine d'un site Gatsby, compilez votre application et préparez son déploiement:
 
 `gatsby build`
 
@@ -115,16 +116,17 @@ At the root of a Gatsby site, compile your application and make it ready for dep
 
 |            Option            | Description                                                                                               |
 | :--------------------------: | --------------------------------------------------------------------------------------------------------- |
-|       `--prefix-paths`       | Build site with link paths prefixed (set pathPrefix in your config)                                       |
-|        `--no-uglify`         | Build site without uglifying JS bundles (for debugging)                                                   |
-| `--open-tracing-config-file` | Tracer configuration file (OpenTracing compatible). See [Performance Tracing](/docs/performance-tracing/) |
-| `--no-color`, `--no-colors`  | Disables colored terminal output                                                                          |
+|       `--prefix-paths`       | Construit un site avec des chemins de liens préfixés (définissez pathPrefix dans votre configuration) |
+|        `--no-uglify`         | Crée un site sans avoir à dissocier les paquets JS (pour le débogage)                                                   |
+| `--open-tracing-config-file` | Fichier de configuration du traceur (compatible OpenTracing). 
+Voir [Suivi des performances du traceur](/docs/performance-tracing/) |
+| `--no-color`, `--no-colors`  | Désactive la sortie du terminal en couleur                                                                         |
 
-In addition to these build options, there are some optional [build environment variables](/docs/environment-variables/#build-variables) for more advanced configurations that can adjust how a build runs. For example, setting `CI=true` as an environment variable will tailor output for [dumb terminals](https://en.wikipedia.org/wiki/Computer_terminal#Dumb_terminals).
+En plus de ces options de build, il y a quelques options optionnelles [variables d'environnement de build] (/docs/environment-variables/#build-variables) pour des configurations plus avancées qui peuvent ajuster le fonctionnement d'un build. Par exemple, le réglage de `CI=true` comme variable d'environnement personnalisera la sortie pour les [terminaux bêtes] (https://en.wikipedia.org/wiki/Computer_terminal#Dumb_terminals).
 
 ### `serve`
 
-At the root of a Gatsby site, serve the production build of your site for testing:
+A la racine d'un site Gatsby, servez le build de production de votre site pour les tests:
 
 `gatsby serve`
 
@@ -132,14 +134,15 @@ At the root of a Gatsby site, serve the production build of your site for testin
 
 |      Option      | Description                                                                              |
 | :--------------: | ---------------------------------------------------------------------------------------- |
-|  `-H`, `--host`  | Set host. Defaults to localhost                                                          |
-|  `-p`, `--port`  | Set port. Defaults to 9000                                                               |
-|  `-o`, `--open`  | Open the site in your (default) browser for you                                          |
-| `--prefix-paths` | Serve site with link paths prefixed (if built with pathPrefix in your gatsby-config.js). |
+|  `-H`, `--host`  | Définit hôte. Par défaut à localhost                                                     |
+|  `-p`, `--port`  | Définit port. Par défaut à 9000                                                          |
+|  `-o`, `--open`  | Ouvre le site dans votre navigateur (par défaut) pour vous                               |
+| `--prefix-paths` | Servi le site avec les chemins de liens préfixés (si construit avec pathPrefix dans votre|
+|                  | gatsby-config.js) |
 
 ### `info`
 
-At the root of a Gatsby site, get helpful environment information which will be required when reporting a bug:
+A la racine d'un site Gatsby, obtenez des informations utiles sur l'environnement qui seront nécessaires pour signaler un bug:
 
 `gatsby info`
 
@@ -147,40 +150,41 @@ At the root of a Gatsby site, get helpful environment information which will be 
 
 |       Option        | Description                                             |
 | :-----------------: | ------------------------------------------------------- |
-| `-C`, `--clipboard` | Automagically copy environment information to clipboard |
+| `-C`, `--clipboard` | Copie automatiquement les informations d'environnement  |
+|                     |dans le presse-papiers |
 
 ### `clean`
 
-At the root of a Gatsby site, wipe out the cache (`.cache` folder) and public directories:
+A la racine d'un site Gatsby, effacez le cache (dossier `.cache`) et les répertoires publics:
 
 `gatsby clean`
 
-This is useful as a last resort when your local project seems to have issues or content does not seem to be refreshing. Issues this may fix commonly include:
+Ceci est utile en dernier recours lorsque votre projet local semble avoir des problèmes ou que le contenu ne semble pas rafraîchir. Les problèmes que cela peut résoudre comprennent généralement:
 
-- Stale data, e.g. this file/resource/etc. isn't appearing
-- GraphQL error, e.g. this GraphQL resource should be present but is not
-- Dependency issues, e.g. invalid version, cryptic errors in console, etc.
-- Plugin issues, e.g. developing a local plugin and changes don't seem to be taking effect
+- Les données périmées, par exemple ce fichier/ressource/etc. n'apparait pas.
+- Erreur de GraphQL, par exemple cette ressource GraphQL doit être présente mais n'est pas
+- Problèmes de dépendance, par exemple, version invalide, erreurs cryptographiques dans la console, etc.
+- Problèmes de plugin, par exemple, le développement d'un plugin local et les changements ne semblent pas prendre effet.
 
 ### `plugin`
 
-Run commands pertaining to gatsby plugins.
+Exécuter des commandes se référant aux plugins Gatsby.
 
 #### `docs`
 
 `gatsby plugin docs`
 
-Directs you to documentation about using and creating plugins.
+Vous dirige vers la documentation sur l'utilisation et la création de plugins.
 
 ### Repl
 
-Get a Node.js REPL (interactive shell) with context of your Gatsby environment:
+Obtenez un REPL Node.js (shell interactif) avec le contexte de votre environnement Gatsby:
 
 `gatsby repl`
 
-Gatsby will prompt you to type in commands and explore. When it shows this: `gatsby >`
+Gatsby vous invitera à taper des commandes et à explorer. Quand il montre ceci: `gatsby >`
 
-You can type in a command, such as one of these:
+Vous pouvez taper une commande comme celle-ci:
 
 `babelrc`
 
@@ -200,10 +204,10 @@ You can type in a command, such as one of these:
 
 `staticQueries`
 
-When combined with the [GraphQL explorer](/docs/introducing-graphiql/), these REPL commands could be very helpful for understanding your Gatsby site's data.
+Combinées avec [l'explorateur GraphQL] (/docs/introducing-graphiql/), ces commandes REPL peuvent être très utiles pour comprendre les données de votre site Gatsby.
 
-For more information, check out the [Gatsby REPL documentation](/docs/gatsby-repl/).
+Pour plus d'informations, consultez la [documentation Gatsby REPL] (/docs/gatsby-repl/).
 
-### Disabling colored output
+### Désactivation de la sortie colorée
 
-In addition to the explicit `--no-color` option, the CLI respects the presence of the `NO_COLOR` environment variable (see [no-color.org](https://no-color.org/)).
+En plus de l'option explicite `--no-color`, la CLI respecte la présence de la variable d'environnement `NO_COLOR` (voir [no-color.org](https://no-color.org/)).
