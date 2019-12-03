@@ -6,5 +6,5 @@ Cette liste est évolutive et constitue une simple proposition afin de conserver
 
 | Terminologie originale      | Traduction proposée               |
 |---------------------|---------------------------|
-| X               | X                     |
+| Hosting               | Hébergement                     |
 
