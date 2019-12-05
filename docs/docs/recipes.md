@@ -1212,7 +1212,7 @@ export default IndexPage
 
 #### Instructions
 
-1. Le composant `StaticQuery` nécessite deux outils de rendu : `query` et `render`
+1. Le composant `StaticQuery` nécessite deux props de rendu : `query` et `render`
 
 ```jsx:title=src/components/NonPageComponent.js
 import React from "react"
