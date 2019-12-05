@@ -113,7 +113,7 @@ Le routing avec Gatsby s'appuie sur le composant `<Link />`
 
 #### Instructions
 
-1. Ouvrez le composant page `index.js` (`src/pages/index.js`), importez le composant `<Link />` de Gatsby, ajoutez un composant `<Link />`  au-dessus de l'en-tête, et donnez-lui une propriété `to` avec la valeur de `"/contact/"` pour le pathname :
+1. Ouvrez le composant page `index.js` (`src/pages/index.js`), importez le composant `<Link />` de Gatsby, ajoutez un composant `<Link />`  au-dessus de l'en-tête, et donnez-lui une propriété `to` avec la valeur de `"/contact/"` pour le chemin :
 
 ```jsx:title=src/pages/index.js
 import React from "react"
