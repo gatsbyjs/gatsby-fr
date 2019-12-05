@@ -170,7 +170,7 @@ export default () => (
 #### Ressources complémentaires
 
 - Créer un composant Layout dans [tutorial partie trois](/tutorial/part-three/#your-first-layout-component)
-- Ajouter du stylisme avec [Composants Layout](/docs/layout-components/)
+- Ajouter du style avec les [Composants de Mise en Page](/docs/layout-components/)
 
 ### Création dynamique de pages avec createPage
 
