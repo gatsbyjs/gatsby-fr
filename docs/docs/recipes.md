@@ -1247,7 +1247,7 @@ export default NonPageComponent
 
 ### Requêter des données avec le hook useStaticQuery
 
-Depuis Gatsby v2.1.0, vous pouvez utiliser le hook `useStaticQuery` pour interroger des données avec une fonction JavaScript au lieu d'un composant. La syntaxe élimine la nécessité d'un composant `<StaticQuery>` enveloppant tout, que certaines personnes trouvent plus simple à écrire.
+Depuis Gatsby v2.1.0, vous pouvez utiliser le hook `useStaticQuery` pour interroger des données avec une fonction JavaScript au lieu d'un composant. La syntaxe élimine la nécessité d'un composant `<StaticQuery>` enveloppant tout, ce que certaines personnes trouvent plus simple à écrire.
 
 Le hook `useStaticQuery` prend une requête GraphQL et renvoie les données demandées. Il peut être stocké dans une variable et utilisé plus tard dans vos modèles JSX
 
