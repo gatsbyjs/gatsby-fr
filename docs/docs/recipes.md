@@ -57,7 +57,7 @@ Quelques fichiers notables et leurs définitions :
 - `gatsby-config.js` — configurer les options pour un site Gatsby, avec des métadonnées pour le titre du projet, la description, les plugins, etc.
 - `gatsby-node.js` — implémenter les API Node.js de Gatsby pour personnaliser et étendre les paramètres par défaut affectant le processus de build
 - `gatsby-browser.js` — personnaliser et étendre les paramètres par défaut affectant le navigateur, en utilisant les API du navigateur de Gatsby
-- `gatsby-ssr.js` — utilisez les API de rendu côté serveur de Gatsby pour personnaliser les paramètres par défaut affectant le rendu côté serveur
+- `gatsby-ssr.js` — utiliser les API de rendu côté serveur de Gatsby pour personnaliser les paramètres par défaut affectant le rendu côté serveur
 
 #### Ressources complémentaires
 
