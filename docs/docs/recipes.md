@@ -6,7 +6,7 @@ tableauOfDepthContents: 2
 <!-- Template de base pour une recette Gatsby:
 
 ## Tâche à accomplir
-Une ou deux phrases à propos du sujet. Le plus concis et concentré, le mieux !
+Une ou deux phrases à propos du sujet. Plus cela est concis et ciblé, meilleur c'est !
 
 ### Conditions préalables
 - Exigences système/version
