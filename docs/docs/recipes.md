@@ -63,7 +63,7 @@ Quelques fichiers notables et leurs définitions :
 
 - Pour un aperçu de tous les dossiers et fichiers courants, lisez les documents sur [Gatsby's Project Structure](/docs/gatsby-project-structure/)
 - Pour les commandes courantes, consultez les [Gatsby CLI docs](/docs/gatsby-cli)
-- Consultez la [Gatsby Cheat Sheet](/docs/cheat-sheet/) pour obtenir des informations en un coup d'oeil téléchargeables
+- Consultez la [Gatsby Cheat Sheet](/docs/cheat-sheet/) pour obtenir des informations en un coup d'œil téléchargeables
 
 ### Création de pages automatiquement
 
@@ -492,7 +492,7 @@ Sass compilera des fichiers .scss et .sass en des fichiers .css pour vous, vous 
 plugins: [`gatsby-plugin-sass`],
 ```
 
-3. Écrivez vos feuilles de style en `.sass` ou `.scss` et les importer. Si vous ne savez pas comment importer des styles, jetez un oeil à [Styling avec CSS](/docs/recipes/#2-styling-with-css)
+3. Écrivez vos feuilles de style en `.sass` ou `.scss` et les importer. Si vous ne savez pas comment importer des styles, jetez un œil à [Styling avec CSS](/docs/recipes/#2-styling-with-css)
 
 ```css:title=styles.scss
 $font-stack: Helvetica, sans-serif;
@@ -1434,7 +1434,7 @@ Pour cette recette, vous aurez besoin d'un site Gatsby avec une collection de n�
 
 1. Exécutez `gatsby develop` pour démarrer le serveur de développement
 2. Ouvrez l'explorateur GraphiQL dans un onglet de navigateur à : `http://localhost:8000/___graphql`
-3. Ajoutez une requête dans l'éditeur à l'aide d'un champ préfixé par`all`, comme `allMarkdownRemark` (ce qui signifie qu'il retournera une liste de nœuds)
+3. Ajoutez une requête dans l'éditeur à l'aide d'un champ préfixé par `all`, comme `allMarkdownRemark` (ce qui signifie qu'il retournera une liste de nœuds)
 
 ```graphql
 {
@@ -1682,7 +1682,7 @@ export default () => (
 
 Le plugin `gatsby-image` peut soulager une grande partie de la douleur associée à l'optimisation des images sur votre site
 
-Gatsby générera des ressources optimisées qui peuvent être requêtées via GraphQL et transmises dans le composant d'image de Gatsby. Ce composant s’occupe des éléments compliqués de la gestion d’images, y compris la création de plusieurs tailles d'image afin de les charger au bon moment suivant la taille de l’appareil utilisé pour accécer au site.
+Gatsby générera des ressources optimisées qui peuvent être requêtées via GraphQL et transmises dans le composant d'image de Gatsby. Ce composant s’occupe des éléments compliqués de la gestion d’images, y compris la création de plusieurs tailles d'image afin de les charger au bon moment suivant la taille de l’appareil utilisé pour accéder au site.
 
 #### Les prérequis
 
