@@ -62,8 +62,8 @@ exporter default () => (
 
 If an external link is to an article in a reference like [MDN] or [Wikipedia], and a version of that article exists in your language that is of decent quality, consider linking to that version instead.
 
-[mdn]: https://developer.mozilla.org/en-US/
-[wikipedia]: https://en.wikipedia.org/wiki/Main_Page
+[mdn]: https://developer.mozilla.org/fr/
+[wikipedia]: https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal
 
 Exemple:
 
