@@ -18,17 +18,7 @@ export default () => (
 )
 ```
 
-✅ LE DO:
-
-```js
-// Exemple
-import React from "react"
-export default () => (
-  <div style={{ color: `purple`, fontSize: `72px` }}>Hello Gatsby!</div>
-)
-```
-
-✅ AUSSI BIEN:
+✅ DO:
 
 ```js
 // Exemple
@@ -38,7 +28,17 @@ export default () => (
 )
 ```
 
-❌ IL NE FAUT PAS:
+✅ OK:
+
+```js
+// Exemple
+import React from "react"
+export default () => (
+  <div style={{ color: `purple`, fontSize: `72px` }}>Salut Gatsby!</div>
+)
+```
+
+❌ DON'T:
 
 ```js
 // Exemple
@@ -52,8 +52,8 @@ export default () => (
 ❌ DEFINITELY DON'T:
 
 ```js
-importer React de "react"
-exporter default () => (
+import React from "react"
+export default () => (
    <div style = {{color: `morado`, fontSize:` 72px`}}> Salut Gatsby! </div>
 )
 ```
@@ -74,7 +74,7 @@ React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object).
 ✅ OK:
 
 ```md
-les éléments de React sont [immuable](https://fr.wikipedia.org/wiki/Objet_immuable).
+Les éléments de React sont [immuable](https://fr.wikipedia.org/wiki/Objet_immuable).
 ```
 
 For links that have no equivalent (Stack Overflow, YouTube videos, etc.), just use the English link.
