@@ -21,40 +21,40 @@ export default () => (
 ✅ DO:
 
 ```js
-// Ejemplo
+// Exemple
 import React from "react"
 export default () => (
-  <div style={{ color: `purple`, fontSize: `72px` }}>Hello Gatsby!</div>
+  <div style={{ color: `purple`, fontSize: `72px` }}>Salut Gatsby !</div>
 )
 ```
 
 ✅ ALSO OKAY:
 
 ```js
-// Ejemplo
+// Exemple
 import React from "react"
 export default () => (
-  <div style={{ color: `purple`, fontSize: `72px` }}>¡Hola Gatsby!</div>
+  <div style={{ color: `purple`, fontSize: `72px` }}>Salut Gatsby !</div>
 )
 ```
 
 ❌ DON'T:
 
 ```js
-// Ejemplo
+// Exemple
 import React from "react"
 export default () => (
   // 'purple' is a CSS keyword
-  <div style={{ color: `morado`, fontSize: `72px` }}>¡Hola Gatsby!</div>
+  <div style={{ color: `mauve`, fontSize: `72px` }}>Salut Gatsby !</div>
 )
 ```
 
 ❌ DEFINITELY DON'T:
 
 ```js
-importar Reaccionar desde "reaccionar"
-exportar defecto () => (
-   <div estilo = {{color: `morado`, fontSize:` 72px`}}> ¡Hola Gatsby! </div>
+importer React de "react"
+exporter par défaut () => (
+   <div style = {{color: `mauve`, fontSize:` 72px`}}>Salut Gatsby !</div>
 )
 ```
 
@@ -62,8 +62,8 @@ exportar defecto () => (
 
 If an external link is to an article in a reference like [MDN] or [Wikipedia], and a version of that article exists in your language that is of decent quality, consider linking to that version instead.
 
-[mdn]: https://developer.mozilla.org/en-US/
-[wikipedia]: https://en.wikipedia.org/wiki/Main_Page
+[mdn]: https://developer.mozilla.org/fr/
+[wikipedia]: https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal
 
 Example:
 
@@ -74,7 +74,7 @@ React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object).
 ✅ OK:
 
 ```md
-Los elementos de React son [inmutables](https://es.wikipedia.org/wiki/Objeto_inmutable).
+Les éléments de React sont [immuable](https://fr.wikipedia.org/wiki/Objet_immuable).
 ```
 
 For links that have no equivalent (Stack Overflow, YouTube videos, etc.), just use the English link.
