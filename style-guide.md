@@ -28,7 +28,7 @@ export default () => (
 )
 ```
 
-✅ ALSO OK:
+✅ ALSO OKAY:
 
 ```js
 // Exemple
