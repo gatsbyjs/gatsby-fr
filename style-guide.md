@@ -11,10 +11,10 @@ Leave text in code blocks untranslated except for comments. You may optionally t
 Example:
 
 ```js
-// Exemple
+// Example
 import React from "react"
 export default () => (
-  <div style={{ color: `purple`, fontSize: `72px` }}>Salut Gatsby !</div>
+  <div style={{ color: `purple`, fontSize: `72px` }}>Hello Gatsby!</div>
 )
 ```
 
