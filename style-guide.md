@@ -8,13 +8,13 @@ Use this file for language-specific style rules to follow for translation.
 
 Leave text in code blocks untranslated except for comments. You may optionally translate text in strings, but be careful not to translate strings that refer to code!
 
-Exemple:
+Example:
 
 ```js
 // Exemple
 import React from "react"
 export default () => (
-  <div style={{ color: `purple`, fontSize: `72px` }}>Hello Gatsby!</div>
+  <div style={{ color: `purple`, fontSize: `72px` }}>Salut Gatsby !</div>
 )
 ```
 
@@ -24,17 +24,17 @@ export default () => (
 // Exemple
 import React from "react"
 export default () => (
-  <div style={{ color: `purple`, fontSize: `72px` }}>Salut Gatsby!</div>
+  <div style={{ color: `purple`, fontSize: `72px` }}>Salut Gatsby !</div>
 )
 ```
 
-✅ OK:
+✅ ALSO OK:
 
 ```js
 // Exemple
 import React from "react"
 export default () => (
-  <div style={{ color: `purple`, fontSize: `72px` }}>Salut Gatsby!</div>
+  <div style={{ color: `purple`, fontSize: `72px` }}>Salut Gatsby !</div>
 )
 ```
 
@@ -45,16 +45,16 @@ export default () => (
 import React from "react"
 export default () => (
   // 'purple' is a CSS keyword
-  <div style={{ color: `morado`, fontSize: `72px` }}>Salut Gatsby!</div>
+  <div style={{ color: `mauve`, fontSize: `72px` }}>Salut Gatsby !</div>
 )
 ```
 
 ❌ DEFINITELY DON'T:
 
 ```js
-import React from "react"
-export default () => (
-   <div style = {{color: `morado`, fontSize:` 72px`}}> Salut Gatsby! </div>
+importer React de "react"
+exporter par défaut () => (
+   <div style = {{color: `mauve`, fontSize:` 72px`}}>Salut Gatsby !</div>
 )
 ```
 
@@ -65,7 +65,7 @@ If an external link is to an article in a reference like [MDN] or [Wikipedia], a
 [mdn]: https://developer.mozilla.org/fr/
 [wikipedia]: https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal
 
-Exemple:
+Example:
 
 ```md
 React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object).
