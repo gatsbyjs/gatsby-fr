@@ -4,7 +4,7 @@ titre:  Démarrage rapide
 
 Cette section de démarrage rapide est destinée aux développeurs intermédiaires à avancés. Pour une introduction plus douce à Gatsby, rendez-vous sur la page de [notre tutoriel](/tutorial/) !
 
-### Utiliser Gatsby CLI
+## Utiliser Gatsby CLI
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-quick-start-with-gatsby-create-develop-and-build-gatsby-sites-from-the-command-line"
@@ -19,7 +19,7 @@ Cette section de démarrage rapide est destinée aux développeurs intermédiair
 npm install -g gatsby-cli
 ```
 
-## Créer un nouveau site
+### Créer un nouveau site
 
 ```shell
 gatsby new gatsby-site
