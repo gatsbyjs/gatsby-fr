@@ -4,16 +4,16 @@ titre:  Démarrage rapide
 
 Cette section de démarrage rapide est destinée aux développeurs intermédiaires à avancés. Pour une introduction plus douce à Gatsby, rendez-vous sur la page de [notre tutoriel](/tutorial/) !
 
-## Utiliser Gatsby CLI
+### Utiliser Gatsby CLI
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-quick-start-with-gatsby-create-develop-and-build-gatsby-sites-from-the-command-line"
   lessonTitle="Quick Start with Gatsby: Create, Develop, and Build Gatsby Sites From the Command Line"
 />
 
-**Note** : cette vidéo utilise `npx`, un outil permettant d’exécuter un package npm sans l'installer d'abord. Exécuter la commande  `npx gatsby new` est la même chose que d’exécuter `gatsby new` après l'installation de gatsby-cli sur votre ordinateur.
+**Note** : cette vidéo utilise `npx`, un outil permettant d’exécuter un package npm sans l'installer d'abord. Exécuter la commande `npx gatsby new` est la même chose que d’exécuter `gatsby new` après l'installation de gatsby-cli sur votre ordinateur.
 
-## Installer Gatsby CLI
+### Installer Gatsby CLI
 
 ```shell
 npm install -g gatsby-cli
@@ -55,12 +55,12 @@ Gatsby effectue un build de production optimisé pour votre site, générant le 
 gatsby serve
 ```
 
-Gatsby lance un serveur HTML local pour tester votre site construit. N'oubliez pas de construire votre site en utilisant `gatsby build`  avant d'utiliser cette commande.
+Gatsby lance un serveur HTML local pour tester votre site construit. N'oubliez pas de construire votre site en utilisant `gatsby build` avant d'utiliser cette commande.
 
 ### Accéder à la documentation pour les commandes CLI
 
-Pour voir la documentation détaillée des commandes CLI, exécutez `gatsby –help`  dans le terminal.
+Pour voir la documentation détaillée des commandes CLI, exécutez `gatsby --help` dans le terminal.
 
-Pour des commandes spécifiques, exécutez `gatsby COMMAND_NAME –help` par exemple `gatsby new –help`.
+Pour des commandes spécifiques, exécutez `gatsby COMMAND_NAME --help` par exemple `gatsby new --help`.
 
 Pour plus d'informations sur Gatsby CLI, visitez la section [Référence CLI](/docs/gatsby-cli/) de la documentation.
