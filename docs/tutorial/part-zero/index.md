@@ -151,7 +151,7 @@ Pour résumer, dans cette section vous:
 - Connaître la ligne de commande et comment l'utiliser
 - Installation et apprentissage de Node.js et de l'outil CLI npm, du système de contrôle de version Git et de l'outil CLI Gatsby
 - Généré un nouveau site Gatsby à l'aide de l'outil CLI Gatsby
-- Exécutez le serveur de développement Gatsby et visité votre site localement
+- Exécutez le serveur de développement Gatsby et visitez votre site localement
 - Téléchargez un éditeur de code
 - Installation d'un formateur de code appelé Prettier
 
