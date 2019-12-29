@@ -11,7 +11,7 @@ Avant de commencer à créer votre premier site Gatsby, vous devez vous familiar
 La ligne de commande est une interface textuelle utilisée pour exécuter des commandes sur votre ordinateur. Vous le verrez également souvent sous le nom de terminal. Dans ce didacticiel, nous utiliserons les deux de manière interchangeable. C'est un peu comme utiliser le Finder sur un Mac ou l'Explorateur sur Windows. Finder et Explorer sont des exemples d'interfaces utilisateur graphiques (GUI). La ligne de commande est un moyen puissant et textuel d'interagir avec votre ordinateur.
 
 
-Prenez un temps pour trouver et ouvrir l'interface de ligne de commande (CLI) de votre ordinateur. Selon le système d'exploitation que vous utilisez, voir [**instructions pour Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instructions pour Windows**](https://www.quora.com/How-do-I-open-terminal-in-windows) ou [**instructions pour Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
+Prenez le temps pour trouver et ouvrir l'interface de ligne de commande (CLI) de votre ordinateur. Selon le système d'exploitation que vous utilisez, voir [**instructions pour Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instructions pour Windows**](https://www.quora.com/How-do-I-open-terminal-in-windows) ou [**instructions pour Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
 
 ## Installez Homebrew pour Node.js
 
