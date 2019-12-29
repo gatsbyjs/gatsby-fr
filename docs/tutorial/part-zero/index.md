@@ -185,7 +185,7 @@ npm a trois composants distincts: le site Web npm, le registre npm et l'interfac
 
 - Sur le site Web de npm, vous pouvez parcourir les packages JavaScript disponibles dans le registre npm.
 - Le registre npm est une grande base de données d'informations sur les packages JavaScript disponibles sur npm.
-- Une fois que vous avez identifié le package souhaité, vous pouvez utiliser la CLI npm pour l'installer dans votre projet ou globalement (comme les autres outils CLI). La CLI npm est ce qui parle au registre
+- Une fois que vous avez identifié le package souhaité, vous pouvez utiliser la CLI npm pour l'installer dans votre projet ou globalement (comme les autres outils CLI). La CLI npm est ce qui parle au registre.
 - vous n'interagissez généralement qu'avec le site Web npm ou la CLI npm.
 
 > 💡 Découvrez l'introduction de npm, “[**Qu'est-ce que npm?**](https://docs.npmjs.com/getting-started/what-is-npm)”.
