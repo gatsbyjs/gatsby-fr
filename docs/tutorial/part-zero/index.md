@@ -15,7 +15,7 @@ Prenez le temps pour trouver et ouvrir l'interface de ligne de commande (CLI) de
 
 ## Installez Homebrew pour Node.js
 
-Pour installer Gatsby et Node.js, il est recommandé d'utiliser [Homebrew](https://brew.sh/). Une petite configuration au début peut vous éviter quelques maux de tête plus tard!
+Pour installer Gatsby et Node.js, il est recommandé d'utiliser [Homebrew](https://brew.sh/). Une petite configuration au début peut vous éviter quelques maux de tête plus tard !
 
 Comment installer ou vérifier Homebrew sur votre ordinateur:
 
