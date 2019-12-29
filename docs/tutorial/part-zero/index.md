@@ -4,7 +4,7 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Avant de commencer à créer votre premier site Gatsby, vous devez vous familiariser avec certaines technologies Web de base et vous assurer que vous avez installé tous les outils logiciels requis.
+Avant de commencer à créer votre premier site Gatsby, vous devez vous familiariser avec certaines technologies web de base et vous assurer que vous avez installé tous les outils logiciels requis.
 
 ## Familiarisez-vous avec la ligne de commande
 
