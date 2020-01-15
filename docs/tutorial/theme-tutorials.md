@@ -1,14 +1,14 @@
 ---
-title: Theme Tutorials
+title: Tutoriels sur les thèmes
 ---
 
-Gatsby themes are a new way to encapsulate, re-use, and compose Gatsby functionality.
+Les thèmes Gatsby sont une nouvelle façon d'encapsuler, de réutiliser et de composer des fonctionnalités pour Gatsby.
 
-In this section, you'll find tutorials for:
+Dans cette section, vous trouverez des tutoriels pour:
 
-1. Setting up a site using a single theme (the blog theme)
-2. Setting up a site which composes multiple themes (the blog theme, and the notes theme)
+1. Configurer un site en utilisant seulement un thème (le thème de blog)
+2. Configurer un site qui compose plusieurs thèmes (le thème de blog et celui des notes)
 
-To learn more about themes in general, you may be interested to check out the [themes section of the docs](/docs/themes), as well.
+Pour en apprendre plus au sujet des thèmes en général, jettez un oeil à la [section "thèmes" de la documentation](/docs/themes) aussi
 
 <GuideList slug={props.slug} />
