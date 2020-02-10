@@ -6,7 +6,7 @@ Nous voulons que contribuer à Gatsby soit amusant, agréable et éducatif pour 
 
 ## Vous ne savez pas comment commencer à contribuer?
 
-Si vous êtes inquiet ou si vous ne savez pas par où commencer, consultez notre [où participer](/contributing/where-to-participate/) page. Vous pouvez contacter avec des questions [Marcy Sutton (@marcysutton)](https://twitter.com/marcysutton) or [@GatsbyJS](https://twitter.com/gatsbyjs) sur Twitter, et toute personne de l'équipe Gatsby sur [Discord](https://gatsby.dev/discord). Vous pouvez également [soumettre un problème](/contributing/how-to-file-an-issue/) et un mainteneur peut vous guider!
+Si vous êtes inquiet ou si vous ne savez pas par où commencer, consultez notre page [où participer](/contributing/where-to-participate/). Vous pouvez contacter avec des questions [Marcy Sutton (@marcysutton)](https://twitter.com/marcysutton) or [@GatsbyJS](https://twitter.com/gatsbyjs) sur Twitter, et toute personne de l'équipe Gatsby sur [Discord](https://gatsby.dev/discord). Vous pouvez également [soumettre un problème](/contributing/how-to-file-an-issue/) et un mainteneur peut vous guider!
 
 ## Programmation en binôme
 
