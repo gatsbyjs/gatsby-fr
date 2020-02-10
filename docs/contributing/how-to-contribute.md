@@ -10,6 +10,6 @@ Si vous êtes inquiet ou si vous ne savez pas par où commencer, consultez notre
 
 ## Programmation en binôme
 
-Gatsby.js offre gratuitement [séances de programmation en binôme](/contributing/pair-programming/) à la communauté, s'il y a quelque chose sur lequel vous aimeriez travailler ensemble. Contactez-nous si vous avez une question sur la contribution ou une idée de quelque chose à associer!
+Gatsby.js offre gratuitement [séances de programmation en binôme](/contributing/pair-programming/) à la communauté, s'il y a quelque chose sur lequel vous aimeriez travailler ensemble. Contactez-nous si vous avez une question sur la contribution ou une idée sur un travail en binôme!
 
 <GuideList slug={props.slug} />
