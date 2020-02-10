@@ -1,15 +1,15 @@
 ---
-title: How to Contribute
+title: Comment contribuer
 ---
 
-We want contributing to Gatsby to be fun, enjoyable, and educational for anyone and everyone. All contributions are welcome, including issues, new docs as well as updates and tweaks, blog posts, workshops, and more.
+Nous voulons que contribuer à Gatsby soit amusant, agréable et éducatif pour tout le monde. Toutes les contributions sont les bienvenues, y compris les numéros, les nouveaux documents ainsi que les mises à jour et modifications, les articles de blog, les ateliers, etc.
 
-## Not sure how to start contributing?
+## Vous ne savez pas comment commencer à contribuer?
 
-If you are worried or don't know where to start, check out our [where to participate](/contributing/where-to-participate/) page. You can reach out with questions to [Marcy Sutton (@marcysutton)](https://twitter.com/marcysutton) or [@GatsbyJS](https://twitter.com/gatsbyjs) on Twitter, and anyone from the Gatsby team on [Discord](https://gatsby.dev/discord). You can also [submit an issue](/contributing/how-to-file-an-issue/) and a maintainer can give you guidance!
+Si vous êtes inquiet ou si vous ne savez pas par où commencer, consultez notre [où participer](/contributing/where-to-participate/) page. Vous pouvez contacter avec des questions [Marcy Sutton (@marcysutton)](https://twitter.com/marcysutton) or [@GatsbyJS](https://twitter.com/gatsbyjs) sur Twitter, et toute personne de l'équipe Gatsby sur [Discord](https://gatsby.dev/discord). Vous pouvez également [soumettre un problème](/contributing/how-to-file-an-issue/) et un mainteneur peut vous guider!
 
-## Pair programming
+## Programmation en binôme
 
-Gatsby.js offers free [pair programming sessions](/contributing/pair-programming/) to the community, if there's something you'd like to work on together. Get in touch with us if you have a question about contributing or an idea for something to pair on!
+Gatsby.js offre gratuitement [séances de programmation en binôme](/contributing/pair-programming/) à la communauté, s'il y a quelque chose sur lequel vous aimeriez travailler ensemble. Contactez-nous si vous avez une question sur la contribution ou une idée de quelque chose à associer!
 
 <GuideList slug={props.slug} />
