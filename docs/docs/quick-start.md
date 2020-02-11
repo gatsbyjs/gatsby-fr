@@ -13,35 +13,59 @@ Cette section de démarrage rapide est destinée aux développeurs intermédiair
 
 **Note** : cette vidéo utilise `npx`, un outil permettant d’exécuter un package npm sans l'installer d'abord. Exécuter la commande `npx gatsby new` est la même chose que d’exécuter `gatsby new` après l'installation de gatsby-cli sur votre ordinateur.
 
+<<<<<<< HEAD
 ### Installer Gatsby CLI
+=======
+### Install the Gatsby CLI
+>>>>>>> fd3df38d5351bfbf1bf86cb9e0c8cc80dc9ba2a7
 
 ```shell
 npm install -g gatsby-cli
 ```
 
+<<<<<<< HEAD
 ### Créer un nouveau site
+=======
+### Create a new site
+>>>>>>> fd3df38d5351bfbf1bf86cb9e0c8cc80dc9ba2a7
 
 ```shell
 gatsby new gatsby-site
 ```
 
+<<<<<<< HEAD
 ### Se déplacer vers le dossier du site
+=======
+### Change directories into site folder
+>>>>>>> fd3df38d5351bfbf1bf86cb9e0c8cc80dc9ba2a7
 
 ```shell
 cd gatsby-site
 ```
 
+<<<<<<< HEAD
 ### Lancer son serveur de développement
+=======
+### Start development server
+>>>>>>> fd3df38d5351bfbf1bf86cb9e0c8cc80dc9ba2a7
 
 ```shell
 gatsby develop
 ```
 
+<<<<<<< HEAD
 Gatsby lance un environnement de développement disposant du hot-reloading et accessible par défaut à `localhost:8000`.
+=======
+Gatsby will start a hot-reloading development environment accessible by default at `http://localhost:8000`.
+>>>>>>> fd3df38d5351bfbf1bf86cb9e0c8cc80dc9ba2a7
 
 Essayez d'éditer les pages JavaScript disponible dans le dossier `src/pages`. Les modifications enregistrées seront rechargées en direct dans le navigateur (hot-reloading).
 
+<<<<<<< HEAD
 ### Créer un build pour mise en production
+=======
+### Create a production build
+>>>>>>> fd3df38d5351bfbf1bf86cb9e0c8cc80dc9ba2a7
 
 ```shell
 gatsby build
@@ -49,7 +73,11 @@ gatsby build
 
 Gatsby effectue un build de production optimisé pour votre site, générant le HTML static et des bundles du JavaScript pour chaque route.
 
+<<<<<<< HEAD
 ### Servir le build de production localement
+=======
+### Serve the production build locally
+>>>>>>> fd3df38d5351bfbf1bf86cb9e0c8cc80dc9ba2a7
 
 ```shell
 gatsby serve

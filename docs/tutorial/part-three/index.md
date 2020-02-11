@@ -280,11 +280,15 @@ export default ({ children }) => (
 )
 ```
 
-![with-navigation2](with-navigation2.png)
+![with-navigation2](with-navigation.png)
 
 Et voilà ! Maintenant vous avez un site de trois pages avec un menu de navigation de base.
 
+<<<<<<< HEAD
 _Challenge:_ Avec vos nouveaux pouvoirs de "composants de présentation", essayez d'ajouter à votre site Gatsby des en-têtes, pieds de page, menus de navigation, barres latérales, etc.
+=======
+_Challenge:_ With your new "layout component" powers, try adding headers, footers, global navigation, sidebars, etc. to your Gatsby sites!
+>>>>>>> fd3df38d5351bfbf1bf86cb9e0c8cc80dc9ba2a7
 
 ## Quelle est la suite ?
 
