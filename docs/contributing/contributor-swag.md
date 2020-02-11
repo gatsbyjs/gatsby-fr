@@ -1,26 +1,26 @@
 ---
-title: Free Swag for Gatsby Contributors!
+title: Cadeaux gratuit pour les contributeurs de Gatsby !
 ---
 
-Gatsby relies on contributors from the open source community, and we want to make sure you know how much it means to us that you’re willing to put time and effort into [contributing to Gatsby](/contributing/how-to-contribute/).
+Gatsby s'appuie sur des contributeurs de la communauté open source, et nous voulons nous assurer que vous savez à quel point il est important pour nous que vous soyez prêt à consacrer du temps et des efforts dans la [contribution à Gatsby](/contributing/how-to-contribute/).
 
-To show our appreciation, _**everyone who contributes to Gatsby is eligible to receive free swag!**_
+Pour montrer notre gratitude, _**tous ceux qui contribuent à Gatsby peuvent recevoir un cadeau gratuit !**_
 
-![Gatsby contributors wearing swag.](./images/gatsby-swag.jpg)
+![Les contributeurs de Gatsby portant le cadeau.](./images/gatsby-swag.jpg)
 
-### How to claim your free swag
+### Comment obtenir votre cadeau gratuit
 
-If you contribute to the Gatsby organization on GitHub, you can claim your swag by [logging into the Gatsby Store](https://store.gatsbyjs.org/) and requesting a discount code. With five or more contributions, you can claim your _**Level 2**_ swag.
+Si vous contribuez à l'organisation Gatsby sur GitHub, vous pouvez réclamer votre cadeau en vous [connectant dans la boutique Gatsby](https://store.gatsbyjs.org/) et en demandant un code de réduction. Avec cinq contributions ou plus, vous pouvez obtenir votre cadeau _**Level 2**_.
 
-If you’ve contributed in other ways, such as giving talks about Gatsby, teaching others to use it, writing Gatsby articles/tutorials, participating in a Gatsby research project, or any other way, please email <mailto:marketing@gatsbyjs.com> or [tweet at Gatsby on Twitter](https://twitter.com/gatsbyjs) to claim your swag.
+Si vous avez contribué d'une autre manière, par exemple en donnant des conférences sur Gatsby, en apprenant à d'autres personnes à l'utiliser, en écrivant des articles/tutoriels sur Gatsby, en participant à un projet de recherche sur Gatsby ou de toute autre manière, veuillez envoyer un mail à <mailto:marketing@gatsbyjs.com> ou [tweetez @Gatsby sur Twitter](https://twitter.com/gatsbyjs) pour obtenir votre cadeau.
 
-### Details about free swag
+### Détails sur le cadeau gratuit
 
-- We will send one item from our [swag store](https://store.gatsbyjs.org/) per swag tier
-- Tier 1 swag includes most items \$10 and under
-- Tier 2 swag includes most items \$26 and under
-- Not all items are eligible due to high cost to create the swag. We’ll make it clear which items are not eligible
-- There’s a limit of one free swag item per swag tier
-- Shipping is free worldwide
+- Nous enverrons un article de notre [boutique cadeau](https://store.gatsbyjs.org/) par niveau
+- Le cadeau de niveau 1 comprend la plupart des articles de \$10 et moins
+- Le cadeau de niveau 2 comprend la plupart des articles de \$26 et moins
+- Tous les articles ne sont pas éligibles en raison du coût élevé de la création du cadeau. Nous préciserons quels articles ne sont pas éligibles
+- Il y a une limite d'un article gratuit par niveau de promotion
+- La livraison est gratuite dans le monde entier
 
-> **NOTE:** Worldwide free shipping is a pilot program. If shipping costs get out of control, we may need to adjust this policy in the future.
+> **NOTE:** La livraison gratuite dans le monde entier est un programme pilote. Si les frais d'expédition deviennent incontrôlables, nous devrons peut-être adapter cette politique à l'avenir.
