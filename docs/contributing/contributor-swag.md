@@ -10,7 +10,7 @@ Pour montrer notre gratitude, _**tous ceux qui contribuent à Gatsby peuvent rec
 
 ### Comment obtenir votre cadeau gratuit
 
-Si vous contribuez à l'organisation Gatsby sur GitHub, vous pouvez réclamer votre cadeau en vous [connectant dans la boutique Gatsby](https://store.gatsbyjs.org/) et en demandant un code de réduction. Avec cinq contributions ou plus, vous pouvez obtenir votre cadeau _**Level 2**_.
+Si vous contribuez à l'organisation Gatsby sur GitHub, vous pouvez réclamer votre cadeau en vous [connectant à la boutique Gatsby](https://store.gatsbyjs.org/) et en demandant un code de réduction. Avec cinq contributions ou plus, vous pouvez obtenir votre cadeau de _**Niveau 2**_.
 
 Si vous avez contribué d'une autre manière, par exemple en donnant des conférences sur Gatsby, en apprenant à d'autres personnes à l'utiliser, en écrivant des articles/tutoriels sur Gatsby, en participant à un projet de recherche sur Gatsby ou de toute autre manière, veuillez envoyer un mail à <mailto:marketing@gatsbyjs.com> ou [tweetez @Gatsby sur Twitter](https://twitter.com/gatsbyjs) pour obtenir votre cadeau.
 
