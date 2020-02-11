@@ -2,7 +2,7 @@
 title: Cadeaux gratuit pour les contributeurs de Gatsby !
 ---
 
-Gatsby s'appuie sur des contributeurs de la communauté open source, et nous voulons nous assurer que vous savez à quel point il est important pour nous que vous soyez prêt à consacrer du temps et des efforts dans la [contribution à Gatsby](/contributing/how-to-contribute/).
+Gatsby s'appuie sur des contributeurs de la communauté open source, et nous voulons nous assurer que vous savez à quel point il est important pour nous que vous ayez envie de consacrer du temps et des efforts dans la [contribution à Gatsby](/contributing/how-to-contribute/).
 
 Pour montrer notre gratitude, _**tous ceux qui contribuent à Gatsby peuvent recevoir un cadeau gratuit !**_
 
