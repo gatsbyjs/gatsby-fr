@@ -280,7 +280,7 @@ export default ({ children }) => (
 )
 ```
 
-![with-navigation2](with-navigation2.png)
+![with-navigation2](with-navigation.png)
 
 Et voilà ! Maintenant vous avez un site de trois pages avec un menu de navigation de base.
 
