@@ -27,13 +27,10 @@ Vous pouvez aussi utiliser la variante de script `package.json` de ces commandes
 
 ### `new`
 
-<<<<<<< HEAD
-```
-gatsby new [<nom-de-site> [<url-de-départ>]]
-=======
+
 ```shell
-gatsby new [<site-name> [<starter-url>]]
->>>>>>> fd3df38d5351bfbf1bf86cb9e0c8cc80dc9ba2a7
+gatsby new [<nom-de-site> [<url-de-départ>]]
+
 ```
 
 #### Arguments
@@ -83,18 +80,12 @@ Une fois que vous avez installé un site Gatsby, allez dans le répertoire racin
 
 |     Option      | Description                                     |
 | :-------------: | ----------------------------------------------- |
-<<<<<<< HEAD
 | `-H`, `--host`  | Définit hôte. Par défaut à localhost            |
 | `-p`, `--port`  | Définit port. Par défaut à 8000                 |
 | `-o`, `--open`  | Ouvre le site dans votre navigateur (par défaut)|
 |                 | pour vous                                       |
 | `-S`, `--https` | Utilise HTTPS                                   |
-=======
-| `-H`, `--host`  | Set host. Defaults to localhost                 |
-| `-p`, `--port`  | Set port. Defaults to env.PORT or 8000          |
-| `-o`, `--open`  | Open the site in your (default) browser for you |
-| `-S`, `--https` | Use HTTPS                                       |
->>>>>>> fd3df38d5351bfbf1bf86cb9e0c8cc80dc9ba2a7
+
 
 Suivez le [Guide HTTPS local](/docs/local-https/)
 pour savoir comment configurer un serveur de développement HTTPS avec Gatsby.
@@ -109,23 +100,14 @@ gatsby develop -H 0.0.0.0
 
 Ensuite, le terminal enregistrera les informations comme d'habitude, mais inclura en plus une URL vers laquelle vous pouvez naviguer depuis un client sur le même réseau pour voir comment le site est rendu.
 
-<<<<<<< HEAD
-```
-Vous pouvez maintenant voir gatsbyjs.org dans le navigateur.
-=======
 ```shell
-You can now view gatsbyjs.org in the browser.
->>>>>>> fd3df38d5351bfbf1bf86cb9e0c8cc80dc9ba2a7
+Vous pouvez maintenant voir gatsbyjs.org dans le navigateur.
 ⠀
   Local:            http://0.0.0.0:8000/
   Sur votre réseau:  http://192.168.0.212:8000/ // highlight-line
 ```
 
-<<<<<<< HEAD
-**Note**: vous ne pouvez pas visiter 0.0.0.0:8000 sous Windows (mais les choses fonctionneront en utilisant soit localhost:8000 ou l'URL "Sur votre réseau" sous Windows)
-=======
-**Note**: To access Gatsby on your local machine, use either `http://localhost:8000` or the "On Your Network" URL.
->>>>>>> fd3df38d5351bfbf1bf86cb9e0c8cc80dc9ba2a7
+**Note** : Pour accéder à Gatsby depuis votre machine locale, utilisez soit `http://localhost:8000`, soit l'URL "Sur votre réseau".
 
 ### `build`
 
@@ -231,14 +213,11 @@ Pour plus d'informations, consultez la [documentation Gatsby REPL] (/docs/gatsby
 
 ### Désactivation de la sortie colorée
 
-<<<<<<< HEAD
 En plus de l'option explicite `--no-color`, la CLI respecte la présence de la variable d'environnement `NO_COLOR` (voir [no-color.org](https://no-color.org/)).
-=======
-In addition to the explicit `--no-color` option, the CLI respects the presence of the `NO_COLOR` environment variable (see [no-color.org](https://no-color.org/)).
 
-## How to change your default package manager for your next project?
+## Comment changer de gestionnaire de paquets par défaut sur votre prochain projet ?
 
-When you use `gatsby new` for the first time to create a new project, you are asked to choose your default package manager between yarn and npm.
+Lorsque vous utilisez `gatsby new` la première fois pour créer un nouveau projet, il vous demande de choisir votre gestionnaire de paquets par défaut entre yarn et npm.
 
 ```shell
 Which package manager would you like to use ? › - Use arrow-keys. Return to submit.
@@ -246,12 +225,12 @@ Which package manager would you like to use ? › - Use arrow-keys. Return to su
    npm
 ```
 
-Once you’ve made your choice, the CLI won’t ask for your preference again for any subsequent project.
+Une fois que vous avez fait votre choix, la CLI ne vous demandera plus vos préférences même pour de nouveaux projets.
 
-If you want to change this for your next project you have to edit the config file created automatically by the CLI.
-This file is available on your system at: `~/.config/gatsby/config.json`
+SI vous souhaitez changer ce paramètre pour votre prochain projet vous devez modifier le fichier de configuration qui a été créé automatiquement par la CLI.
+Sur votre système, ce fichier est disponible à : `~/.config/gatsby/config.json`
 
-In it you’re going to see something like this.
+Dans ce fichier vous verrez quelque chose de similaire à ceci.
 
 ```json:title=config.json
 {
@@ -261,5 +240,5 @@ In it you’re going to see something like this.
 }
 ```
 
-Edit your `packageManager` value, save and you’re good to go for your next project using `gatsby new`.
->>>>>>> fd3df38d5351bfbf1bf86cb9e0c8cc80dc9ba2a7
+Modifiez la valeur de `packageManager`, enregistrez et vous êtes pret à attaquer votre prochain projet avec `gatsby new`.
+
