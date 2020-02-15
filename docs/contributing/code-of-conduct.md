@@ -44,6 +44,8 @@ Les cas de comportements abusifs, harcelants ou tout autre comportement inaccept
 
 Les membres du projet qui ne suivent ou qui n'appliquent pas le Code de Conduite de bonne foi s'exposent temporairement ou de façon permanente à des répercussions définies par d'autres membres de la direction du projet.
 
+Lorsqu’exposée à des commentaires de mauvaise foi ou harcelants de manière répétée et après avoir sincèrement tenté d'assurer la médiation d'un problème, l'équipe de Gatsby se réserve le droit de supprimer une personne du répertoire GitHub et/ou de les bloquer sur les réseaux sociaux. Cette décision sera toujours prise avec le concours de plus d'un membre de l'équipe.
+
 ## Attribution
 
 Ce Code de Conduite est adapté du Contributor Covenant, version 1.4.
