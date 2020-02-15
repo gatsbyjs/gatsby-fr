@@ -227,7 +227,7 @@ Which package manager would you like to use ? › - Use arrow-keys. Return to su
 
 Une fois que vous avez fait votre choix, la CLI ne vous demandera plus vos préférences même pour de nouveaux projets.
 
-SI vous souhaitez changer ce paramètre pour votre prochain projet vous devez modifier le fichier de configuration qui a été créé automatiquement par la CLI.
+Si vous souhaitez changer ce paramètre pour votre prochain projet vous devez modifier le fichier de configuration qui a été créé automatiquement par la CLI.
 Sur votre système, ce fichier est disponible à : `~/.config/gatsby/config.json`
 
 Dans ce fichier vous verrez quelque chose de similaire à ceci.
@@ -241,4 +241,3 @@ Dans ce fichier vous verrez quelque chose de similaire à ceci.
 ```
 
 Modifiez la valeur de `packageManager`, enregistrez et vous êtes pret à attaquer votre prochain projet avec `gatsby new`.
-
