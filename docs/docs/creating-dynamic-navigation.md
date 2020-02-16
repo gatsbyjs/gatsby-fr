@@ -1,8 +1,6 @@
 ---
-title: Centralizing Your Site's Navigation
+title: Creating Dynamic Navigation in Gatsby
 ---
-
-## Creating dynamic navigation in Gatsby
 
 At times you will want to be able to edit your website's navigation in response to a _change in requirements_. To achieve this, you can use Gatsby to dynamically generate your navigation. Where you store the data for your navigation can be anywhere - a backend API, CMS, headless CMS or even the filesystem.
 
@@ -86,7 +84,7 @@ When executing this query within the GraphiQL editor you see output that looks s
 }
 ```
 
-Perfect! You now have a way of obtaining data from the `gatsby-config.js` file. Let's continue by pulling this data into the layout using the query you just formed.
+Perfect! You now have a way of obtaining data from the `gatsby-config.js` file. Continue by pulling this data into the layout using the query you just formed.
 
 ### Pulling data inside the layout component
 
@@ -94,7 +92,7 @@ Inside your project, locate the `src/components` folder and navigate to the `lay
 
 StaticQuery is a new component introduced in Gatsby V2, which allows you to run GraphQL queries within your components, not just pages. It allows developers to collocate data with their components.
 
-Let's extend the query within this component to include the menu links, so it looks like so:
+Extend the query within this component to include the menu links, so it looks like so:
 
 ```diff:title=src/components/layout.js
 const Layout = ({ children }) => (
@@ -141,7 +139,7 @@ const Layout = ({ children }) => (
 
 With the above changes to your `StaticQuery` component, the `render` property, which accepts a function that takes one argument, now has access to the menu links for use inside the function (as the argument). The last thing that is left to do is to display the site's navigation.
 
-To do this, the header component that is already available in the project seems like it might be a good starting place to display the navigation. Let's pass the `menuLinks` object to this header component like so:
+To do this, the header component that is already available in the project seems like it might be a good starting place to display the navigation. Pass the `menuLinks` object to this header component like so:
 
 ```diff:title=src/components/layout.js
 const Layout = ({ children }) => (
@@ -189,9 +187,9 @@ const Layout = ({ children }) => (
 
 ### Using the header component to display the navigation
 
-Locate the `header.js` file inside `src/components` and remove everything so only the functional component definition is left (everything else is just boilerplate code given to us when generating our project):
+Locate the `header.js` file inside `src/components` and remove everything so only the functional component definition is left (everything else is just boilerplate code given to you when generating your project):
 
-```js:title=src/components/header.js
+```jsx:title=src/components/header.js
 import React from "react"
 import { Link } from "gatsby"
 const Header = ({ siteTitle, menuLinks }) => (
