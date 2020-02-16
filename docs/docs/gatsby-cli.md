@@ -27,8 +27,10 @@ Vous pouvez aussi utiliser la variante de script `package.json` de ces commandes
 
 ### `new`
 
-```
+
+```shell
 gatsby new [<nom-de-site> [<url-de-départ>]]
+
 ```
 
 #### Arguments
@@ -84,6 +86,7 @@ Une fois que vous avez installé un site Gatsby, allez dans le répertoire racin
 |                 | pour vous                                       |
 | `-S`, `--https` | Utilise HTTPS                                   |
 
+
 Suivez le [Guide HTTPS local](/docs/local-https/)
 pour savoir comment configurer un serveur de développement HTTPS avec Gatsby.
 
@@ -97,14 +100,14 @@ gatsby develop -H 0.0.0.0
 
 Ensuite, le terminal enregistrera les informations comme d'habitude, mais inclura en plus une URL vers laquelle vous pouvez naviguer depuis un client sur le même réseau pour voir comment le site est rendu.
 
-```
+```shell
 Vous pouvez maintenant voir gatsbyjs.org dans le navigateur.
 ⠀
   Local:            http://0.0.0.0:8000/
   Sur votre réseau:  http://192.168.0.212:8000/ // highlight-line
 ```
 
-**Note**: vous ne pouvez pas visiter 0.0.0.0:8000 sous Windows (mais les choses fonctionneront en utilisant soit localhost:8000 ou l'URL "Sur votre réseau" sous Windows)
+**Note** : Pour accéder à Gatsby depuis votre machine locale, utilisez soit `http://localhost:8000`, soit l'URL "Sur votre réseau".
 
 ### `build`
 
@@ -211,3 +214,30 @@ Pour plus d'informations, consultez la [documentation Gatsby REPL] (/docs/gatsby
 ### Désactivation de la sortie colorée
 
 En plus de l'option explicite `--no-color`, la CLI respecte la présence de la variable d'environnement `NO_COLOR` (voir [no-color.org](https://no-color.org/)).
+
+## Comment changer de gestionnaire de paquets par défaut sur votre prochain projet ?
+
+Lorsque vous utilisez `gatsby new` la première fois pour créer un nouveau projet, il vous demande de choisir votre gestionnaire de paquets par défaut entre yarn et npm.
+
+```shell
+Which package manager would you like to use ? › - Use arrow-keys. Return to submit.
+❯  yarn
+   npm
+```
+
+Une fois que vous avez fait votre choix, la CLI ne vous demandera plus vos préférences même pour de nouveaux projets.
+
+Si vous souhaitez changer ce paramètre pour votre prochain projet vous devez modifier le fichier de configuration qui a été créé automatiquement par la CLI.
+Sur votre système, ce fichier est disponible à : `~/.config/gatsby/config.json`
+
+Dans ce fichier vous verrez quelque chose de similaire à ceci.
+
+```json:title=config.json
+{
+  "cli": {
+    "packageManager": "yarn"
+  }
+}
+```
+
+Modifiez la valeur de `packageManager`, enregistrez et vous êtes pret à attaquer votre prochain projet avec `gatsby new`.

@@ -114,7 +114,7 @@ import "./src/styles/global.css"
 // require('./src/styles/global.css')
 ```
 
-> Note : Les deux syntaxes (`require`) de CommonJS et (`import`) des modules ES fonctionnent ici. Si vous n'êtes pas sûr de laquelle choisir, nous utilisons la plupart du temps `import`.
+> Note : Les deux syntaxes (`require`) de CommonJS et (`import`) des modules ES fonctionnent ici. Si vous n'êtes pas sûr de laquelle choisir, `import` est la plupart du temps un bon choix par défaut. Cependant, lorsque vous travaillez sur des fichiers qui ne sont exécutés que dans un evironnement Node.js (comme `gatsby-node.js`), `require` devra être utilisé.
 
 3. Lancez le serveur de développement:
 
@@ -247,15 +247,13 @@ import Container from "../components/container"
 console.log(styles)
 ```
 
-Le code `console.log(styles)` va logger le résultat de cet import de sorte que vous pouviez voir le résultat généré par le fichier `./about-css-modules.module.css`. Si vous ouvrez la console développeur (en utilisant par exemple l'outil de développement de Firefox ou de Chrome) dans votre navigateur, vous verrez :
+Le code `console.log(styles)` va logger le résultat de cet import de sorte que vous puissiez voir le résultat généré par le fichier `./about-css-modules.module.css`. Si vous ouvrez la console développeur (en utilisant par exemple l'outil de développement de Firefox ou de Chrome, on y accède souvent par la touche F12) dans votre navigateur, vous verrez :
 
 ![le résultat de votre import du Module CSS](css-modules-console.png)
 
 Si vous comparez ce résultat avec votre fichier CSS, vous verrez que chaque classe dans l'objet que vous importez pointe vers une longue chaine de caractères. Par exemple: `avatar` pointe vers `src-pages----about-css-modules-module---avatar---2lRF7`. Ce sont les noms de classes générés par les Modules CSS. Ils garantissent leur unicité à travers tout votre site. Étant donné que vous les importez pour les utiliser, il n'y a jamais de doute quant à savoir où s'applique votre CSS.
 
-4. Créez un composant `User`.
-
-Créez un nouveau composant `<User />` dans votre composant de page `about-css-modules.js`. Modifiez `about-css-modules.js` afin qu'il ressemble à ça :
+4. Créez un nouveau composant `<User />` dans votre composant de page `about-css-modules.js`. Modifiez `about-css-modules.js` afin qu'il ressemble à ça :
 
 ```jsx:title=src/pages/about-css-modules.js
 import React from "react"

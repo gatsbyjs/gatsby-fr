@@ -14,8 +14,7 @@ Dans ce tutoriel, vous apprendrez comment intégrer des données dans votre site
 
 GraphiQL est l'environnement de développement intégré (EDI) de GraphQL. C'est un outil puissant (et en tout point génial) que vous serez souvent amené à utiliser en construisant des sites web Gatsby.
 
-Vous pouvez y accéder lorsque votre serveur de développement est lancé - normalement ici
-<http://localhost:8000/___graphql>.
+Lorsque votre serveur de développement est lancé, vous pouvez y accéder ici `http://localhost:8000/___graphql`.
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="/graphiql-explore.mp4"></source>
@@ -94,7 +93,7 @@ Sinon, vous pouvez ajouter des champs en utilisant le raccourci d'autocomplétio
 
 ![filesystem-autocomplete](filesystem-autocomplete.png)
 
-Essayez d'ajouter de multiples champs à votre requête, en appuyant sur <kbd>Ctrl + Entrer</kbd> pour exécuter à nouveau la requête. Vous verrez les résultats mis à jour de la requête :
+Essayez d'ajouter de multiples champs à votre requête, appuyez sur <kbd>Ctrl + Entrer</kbd> à chaque fois pour exécuter à nouveau la requête. Vous verrez les résultats de la requête mis à jour :
 
 ![allfile-query](allfile-query.png)
 
@@ -202,7 +201,7 @@ export const query = graphql`
 `
 ```
 
-Visitez maintenant [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
+Et maintenant visitez `http://localhost:8000/my-files`… 😲
 
 ![my-files-page](my-files-page.png)
 

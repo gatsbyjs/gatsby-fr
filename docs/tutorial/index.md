@@ -28,7 +28,7 @@ Dans ces tutoriels intermédiaires, vous apprendrez à collecter des données de
 
 Les thèmes Gatsby extraient toute votre configuration de base (fonctionnalités partagées, origine des données, design) hors de votre site et génère un paquet pouvant être installé.
 
-Ce qui signifie que la configuration et les fonctionnalités ne sont pas écrites directement dans votre projet, mais plutôt sous forme de versions, géré de manière centralisée et installé en tant que dépendance. Vous pouvez parfaitement mettre à jour votre thème, intégrer plusieurs thèmes simultanément, et même substituer un thème compatible à un autre.
+Ceci signifie que la configuration et les fonctionnalités ne sont pas écrites directement dans votre projet, mais plutôt versionné, géré de manière centralisée et installé en tant que dépendance. Vous pouvez parfaitement mettre à jour votre thème, intégrer plusieurs thèmes simultanément, et même substituer un thème compatible à un autre.
 
 Apprenez en plus à propos de l'utilisation et la création de thèmes avec les [Tutoriels des thèmes Gatsby](/tutorial/theme-tutorials/).
 

@@ -20,7 +20,7 @@ Lors de la création d'un nouveau site Gatsby, vous pouvez utiliser la structure
 gatsby new [SITE_DIRECTORY_NAME] [URL_OF_STARTER_GITHUB_REPO]
 ```
 
-Si vous oubliez l'URL à la fin, Gatsby générera automatiquement un site pour vous en fonction du [**starter par défaut**](https://github.com/gatsbyjs/gatsby-starter-default). Dans cette section du tutoriel, restez avec le site “Hello World” que vous avez déjà créé dans la partie zéro.
+Si vous oubliez l'URL à la fin, Gatsby générera automatiquement un site pour vous en fonction du [**starter par défaut**](https://github.com/gatsbyjs/gatsby-starter-default). Dans cette section du tutoriel, restez avec le site “Hello World” que vous avez déjà créé dans la partie zéro. Vous pouvez en apprendre plus sur [la modification des starters](/docs/modifying-a-starter) dans la documentation.
 
 ### ✋ Ouvrez le code
 
@@ -165,7 +165,7 @@ export default () => (
 )
 ```
 
-2.  Accédez à http://localhost:8000/about/.
+2.  Accédez à `http://localhost:8000/about/`
 
 ![Nouvelle page à propos](05-about-page.png)
 
@@ -228,9 +228,9 @@ export default () => (
 
 Vous devriez maintenant voir l'en-tête “A propos de Gatsby” encore !
 
-### Que sont les “props”?
+### Que sont les “props” ?
 
-Vous avez précédemment défini les composants React comme des éléments de code réutilisables décrivant une interface utilisateur. Pour rendre ces pièces réutilisables dynamiques, vous devez pouvoir leur fournir différentes données. Vous faites cela avec une entrée appelée “props”. Les props sont des propriétés fournies aux composants React.
+Vous avez précédemment défini les composants React comme des éléments de code réutilisables décrivant une interface utilisateur. Pour rendre ces pièces réutilisables réellement dynamiques, vous devez pouvoir leur fournir différentes données. Vous faites cela avec une entrée appelée “props”. Les props sont (comme leur nom l'indique) les propriétés fournies aux composants React.
 
 Dans `about.js`, vous avez passé un prop `headerText` avec la valeur de `"A propos de Gatsby"` vers le sous-composant importé `Header` :
 
@@ -323,11 +323,11 @@ export default () => (
 )
 ```
 
-Après avoir enregistré le fichier, vous devriez voir la page de contact et être capable de naviguer entre celle-ci et la page d'accueil.
+Après avoir enregistré le fichier, vous devriez voir la page de contact et être capable de suivre le lien jusque sur la page d'accueil.
 
 <video controls="controls" loop="true">
   <source type="video/mp4" src="./10-linking-between-pages.mp4"></source>
-  <p>Désolé ! Votre navigateur ne supporte pas cette vidéo.</p>
+  <p>Désolé ! Votre navigateur ne supporte pas cette vidéo.</p>
 </video>
 
 Le composant Gatsby `<Link />` permet de lier différentes pages de votre site. Pour les liens externes non gérés par votre site Gatsby, utilisez la balise HTML par défaut `<a>`.
@@ -336,7 +336,7 @@ Le composant Gatsby `<Link />` permet de lier différentes pages de votre site. 
 
 Gatsby.js est un _générateur de site moderne_, ce qui veut dire qu'il n'y a pas besoin de serveurs à configurer ou de base de données à déployer. Au lieu de ça, la commande Gatsby `build` produit un dossier contenant des fichiers HTML statiques ainsi que des fichiers JavaScript que vous pouvez déployer sur n'importe quel hébergeur de site statique.
 
-Essayez d'utiliser [Surge](http://surge.sh/) pour déployer votre premier site Gatsby. Surge est un des nombreux "hébergeurs de site statique" ce qui lui permet de déployer des site Gatsby.
+Essayez d'utiliser [Surge](http://surge.sh/) pour déployer votre premier site Gatsby. Surge est un des nombreux "hébergeurs de site statique" ce qui lui permet de déployer des sites Gatsby.
 
 Si vous ne l'aviez pas précédemment installé &amp; installez Surge, ouvrez une nouvelle invite de commande et installez leur outil :
 
@@ -366,6 +366,8 @@ Finalement, déployez votre site en publiant les fichiers générés sur surge.s
 ```shell
 surge public/
 ```
+
+> Notez que vous devrez appuyer sur la touche `entré` après avoir vu les informations du `domaine: some-name.surge.sh` dans votre terminal.
 
 Dès que la commande est finie, vous devriez voir quelque chose de similaire dans votre invite de commande :
 

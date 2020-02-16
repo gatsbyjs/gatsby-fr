@@ -1,5 +1,5 @@
 ---
-titre:  Démarrage rapide
+titre: Démarrage rapide
 ---
 
 Cette section de démarrage rapide est destinée aux développeurs intermédiaires à avancés. Pour une introduction plus douce à Gatsby, rendez-vous sur la page de [notre tutoriel](/tutorial/) !
@@ -37,7 +37,7 @@ cd gatsby-site
 gatsby develop
 ```
 
-Gatsby lance un environnement de développement disposant du hot-reloading et accessible par défaut à `localhost:8000`.
+Gatsby lance un environnement de développement disposant du hot-reloading et accessible par défaut à `http://localhost:8000`.
 
 Essayez d'éditer les pages JavaScript disponible dans le dossier `src/pages`. Les modifications enregistrées seront rechargées en direct dans le navigateur (hot-reloading).
 

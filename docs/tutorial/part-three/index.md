@@ -284,7 +284,7 @@ export default ({ children }) => (
 
 Et voilà ! Maintenant vous avez un site de trois pages avec un menu de navigation de base.
 
-_Challenge:_ Avec vos nouveaux pouvoirs de "composants de présentation", essayez d'ajouter à votre site Gatsby des en-têtes, pieds de page, menus de navigation, barres latérales, etc.
+_Challenge :_ Avec vos nouveaux pouvoirs de "composants de présentation", essayez d'ajouter à votre site Gatsby des en-têtes, pieds de page, menus de navigation, barres latérales, etc.
 
 ## Quelle est la suite ?
 
