@@ -12,7 +12,7 @@ La ligne de commande est une interface textuelle utilisée pour exécuter des co
 
 Prenez le temps pour trouver et ouvrir l'interface de ligne de commande (CLI) de votre ordinateur. Selon le système d'exploitation que vous utilisez, voir [**instructions pour Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instructions pour Windows**](https://www.quora.com/How-do-I-open-terminal-in-windows) ou [**instructions pour Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
 
-_NB: si vous êtes débutant en lignes de commande, "exécuter une commande signifie écrire un certain nombre d'instructions dans votre invite de commande et presser la touche Entrer. Les commandes seront indiquées dans un encadré surligné, comme ceci `node --version`, mais tous les encadrés surlignés ne sont pas des commandes ! Si quelque chose est une commande, cela sera mentionné comme quelque chose que vous aurez à exécuter._
+_NB: si vous êtes débutant en lignes de commande, "exécuter" une commande signifie "écrire un certain nombre d'instructions dans votre invite de commande et presser la touche Entrer". Les commandes seront indiquées dans un encadré mis en valeur, comme ceci `node --version`, mais tous les encadrés surlignés ne sont pas des commandes ! Si quelque chose est une commande, cela sera mentionné comme quelque chose que vous aurez à exécuter._
 
 ## Installer Node.js pour le système d'exploitation approprié
 
@@ -26,14 +26,14 @@ Pour installer Gatsby et Node.js, il est recommandé d'utiliser [Homebrew](https
 
 1. Ouvrez votre terminal.
 2. Vérifiez si Homebrew est installé en exécutant la commande `brew -v`. Vous devriez voir "Homebrew" et un numéro de version.
-3. Sinon, téléchargez et installez-le [Homebrew avec les instructions](https://docs.brew.sh/Installation).
+3. Sinon, téléchargez et installez [Homebrew en suivant les instructions](https://docs.brew.sh/Installation).
 4. Une fois que vous avez installé Homebrew, répétez l'étape 2 pour vérifier s'il est bien installé.
 
 #### Installer les outils de ligne de commande Xcode:
 
 1. Ouvrez votre terminal.
-2. Sur un Mac, installez les outils de ligne de commande Xcode en exécutant la commande `xcode-select --install`.
-   1. Si cela échoue, téléchargez-le [directement depuis le site Apple](https://developer.apple.com/download/more/), après connexion avec votre compte développeur Apple
+2. Installez _Xcode Command line tools_ en exécutant la commande `xcode-select --install`.
+   - Si cela échoue, téléchargez-le [directement depuis le site Apple](https://developer.apple.com/download/more/), après connexion avec un compte développeur Apple
 3. Après avoir été invité à démarrer l'installation, vous serez à nouveau invité à accepter une licence logicielle pour les outils à télécharger.
 
 #### Installer Node

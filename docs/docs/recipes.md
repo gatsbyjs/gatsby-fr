@@ -107,6 +107,7 @@ Accédez à des images comme ressources statiques, ou automatisez le processus d
 La transformation des données dans Gatsby est axée sur l’utilisation de plugins. Les plugins de transformation prennent les données récupérées à l'aide de plugins sources et les transforment en quelque chose de plus utilisable (par exemple le JSON en objets JavaScript et plus encore)
 
 - [Transformer du Markdown en HTML](/docs/recipes/transforming-data#transforming-markdown-into-html)
+- [Transformer des images en nuances de gris avec GraphQL](/docs/recipes/transforming-data#transforming-images-into-grayscale-using-graphql)
 
 ## [9. Déployez votre site](/docs/recipes/deploying-your-site)
 
