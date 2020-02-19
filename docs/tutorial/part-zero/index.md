@@ -12,11 +12,7 @@ La ligne de commande est une interface textuelle utilisée pour exécuter des co
 
 Prenez le temps pour trouver et ouvrir l'interface de ligne de commande (CLI) de votre ordinateur. Selon le système d'exploitation que vous utilisez, voir [**instructions pour Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instructions pour Windows**](https://www.quora.com/How-do-I-open-terminal-in-windows) ou [**instructions pour Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
 
-<<<<<<< HEAD
-_NB: si vous êtes débutant en lignes de commande, "exécuter une commande signifie écrire un certain nombre d'instructions dans votre invite de commande et presser la touche Entrer. Les commandes seront indiquées dans un encadré surligné, comme ceci `node --version`, mais tous les encadrés surlignés ne sont pas des commandes ! Si quelque chose est une commande, cela sera mentionné comme quelque chose que vous aurez à exécuter._
-=======
-_Note: If you’re new to the command line, "running" a command, means "writing a given set of instructions in your command prompt, and hitting the Enter key". Commands will be shown in a highlighted box, something like `node --version`, but not every highlighted box is a command! If something is a command it will be mentioned as something you have to run/execute._
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+_NB: si vous êtes débutant en lignes de commande, "exécuter" une commande signifie "écrire un certain nombre d'instructions dans votre invite de commande et presser la touche Entrer". Les commandes seront indiquées dans un encadré mis en valeur, comme ceci `node --version`, mais tous les encadrés surlignés ne sont pas des commandes ! Si quelque chose est une commande, cela sera mentionné comme quelque chose que vous aurez à exécuter._
 
 ## Installer Node.js pour le système d'exploitation approprié
 
@@ -28,31 +24,17 @@ Pour installer Gatsby et Node.js, il est recommandé d'utiliser [Homebrew](https
 
 #### Comment installer ou vérifier Homebrew sur votre ordinateur:
 
-<<<<<<< HEAD
 1. Ouvrez votre terminal.
 2. Vérifiez si Homebrew est installé en exécutant la commande `brew -v`. Vous devriez voir "Homebrew" et un numéro de version.
-3. Sinon, téléchargez et installez-le [Homebrew avec les instructions](https://docs.brew.sh/Installation).
+3. Sinon, téléchargez et installez [Homebrew en suivant les instructions](https://docs.brew.sh/Installation).
 4. Une fois que vous avez installé Homebrew, répétez l'étape 2 pour vérifier s'il est bien installé.
-=======
-1. Open your Terminal.
-2. See if Homebrew is installed by running `brew -v`. You should see "Homebrew" and a version number.
-3. If not, download and install [Homebrew with the instructions](https://docs.brew.sh/Installation).
-4. Once you've installed Homebrew, repeat step 2 to verify.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 #### Installer les outils de ligne de commande Xcode:
 
-<<<<<<< HEAD
 1. Ouvrez votre terminal.
-2. Sur un Mac, installez les outils de ligne de commande Xcode en exécutant la commande `xcode-select --install`.
-   1. Si cela échoue, téléchargez-le [directement depuis le site Apple](https://developer.apple.com/download/more/), après connexion avec votre compte développeur Apple
+2. Installez _Xcode Command line tools_ en exécutant la commande `xcode-select --install`.
+   - Si cela échoue, téléchargez-le [directement depuis le site Apple](https://developer.apple.com/download/more/), après connexion avec un compte développeur Apple
 3. Après avoir été invité à démarrer l'installation, vous serez à nouveau invité à accepter une licence logicielle pour les outils à télécharger.
-=======
-1. Open your Terminal.
-2. Install Xcode Command line tools by running `xcode-select --install`.
-   - If that fails, download it [directly from Apple's site](https://developer.apple.com/download/more/), after signing-in with an Apple developer account
-3. After being prompted to start the installation, you'll be prompted again to accept a software license for the tools to download.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 #### Installer Node
 
