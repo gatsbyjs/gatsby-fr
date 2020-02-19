@@ -19,13 +19,9 @@ Cette section de démarrage rapide est destinée aux développeurs intermédiair
 npm install -g gatsby-cli
 ```
 
-<<<<<<< HEAD
-### Créer un nouveau site
-=======
-> The above command installs Gatsby CLI globally on your machine.
+> La commande ci-dessus intalle la CLI de Gatsby de façon globale sur votre machine.
 
-### Create a new site
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+### Créer un nouveau site
 
 ```shell
 gatsby new gatsby-site
