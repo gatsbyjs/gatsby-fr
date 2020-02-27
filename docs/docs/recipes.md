@@ -45,7 +45,6 @@ Ajoutez des pages à votre site Gatsby, et utilisez des mises en page pour gére
 
 Il y a énormément de façons de mettre en forme votre site ; Gatsby fonctionne avec presque toutes les options possibles grâce aux plugins officiels et à ceux de la communauté.
 
-<<<<<<< HEAD
 - [Utiliser un fichier CSS global sans composant de mise en page](/docs/recipes/styling-css#using-global-css-files-without-a-layout-component)
 - [Utiliser un fichier CSS global dans un composant de mise en page](/docs/recipes/styling-css#using-global-styles-in-a-layout-component)
 - [Utiliser Styled Components](/docs/recipes/styling-css#using-styled-components)
@@ -54,17 +53,7 @@ Il y a énormément de façons de mettre en forme votre site ; Gatsby fonctionne
 - [Ajouter une police d'écriture locale](/docs/recipes/styling-css#adding-a-local-font)
 - [Utiliser Emotion](/docs/recipes/styling-css#using-emotion)
 - [Utiliser Google Fonts](/docs/recipes/styling-css#using-google-fonts)
-=======
-- [Using global CSS files without a Layout component](/docs/recipes/styling-css#using-global-css-files-without-a-layout-component)
-- [Using global styles in a layout component](/docs/recipes/styling-css#using-global-styles-in-a-layout-component)
-- [Using Styled Components](/docs/recipes/styling-css#using-styled-components)
-- [Using CSS Modules](/docs/recipes/styling-css#using-css-modules)
-- [Using Sass/SCSS](/docs/recipes/styling-css#using-sassscss)
-- [Adding a Local Font](/docs/recipes/styling-css#adding-a-local-font)
-- [Using Emotion](/docs/recipes/styling-css#using-emotion)
-- [Using Google Fonts](/docs/recipes/styling-css#using-google-fonts)
-- [Using Font Awesome](/docs/recipes/styling-css#using-fontawesome)
->>>>>>> 544ea88b26036514a0018d4526ff6b3f388823a7
+- [Utiliser Font Awesome](/docs/recipes/styling-css#using-fontawesome)
 
 ## [3. Travailler avec les plugins de démarrage](/docs/recipes/working-with-starters)
 
