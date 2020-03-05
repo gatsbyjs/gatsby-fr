@@ -8,11 +8,11 @@ Nous souhaitons que tous ceux qui utilisent Gatsy se sentent bienvenue et trouve
 
 Cette page a été créé pour ressembler en un seul endroit les informations sur l'accessibilité dans l'éco-système Gatsby et indique les canals de communication où les personnes avec des handicaps peuvent trouver de l'aide concernant Gatsby.
 
-## Gatsby products and services
+## Les produits et services Gatsby
 
-Gatsbyjs.org is the online home of the open source Gatsby website framework; it includes documentation, tutorials, and guides on how and why to build with Gatsby, as well as a blog, site showcase, and information on how to contribute to the project.
+Gatsbyjs.org est le site internet du framework open-source Gatsby; cela inclu la documentation, les tutoriels, et les guides traitant du comment et du pourquoi construire avec Gatsby, ainsi qu'un blog, un espace de demonstration et des information sur comment contribuer au projet.
 
-Gatsbyjs.com is the business website for Gatsby, Inc. the startup building Gatsby, including our first product, Gatsby Preview: a cloud service allowing team members to collaborate on a Gatsby site in development.
+Gatsbyjs.com est le site internet commercial de Gatsby, Inc. la startup qui développe Gatsby, cela inclu notre premier produit, Gatsby Preview : un service cloud qui permet aux membres d'une équipe de collaborer au développement d'un site Gatsby.
 
 ## Providing feedback and getting accessibility help
 
