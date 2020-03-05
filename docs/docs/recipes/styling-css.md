@@ -1,20 +1,17 @@
 ---
-title: "Recipes: Styling with CSS"
+title: "Recettes: Styliser avec du CSS"
 tableOfContentsDepth: 1
 ---
+Il y différentes façons d'ajouter du style à votre site internet; Gatsby supporte presque toutes les options possibles grâce à des plugins officiels ou communautaires.
 
-There are so many ways to add styles to your website; Gatsby supports almost every possible option, through official and community plugins.
+## Utiliser des feuilles de styles CSS globales sans de composant Layout
 
-## Using global CSS files without a Layout component
+### Prérequis
+- Un [site Gatsby](/docs/quick-start/) existant avec un composant page index
+- Un fichier `gatsby-browser.js`
 
-### Prerequisites
-
-- An existing [Gatsby site](/docs/quick-start/) with an index page component
-- A `gatsby-browser.js` file
-
-### Directions
-
-1. Create a global CSS file as `src/styles/global.css` and paste the following into the file:
+### Instructions
+1. Créez une feuille de style CSS globale `src/styles/global.css` et y coller les lignes suivantes
 
 ```css:title=src/styles/global.css
 html {
@@ -25,38 +22,37 @@ p {
   color: maroon;
 }
 ```
-
-2. Import the global CSS file in the `gatsby-browser.js` file such as the following:
+2. Importer la feuille de style CSS globale dans le fichier `gatsby-browser.js` comme suivant:
 
 ```javascript:title=gatsby-browser.js
 import "./src/styles/global.css"
 ```
 
-> **Note:** You can also make use of `require('./src/styles/global.css')` to import the global CSS file in your `gatsby-config.js` file.
+> **Note:** Vous pouvez aussi utiliser `require('./src/styles/global.css')` pour importer la feuille de style globale dans votre fichier gatsby-config.js`
 
-3. Run `gatsby-develop` to observe the global styling being applied across your site.
+3. Lancer `gatsby-develop` pour observer le style global appliqué à votre site.
 
-> **Note:** This approach is not the best fit if you are using CSS-in-JS for styling your site, in which case a layout page with all the shared components should be used. This is covered in the next recipe.
+> **Note:** Cette approche n'est pas la meilleure si vous utilisez du CSS-in-JS pour styliser votre site, dans quel cas une page layout avec tous les composants partagés doit être utilisée. Cette approche est couverte dans la prochaine recette.
 
-### Additional resources
+### Ressources additionnelles
 
-- More on [adding global styles without a layout component](/docs/global-css/#adding-global-styles-without-a-layout-component)
+- Plus d'informations sur comment [ajouter un style global sans composant layout](/docs/global-css/#adding-global-styles-without-a-layout-component)
 
-## Using global styles in a layout component
+## Utiliser des styles globaux dans un composant layout
 
-### Prerequisites
+### Prérequis
 
-- A [Gatsby site](/docs/quick-start/) with an index page component
+- Un [site Gatsby](/docs/quick-start/) existant avec un composant page index
 
-### Directions
+### Instructions
 
-You can add global styles to a [shared layout component](/tutorial/part-three/#your-first-layout-component). This component is used for things that are common throughout the site, like a header or footer.
+Vous pouvez ajouter des styles globaux à un [composant layout partagé](/tutorial/part-three/#your-first-layout-component). Ce composant est utiliser pour des choses communes sur le site, comme le header ou le footer.
 
-1. If you don't already have one, create a new directory in your site at `/src/components`.
+1. Si vous n'en avez pas encore un, créez un nouveau répertoire dans votre projet en tant que `/src/components`.
 
-2. Inside the components directory, create two files: `layout.css` and `layout.js`.
+2. Dans le répertoire components, créez deux fichiers: `layout.css` et `layout.js`.
 
-3. Add the following to `layout.css`:
+3. Ajouter ce qui suit à `layout.css`:
 
 ```css:title=/src/components/layout.css
 body {
@@ -64,7 +60,7 @@ body {
 }
 ```
 
-4. Edit `layout.js` to import the CSS file and output layout markup:
+4. Éditer `layout.js` pour importer le fichier CSS sortir le layout markup:
 
 ```jsx:title=/src/components/layout.js
 import React from "react"
@@ -73,7 +69,7 @@ import "./layout.css"
 export default ({ children }) => <div>{children}</div>
 ```
 
-5. Now edit your site's homepage at `/src/pages/index.js` and use the new layout component:
+5. Maintenant, éditez la page d'accueil de votre site `/src/pages/index.js` et utilisez le nouveau composant layout:
 
 ```jsx:title=/src/pages/index.js
 import React from "react"
@@ -82,21 +78,22 @@ import Layout from "../components/layout"
 export default () => <Layout>Hello world!</Layout>
 ```
 
-### Additional resources
+### Ressources additionnelles
 
+- [Style standard avec des fichiers CSS globaux](/docs/global-css/)
 - [Standard Styling with Global CSS Files](/docs/global-css/)
-- [More about layout components](/tutorial/part-three)
+- [En savoir plus sur les composants layout](/tutorial/part-three)
 
-## Using Styled Components
+## Utiliser Styled Components
 
-### Prerequisites
+### Prérequis
 
-- A [Gatsby site](/docs/quick-start/) with an index page component
-- [gatsby-plugin-styled-components, styled-components, and babel-plugin-styled-components](/packages/gatsby-plugin-styled-components/) installed in `package.json`
+- Un [site Gatsby](/docs/quick-start/) existant avec un composant page index
+- [gatsby-plugin-styled-components, styled-components, and babel-plugin-styled-components](/packages/gatsby-plugin-styled-components/) installés dans `package.json`
 
-### Directions
+### Instructions
 
-1. Inside your `gatsby-config.js` file add `gatsby-plugin-styled-components`
+1. Dans votre fichier `gatsby-config.js` ajoutez `gatsby-plugin-styled-components`
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -104,11 +101,11 @@ module.exports = {
 }
 ```
 
-2. Open the index page component (`src/pages/index.js`) and import the `styled-components` package
+2. Ouvrir le composant index de page (`src/pages/index.js`) et importer le paquet `styled-components`
 
-3. Style components by creating style blocks for each element type
+3. Stylisez les composants en créant des blocks de style pour chaque type d'élément
 
-4. Apply to the page by including styled components in the JSX
+4. Appliquez à la page en incluant styled components dans le JSX
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -158,22 +155,22 @@ export default () => (
 )
 ```
 
-4. Run `gatsby develop` to see the changes
+4. Lancer `gatsby develop` pour voir les changements
 
-### Additional resources
+### Ressources additionnelles
 
-- [More on Using Styled Components](/docs/styled-components/)
-- [Egghead lesson](https://egghead.io/lessons/gatsby-style-gatsby-sites-with-styled-components)
+- [En savoir plus sur l'utilisation de composants stylisés](/docs/styled-components/)
+- [Leçon sur Egghead](https://egghead.io/lessons/gatsby-style-gatsby-sites-with-styled-components)
 
-## Using CSS Modules
+## Utiliser les CSS Modules
 
-### Prerequisites
+### Prérequis
 
-- An existing [Gatsby site](/docs/quick-start/) with an index page component
+- Un [site Gatsby](/docs/quick-start/) existant avec un composant page index
 
-### Directions
+### Instructions
 
-1. Create a CSS module as `src/pages/index.module.css` and paste the following into the module:
+1. Créez un module CSS en tant que `src/pages/index.module.css` et collez ce qui suit dans le module:
 
 ```css:title=src/pages/index.module.css
 .feature {
@@ -182,7 +179,7 @@ export default () => (
 }
 ```
 
-2. Import the CSS module as a JSX object `style` in the `index.js` file by modifying the page so it looks like the following:
+2. Importez le module CSS en tant qu'objet JSX `style` dans le fichier `index.js` en modifiant la page pour qu'elle ressemble à ce qui suit:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -198,41 +195,41 @@ export default () => (
 // highlight-end
 ```
 
-3. Run `gatsby develop` to see the changes.
+3. Lancez `gatsby develop` pour voir les changements.
 
 **Note:**
-Notice that the file extension is `.module.css` instead of `.css`, which tells Gatsby that this is a CSS module.
+Notez que l'extension de fichier est `.module.css` au lieu de `.css`, ce qui indique à Gatsby qu'il s'agit d'un module CSS.
 
-### Additional resources
+### Ressources additionnelles
 
-- More on [Using CSS Modules](/tutorial/part-two/#css-modules)
-- [Live example on Using CSS modules](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-css-modules)
+- Plus d'informations sur [utiliser les CSS Modules](/tutorial/part-two/#css-modules)
+- [Exemple sur l'utilisation des modules CSS](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-css-modules)
 
-## Using Sass/SCSS
+## Utiliser Sass/SCSS
 
-Sass is an extension of CSS that gives you more advanced features like nested rules, variables, mixins, and more.
+Sass est une extension de CSS qui vous offre des fonctionnalités plus avancées telles que des règles imbriquées, des variables, des mixins, etc.
 
 Sass has 2 syntaxes. The most commonly used syntax is "SCSS", and is a superset of CSS. That means all valid CSS syntax, is valid SCSS syntax. SCSS files use the extension `.scss`
 
-Sass will compile `.scss` and `.sass` files to `.css` files for you, so you can write your stylesheets with more advanced features.
+Sass a 2 syntaxes. La syntaxe la plus utilisée est "SCSS" et est un sur-ensemble de CSS. Cela signifie que toute syntaxe CSS valide est une syntaxe SCSS valide. Les fichiers SCSS utilisent l'extension `.scss`
 
-### Prerequisites
+### Prérequis
 
-- A [Gatsby site](/docs/quick-start/).
+- Un [site Gatsby](/docs/quick-start/).
 
-### Directions
+### Instructions
 
-1. Install the Gatsby plugin [gatsby-plugin-sass](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) and `node-sass`.
+1. Installez le plugin Gatsby [gatsby-plugin-sass](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) and `node-sass`
 
 `npm install --save node-sass gatsby-plugin-sass`
 
-2. Include the plugin in your `gatsby-config.js` file.
+2. Incluez le plugin dans votre fichier `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 plugins: [`gatsby-plugin-sass`],
 ```
 
-3.  Write your stylesheets as `.sass` or `.scss` files and import them. If you don't know how to import styles, take a look at [Styling with CSS](/docs/recipes/#2-styling-with-css)
+3.  Écrivez vos feuilles de style en tant que fichiers `.sass` ou `.scss` et importez-les. Si vous ne savez pas comment importer des styles, jetez un œil à [Styliser avec CSS](/docs/recipes/#2-styling-with-css).
 
 ```css:title=styles.scss
 $font-stack: Helvetica, sans-serif;
@@ -258,30 +255,30 @@ import "./styles.scss"
 import "./styles.sass"
 ```
 
-_Note: You can use Sass/SCSS files as modules too, like mentioned in the previous recipe about CSS modules, with the difference that instead of `.css` the extensions have to be `.scss` or `.sass`_
+_Note: Vous pouvez également utiliser des fichiers Sass / SCSS comme modules, comme mentionné dans la recette précédente sur les modules CSS, à la différence qu'au lieu de `.css` les extensions doivent être `.scss` ou `.sass`Styling avec CSS_
 
-### Additional resources
+### Ressources additionnelles
 
-- [Difference between .sass and .scss](https://responsivedesign.is/articles/difference-between-sass-and-scss/)
-- [Sass guide from the official Sass website](https://sass-lang.com/guide)
-- [A more complete installation tutorial on Sass with some more explanations and more resources](https://www.gatsbyjs.org/docs/sass/)
+- [Différences entre .sass and .scss](https://responsivedesign.is/articles/difference-between-sass-and-scss/)
+- [Guide Sass sur le site officiel de Sass](https://sass-lang.com/guide)
+- [Un tutoriel d'installation plus complet sur Sass avec plus d'explications et plus de ressources](https://www.gatsbyjs.org/docs/sass/)
 
-## Adding a Local Font
+## Ajout d'une police locale
 
-### Prerequisites
+### Prérequis
 
-- A [Gatsby site](/docs/quick-start/)
-- A font file: `.woff2`, `.ttf`, etc.
+- Un [site Gatsby](/docs/quick-start/)
+- Un fichier police: `.woff2`, `.ttf`, etc.
 
-### Directions
+### Instructions
 
-1. Copy a font file into your Gatsby project, such as `src/fonts/fontname.woff2`.
+1. Copiez un fichier de police dans votre projet Gatsby, tel que `src/fonts/fontname.woff2`.
 
 ```text
 src/fonts/fontname.woff2
 ```
 
-2. Import the font asset into a CSS file to bundle it into your Gatsby site:
+2. Importez l'élément de police dans un fichier CSS pour l'intégrer à votre site Gatsby:
 
 ```css:title=src/css/typography.css
 @font-face {
@@ -290,7 +287,7 @@ src/fonts/fontname.woff2
 }
 ```
 
-**Note:** Make sure the font name is referenced from the relevant CSS, e.g.:
+**Note:** Assurez-vous que le nom de la police est référencé à partir du CSS approprié, par exemple:
 
 ```css:title=src/components/layout.css
 body {
@@ -298,31 +295,31 @@ body {
 }
 ```
 
-By targeting the HTML `body` element, your font will apply to most text on the page. Additional CSS can target other elements, such as `button` or `textarea`.
+En ciblant l'élément HTML `body`, votre police s'appliquera à la plupart du texte de la page. Des CSS supplémentaires peuvent cibler d'autres éléments, tels que `button` ou `textarea`.
 
-If fonts are not updating following steps above, make sure to replace the existing font-family in relevant CSS.
+Si les polices ne sont pas mises à jour en suivant les étapes ci-dessus, assurez-vous de remplacer la famille de polices existante dans la feuille de style CSS correspondante.
 
-### Additional resources
+### Ressources additionnelles
 
-- More on [importing assets into files](/docs/importing-assets-into-files/)
+- Plus d'informations sur [importation d'assets dans des fichiers](/docs/importing-assets-into-files/)
 
-## Using Emotion
+## Utiliser Emotion
 
-[Emotion](https://emotion.sh) is a powerful CSS-in-JS library that supports both inline CSS styles and styled components. You can use each styling feature individually or together in the same file.
+[Emotion](https://emotion.sh) est une puissante bibliothèque CSS-in-JS qui prend en charge à la fois les styles CSS en ligne et les composants stylisés. Vous pouvez utiliser chaque fonction de style individuellement ou ensemble dans le même fichier.
 
-### Prerequisites
+### Prérequis
 
-- A [Gatsby site](/docs/quick-start)
+- Un [site Gatsby](/docs/quick-start)
 
-### Directions
+### Instructions
 
-1. Install the [Gatsby Emotion plugin](/packages/gatsby-plugin-emotion/) and Emotion packages.
+1. Installer le plugin [Gatsby Emotion](/packages/gatsby-plugin-emotion/) et les paquets Emotion.
 
 ```shell
 npm install --save gatsby-plugin-emotion @emotion/core @emotion/styled
 ```
 
-2. Add the `gatsby-plugin-emotion` plugin to your `gatsby-config.js` file:
+2. Ajoutez le plugin `gatsby-plugin-emotion` à votre fichier `gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -330,9 +327,9 @@ module.exports = {
 }
 ```
 
-3. If you don't already have one, create a page in your Gatsby site at `src/pages/emotion-sample.js`.
+3. Si vous n'en avez pas déjà, créez une page dans votre site Gatsby à l'adresse `src/pages/emotion-sample.js`.
 
-Import Emotion's `css` core package. You can then use the `css` prop to add [Emotion object styles](https://emotion.sh/docs/object-styles) to any element inside a component:
+Importez le paquet de base CSS d'Emotion'. Vous pouvez ensuite utiliser l'accessoire `css` pour ajouter des [styles d'objet Emotion](https://emotion.sh/docs/object-styles) à tout élément à l'intérieur d'un composant:
 
 ```jsx:title=src/pages/emotion-sample.js
 import React from "react"
@@ -352,7 +349,7 @@ export default () => (
 )
 ```
 
-4. To use Emotion's [styled components](https://emotion.sh/docs/styled), import the package and define them using the `styled` function.
+4. Pour utiliser les [composants stylisés](https://emotion.sh/docs/styled) d'Emotion, importez le package et les définir à l'aide de la fonction `styled`.
 
 ```jsx:title=src/pages/emotion-sample.js
 import React from "react"
@@ -373,35 +370,35 @@ export default () => (
 )
 ```
 
-### Additional resources
+### Ressources additionnelles
 
-- [Using Emotion in Gatsby](/docs/emotion/)
-- [Emotion website](https://emotion.sh)
-- [Getting started with Emotion and Gatsby](https://egghead.io/lessons/gatsby-getting-started-with-emotion-and-gatsby)
+- [Utiliser Emotion dans Gatsby](/docs/emotion/)
+- [Site d'Emotion](https://emotion.sh)
+- [Débuter avec Emotion et Gatsby](https://egghead.io/lessons/gatsby-getting-started-with-emotion-and-gatsby)
 
-## Using Google Fonts
+## Utiliser les Google Fonts
 
-Hosting your own [Google Fonts](https://fonts.google.com/) locally within a project means they won't have to be fetched over the network when your site loads, increasing your site's speed index by up to ~300 milliseconds on desktop and 1+ seconds on 3G. It's also recommended to limit custom font usage to only the essential for performance.
+L'hébergement de vos propres [Google Fonts] (https://fonts.google.com/) localement dans un projet signifie qu'elles n'auront pas à être récupérées sur le réseau lors du chargement de votre site, augmentant l'indice de vitesse de votre site jusqu'à ~ 300 millisecondes sur le bureau et 1+ secondes sur la 3G. Il est également recommandé de limiter l'utilisation des polices personnalisées à l'essentiel pour les performances.
 
-### Prerequisites
+### Prérequis
 
-- A [Gatsby site](/docs/quick-start)
-- The [Gatsby CLI](/docs/gatsby-cli/) installed
-- Choosing a font package from [the typefaces project](https://github.com/KyleAMathews/typefaces)
+- Un [site Gatsby](/docs/quick-start)
+- L'outil en [ligne de commande de Gatsby](/docs/gatsby-cli/) installé
+- Choisir un package de polices dans [le projet de polices de caractères](https://github.com/KyleAMathews/typefaces)
 
-### Directions
+### Instructions
 
-1. Run `npm install --save typeface-your-chosen-font`, replacing `your-chosen-font` with the name of the font you want to install from [the typefaces project](https://github.com/KyleAMathews/typefaces).
+1. Lancez `npm install --save typeface-votre-police-de-caractere`, remplacez `votre-police-de-caractere` avec le nom de la police que vous voulez installer depuis [le projet de polices de caractères](https://github.com/KyleAMathews/typefaces)
 
-An example to load the popular 'Source Sans Pro' font would be: `npm install --save typeface-source-sans-pro`.
+Un exemple pour charger la police populaire 'Source Sans Pro' serait:: `npm install --save typeface-source-sans-pro`.
 
-2. Add `import "typeface-your-chosen-font"` to a layout template, page component, or `gatsby-browser.js`.
+2. Ajoutez `import "typeface-your-chosen-font"` au template layout, au composant page ou à `gatsby-browser.js`.
 
 ```jsx:title=src/components/layout.js
 import "typeface-your-chosen-font"
 ```
 
-3. Once it's imported, you can reference the font name in a CSS stylesheet, CSS Module, or CSS-in-JS.
+3. Une fois importé, vous pouvez référencer le nom de la police dans une feuille de style CSS, un module CSS ou CSS-in-JS
 
 ```css:title=src/components/layout.css
 body {
@@ -409,34 +406,34 @@ body {
 }
 ```
 
-_NOTE: So for the above example, the relevant CSS declaration would be `font-family: 'Source Sans Pro';`_
+_NOTE: Ainsi, pour l'exemple ci-dessus, la déclaration CSS pertinente serait `font-family: 'Source Sans Pro';`_
 
-### Additional resources
+### Ressources additionnelles
 
-- [Typography.js](/docs/typography-js/) - Another option for using Google fonts on a Gatsby site
-- [The Typefaces Project Docs](https://github.com/KyleAMathews/typefaces/blob/master/README.md)
-- [Live example on Kyle Mathews' blog](https://www.bricolage.io/typefaces-easiest-way-to-self-host-fonts/)
+- [Typography.js](/docs/typography-js/) - Une autre option pour utiliser les polices Google sur un site Gatsby
+- [Documentation du projet sur les polices de caractères](https://github.com/KyleAMathews/typefaces/blob/master/README.md)
+- [Exemple sur le blog de Kyle Mathews](https://www.bricolage.io/typefaces-easiest-way-to-self-host-fonts/)
 
-## Using Font Awesome
+## Utiliser Font Awesome
 
-Using [Font Awesome](https://fontawesome.com/) gives you access to thousands of icons for use on your site. Since Gatsby sites are React sites, it's recommended to use the [react-fontawesome](https://github.com/FortAwesome/react-fontawesome) SVG library.
+Utiliser [Font Awesome](https://fontawesome.com/) vous donne accès à des milliers d'icônes à utiliser sur votre site. Étant donné que les sites Gatsby sont des sites React, il est recommandé d'utiliser la bibliothèque SVG [react-fontawesome](https://github.com/FortAwesome/react-fontawesome).
 
-### Prerequisites
+### Prérequis
 
-- The [Gatsby CLI](/docs/gatsby-cli/) installed
-- A [Gatsby site](/docs/quick-start)
+- L'outil en [ligne de commande Gatsby](/docs/gatsby-cli/) installé
+- Un [site Gatsby](/docs/quick-start)
 
-### Directions
+### Instructions
 
-1. Install the `react-fontawesome` dependencies.
+1. Installez les dépendances `react-fontawesome`.
 
 ```shell
 npm install @fortawesome/fontawesome-svg-core  @fortawesome/free-brands-svg-icons @fortawesome/react-fontawesome
 ```
 
-> Note that there are multiple icon libraries within `react-fontawesome`. You may also be interested in `free-regular-svg-icons` and `free-solid-svg-icons` which you would install the same way.
+> Notez qu'il existe plusieurs bibliothèques d'icônes dans `react-fontawesome`. Vous pourriez également être intéressé par les icônes `free-regular-svg-icons` et `free-solid-svg-icons` que vous installeriez de la même manière.
 
-2. Import the `FontAwesomeIcon` component and the icon you want to use. Then use the icon as a component directly in your JSX files:
+2. Importez le composant `FontAwesomeIcon` et l'icône que vous souhaitez utiliser. Utilisez ensuite l'icône comme un composant directement dans votre ficher JSX:
 
 ```jsx:title=index.js
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -451,9 +448,9 @@ const IndexPage = () => (
 export default IndexPage
 ```
 
-> This example imports a single, specific icon and uses it for improved performance. As an alternative, you can [import the icons and build a library](https://github.com/FortAwesome/react-fontawesome#build-a-library-to-reference-icons-throughout-your-app-more-conveniently).
+> Cet exemple importe une seule icône spécifique et l'utilise pour de meilleures performances. Comme alternative, vous pouvez [importer les icônes et créer une bibliothèque](https://github.com/FortAwesome/react-fontawesome#build-a-library-to-reference-icons-throughout-your-app-more-conveniently).
 
-### Additional resources
+### Ressources additionnelles
 
 - [Font Awesome](https://fontawesome.com/)
 - [react-fontawesome](https://github.com/FortAwesome/react-fontawesome)
