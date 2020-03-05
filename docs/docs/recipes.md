@@ -53,6 +53,7 @@ Il y a énormément de façons de mettre en forme votre site ; Gatsby fonctionne
 - [Ajouter une police d'écriture locale](/docs/recipes/styling-css#adding-a-local-font)
 - [Utiliser Emotion](/docs/recipes/styling-css#using-emotion)
 - [Utiliser Google Fonts](/docs/recipes/styling-css#using-google-fonts)
+- [Utiliser Font Awesome](/docs/recipes/styling-css#using-fontawesome)
 
 ## [3. Travailler avec les plugins de démarrage](/docs/recipes/working-with-starters)
 
