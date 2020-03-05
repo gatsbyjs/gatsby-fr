@@ -1,12 +1,12 @@
 ---
-title: Accessibility Statement
+title: Déclaration d'accessibilité
 ---
 
-_Last updated: April 8, 2019_
+_Mis à jour le: 8 avril 2019_
 
-We want everyone who uses Gatsby to feel welcome and find the experience rewarding: this includes developers with disabilities and users with disabilities for Gatsby sites, docs, and resources.
+Nous souhaitons que tous ceux qui utilisent Gatsy se sentent bienvenue et trouve l'expérience gratifiante: ceci inclu les développeurs ayant des handicaps et les utilisateurs ayant des handicaps lorsqu'il s'agit des sites Gatsby, de la documentation, et des autres ressources.
 
-This page was created to collect accessibility information about the Gatsby ecosystem in one place and provide communication channels for people with disabilities to get help with Gatsby.
+Cette page a été créé pour ressembler en un seul endroit les informations sur l'accessibilité dans l'éco-système Gatsby et indique les canals de communication où les personnes avec des handicaps peuvent trouver de l'aide concernant Gatsby.
 
 ## Gatsby products and services
 
