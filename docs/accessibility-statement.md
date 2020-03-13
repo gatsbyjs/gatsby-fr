@@ -41,8 +41,8 @@ Pour gérer et déployer des sites Gatsby avec des outils accessibles, nous vous
 
 Pour faire des retours concernant les services tiers, vous pouvez contacter les vendeurs directement ou [nous écrire](mailto:marcy@gatsbyjs.com), nous ferons tout notre possible pour transmettre les informations. Nous avons également très envie d'entendre vos succés avec les plateforme tieres !
 
-## Surveys and research projects
+## Les sondages et les projets de recherche
 
-The Gatsby team conducts surveys and research projects from time to time. We highly value feedback from all Gatsby users, and particularly those with experience applicable to the research being conducted.
+L'équipe Gatsby mène de temps à autre des sondages et des projets de recherche. Nous apprécions grandement les commentaires de tous les utilisateurs de Gatsby, et en particulier ceux ayant une expérience applicable à la recherche en cours.
 
-To be considered for these initiatives, please contact [marcy@gatsbyjs.com](mailto:marcy@gatsbyjs.com).
+Pour être sélectionné pour ces initiatives, merci de contacter [marcy@gatsbyjs.com](mailto:marcy@gatsbyjs.com).
