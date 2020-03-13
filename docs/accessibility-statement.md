@@ -14,32 +14,32 @@ Gatsbyjs.org est le site internet du framework open-source Gatsby; cela inclu la
 
 Gatsbyjs.com est le site internet commercial de Gatsby, Inc. la startup qui développe Gatsby, cela inclu notre premier produit, Gatsby Preview : un service cloud qui permet aux membres d'une équipe de collaborer au développement d'un site Gatsby.
 
-## Providing feedback and getting accessibility help
+## Partager vos retours et recevoir de l'aide concernant l'accessecibilité
 
-We strive to make these websites and the Gatsby framework itself as accessible as possible. Our goal is to meet [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/), with which we are partially compliant. We’ll be the first to admit the Gatsby ecosystem is a work in progress, and we are open to all feedback to make things better.
+Nous nous efforçons de rendre les sites et le frameworkd Gatsy lui-même aussi accessible que possible. Notre objectif est d'atteindre la norme [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) avec laquelle nous sommes en partie conforme. Nous serons les premier à admettre que l'éco-système Gatsby est en constant développement et nous somme ouvert à tous les retours pour rendre les choses meilleures.
 
-To contact the core team with your accessibility feedback or challenges, please [file an issue on GitHub](https://github.com/gatsbyjs/gatsby/issues/new/choose).
+Pour contacter l'équipe core pour vos retours concernant l'accéssibilité, merci de [créer une issue sur Github](https://github.com/gatsbyjs/gatsby/issues/new/choose).
 
-Alternatively, we welcome you to reach out directly to Marcy Sutton, Head of Learning at Gatsby: [marcy@gatsbyjs.com](mailto:marcy@gatsbyjs.com)
+Alternativement, nous vous invitons à contacter directement Marcy Sutton, responsable de l'apprentissage chez Gatsby : [marcy@gatsbyjs.com](mailto:marcy@gatsbyjs.com)
 
-## Building with Gatsby
+## Construire avec Gatsby
 
-To learn how to build an accessible website with Gatsby, visit our guide [Making Your Site Accessible](/docs/making-your-site-accessible/). Contributions are very welcome as this page evolves.
+Pour savoir comment créer un site Web accessible avec Gatsby, visitez notre guide [Rendre votre site accessible](/docs/making-your-site-accessible/). Les contributions sont les bienvenues tout au long de l'évolution de cette page.
 
-## Third-party platforms, products and services
+## Plateformes, produits et services tiers
 
-Common Gatsby workflows involve third-party products and services, such as sourcing from Content Management Systems, and managing and deploying sites with hosting platforms. Some of these platforms appear to have been designed and/or built without accessibility in mind; we encourage those vendors to improve their accessibility along with us.
+Les workflows Gatsby courants impliquent des produits et services tiers, tels que l'approvisionnement à partir de systèmes de gestion de contenu (CMS), et la gestion et le déploiement de sites avec des plates-formes d'hébergement. Certaines de ces plateformes semblent avoir été conçues et / ou construites sans accessibilité à l’esprit; nous encourageons ces fournisseurs à améliorer leur accessibilité avec nous.
 
-Our current recommendations for accessible CMS platforms are:
+Nos recommandations actuelles de CMS accessibles sont:
 
-- WordPress with the Classic Editor Plugin
+- WordPress avec le plugin Classic Editor
 - Drupal
 
-For managing and deploying Gatsby sites with accessible tools, we recommend:
+Pour gérer et déployer des sites Gatsby avec des outils accessibles, nous vous recommandons:
 
 - Netlify
 
-To provide feedback for third-party services, you can contact those vendors directly or [write to us](mailto:marcy@gatsbyjs.com), and we will do our best to pass the information along. We're also interested in hearing about your successes with third-party platforms!
+Pour faire des retours concernant les services tiers, vous pouvez contacter les vendeurs directement ou [nous écrire](mailto:marcy@gatsbyjs.com), nous ferons tout notre possible pour transmettre les informations. Nous avons également très envie d'entendre vos succés avec les plateforme tieres !
 
 ## Surveys and research projects
 
