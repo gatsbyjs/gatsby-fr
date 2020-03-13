@@ -30,7 +30,7 @@ import "./src/styles/global.css"
 
 > **Note:** Vous pouvez aussi utiliser `require('./src/styles/global.css')` pour importer la feuille de style globale dans votre fichier gatsby-config.js`
 
-3. Lancer `gatsby-develop` pour observer le style global appliqué à votre site.
+3. Lancez `gatsby-develop` pour observer le style global appliqué à votre site.
 
 > **Note:** Cette approche n'est pas la meilleure si vous utilisez du CSS-in-JS pour styliser votre site, dans quel cas une page layout avec tous les composants partagés doit être utilisée. Cette approche est couverte dans la prochaine recette.
 
