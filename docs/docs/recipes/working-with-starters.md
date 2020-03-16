@@ -1,38 +1,38 @@
 ---
-title: "Recipes: Working with Starters"
+title: "Recette: Travailler avec des configurations de démarrage"
 tableOfContentsDepth: 1
 ---
 
-[Starters](/docs/starters/) are boilerplate Gatsby sites maintained officially, or by the community.
+Les [Configurations de démarrage](/docs/starters/) sont des sites Gatsby passe-partout entretenus officiellement ou par la communauté.
 
-## Using a starter
+## Utiliser une configuration de démarrage
 
-### Prerequisites
+### Prérequis
 
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- [L'interface en ligne de commande](/docs/gatsby-cli) Gatsby installée
 
-### Directions
+### Instructions
 
-1. Find the starter you'd like to use. (_The [Starter Library](/starters/?v=2) is a good place to look!_)
+1. Trouvez une configuration de démarrage que vous voulez utiliser. (_La [bibliothèque des configurations de démarrage](/starters/?v=2) est un bon endroit pour regarder_)
 
-2. Generate a new site based on the starter. In the terminal, run:
+2. Générez un nouveau site basé sur la configuration de démarrage. Dans le terminal, exécutez:
 
 ```shell
-gatsby new {your-project-name} {link-to-starter}
+gatsby new {le-nom-de-votre-projet} {le-lien-de-la-configuration-de-demarrage}
 ```
 
-> _Don't run the above command as-is -- remember to replace {your-project-name} and {link-to-starter}!_
+> _Ne pas exécuter la commande ci-dessus telle quelle -- n'oubliez pas de remplacer {le-nom-de-votre-projet} et {le-lien-de-la-configuration-de-demarrage}!_
 
-3. Run your new site:
+3. Exécutez votre nouveau site:
 
 ```shell
-cd {your-project-name}
+cd {le-nom-de-votre-projet}
 gatsby develop
 ```
 
-### Additional resources
+### Ressources supplémentaires
 
-- Follow a [more detailed guide](/docs/starters/) on using Gatsby starters.
-- Learn how to use the [Gatsby CLI](/docs/gatsby-cli) tool to use starters in [tutorial part one](/tutorial/part-one/#using-gatsby-starters)
-- Browse the [Starter Library](/starters/?v=2)
-- Check out Gatsby's [official default starter](https://github.com/gatsbyjs/gatsby-starter-default)
+- Suivez [un guide plus détaillé](/docs/starters/) sur l'utilisation des configurations de démarrage Gatsby.
+- Apprenez à utiliser l'outil [d'interface en ligne de commande Gatsby](/docs/gatsby-cli) pour utiliser les configurations de démarrage dans [la première partie du didacticiel](/tutorial/part-one/#using-gatsby-starters)
+- Parcourir la [bibliothère de configurations de démarrage](/starters/?v=2)
+- Découvrez la [configuration de démarrage par défaut et officielle de Gatsby](https://github.com/gatsbyjs/gatsby-starter-default)
