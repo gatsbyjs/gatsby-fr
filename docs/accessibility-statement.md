@@ -14,7 +14,7 @@ Gatsbyjs.org est le site internet du framework open-source Gatsby; cela inclut l
 
 Gatsbyjs.com est le site internet commercial de Gatsby, Inc. la startup qui développe Gatsby, cela inclu notre premier produit, Gatsby Preview : un service cloud qui permet aux membres d'une équipe de collaborer au développement d'un site Gatsby.
 
-## Partager vos retours et recevoir de l'aide concernant l'accessecibilité
+## Partager vos retours et recevoir de l'aide concernant l'accessibilité
 
 Nous nous efforçons de rendre les sites et le frameworkd Gatsy lui-même aussi accessible que possible. Notre objectif est d'atteindre la norme [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) avec laquelle nous sommes en partie conforme. Nous serons les premier à admettre que l'éco-système Gatsby est en constant développement et nous somme ouvert à tous les retours pour rendre les choses meilleures.
 
