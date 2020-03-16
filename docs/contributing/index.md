@@ -1,6 +1,6 @@
 ---
 title: Contribuer à Gatsby.js
-description: Apprenez en plus sur la contribution à l'une des communauté les plus acceuillante en aidant à developper le future d'internet.
+description: Apprenez en plus sur la contribution à l'une des communautés les plus accueillantes en aidant à développer le futur d'internet.
 disableTableOfContents: true
 ---
 
