@@ -3,7 +3,7 @@ title: "Recette: Travailler avec des configurations de démarrage"
 tableOfContentsDepth: 1
 ---
 
-Les [Configurations de démarrage](/docs/starters/) sont des sites Gatsby passe-partout entretenus officiellement ou par la communauté.
+Les [configurations de démarrage](/docs/starters/) sont des sites Gatsby passe-partout maintenus officiellement ou par la communauté.
 
 ## Utiliser une configuration de démarrage
 
