@@ -21,7 +21,7 @@ Les [configurations de démarrage](/docs/starters/) sont des sites Gatsby passe-
 gatsby new {le-nom-de-votre-projet} {le-lien-de-la-configuration-de-demarrage}
 ```
 
-> _Ne pas exécuter la commande ci-dessus telle quelle -- n'oubliez pas de remplacer {le-nom-de-votre-projet} et {le-lien-de-la-configuration-de-demarrage}!_
+> _Ne pas exécuter la commande ci-dessus tel quel -- n'oubliez pas de remplacer {le-nom-de-votre-projet} et {le-lien-de-la-configuration-de-demarrage}!_
 
 3. Exécutez votre nouveau site:
 
