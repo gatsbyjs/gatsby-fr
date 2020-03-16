@@ -16,7 +16,7 @@ Gatsbyjs.com est le site internet commercial de Gatsby, Inc. la startup qui dév
 
 ## Partager vos retours et recevoir de l'aide concernant l'accessibilité
 
-Nous nous efforçons de rendre les sites et le frameworkd Gatsy lui-même aussi accessible que possible. Notre objectif est d'atteindre la norme [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) avec laquelle nous sommes en partie conforme. Nous serons les premier à admettre que l'éco-système Gatsby est en constant développement et nous somme ouvert à tous les retours pour rendre les choses meilleures.
+Nous nous efforçons de rendre les sites et le framework Gatsy lui-même aussi accessible que possible. Notre objectif est d'atteindre la norme [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) avec laquelle nous sommes en partie conforme. Nous serons les premier à admettre que l'éco-système Gatsby est en constant développement et nous sommes ouvert à tous les retours pour rendre les choses meilleures.
 
 Pour contacter l'équipe core pour vos retours concernant l'accéssibilité, merci de [créer une issue sur Github](https://github.com/gatsbyjs/gatsby/issues/new/choose).
 
