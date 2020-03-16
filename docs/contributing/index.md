@@ -4,7 +4,7 @@ description: Apprenez en plus sur la contribution à l'une des communautés les 
 disableTableOfContents: true
 ---
 
-Merci pour votre interet pour la contribution Nous somme heureux que vous souhaitiez nous aider !
+Merci de votre intérêt pour contribuer ! Nous sommes heureux que vous souhaitiez nous aider !
 
 Vous trouverez ci-dessous des guides concernant la communauté Gatsby.js, le code de conduite, et comment commencer à contribuer :
 
