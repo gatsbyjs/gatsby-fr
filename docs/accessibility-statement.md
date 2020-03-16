@@ -6,7 +6,7 @@ _Mis à jour le: 8 avril 2019_
 
 Nous souhaitons que tous ceux qui utilisent Gatsy se sentent bienvenue et trouve l'expérience gratifiante: ceci inclut les développeurs ayant des handicaps et les utilisateurs ayant des handicaps lorsqu'il s'agit des sites Gatsby, de la documentation, et des autres ressources.
 
-Cette page a été créé pour ressembler en un seul endroit les informations sur l'accessibilité dans l'éco-système Gatsby et indique les canals de communication où les personnes avec des handicaps peuvent trouver de l'aide concernant Gatsby.
+Cette page a été créée pour ressembler en un seul endroit les informations sur l'accessibilité dans l'éco-système Gatsby et indique les canaux de communication où les personnes avec des handicaps peuvent trouver de l'aide concernant Gatsby.
 
 ## Les produits et services Gatsby
 
