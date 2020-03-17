@@ -23,7 +23,7 @@ gatsby new {le-nom-de-votre-projet} {le-lien-de-la-configuration-de-demarrage}
 
 > _Ne pas exécuter la commande ci-dessus tel quel -- n'oubliez pas de remplacer {le-nom-de-votre-projet} et {le-lien-de-la-configuration-de-demarrage}!_
 
-3. Lancez votre nouveau site:
+3. Lancez votre nouveau site :
 
 ```shell
 cd {le-nom-de-votre-projet}
