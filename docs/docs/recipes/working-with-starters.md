@@ -1,5 +1,5 @@
 ---
-title: "Recette: Travailler avec des configurations de démarrage"
+title: "Recettes : Travailler avec des configurations de démarrage"
 tableOfContentsDepth: 1
 ---
 
