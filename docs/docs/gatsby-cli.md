@@ -35,10 +35,17 @@ gatsby new [<nom-de-site> [<url-de-départ>]]
 
 #### Arguments
 
+<<<<<<< HEAD
 | Argument    | Description                                                                                                                                                                                                     |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | nom-de-site   | Le nom de votre site Gatsby, qui est également utilisé pour créer un répertoire de projet.                                                                                                                                        |
 | url-de-départ | Une URL de démarrage Gatsby ou un chemin de fichier local. Par défaut :[gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); voir les docs [Gatsby starters](/docs/gatsby-starters/) pour plus d'informations. |
+=======
+| Argument    | Description                                                                                                                                                                                              |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| site-name   | Your Gatsby site name, which is also used to create a project directory.                                                                                                                                 |
+| starter-url | A Gatsby starter URL or local file path. Defaults to [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); see the [Gatsby starters](/docs/starters/) docs for more information. |
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 > Note: Le `nom-de-site` ne doit être composé que de lettres et de chiffres. Si vous spécifiez un `.`, `./` ou un `<espace>` dans le nom, `gatsby new` provoquera une erreur.
 
@@ -117,6 +124,7 @@ A la racine d'un site Gatsby, compilez votre application et préparez son déplo
 
 #### Options
 
+<<<<<<< HEAD
 |            Option            | Description                                                                                               |
 | :--------------------------: | --------------------------------------------------------------------------------------------------------- |
 |       `--prefix-paths`       | Construit un site avec des chemins de liens préfixés (définissez pathPrefix dans votre configuration) |
@@ -124,6 +132,15 @@ A la racine d'un site Gatsby, compilez votre application et préparez son déplo
 | `--open-tracing-config-file` | Fichier de configuration du traceur (compatible OpenTracing). 
 Voir [Suivi des performances du traceur](/docs/performance-tracing/) |
 | `--no-color`, `--no-colors`  | Désactive la sortie du terminal en couleur                                                                         |
+=======
+|            Option            | Description                                                                                                                                  |
+| :--------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------- |
+|       `--prefix-paths`       | Build site with link paths prefixed (set pathPrefix in your config)                                                                          |
+|        `--no-uglify`         | Build site without uglifying JS bundles (for debugging)                                                                                      |
+|         `--profile`          | Build site with react profiling. See [Profiling Site Performance with React Profiler](/docs/profiling-site-performance-with-react-profiler/) |
+| `--open-tracing-config-file` | Tracer configuration file (OpenTracing compatible). See [Performance Tracing](/docs/performance-tracing/)                                    |
+| `--no-color`, `--no-colors`  | Disables colored terminal output                                                                                                             |
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 En plus de ces options de build, il y a quelques options optionnelles [variables d'environnement de build] (/docs/environment-variables/#build-variables) pour des configurations plus avancées qui peuvent ajuster le fonctionnement d'un build. Par exemple, le réglage de `CI=true` comme variable d'environnement personnalisera la sortie pour les [terminaux bêtes] (https://en.wikipedia.org/wiki/Computer_terminal#Dumb_terminals).
 

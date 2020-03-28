@@ -45,8 +45,13 @@ Ouvrez le fichier `src/pages/index.js`. Le code dans ce fichier crée un composa
 1.  Changez le texte “Hello World!” pour “Hello Gatsby!” et sauvegardez le fichier. Si vos fenêtres sont côte à côte, vous pouvez voir votre code et le contenu qui change de façon presque instantanée dans votre navigateur après avoir sauvegardé le fichier.
 
 <video controls="controls" autoplay="true" loop="true">
+<<<<<<< HEAD
   <source type="video/mp4" src="./02-demo-hot-reloading.mp4"></source>
   <p>Désolé ! Votre navigateur ne supporte pas cette vidéo.</p>
+=======
+  <source type="video/mp4" src="./02-demo-hot-reloading.mp4" />
+  <p>Sorry! Your browser doesn't support this video.</p>
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 </video>
 
 > 💡 Gatsby utilise le **rechargement immédiat** pour accélérer votre processus de développement. Lorsque vous exécutez un serveur de développement Gatsby, les fichiers du site Gatsby sont “surveillés” en arrière-plan - chaque fois que vous enregistrez un fichier, vos modifications sont immédiatement reflétées dans le navigateur. Vous n'avez pas besoin d'actualiser la page ou de redémarrer le serveur de développement, vos modifications apparaissent.
@@ -326,8 +331,13 @@ export default () => (
 Après avoir enregistré le fichier, vous devriez voir la page de contact et être capable de suivre le lien jusque sur la page d'accueil.
 
 <video controls="controls" loop="true">
+<<<<<<< HEAD
   <source type="video/mp4" src="./10-linking-between-pages.mp4"></source>
   <p>Désolé ! Votre navigateur ne supporte pas cette vidéo.</p>
+=======
+  <source type="video/mp4" src="./10-linking-between-pages.mp4" />
+  <p>Sorry! Your browser doesn't support this video.</p>
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 </video>
 
 Le composant Gatsby `<Link />` permet de lier différentes pages de votre site. Pour les liens externes non gérés par votre site Gatsby, utilisez la balise HTML par défaut `<a>`.

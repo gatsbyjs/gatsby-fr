@@ -55,6 +55,12 @@ Si vous êtes en train de construire un petit site, une façon efficace de le co
 
 ### Comment la couche de données de Gatsby utilise GraphQL pour récupérer les données dans ses composants
 
+<<<<<<< HEAD
+=======
+There are many options for loading data into React components. One of the most
+popular and powerful of these is a technology called
+[GraphQL](https://graphql.org/).
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 Il existe de nombreuses options pour charger les données dans les composants React. Une des plus populaires et puissantes de celle-ci est une technologie appelée [GraphQL](http://graphql.org/).
 

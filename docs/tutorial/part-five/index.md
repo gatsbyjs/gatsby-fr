@@ -17,8 +17,13 @@ GraphiQL est l'environnement de développement intégré (EDI) de GraphQL. C'est
 Lorsque votre serveur de développement est lancé, vous pouvez y accéder ici `http://localhost:8000/___graphql`.
 
 <video controls="controls" autoplay="true" loop="true">
+<<<<<<< HEAD
   <source type="video/mp4" src="/graphiql-explore.mp4"></source>
   <p>Votre navigateur ne prend pas en charge l'élément HTML5 "vidéo"</p>
+=======
+  <source type="video/mp4" src="/graphiql-explore.mp4" />
+  <p>Your browser does not support the video element.</p>
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 </video>
 
 Faites un tour dans le "type" `Site` intégré et regardez quels champs y sont disponibles -- dont l'objet `siteMetadata` que nous avons interrogé plus tôt. Essayez d'ouvrir GraphiQL et de jouer avec vos données ! Appuyez sur <kbd>Ctrl + Espace</kbd> (ou utilisez <kbd>Maj + Espace</kbd> comme raccourci clavier alternatif) pour faire apparaître la fenêtre d'autocomplétion et <kbd>Ctrl + Entrer</kbd> pour exécuter votre requête. Vous utiliserez beaucoup plus GraphiQL d'ici à la fin de ce tutoriel.
