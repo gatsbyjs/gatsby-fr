@@ -45,7 +45,7 @@ Ouvrez le fichier `src/pages/index.js`. Le code dans ce fichier crée un composa
 1.  Changez le texte “Hello World!” pour “Hello Gatsby!” et sauvegardez le fichier. Si vos fenêtres sont côte à côte, vous pouvez voir votre code et le contenu qui change de façon presque instantanée dans votre navigateur après avoir sauvegardé le fichier.
 
 <video controls="controls" autoplay="true" loop="true">
-  <source type="video/mp4" src="./02-demo-hot-reloading.mp4"></source>
+  <source type="video/mp4" src="./02-demo-hot-reloading.mp4" />
   <p>Désolé ! Votre navigateur ne supporte pas cette vidéo.</p>
 </video>
 
@@ -150,7 +150,7 @@ Les composants deviennent les éléments de base de votre site. Au lieu d’êtr
 
 Tout composant React défini dans `src/pages/*.js` deviendra automatiquement une page. Voyons cela en action
 
-Vous avez déjà un fichier `src/pages/index.js` qui vient avec le starter “Hello World”.  starter. Créons une page à propos de.
+Vous avez déjà un fichier `src/pages/index.js` qui vient avec le starter “Hello World”. starter. Créons une page à propos de.
 
 1.  Créez un nouveau fichier `src/pages/about.js`, copiez le code suivant dans le nouveau fichier, et sauvegardez.
 
@@ -301,6 +301,7 @@ export default () => (
   </div>
 )
 ```
+
 Lorsque vous allez cliquer sur le nouveau lien "Contact" sur la page d'accueil, vous devriez voir...
 
 ![Gatsby dev 404 page](09-dev-404.png)
@@ -326,7 +327,7 @@ export default () => (
 Après avoir enregistré le fichier, vous devriez voir la page de contact et être capable de suivre le lien jusque sur la page d'accueil.
 
 <video controls="controls" loop="true">
-  <source type="video/mp4" src="./10-linking-between-pages.mp4"></source>
+  <source type="video/mp4" src="./10-linking-between-pages.mp4" />
   <p>Désolé ! Votre navigateur ne supporte pas cette vidéo.</p>
 </video>
 

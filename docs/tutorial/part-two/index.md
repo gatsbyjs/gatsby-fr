@@ -48,7 +48,7 @@ Vous avez maintenant un nouveau site Gatsby (basé sur le kit de démarrage "hel
 │       └── index.js
 ```
 
-#### ✋ Ajoutez des styles à votre fichier `.css`
+#### ✋ Ajouter des styles à un fichier CSS
 
 1. Créez un fichier `.css` dans votre nouveau projet :
 
@@ -80,7 +80,7 @@ html {
 }
 ```
 
-> Note : L'emplacement de ce fichier css d'exemple (dans le dossier`/src/styles/`) est purement arbitraire.
+> Note : L'emplacement de ce fichier css d'exemple dans un dossier`/src/styles/` est purement arbitraire.
 
 #### ✋ Inclure votre feuille de style dans `gatsby-browser.js`
 
@@ -160,7 +160,7 @@ export default ({ children }) => (
 )
 ```
 
-Comme vous pouvez le remarquer, vous avez importé un module CSS du nom de `container.module.css`. Créons ce fichier maintenant.
+Vous remarquerez que avez importé un fichier de module CSS du nom de `container.module.css`. Créons ce fichier maintenant.
 
 2. Dans ce même dossier (`src/components`), créez le fichier `container.module.css` et copiez le contenu suivant :
 
@@ -263,7 +263,7 @@ import Container from "../components/container"
 console.log(styles)
 
 // highlight-start
-const User = props => (
+const User = (props) => (
   <div className={styles.user}>
     <img src={props.avatar} className={styles.avatar} alt="" />
     <div className={styles.description}>

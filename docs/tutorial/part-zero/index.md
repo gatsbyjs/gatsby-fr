@@ -12,7 +12,7 @@ La ligne de commande est une interface textuelle utilisée pour exécuter des co
 
 Prenez le temps pour trouver et ouvrir l'interface de ligne de commande (CLI) de votre ordinateur. Selon le système d'exploitation que vous utilisez, voir [**instructions pour Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instructions pour Windows**](https://www.quora.com/How-do-I-open-terminal-in-windows) ou [**instructions pour Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
 
-_NB: si vous êtes débutant en lignes de commande, "exécuter" une commande signifie "écrire un certain nombre d'instructions dans votre invite de commande et presser la touche Entrer". Les commandes seront indiquées dans un encadré mis en valeur, comme ceci `node --version`, mais tous les encadrés surlignés ne sont pas des commandes ! Si quelque chose est une commande, cela sera mentionné comme quelque chose que vous aurez à exécuter._
+_NB: si vous êtes débutant en lignes de commande, "exécuter" une commande signifie "écrire un certain nombre d'instructions dans votre invite de commande et presser la touche Entrer". Les commandes seront indiquées dans un encadré mis en valeur, comme ceci `node --version`, mais tous les encadrés surlignés ne sont pas des commandes ! Si quelque chose est une commande, cela sera mentionné comme quelque chose que vous aurez à lacner/exécuter._
 
 ## Installer Node.js pour le système d'exploitation approprié
 
@@ -25,22 +25,38 @@ Pour installer Gatsby et Node.js, il est recommandé d'utiliser [Homebrew](https
 #### Comment installer ou vérifier Homebrew sur votre ordinateur:
 
 1. Ouvrez votre terminal.
-2. Vérifiez si Homebrew est installé en exécutant la commande `brew -v`. Vous devriez voir "Homebrew" et un numéro de version.
+2. Vérifiez si Homebrew est installé. Vous devriez voir "Homebrew" et un numéro de version.
+
+```shell
+brew -v
+```
+
 3. Sinon, téléchargez et installez [Homebrew en suivant les instructions](https://docs.brew.sh/Installation).
-4. Une fois que vous avez installé Homebrew, répétez l'étape 2 pour vérifier s'il est bien installé.
+4. Une fois que vous avez installé Homebrew, répétez l'étape 2 pour vérifier.
 
 #### Installer les outils de ligne de commande Xcode:
 
 1. Ouvrez votre terminal.
-2. Installez _Xcode Command line tools_ en exécutant la commande `xcode-select --install`.
-   - Si cela échoue, téléchargez-le [directement depuis le site Apple](https://developer.apple.com/download/more/), après connexion avec un compte développeur Apple
+2. Installez Xcode Command line tools en lançant :
+
+```shell
+xcode-select --install
+```
+
+> 💡 Si cela échoue, téléchargez-le [directement depuis le site Apple](https://developer.apple.com/download/more/), après connexion avec un compte développeur Apple.
+
 3. Après avoir été invité à démarrer l'installation, vous serez à nouveau invité à accepter une licence logicielle pour les outils à télécharger.
 
 #### Installer Node
 
 1. Ouvrez votre terminal
-2. Exécutez `brew install node`
-   - Si vous ne souhaitez pas l'installer avec Homebrew, téléchargez la dernière version de Node.js depuis [le site officiel de Node.js](https://nodejs.org/fr/), double-cliquez sur le fichier téléchargé et suivez le processus d'installation.
+2. Installez node avec Homebrew :
+
+```shell
+brew install node
+```
+
+> 💡 Si vous ne souhaitez pas l'installer avec Homebrew, téléchargez la dernière version de Node.js depuis [le site officiel de Node.js](https://nodejs.org/fr/), double-cliquez sur le fichier téléchargé et suivez le processus d'installation.
 
 ### Instructions pour Windows
 
@@ -50,40 +66,106 @@ Pour installer Gatsby et Node.js, il est recommandé d'utiliser [Homebrew](https
 
 Installez nvm (Node Version Manager) et les dépendances nécessaires. nvm est utilisé pour gérer Node.js et toutes ses versions associées.
 
+> 💡 Lorsque vous installez un package, s'il vous est demandé une confirmation, appuyez sur `y` et pressez entrer.
+
+Sélectionnez votre distribution :
+
+- [Ubuntu, Debian, et autres distros basées sur apt](#ubuntu-debian-and-other-apt-based-distros)
+- [Arch, Manjaro et autres distros basées sur pacman](#arch-manjaro-and-other-pacman-based-distros)
+- [Fedora, RedHat, et autres distros basées sur dnf](#fedora-redhat-and-other-dnf-based-distros)
+
+Si la distribution Linux que vous utilisez n'est pas listée ici, merci de trouver des instructions sur le web.
+
 #### Ubuntu, Debian, et autres distros basées sur `apt` :
 
-1. Exécutez `sudo apt update` et ensuite `sudo apt -y upgrade` pour vous assurer que votre distribution Linux est parée.
-2. Exécutez `sudo apt-get install curl` pour installer curl qui vous permet de transférer des données et télécharger des dépendances additionnelles.
-3. Une fois l'installation terminée, exécutez `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash` pour télécharger la dernière version de nvm.
-4. Pour vous assurer que cela a marché, utilisez la commande suivante : `nvm -version`. Le résultat doit être un numéro de version.
-5. [Définir la version de Node.js par défaut](#set-default-nodejs-version)
+1. Assurez-vous que votre distribution Linux est prête en exécutant une mise à jour et une mise à niveau.
 
-#### Arch, Manjaro et autres distros basées sur `pacman` :
+```shell
+sudo apt update
+sudo apt -y upgrade
+```
 
-1. Exécutez `sudo pacman -Sy` pour vous assurer que votre distribution Linux est parée.
-2. Ces distros ont directement curl d'installé, vous pouvez donc utiliser cette commande pour télécharger nvm. `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash`
-3. Avant d'utiliser nvm, vous devez installer des dépendances additionnelles en exécutant `sudo pacman -S grep awk tar`.
-4. Pour vous assurer que cela a marché, utilisez la commande suivante : `nvm -version`. Le résultat doit être un numéro de version.
-5. [Définir la version de Node.js par défaut](#set-default-nodejs-version)
+2. Installez curl qui vous permettra de transférer des données et télécharger des dépendances additionnelles :
 
-#### Fedora, RedHat, and other `dnf` based distros:
+```shell
+sudo apt-get install curl
+```
 
-1. Ces distros ont directement curl d'installé, vous pouvez donc utiliser cette commande pour télécharger nvm. `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash`
-2. Pour vous assurer que cela a marché, utilisez la commande suivante : `nvm -version`. Le résultat doit être un numéro de version.
-3. [Définir la version de Node.js par défaut](#set-default-nodejs-version)
+3. Une fois installé, téléchargez la dernière version de nvm :
 
-Si votre distribution Linux n'est pas listée ici, vous devriez trouver des instructions sur le web.
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+```
+
+4. Assurez-vous que cela a fonctionné. Le retour devrait être un numéro de version.
+
+```shell
+nvm --version
+```
+
+5. Continuez avec la section : [Définir la version par défaut de Node.js](#set-default-nodejs-version)
+
+#### Arch, Manjaro et autres distros basées sur pacman :
+
+1. Assurez-vous que votre distribution Linux est prête :
+
+```shell
+sudo pacman -Sy
+```
+
+2. Ces distributions viennent installées avec curl, vous pouvez donc vous en servir pour télécharger nvm :
+
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+```
+
+3. Avant d'installer nvm, vous devez installez des dépendances additionnelles en exécutant :
+
+```shell
+sudo pacman -S grep awk tar
+```
+
+4. Assurez-vous que cela a fonctionné. Le retour devrait être un numéro de version.
+
+```shell
+nvm --version
+```
+
+5. Continuez avec la section : [Définir la version par défaut de Node.js](#set-default-nodejs-version)
+
+#### Fedora, RedHat, et autres distros basées sur dnf :
+
+1. Ces distributions viennent installées avec curl, vous pouvez donc vous en servir pour télécharger nvm :
+
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+```
+
+2. Assurez-vous que cela a fonctionné. Le retour devrait être un numéro de version.
+
+```shell
+nvm --version
+```
+
+3. Continuez avec la section : [Définir la version par défaut de Node.js](#set-default-nodejs-version)
 
 #### Définir la version par défaut de Node.js
 
-Lorsque nvm est installé, il n'est pas par défaut attaché à une version particulière de node. Vous devrez installer la version que vous souhaitez utiliser et donner des instructions à nvm pour l'utiliser. Cet exemple utiliser la dernière version de Node 10, mais des versions plus récentes peuvent être utilisées à la place.
+Lorsque nvm est installé, il n'est pas par défaut attaché à une version particulière de node. Vous devrez installer la version que vous souhaitez utiliser et donner des instructions à nvm pour l'utiliser. Cet exemple utiliser la version 10, mais des versions plus récentes peuvent être utilisées à la place.
 
 ```shell
 nvm install 10
 nvm use 10
 ```
 
-Afin de confirmer que cela a marché vous pouvez exécuter `npm --version` et `node --version`. Le résultat devrait ressembler à quelque chose comme la capture d'écran ci-dessous, montrant le numéro de version en réponse à ces commandes.
+Confirmez que cela a marché :
+
+```shell
+npm --version
+node --version
+```
+
+Le résultat devrait ressembler à quelque chose comme la capture d'écran ci-dessous, montrant le numéro de version en réponse à ces commandes.
 
 ![Vérifier les versions de node et npm dans le terminal](01-node-npm-versions.png)
 
@@ -103,11 +185,19 @@ Les étapes pour télécharger et installer Git dépendent de votre système d'e
 
 L'outil CLI de Gatsby vous permet de créer rapidement de nouveaux sites propulsés par Gatsby et d'exécuter des commandes pour développer des sites Gatsby. Il s'agit d'un package npm publié.
 
-La CLI Gatsby est disponible via npm et doit être installée globalement en exécutant `npm install -g gatsby-cli`.
+La CLI Gatsby est disponible via npm et doit être installée globalement en exécutant :
+
+```shell
+npm install -g gatsby-cli
+```
 
 _**Remarque**: lorsque vous installez Gatsby et l'exécutez pour la première fois, vous verrez un court message vous informant des données d'utilisation anonymes qui sont collectées pour les commandes Gatsby, vous pouvez en savoir plus sur la façon dont ces données sont extraites et utilisées dans le [doc de télémétrie](/docs/telemetry)._
 
-Pour voir les commandes disponibles, exécutez `gatsby --help`.
+Pour voir les commandes disponibles :
+
+```shell
+gatsby --help
+```
 
 ![Vérifier les commandes Gatsby dans le terminal](05-gatsby-help.png)
 
@@ -118,36 +208,40 @@ Pour voir les commandes disponibles, exécutez `gatsby --help`.
 Vous êtes maintenant prêt à utiliser l'outil CLI Gatsby pour créer votre premier site Gatsby. À l'aide de l'outil, vous pouvez télécharger des "starters" (sites partiellement construits avec une configuration par défaut) pour vous aider à accélérer la création d'un certain type de site. Le démarreur "Hello World" que vous utiliserez ici est un démarreur avec l'essentiel nécessaire pour un site Gatsby.
 
 1.  Ouvrez votre terminal.
-2.  Exécutez `gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world`. (_Remarque: En fonction de votre vitesse de téléchargement, le temps que cela prendra variera. Par souci de concision, le gif ci-dessous a été suspendu pendant une partie de l'installation_).
-3.  Exécutez `cd hello-world`.
-4.  Exécutez `gatsby develop`.
-
-<video controls="controls" autoplay="true" loop="true">
-  <source type="video/mp4" src="./03-create-site.mp4" />
-  <p>Désolé! Votre navigateur ne prend pas en charge cette vidéo.</p>
-</video>
-
-Qu'est-ce qui vient de se passer?
+2.  Créez un nouveau site depuis un starter :
 
 ```shell
 gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-- `new` est une commande gatsby pour créer un nouveau projet Gatsby.
-- Ici, `hello-world` est un titre arbitraire - vous pouvez choisir n'importe quoi. L'outil CLI placera le code de votre nouveau site dans un nouveau dossier appelé “hello-world”.
-- Enfin, l'URL GitHub spécifiée pointe vers un référentiel de code qui contient le code de démarrage que vous souhaitez utiliser.
+> 💡 Que vient-il de se passer ?
+>
+> - `new` est une commande gatsby pour créer un nouveau projet Gatsby.
+> - Ici, `hello-world` est un titre arbitraire — vous auriez pu choisir n'importe lequel. L'outil CLI va placer le code de votre nouveau site dans un dossier intitulé “hello-world”.
+> - Pour finir, l'URL GitHub spécifiée dirige vers un répertoire contenant le code du starter que vous voulez utiliser.
+
+> 💡 En fonction de votre vitesse de téléchargement, le temps que cela prendra peut varier. Par souci de brièveté, le gif ci-dessous a été mis en pause lors de certaines parties de l'installation.
+
+3.  Rendez-vous dans le répertoire de travail.
 
 ```shell
 cd hello-world
 ```
 
-- Cela dit : 'Je veux changer les répertoires («cd») en sous-dossier «hello-world». Chaque fois que vous souhaitez exécuter des commandes pour votre site, vous devez être dans le contexte de ce site (alias votre terminal doit être pointé vers le répertoire où réside le code de votre site).
+- Cela dit : 'Je veux changer les répertoires (`cd`) vers le sous-dossier «hello-world». Chaque fois que vous souhaitez exécuter des commandes pour votre site, vous devez être dans le contexte de ce site (c'est à dire que votre terminal doit pointer vers le répertoire où réside le code de votre site).
+
+4. Lancez le mode de développement :
 
 ```shell
 gatsby develop
 ```
 
-- Cette commande démarre un serveur de développement. Vous pourrez voir et interagir avec votre nouveau site dans un environnement de développement local (sur votre ordinateur, non publié sur Internet).
+> 💡 Cette commande démarre un serveur de développement. Vous pourrez voir et interagir avec votre nouveau site dans un environnement de développement local (sur votre ordinateur, non publié sur Internet).
+
+<video controls="controls" autoplay="true" loop="true">
+  <source type="video/mp4" src="./03-create-site.mp4" />
+  <p>Désolé! Votre navigateur de prend pas en charge cette vidéo.</p>
+</video>
 
 ### Affichez votre site localement
 
@@ -159,7 +253,7 @@ Félicitations! C'est le début de votre tout premier site Gatsby!🎉
 
 Vous pourrez visiter le site localement à [**_http://localhost:8000_**](http://localhost:8000/) tant que votre serveur de développement est en cours d'exécution. C’est le processus que vous avez commencé en exécutant la commande `gatsby develop`. Pour arrêter l'exécution de ce processus (ou pour «arrêter l'exécution du serveur de développement»), revenez à la fenêtre de votre terminal, maintenez enfoncée la touche "control" puis appuyez sur «c» (ctrl-c). Pour le redémarrer, lancez à nouveau la commande `gatsby develop`!
 
-**Remarque:** Si vous utilisez une configuration VM comme`vagrant` et / ou souhaitez écouter sur votre adresse IP locale, exécutez `gatsby develop -- --host=0.0.0.0`. Maintenant, le serveur de développement écoute à la fois sur «localhost» et sur votre IP locale.
+\_**Remarque:** Si vous utilisez une configuration VM comme `vagrant` et / ou souhaitez écouter sur votre adresse IP locale, exécutez `gatsby develop -- --host=0.0.0.0`. Maintenant, le serveur de développement écoute à la fois sur `http://localhost` et sur votre IP locale.
 
 ## Configurer un éditeur de code
 
