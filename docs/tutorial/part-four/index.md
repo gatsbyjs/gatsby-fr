@@ -4,7 +4,7 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Bienvenue dans la partie quatre du tutoriel ! Vous êtes à la moitié du chemin ! 
+Bienvenue dans la partie quatre du tutoriel ! Vous êtes à la moitié du chemin !
 J'espère que vous commencez à vous sentir à l'aise 😀
 
 ## Récap de la première moitié du tutoriel
@@ -48,19 +48,12 @@ Voir le guide [Utiliser Gatsby sans GraphQL](/docs/using-gatsby-without-graphql/
 
 ### Quand utiliser les données non structurées vs GraphQL ?
 
-Si vous êtes en train de construire un petit site, une façon efficace de le construire est de récupérer les données comme présenté dans ce guide, en utilisant l'API  `createPages`, et ensuite si le site devient plus complexe, vous modifiez votre site pour une structure plus complexe, ou si vous vous voulez transformer vos données, suivez ces étapes :
+Si vous êtes en train de construire un petit site, une façon efficace de le construire est de récupérer les données comme présenté dans ce guide, en utilisant l'API `createPages`, et ensuite si le site devient plus complexe, vous modifiez votre site pour une structure plus complexe, ou si vous vous voulez transformer vos données, suivez ces étapes :
 
 1.  Vérifier la [Bibliothèque des Plugins](/plugins/) pour voir si la source du plugin et/ou le plugin de transformation que vous souhaitez utiliser existe déjà
 2.  S'ils n'existent pas encore, lisez le guide sur la [Création de plugin](/docs/creating-plugins/) et envisager de construire le vôtre !
 
 ### Comment la couche de données de Gatsby utilise GraphQL pour récupérer les données dans ses composants
-
-<<<<<<< HEAD
-=======
-There are many options for loading data into React components. One of the most
-popular and powerful of these is a technology called
-[GraphQL](https://graphql.org/).
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 Il existe de nombreuses options pour charger les données dans les composants React. Une des plus populaires et puissantes de celle-ci est une technologie appelée [GraphQL](http://graphql.org/).
 
@@ -154,7 +147,8 @@ export default () => (
   <Layout>
     <h1>A Propos Des Pandas Mangent Beaucoup</h1>
     <p>
-      Nous sommes le seul site fonctionnant sur votre ordinateur à afficher les meilleures photos et vidéos de pandas mangeant beaucoup de nourriture.
+      Nous sommes le seul site fonctionnant sur votre ordinateur à afficher les
+      meilleures photos et vidéos de pandas mangeant beaucoup de nourriture.
     </p>
   </Layout>
 )
@@ -237,7 +231,8 @@ export default ({ data }) => (
   <Layout>
     <h1>A Propos {data.site.siteMetadata.title}</h1> {/* highlight-line */}
     <p>
-      Nous sommes le seul site fonctionnant sur votre ordinateur à afficher les meilleures photos et vidéos de pandas mangeant beaucoup de nourriture.
+      Nous sommes le seul site fonctionnant sur votre ordinateur à afficher les
+      meilleures photos et vidéos de pandas mangeant beaucoup de nourriture.
     </p>
   </Layout>
 )
@@ -342,7 +337,6 @@ export default ({ children }) => {
 Une autre réussite ! 🎉
 
 ![Titre de page et le titre de la mise en page récupéré depuis siteMetadata](site-metadata-two-titles.png)
-
 
 Pourquoi utiliser deux requêtes différentes ici? Ces exemples étaient des introductions rapides aux types de requête, à leur formatage et à leur utilisation. Pour l'instant, garder à l'esprit que seules les pages peuvent faire des requêtes de page. Les composants non-page, comme le Layout, peuvent utiliser StaticQuery. La [Partie Sept](/tutorial/part-seven/) du tutoriel explique ceux-ci en plus grande profondeur.
 

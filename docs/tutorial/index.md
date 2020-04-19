@@ -24,21 +24,11 @@ Dans ces tutoriels intermédiaires, vous apprendrez à collecter des données de
 7.  [Créer programmatiquement des pages depuis des données](/tutorial/part-seven/): Apprenez comment créer programmatiquement un ensemble de pages pour vos articles de blog.
 8.  [Préparer un site à être mis en ligne](/tutorial/part-eight/): Apprenez comment auditer les performances de votre site et les meilleures pratiques en termes d'accessibilité, SEO, et plus encore.
 
-<<<<<<< HEAD
-## Tutoriels des thèmes
+## Tutoriels des plugins & thèmes
 
-Les thèmes Gatsby extraient toute votre configuration de base (fonctionnalités partagées, origine des données, design) hors de votre site et génère un paquet pouvant être installé.
+Les plugins Gatsby sont une manière d'encapsuler, réutiliser et composer des fonctionnalités, comme des sources de données. Les thèmes Gatsby sont un type de plugin qui abstrait votre configuration par défaut (fonctionnalité partagée, sources des données, design) hors de votre site et l'intègre dans un package pouvant être installé.
 
-Ceci signifie que la configuration et les fonctionnalités ne sont pas écrites directement dans votre projet, mais plutôt versionné, géré de manière centralisée et installé en tant que dépendance. Vous pouvez parfaitement mettre à jour votre thème, intégrer plusieurs thèmes simultanément, et même substituer un thème compatible à un autre.
-
-Apprenez en plus à propos de l'utilisation et la création de thèmes avec les [Tutoriels des thèmes Gatsby](/tutorial/theme-tutorials/).
-=======
-## Plugin & Theme tutorials
-
-Gatsby plugins are a way to encapsulate, re-use, and compose functionality, such as data sourcing. Gatsby themes are a type of plugin which abstracts your default configuration (shared functionality, data sourcing, design) out of your site and into an installable package.
-
-Learn how to build and use plugins and themes step-by-step in the [Plugin and Theme Tutorials](/tutorial/plugin-and-theme-tutorials/).
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+Apprenez comment créer et utiliser des plugins et des thèmes étape par étape dans les [Tutoriels des Plugins et des Thèmes](/tutorial/plugin-and-theme-tutorials/).
 
 ## Tutoriels additionnels
 

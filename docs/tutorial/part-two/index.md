@@ -48,11 +48,7 @@ Vous avez maintenant un nouveau site Gatsby (basé sur le kit de démarrage "hel
 │       └── index.js
 ```
 
-<<<<<<< HEAD
-#### ✋ Ajoutez des styles à votre fichier `.css`
-=======
-#### ✋ Add styles to a CSS file
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+#### ✋ Ajouter des styles à un fichier CSS
 
 1. Créez un fichier `.css` dans votre nouveau projet :
 
@@ -84,11 +80,7 @@ html {
 }
 ```
 
-<<<<<<< HEAD
-> Note : L'emplacement de ce fichier css d'exemple (dans le dossier`/src/styles/`) est purement arbitraire.
-=======
-> Note: The placement of the example CSS file in a `/src/styles/` folder is arbitrary.
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+> Note : L'emplacement de ce fichier css d'exemple dans un dossier`/src/styles/` est purement arbitraire.
 
 #### ✋ Inclure votre feuille de style dans `gatsby-browser.js`
 
@@ -138,11 +130,7 @@ Si vous jetez un oeil à votre projet dans votre navigateur, vous devriez voir u
 
 ## Utiliser du CSS limité à un composant
 
-<<<<<<< HEAD
 Jusqu'à maintenant nous avons parlé de la méthode la plus traditionnelle en utilisant une feuille de style CSS classique. Maintenant, nous allons parler des diverses méthodes pour modulariser du CSS et appréhender les mises en page du point de vue des composants.
-=======
-So far, we've talked about the more traditional approach of using standard CSS stylesheets. Now, we'll talk about various methods of modularizing CSS to tackle styling in a component-oriented way.
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 ### Modules CSS
 
@@ -172,11 +160,7 @@ export default ({ children }) => (
 )
 ```
 
-<<<<<<< HEAD
-Comme vous pouvez le remarquer, vous avez importé un module CSS du nom de `container.module.css`. Créons ce fichier maintenant.
-=======
-You'll notice you imported a CSS module file named `container.module.css`. Let's create that file now.
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+Vous remarquerez que avez importé un fichier de module CSS du nom de `container.module.css`. Créons ce fichier maintenant.
 
 2. Dans ce même dossier (`src/components`), créez le fichier `container.module.css` et copiez le contenu suivant :
 
@@ -279,7 +263,7 @@ import Container from "../components/container"
 console.log(styles)
 
 // highlight-start
-const User = props => (
+const User = (props) => (
   <div className={styles.user}>
     <img src={props.avatar} className={styles.avatar} alt="" />
     <div className={styles.description}>

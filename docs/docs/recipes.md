@@ -55,28 +55,20 @@ Il y a énormément de façons de mettre en forme votre site ; Gatsby fonctionne
 - [Utiliser Google Fonts](/docs/recipes/styling-css#using-google-fonts)
 - [Utiliser Font Awesome](/docs/recipes/styling-css#using-fontawesome)
 
-<<<<<<< HEAD
-## [3. Travailler avec les plugins de démarrage](/docs/recipes/working-with-starters)
-=======
-## [3. Working with plugins](/docs/recipes/working-with-plugins)
+## [3. Travailler avec des plugins](/docs/recipes/working-with-plugins)
 
-[Plugins](/docs/plugins/) are Node.js packages that implement Gatsby APIs that are maintained officially, or by the community.
+[Les plugins](/docs/plugins/) sont des packages Node.js qui implémentent des APIs dans Gatsby et sont maintenus soit officiellement, soit par la communauté.
 
-- [Using a plugin](/docs/recipes/working-with-plugins#using-a-plugin)
-- [Creating a new plugin using a plugin starter](/docs/recipes/working-with-plugins#creating-a-new-plugin-using-a-plugin-starter)
+- [Utiliser un plugin](/docs/recipes/working-with-plugins#using-a-plugin)
+- [Créer un nouveau plugin en utilisant un starter](/docs/recipes/working-with-plugins#creating-a-new-plugin-using-a-plugin-starter)
 
-## [4. Working with starters](/docs/recipes/working-with-starters)
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+## [4. Travailler avec les plugins de démarrage](/docs/recipes/working-with-starters)
 
 [Les plugins de démarrage](/docs/starters/) sont des sites Gatsby génériques maintenus officiellement ou par la communauté.
 
 - [Utiliser un plugin de démarrage](/docs/recipes/working-with-starters#using-a-starter)
 
-<<<<<<< HEAD
-## [4. Travailler avec les thèmes](/docs/recipes/working-with-themes)
-=======
-## [5. Working with themes](/docs/recipes/working-with-themes)
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+## [5. Travailler avec les thèmes](/docs/recipes/working-with-themes)
 
 Un thème Gatsby vous permet de centraliser l'apparence de votre site. Vous pouvez mettre à jour un thème, composer plusieurs thèmes ensemble, et même rapidement changer de thème parmi les thèmes compatibles.
 
@@ -84,11 +76,7 @@ Un thème Gatsby vous permet de centraliser l'apparence de votre site. Vous pouv
 - [Créer un nouveau site en thème d'un plugins de démarrage](/docs/recipes/working-with-themes#creating-a-new-site-using-a-theme-starter)
 - [Coder un nouveau thème](/docs/recipes/working-with-themes#building-a-new-theme)
 
-<<<<<<< HEAD
-## [5. Récupérer des données](/docs/recipes/sourcing-data)
-=======
-## [6. Sourcing data](/docs/recipes/sourcing-data)
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+## [6. Récupérer des données](/docs/recipes/sourcing-data)
 
 Récupérez des données depuis plusieurs endroits, comme le système de fichiers ou base de données, et intégrez-les dans votre site Gatsby.
 
@@ -99,11 +87,7 @@ Récupérez des données depuis plusieurs endroits, comme le système de fichier
 - [Récupérer des données depuis une source externe et créer des pages sans GraphQL](/docs/recipes/sourcing-data#pulling-data-from-an-external-source-and-creating-pages-without-graphql)
 - [Obtenir des données depuis Drupal](/docs/recipes/sourcing-data#sourcing-content-from-drupal)
 
-<<<<<<< HEAD
-## [6. Interroger des données](/docs/recipes/querying-data)
-=======
-## [7. Querying data](/docs/recipes/querying-data)
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+## [7. Interroger des données](/docs/recipes/querying-data)
 
 Gatsby vous permet d'accéder aux données de toutes vos sources en utilisant une seule interface GraphQL.
 
@@ -117,11 +101,7 @@ Gatsby vous permet d'accéder aux données de toutes vos sources en utilisant un
 - [Fragments de requête GraphQL](/docs/recipes/querying-data#graphql-query-fragments)
 - [Interroger des données côté client avec fetch](/docs/recipes/querying-data#querying-data-client-side-with-fetch)
 
-<<<<<<< HEAD
-## [7. Travailler avec des images](/docs/recipes/working-with-images)
-=======
-## [8. Working with images](/docs/recipes/working-with-images)
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+## [8. Travailler avec des images](/docs/recipes/working-with-images)
 
 Accédez à des images comme ressources statiques, ou automatisez le processus d'optimisation de ces dernières à travers de plugins puissants.
 
@@ -130,32 +110,18 @@ Accédez à des images comme ressources statiques, ou automatisez le processus d
 - [Optimiser et récupérer des images locales avec gatsby-image](/docs/recipes/working-with-images#optimizing-and-querying-local-images-with-gatsby-image)
 - [Optimiser et récupérer des images de posts frontmatter avec gatsby-image](/docs/recipes/working-with-images#optimizing-and-querying-images-in-post-frontmatter-with-gatsby-image)
 
-<<<<<<< HEAD
-## [8. Transformer des données](/docs/recipes/transforming-data)
-=======
-## [9. Transforming data](/docs/recipes/transforming-data)
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+## [9. Transformer des données](/docs/recipes/transforming-data)
 
 La transformation des données dans Gatsby est axée sur l’utilisation de plugins. Les plugins de transformation prennent les données récupérées à l'aide de plugins sources et les transforment en quelque chose de plus utilisable (par exemple le JSON en objets JavaScript et plus encore)
 
 - [Transformer du Markdown en HTML](/docs/recipes/transforming-data#transforming-markdown-into-html)
 - [Transformer des images en nuances de gris avec GraphQL](/docs/recipes/transforming-data#transforming-images-into-grayscale-using-graphql)
 
-<<<<<<< HEAD
-## [9. Déployez votre site](/docs/recipes/deploying-your-site)
-=======
-## [10. Deploying your site](/docs/recipes/deploying-your-site)
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+## [10. Déployez votre site](/docs/recipes/deploying-your-site)
 
 Showtime ! Une fois que vous êtes content de votre site, vous êtes prêt à l’envoyer sur la toile !
 
-<<<<<<< HEAD
 - [Se préparer pour le déploiement](/docs/recipes/deploying-your-site#preparing-for-deployment)
 - [Déployer sur Netlify](/docs/recipes/deploying-your-site#deploying-to-netlify)
 - [Déployer sur ZEIT Now](/docs/recipes/deploying-your-site#deploying-to-zeit-now)
-=======
-- [Preparing for deployment](/docs/recipes/deploying-your-site#preparing-for-deployment)
-- [Deploying to Netlify](/docs/recipes/deploying-your-site#deploying-to-netlify)
-- [Deploying to ZEIT Now](/docs/recipes/deploying-your-site#deploying-to-zeit-now)
-- [Deploying to Cloudflare Workers](/docs/recipes/deploying-your-site#deploying-to-cloudflare-workers)
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+- [Déployer sur Cloudflare Workers](/docs/recipes/deploying-your-site#deploying-to-cloudflare-workers)
