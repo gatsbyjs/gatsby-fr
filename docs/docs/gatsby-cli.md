@@ -27,7 +27,6 @@ Vous pouvez aussi utiliser la variante de script `package.json` de ces commandes
 
 ### `new`
 
-
 ```shell
 gatsby new [<nom-de-site> [<url-de-départ>]]
 
@@ -35,17 +34,10 @@ gatsby new [<nom-de-site> [<url-de-départ>]]
 
 #### Arguments
 
-<<<<<<< HEAD
-| Argument    | Description                                                                                                                                                                                                     |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| nom-de-site   | Le nom de votre site Gatsby, qui est également utilisé pour créer un répertoire de projet.                                                                                                                                        |
-| url-de-départ | Une URL de démarrage Gatsby ou un chemin de fichier local. Par défaut :[gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); voir les docs [Gatsby starters](/docs/gatsby-starters/) pour plus d'informations. |
-=======
-| Argument    | Description                                                                                                                                                                                              |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| site-name   | Your Gatsby site name, which is also used to create a project directory.                                                                                                                                 |
-| starter-url | A Gatsby starter URL or local file path. Defaults to [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); see the [Gatsby starters](/docs/starters/) docs for more information. |
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+| Argument      | Description                                                                                                                                                                                                                    |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| nom-de-site   | Le nom de votre site Gatsby, qui est également utilisé pour créer un répertoire de projet.                                                                                                                                     |
+| url-de-départ | Une URL de démarrage Gatsby ou un chemin de fichier local. Par défaut [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); voir les docs [Gatsby starters](/docs/starters/) pour plus d'informations. |
 
 > Note: Le `nom-de-site` ne doit être composé que de lettres et de chiffres. Si vous spécifiez un `.`, `./` ou un `<espace>` dans le nom, `gatsby new` provoquera une erreur.
 
@@ -85,14 +77,13 @@ Une fois que vous avez installé un site Gatsby, allez dans le répertoire racin
 
 #### Options
 
-|     Option      | Description                                     |
-| :-------------: | ----------------------------------------------- |
-| `-H`, `--host`  | Définit hôte. Par défaut à localhost            |
-| `-p`, `--port`  | Définit port. Par défaut à 8000                 |
-| `-o`, `--open`  | Ouvre le site dans votre navigateur (par défaut)|
-|                 | pour vous                                       |
-| `-S`, `--https` | Utilise HTTPS                                   |
-
+|     Option      | Description                                      |
+| :-------------: | ------------------------------------------------ |
+| `-H`, `--host`  | Définit hôte. Par défaut à localhost             |
+| `-p`, `--port`  | Définit port. Par défaut à 8000                  |
+| `-o`, `--open`  | Ouvre le site dans votre navigateur (par défaut) |
+|                 | pour vous                                        |
+| `-S`, `--https` | Utilise HTTPS                                    |
 
 Suivez le [Guide HTTPS local](/docs/local-https/)
 pour savoir comment configurer un serveur de développement HTTPS avec Gatsby.
@@ -124,25 +115,15 @@ A la racine d'un site Gatsby, compilez votre application et préparez son déplo
 
 #### Options
 
-<<<<<<< HEAD
-|            Option            | Description                                                                                               |
-| :--------------------------: | --------------------------------------------------------------------------------------------------------- |
-|       `--prefix-paths`       | Construit un site avec des chemins de liens préfixés (définissez pathPrefix dans votre configuration) |
-|        `--no-uglify`         | Crée un site sans avoir à dissocier les paquets JS (pour le débogage)                                                   |
-| `--open-tracing-config-file` | Fichier de configuration du traceur (compatible OpenTracing). 
-Voir [Suivi des performances du traceur](/docs/performance-tracing/) |
-| `--no-color`, `--no-colors`  | Désactive la sortie du terminal en couleur                                                                         |
-=======
-|            Option            | Description                                                                                                                                  |
-| :--------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------- |
-|       `--prefix-paths`       | Build site with link paths prefixed (set pathPrefix in your config)                                                                          |
-|        `--no-uglify`         | Build site without uglifying JS bundles (for debugging)                                                                                      |
-|         `--profile`          | Build site with react profiling. See [Profiling Site Performance with React Profiler](/docs/profiling-site-performance-with-react-profiler/) |
-| `--open-tracing-config-file` | Tracer configuration file (OpenTracing compatible). See [Performance Tracing](/docs/performance-tracing/)                                    |
-| `--no-color`, `--no-colors`  | Disables colored terminal output                                                                                                             |
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+|            Option            | Description                                                                                                                                                |
+| :--------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|       `--prefix-paths`       | Génère un site avec des chemins de liens préfixés (définissez pathPrefix dans votre configuration)                                                         |
+|        `--no-uglify`         | Génère un site sans avoir à dissocier les paquets JS (pour le débogage)                                                                                    |
+|         `--profile`          | Génère un site avec profilage react. Voir [Profiler les Performances d'un site avec React Profiler](/docs/profiling-site-performance-with-react-profiler/) |
+| `--open-tracing-config-file` | Fichier de configuration du traceur (compatible OpenTracing). Voir [Suivi des performances du traceur](/docs/performance-tracing/)                         |
+| `--no-color`, `--no-colors`  | Désactive la colorisation du retour du terminal                                                                                                            |
 
-En plus de ces options de build, il y a quelques options optionnelles [variables d'environnement de build] (/docs/environment-variables/#build-variables) pour des configurations plus avancées qui peuvent ajuster le fonctionnement d'un build. Par exemple, le réglage de `CI=true` comme variable d'environnement personnalisera la sortie pour les [terminaux bêtes] (https://en.wikipedia.org/wiki/Computer_terminal#Dumb_terminals).
+En plus de ces options de build, il y a quelques options optionnelles [variables d'environnement de build](/docs/environment-variables/#build-variables) pour des configurations plus avancées qui peuvent ajuster le fonctionnement d'un build. Par exemple, le réglage de `CI=true` comme variable d'environnement personnalisera la sortie pour les [terminaux bêtes](https://en.wikipedia.org/wiki/Computer_terminal#Dumb_terminals).
 
 ### `serve`
 
@@ -152,13 +133,13 @@ A la racine d'un site Gatsby, servez le build de production de votre site pour l
 
 #### Options
 
-|      Option      | Description                                                                              |
-| :--------------: | ---------------------------------------------------------------------------------------- |
-|  `-H`, `--host`  | Définit hôte. Par défaut à localhost                                                     |
-|  `-p`, `--port`  | Définit port. Par défaut à 9000                                                          |
-|  `-o`, `--open`  | Ouvre le site dans votre navigateur (par défaut) pour vous                               |
-| `--prefix-paths` | Servi le site avec les chemins de liens préfixés (si construit avec pathPrefix dans votre|
-|                  | gatsby-config.js) |
+|      Option      | Description                                                                               |
+| :--------------: | ----------------------------------------------------------------------------------------- |
+|  `-H`, `--host`  | Définit hôte. Par défaut à localhost                                                      |
+|  `-p`, `--port`  | Définit port. Par défaut à 9000                                                           |
+|  `-o`, `--open`  | Ouvre le site dans votre navigateur (par défaut) pour vous                                |
+| `--prefix-paths` | Servi le site avec les chemins de liens préfixés (si construit avec pathPrefix dans votre |
+|                  | gatsby-config.js)                                                                         |
 
 ### `info`
 
@@ -168,10 +149,10 @@ A la racine d'un site Gatsby, obtenez des informations utiles sur l'environnemen
 
 #### Options
 
-|       Option        | Description                                             |
-| :-----------------: | ------------------------------------------------------- |
-| `-C`, `--clipboard` | Copie automatiquement les informations d'environnement  |
-|                     |dans le presse-papiers |
+|       Option        | Description                                            |
+| :-----------------: | ------------------------------------------------------ |
+| `-C`, `--clipboard` | Copie automatiquement les informations d'environnement |
+|                     | dans le presse-papiers                                 |
 
 ### `clean`
 
@@ -224,9 +205,9 @@ Vous pouvez taper une commande comme celle-ci:
 
 `staticQueries`
 
-Combinées avec [l'explorateur GraphQL] (/docs/introducing-graphiql/), ces commandes REPL peuvent être très utiles pour comprendre les données de votre site Gatsby.
+Combinées avec [l'explorateur GraphQL](/docs/introducing-graphiql/), ces commandes REPL peuvent être très utiles pour comprendre les données de votre site Gatsby.
 
-Pour plus d'informations, consultez la [documentation Gatsby REPL] (/docs/gatsby-repl/).
+Pour plus d'informations, consultez la [documentation Gatsby REPL](/docs/gatsby-repl/).
 
 ### Désactivation de la sortie colorée
 
