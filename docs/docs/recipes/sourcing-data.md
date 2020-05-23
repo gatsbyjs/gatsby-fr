@@ -69,15 +69,15 @@ Cette recette montre comment créer des pages à partir de fichiers Markdown sur
 
 ### Conditions préalables
 
-- A [Gatsby site](/docs/quick-start) with a `gatsby-config.js` file
-- The [Gatsby CLI](/docs/gatsby-cli) installed
-- The [gatsby-source-filesystem plugin](/packages/gatsby-source-filesystem) installed
-- The [gatsby-transformer-remark plugin](/packages/gatsby-transformer-remark) installed
-- A `gatsby-node.js` file
+- Un [site Gatsby](/docs/quick-start) avec un fichier `gatsby-config.js`
+- [CLI Gatsby](/docs/gatsby-cli) installé
+- Le [plugin gatsby-source-filesystem](/packages/gatsby-source-filesystem) installé
+- Le [plugin gatsby-transformer-remark](/packages/gatsby-transformer-remark) installé
+- Un fichier `gatsby-node.js`
 
 ### Instructions
 
-1. In `gatsby-config.js`, configure `gatsby-transformer-remark` along with `gatsby-source-filesystem` to pull in Markdown files from a source folder. This would be in addition to any previous `gatsby-source-filesystem` entries, such as for images:
+1. Dans `gatsby-config.js`, configurez `gatsby-transformer-remark` avec `gatsby-source-filesystem` pour extraire les fichiers Markdown d'un dossier source. Ce serait en plus de toutes les entrées précédentes de `gatsby-source-filesystem`, comme pour les images:
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -93,19 +93,19 @@ module.exports = {
   ]
 ```
 
-2. Add a Markdown post to `src/content`, including frontmatter for the title, date, and path, with some initial content for the body of the post:
+2. Ajoutez une publication Markdown à `src / content`, y compris le frontmatter pour le titre, la date et le chemin, avec du contenu initial pour le corps de la publication:
 
-```markdown:title=src/content/my-first-post.md
+```markdown:title=src/content/mon-premier-article.md
 ---
 title: My First Post
 date: 2019-07-10
-path: /my-first-post
+path: /mon-premier-article
 ---
 
-This is my first Gatsby post written in Markdown!
+Ceci est mon premier article Gatsby écrit dans Markdown!
 ```
 
-3. Start up the development server with `gatsby develop`, navigate to the GraphiQL explorer at `http://localhost:8000/___graphql`, and write a query to get all markdown data:
+3. Démarrez le serveur de développement avec `gatsby develop`, accédez à l'explorateur GraphiQL sur `http://localhost:8000/___graphql`, et écrivez une requête pour obtenir toutes les données de markdown:
 
 ```graphql
 {
@@ -122,13 +122,13 @@ This is my first Gatsby post written in Markdown!
 ```
 
 <iframe
-  title="Query for all markdown"
+  title="Query pour tout le markdown"
   src="https://q4xpb.sse.codesandbox.io/___graphql?explorerIsOpen=false&query=%7B%0A%20%20allMarkdownRemark%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20frontmatter%20%7B%0A%20%20%20%20%20%20%20%20%20%20path%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D"
   width="600"
   height="300"
 />
 
-4. Add the JavaScript code to generate pages from Markdown posts at build time by copying the GraphQL query into `gatsby-node.js` and looping through the results:
+4. Ajoutez le code JavaScript pour générer des pages à partir des publications Markdown au moment de la construction en copiant la requête GraphQL dans `gatsby-node.js` et en parcourant les résultats:
 
 ```js:title=gatsby-node.js
 const path = require(`path`)
@@ -162,14 +162,14 @@ exports.createPages = async ({ actions, graphql }) => {
 }
 ```
 
-5. Add a post template in `src/templates`, including a GraphQL query for generating pages dynamically from Markdown content at build time:
+5. Ajoutez un modèle de publication dans `src/templates`, y compris une requête GraphQL pour générer dynamiquement des pages à partir du contenu Markdown au moment de la construction:
 
 ```jsx:title=src/templates/post.js
 import React from "react"
 import { graphql } from "gatsby"
 
 export default function Template({ data }) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { markdownRemark } = data // data.markdownRemark contient vos données de publication
   const { frontmatter, html } = markdownRemark
   return (
     <div className="blog-post">
@@ -197,17 +197,18 @@ export const pageQuery = graphql`
 `
 ```
 
-6. Run `gatsby develop` to restart the development server. View your post in the browser: `http://localhost:8000/my-first-post`
+6. Exécutez `gatsby develop` pour redémarrer le serveur de développement. Affichez votre article dans le navigateur: `http://localhost:8000/mon-premier-article`
 
 ### Ressources additionnelles
 
-- [Tutorial: Programmatically create pages from data](/tutorial/part-seven/)
-- [Creating and modifying pages](/docs/creating-and-modifying-pages/)
-- [Adding Markdown pages](/docs/adding-markdown-pages/)
-- [Guide to creating pages from data programmatically](/docs/programmatically-create-pages-from-data/)
-- [Example repo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-sourcing-markdown) for this recipe
+- [Tutoriel: Créer automatiquement des pages à partir de données](/tutorial/part-seven/)
+- [Création et modification de pages](/docs/creating-and-modifying-pages/)
+- [Ajout de pages Markdown](/docs/adding-markdown-pages/)
+- [Guide de création automatique de pages à partir de données](/docs/programmatically-create-pages-from-data/)
+- [Exemple de dépôt](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-sourcing-markdown) pour cette recette
 
-## Sourcing from WordPress
+## Sourcing depuis WordPress
+
 
 ### Conditions préalables
 
