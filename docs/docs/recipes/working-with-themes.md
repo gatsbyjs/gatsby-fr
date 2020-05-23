@@ -1,42 +1,42 @@
 ---
-title: "Recipes: Working with Themes"
+title: "Recettes: Travailler avec des thèmes"
 tableOfContentsDepth: 1
 ---
 
-A [Gatsby theme](/docs/themes/what-are-gatsby-themes) abstracts Gatsby configuration (shared functionality, data sourcing, design) into an installable package. This means that the configuration and functionality isn’t directly written into your project, but rather versioned, centrally managed, and installed as a dependency. You can seamlessly update a theme, compose themes together, and even swap out one compatible theme for another.
+Un [thème Gatsby](/docs/themes/what-are-gatsby-themes) synthétise la configuration de Gatsby (fonctionnalité partagée, source de données, conception) dans un paquet installable. Cela signifie que la configuration et les fonctionnalités ne sont pas directement écrites dans votre projet, mais plutôt versionnées, gérées de manière centrale et installées en tant que dépendance. Vous pouvez mettre à jour un thème en toute simplicité, composer des thèmes dans un même ensemble, et même remplacer un thème compatible par un autre.
 
-## Creating a new site using a theme
+## Création d'un nouveau site à partir d'un thème
 
-Found a theme you'd like to use on your project? Awesome! You can configure it for use by following the steps below.
+Vous avez trouvé un thème que vous aimeriez utiliser pour votre projet ? Génial ! Vous pouvez le configurer en suivant les étapes ci-dessous.
 
-> If you'd like to take a look at more theme options, check out [list of themes](https://www.npmjs.com/search?q=gatsby-theme).
+> Si vous souhaitez consulter d'autres options de thèmes, consultez cette [liste de thèmes](/plugins?=gatsby-theme).
 
-### Prerequisites
+### Prérequis
 
-- Make sure you have the [Gatsby CLI](/docs/gatsby-cli) installed
+- Assurez-vous que l'[interface en ligne de commande de Gatsby](/docs/gatsby-cli) est installée.
 
-### Directions
+### Instructions
 
-1. Create a gatsby site
+1. Créer un site gatsby
 
 ```shell
 gatsby new {your-project-name}
 ```
 
-2. Change directory and install theme
+2. Changement de répertoire et installation du thème
 
-In this example, our theme is `gatsby-theme-blog`. You can replace that reference with whatever your theme is named.
+Dans cet exemple, notre thème est `gatsby-theme-blog`. Vous pouvez remplacer cette référence par le nom de votre thème, quel qu'il soit.
 
 ```shell
 cd {your-project-name}
 npm install gatsby-theme-blog
 ```
 
-3. Add theme to `gatsby.config.js`
+3. Ajouter un thème à `gatsby-config.js`
 
-Follow the instructions found in the README of the theme you're using to determine what configuration it requires.
+Suivez les instructions qui se trouvent dans le README du thème que vous utilisez pour déterminer la configuration requise.
 
-```shell
+```javascript:title=gatsby-config.js
 module.exports = {
   plugins: [
     {
@@ -55,70 +55,70 @@ module.exports = {
 }
 ```
 
-4. Run `gatsby develop` , the theme should be available at `http://localhost:8000/{basePath}`
+4. Lancer `gatsby develop`, le thème devrait maintenant être en cours d'exécution sur votre site. Le thème du blog étant configuré avec le `basePath` vers `"/blog"`, il devrait être accessible à l'adresse `http://localhost:8000/blog`.
 
-> To learn how to further customize a theme, check out the available paths on [Gatsby-theme-blog Documentation](https://www.npmjs.com/package/gatsby-theme-blog).
+> Pour savoir comment personnaliser plus précisément un thème, consultez les chemins d'accès existant dans [la documentation Gatsby-theme-blog](/packages/gatsby-theme-blog/#theme-options).
 
-### Additional resources
+### Ressources additionnelles
 
-- To learn how to further customize a theme, check out the docs on [Gatsby theme shadowing.](https://www.gatsbyjs.org/docs/themes/shadowing/)
+- Pour savoir comment personnaliser plus en détail un thème, consultez la documentation sur le [theme shadowing de Gatsby.](/docs/themes/shadowing/)
 
-- You can also [use multiple themes](https://www.gatsbyjs.org/docs/themes/using-multiple-gatsby-themes/) on a project.
+- Vous pouvez également [utiliser plusieurs thèmes](/docs/themes/using-multiple-gatsby-themes/) sur un projet.
 
-## Creating a new site using a theme starter
+## Création d'un nouveau site à l'aide d'un thème de départ
 
-Creating a site based on a starter that configures a theme follows the same process as creating a site based on a starter that **doesn't** configure a theme. In this example you can use the [starter for creating a new site that uses the official Gatsby blog theme](https://github.com/gatsbyjs/gatsby-starter-blog-theme).
+La création d'un site basé sur une configuration de démarrage qui configure un thème suit le même processus que la création d'un site basé sur une configuration de démarrage qui **ne configure pas** un thème. Dans cet exemple, vous pouvez utiliser la [configuration de démarrage pour créer un nouveau site qui utilise le thème officiel du blog Gatsby](https://github.com/gatsbyjs/gatsby-starter-blog-theme).
 
-### Prerequisites
+### Prérequis
 
-- Make sure you have the [Gatsby CLI](/docs/gatsby-cli) installed
+- Assurez-vous que l'[interface en ligne de commande de Gatsby ](/docs/gatsby-cli) est installée
 
-### Directions
+### Instructions
 
-1. Generate a new site based on the blog theme starter:
+1. Générer un nouveau site basé sur le thème de départ du blog :
 
 ```shell
 gatsby new {your-project-name} https://github.com/gatsbyjs/gatsby-starter-blog-theme
 ```
 
-2. Run your new site:
+2. Faites fonctionner votre nouveau site :
 
 ```shell
 cd {your-project-name}
 gatsby develop
 ```
 
-### Additional resources
+### Ressources additionnelles
 
-- Learn how to use an existing Gatsby theme in the [shorter conceptual guide](/docs/themes/using-a-gatsby-theme) or the more detailed [step-by-step tutorial](/tutorial/using-a-theme).
+- Apprenez à utiliser un thème Gatsby existant dans le [guide conceptuel abrégé](/docs/themes/using-a-gatsby-theme) ou dans le [tutoriel pas à pas](/tutorial/using-a-theme) plus détaillé.
 
-## Building a new theme
+## Créer un nouveau thème
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-use-the-gatsby-theme-workspace-starter-to-begin-building-a-new-theme"
   lessonTitle="Use the Gatsby Theme Workspace Starter to Begin Building a New Theme"
 />
 
-### Prerequisites
+### Prérequis
 
-- The [Gatsby CLI](/docs/gatsby-cli) installed
-- [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable) installed
+- L'[interface en ligne de commande de Gatsby ](/docs/gatsby-cli) est installée
+- [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable) est installé
 
-### Directions
+### Instructions
 
-1. Generate a new theme workspace using the [Gatsby theme workspace starter](https://github.com/gatsbyjs/gatsby-starter-theme-workspace):
+1. Générez un nouvel espace de travail thématique en utilisant la [configuration de démarrage du thème espace de travail de Gatsby](https://github.com/gatsbyjs/gatsby-starter-theme-workspace):
 
 ```shell
 gatsby new {your-project-name} https://github.com/gatsbyjs/gatsby-starter-theme-workspace
 ```
 
-2. Run the example site in the workspace:
+2. Exécutez le site en exemple dans l'espace de travail :
 
 ```shell
 yarn workspace example develop
 ```
 
-### Additional resources
+### Ressources additionnelles
 
-- Follow a [more detailed guide](/docs/themes/building-themes/) on using the Gatsby theme workspace starter.
-- Learn how to build your own theme in the [Gatsby Theme Authoring video course on Egghead](https://egghead.io/courses/gatsby-theme-authoring), or in the [video course's complementary written tutorial companion](/tutorial/building-a-theme).
+- Suivez un [guide plus détaillé](/docs/themes/building-themes/) sur l'utilisation de l'espace de travail du thème Gatsby.
+- Apprenez à concevoir votre propre thème dans le [cours vidéo sur la création de thèmes Gatsby sur Egghead](https://egghead.io/courses/gatsby-theme-authoring), ou dans le [dossier complémentaire du cours vidéo](/tutorial/building-a-theme).

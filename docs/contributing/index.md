@@ -1,17 +1,17 @@
 ---
-title: Contributing to Gatsby.js
-description: Learn about contributing to one of the most welcoming communities helping develop the future of the web
+title: Contribuer à Gatsby.js
+description: Apprenez en plus sur la contribution à l'une des communautés les plus accueillantes en aidant à développer le futur d'internet.
 disableTableOfContents: true
 ---
 
-Thanks for being interested in contributing! We're so glad you want to help!
+Merci de votre intérêt pour contribuer ! Nous sommes heureux que vous souhaitiez nous aider !
 
-Below you'll find guides on the Gatsby.js community, code of conduct, and how to get started contributing:
+Vous trouverez ci-dessous des guides concernant la communauté Gatsby.js, le code de conduite, et comment commencer à contribuer :
 
-- [Community](/contributing/community/): Learn why you should contribute to Gatsby.js, the most effective ways to do so, and all about the benefits (did we mention the free swag?)
-- [Code of Conduct](/contributing/code-of-conduct/): Read about what we expect from everyone participating in Gatsby.js to make it the most friendly and welcoming community
-- [Gatsby Style Guide](/contributing/gatsby-style-guide/): The art of contributing to Gatsby, a.k.a. the detailed requirements that will make it more likely your contribution is accepted with minimal changes
-- [How to Contribute](/contributing/how-to-contribute/): How to get the most out of your Gatsby.js contributing experience, including GitHub management tips, setup instructions for docs and code contributions, and more
-- [RFC process](/contributing/rfc-process): Learn how the Gatsby.js team manages bigger changes, by way of a “Request-for-comment” process on GitHub
+- [Communauté](/contributing/community/): Découvrez pourquoi vous devriez contribuer à Gatsby.js, les moyens les plus efficaces de le faire, et tout sur les avantages (avons-nous mentionné le swag gratuit?)
+- [Code de Conduite](/contributing/code-of-conduct/): Lisez ce que nous attendons de tous ceux qui participent à Gatsby.js pour en faire la communauté la plus sympathique et accueillante possible
+- [Gatsby Style Guide](/contributing/gatsby-style-guide/): L'art de contribuer à Gatsby, ou : les exigences détaillées qui rendront plus probable que votre contribution soit acceptée avec peu de changements
+- [Comment contribuer](/contributing/how-to-contribute/): Comment tirer le meilleur parti de votre expérience de contribution à Gatsby.js, y compris des conseils de gestion de votre compte GitHub, des instructions de configuration pour les documents et les contributions de code, et plus encore
+- [Processus de RFC](/contributing/rfc-process): Découvrez comment l'équipe Gatsby.js gère les changements les plus importants, via un processus de « demande de commentaire » (RFC) sur GitHub
 
-<EmailCaptureForm signupMessage="Want to keep up with the latest tips &amp; tricks? Subscribe to our newsletter!" />
+<EmailCaptureForm signupMessage="Vous voulez suivre les derniers trucs et astuces ? Abonnez-vous à notre newsletter !" />
