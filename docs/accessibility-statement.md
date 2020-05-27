@@ -1,48 +1,48 @@
 ---
-title: Accessibility Statement
+title: Déclaration d'accessibilité
 ---
 
-_Last updated: April 8, 2019_
+_Mis à jour le: 8 avril 2019_
 
-We want everyone who uses Gatsby to feel welcome and find the experience rewarding: this includes developers with disabilities and users with disabilities for Gatsby sites, docs, and resources.
+Nous souhaitons que tous ceux qui utilisent Gatsy se sentent bienvenue et trouve l'expérience gratifiante: ceci inclut les développeurs ayant des handicaps et les utilisateurs ayant des handicaps lorsqu'il s'agit des sites Gatsby, de la documentation, et des autres ressources.
 
-This page was created to collect accessibility information about the Gatsby ecosystem in one place and provide communication channels for people with disabilities to get help with Gatsby.
+Cette page a été créée pour ressembler en un seul endroit les informations sur l'accessibilité dans l'éco-système Gatsby et indique les canaux de communication où les personnes avec des handicaps peuvent trouver de l'aide concernant Gatsby.
 
-## Gatsby products and services
+## Les produits et services Gatsby
 
-Gatsbyjs.org is the online home of the open source Gatsby website framework; it includes documentation, tutorials, and guides on how and why to build with Gatsby, as well as a blog, site showcase, and information on how to contribute to the project.
+Gatsbyjs.org est le site internet du framework open-source Gatsby; cela inclut la documentation, les tutoriels, et les guides traitant du comment et du pourquoi construire avec Gatsby, ainsi qu'un blog, un espace de démonstration et des informations sur comment contribuer au projet.
 
-Gatsbyjs.com is the business website for Gatsby, Inc. the startup building Gatsby, including our first product, Gatsby Preview: a cloud service allowing team members to collaborate on a Gatsby site in development.
+Gatsbyjs.com est le site internet commercial de Gatsby, Inc. la startup qui développe Gatsby, cela inclut notre premier produit, Gatsby Preview : un service cloud qui permet aux membres d'une équipe de collaborer au développement d'un site Gatsby.
 
-## Providing feedback and getting accessibility help
+## Partager vos retours et recevoir de l'aide concernant l'accessibilité
 
-We strive to make these websites and the Gatsby framework itself as accessible as possible. Our goal is to meet [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/), with which we are partially compliant. We’ll be the first to admit the Gatsby ecosystem is a work in progress, and we are open to all feedback to make things better.
+Nous nous efforçons de rendre les sites et le framework Gatsy lui-même aussi accessible que possible. Notre objectif est d'atteindre la norme [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) avec laquelle nous sommes en partie conforme. Nous serons les premier à admettre que l'éco-système Gatsby est en constant développement et nous sommes ouvert à tous les retours pour rendre les choses meilleures.
 
-To contact the core team with your accessibility feedback or challenges, please [file an issue on GitHub](https://github.com/gatsbyjs/gatsby/issues/new/choose).
+Pour contacter l'équipe core pour vos retours concernant l'accéssibilité, merci de [créer une issue sur Github](https://github.com/gatsbyjs/gatsby/issues/new/choose).
 
-Alternatively, we welcome you to reach out directly to Marcy Sutton, Head of Learning at Gatsby: [marcy@gatsbyjs.com](mailto:marcy@gatsbyjs.com)
+Alternativement, nous vous invitons à contacter directement Marcy Sutton, responsable de l'apprentissage chez Gatsby : [marcy@gatsbyjs.com](mailto:marcy@gatsbyjs.com)
 
-## Building with Gatsby
+## Construire avec Gatsby
 
-To learn how to build an accessible website with Gatsby, visit our guide [Making Your Site Accessible](/docs/making-your-site-accessible/). Contributions are very welcome as this page evolves.
+Pour savoir comment créer un site Web accessible avec Gatsby, visitez notre guide [Rendre votre site accessible](/docs/making-your-site-accessible/). Les contributions sont les bienvenues tout au long de l'évolution de cette page.
 
-## Third-party platforms, products and services
+## Plateformes, produits et services tiers
 
-Common Gatsby workflows involve third-party products and services, such as sourcing from Content Management Systems, and managing and deploying sites with hosting platforms. Some of these platforms appear to have been designed and/or built without accessibility in mind; we encourage those vendors to improve their accessibility along with us.
+Les workflows Gatsby courants impliquent des produits et services tiers, tels que l'approvisionnement à partir de systèmes de gestion de contenu (CMS), et la gestion et le déploiement de sites avec des plates-formes d'hébergement. Certaines de ces plateformes semblent avoir été conçues et / ou construites sans accessibilité à l’esprit; nous encourageons ces fournisseurs à améliorer leur accessibilité avec nous.
 
-Our current recommendations for accessible CMS platforms are:
+Nos recommandations actuelles de CMS accessibles sont:
 
-- WordPress with the Classic Editor Plugin
+- WordPress avec le plugin Classic Editor
 - Drupal
 
-For managing and deploying Gatsby sites with accessible tools, we recommend:
+Pour gérer et déployer des sites Gatsby avec des outils accessibles, nous vous recommandons:
 
 - Netlify
 
-To provide feedback for third-party services, you can contact those vendors directly or [write to us](mailto:marcy@gatsbyjs.com), and we will do our best to pass the information along. We're also interested in hearing about your successes with third-party platforms!
+Pour faire des retours concernant les services tiers, vous pouvez contacter les vendeurs directement ou [nous écrire](mailto:marcy@gatsbyjs.com), nous ferons tout notre possible pour transmettre les informations. Nous avons également très envie d'entendre vos succés avec les plateforme tieres !
 
-## Surveys and research projects
+## Les sondages et les projets de recherche
 
-The Gatsby team conducts surveys and research projects from time to time. We highly value feedback from all Gatsby users, and particularly those with experience applicable to the research being conducted.
+L'équipe Gatsby mène de temps à autre des sondages et des projets de recherche. Nous apprécions grandement les commentaires de tous les utilisateurs de Gatsby, et en particulier ceux ayant une expérience applicable à la recherche en cours.
 
-To be considered for these initiatives, please contact [marcy@gatsbyjs.com](mailto:marcy@gatsbyjs.com).
+Pour être sélectionné pour ces initiatives, merci de contacter [marcy@gatsbyjs.com](mailto:marcy@gatsbyjs.com).
