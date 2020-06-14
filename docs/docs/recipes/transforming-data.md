@@ -1,24 +1,24 @@
 ---
-title: "Recipes: Transforming Data"
+title: "Recettes : Transformer les données"
 tableOfContentsDepth: 1
 ---
 
-Transforming data in Gatsby is plugin-driven. Transformer plugins take data fetched using source plugins, and process it into something more usable (e.g. JSON into JavaScript objects, and more).
+La transformation des données dans Gatsby est pilotée par des plugins. Les plugins de transformation prennent les données récupérées à l'aide des plugins sources et les transforment en quelque chose de plus utilisable (par exemple, JSON en objets JavaScript, etc.).
 
-## Transforming Markdown into HTML
+## Transformer le Markdown en HTML
 
-The `gatsby-transformer-remark` plugin can transform Markdown files to HTML.
+Le plugin `gatsby-transformer-remark` peut transformer les fichiers Markdown en HTML.
 
-### Prerequisites
+### Prérequis
 
-- A Gatsby site with `gatsby-config.js` and an `index.js` page
-- A Markdown file saved in your Gatsby site `src` directory
-- A source plugin installed, such as `gatsby-source-filesystem`
-- The `gatsby-transformer-remark` plugin installed
+- Un site Gatsby avec `gatsby-config.js` et une page `index.js`
+- Un fichier Markdown enregistré dans le répertoire `src` de votre site Gatsby
+- Un plugin source installé, tel que `gatsby-source-filesystem`
+- Le plugin `gatsby-transformer-remark` installé
 
-### Directions
+### Instructions
 
-1. Add the transformer plugin in your `gatsby-config.js`:
+1. Ajoutez le plugin transformateur dans `gatsby-config.js` :
 
 ```js:title=gatsby-config.js
 plugins: [
@@ -27,7 +27,7 @@ plugins: [
 ],
 ```
 
-2. Add a GraphQL query to the `index.js` file of your Gatsby site to fetch `MarkdownRemark` nodes:
+2. Ajoutez une requête GraphQL au fichier `index.js` de votre site Gatsby pour récupérer les nœuds `MarkdownRemark` :
 
 ```jsx:title=src/pages/index.js
 export const query = graphql`
@@ -49,25 +49,25 @@ export const query = graphql`
 `
 ```
 
-3. Restart the development server and open GraphiQL at `http://localhost:8000/___graphql`. Explore the fields available on the `MarkdownRemark` node.
+3. Redémarrez le serveur de développement et ouvrez GraphiQL à `http://localhost:8000/___graphql`. Explorez les champs disponibles sur le nœud `MarkdownRemark`.
 
-### Additional resources
+### Ressources additionnelles
 
-- [Tutorial on transforming Markdown to HTML](/tutorial/part-six/#transformer-plugins) using `gatsby-transformer-remark`
-- Browse available transformer plugins in the [Gatsby plugin library](/plugins/?=transformer)
+- [Tutoriel sur la transformation de Markdown en HTML](/tutorial/part-six/#transformer-plugins) en utilisant `gatsby-transformer-remark`
+- Consultez les plugins de transformateur disponibles dans la [bibliothèque de plugins Gatsby](/plugins/?=transformer)
 
-## Transforming images into grayscale using GraphQL
+## Transformation d'images en niveaux de gris à l'aide de GraphQL
 
-### Prerequisites
+### Prérequis
 
-- A [Gatsby site](/docs/quick-start) with a `gatsby-config.js` file and an `index.js` page
-- The `gatsby-image`, `gatsby-transformer-sharp`, and `gatsby-plugin-sharp` packages installed
-- A source plugin installed, such as `gatsby-source-filesystem`
-- An image (`.jpg`, `.png`, `.gif`, `.svg`, etc.) in the `src/images` folder
+- Un [site Gatsby](/docs/quick-start) avec un fichier `gatsby-config.js` et une page `index.js`
+- Les paquets `gatsby-image`, `gatsby-transformer-sharp`, et `gatsby-plugin-sharp` installés
+- Un plugin source installé, tel que `gatsby-source-filesystem`
+- Une image (`.jpg`, `.png`, `.gif`, `.svg`, etc.) dans le dossier `src/images`
 
-### Directions
+### Instructions
 
-1. Edit your `gatsby-config.js` file to source images and configure plugins for Gatsby's GraphQL data layer. A common approach is to source them from an images directory using the `gatsby-source-filesystem` plugin:
+1. Modifiez votre fichier `gatsby-config.js` pour créer des images et configurez des plugins pour la couche de données GraphQL de Gatsby. Une approche courante consiste à les générer à partir d'un répertoire d'images en utilisant le plugin `gatsby-source-filesystem` :
 
 ```javascript:title=gatsby-config.js
 
@@ -84,7 +84,7 @@ export const query = graphql`
  ],
 ```
 
-2.  Query your image using GraphQL and apply a grayscale transformation to the image inline. The `relativePath` should be relative to the path you configured in `gatsby-source-filesystem`.
+2.  Interrogez votre image en utilisant GraphQL et appliquez une transformation en niveaux de gris à l'image en ligne. Le `relativePath` doit être relatif au chemin que vous avez configuré dans `gatsby-source-filesystem`.
 
 ```graphql
   query {
@@ -99,9 +99,9 @@ export const query = graphql`
    }
 ```
 
-Note: You can find these and other parameters in your GraphQL playground located at `http://localhost:8000/__graphql`
+Note : Vous pouvez trouver ces paramètres et d'autres dans votre playground GraphQL à l'adresse suivante `http://localhost:8000/__graphql`
 
-3. Next import the `Img` component from "gatsby-image". You'll use this inside your JSX to display the image.
+3. Ensuite, importez le composant `Img` de "gatsby-image". Vous l'utiliserez dans votre JSX pour afficher l'image.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -137,12 +137,12 @@ export default () => {
 }
 ```
 
-4. Run `gatsby develop` to start the development server.
+4. Lancez `gatsby develop` pour démarrer le serveur de développement.
 
-5. View your image in the browser: `http://localhost:8000/`
+5. Visualisez votre image dans le navigateur : `http://localhost:8000/`
 
-### Additional resources
+### Ressources additionnelles
 
-- [API docs, including grayscale and duotone query tips](/docs/gatsby-image/#shared-query-parameters)
-- [Gatsby Image docs](/docs/gatsby-image/)
-- [Image processing examples](https://github.com/gatsbyjs/gatsby/tree/master/examples/image-processing)
+- [Documents API, y compris des conseils pour les requêtes en niveaux de gris et en double ton](/docs/gatsby-image/#shared-query-parameters)
+- [Documentation Gatsby Image](/docs/gatsby-image/)
+- [Exemples de traitement d'images](https://github.com/gatsbyjs/gatsby/tree/master/examples/image-processing)
