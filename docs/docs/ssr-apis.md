@@ -1,11 +1,11 @@
 ---
-title: Gatsby Server Rendering APIs
-description: Documentation on APIs related to server side rendering during Gatsby's build process
+title: API de rendu du serveur Gatsby
+description: Documentation sur les API liées au rendu côté serveur pendant le processus de construction de Gatsby
 jsdoc: ["gatsby/cache-dir/api-ssr-docs.js"]
 apiCalls: SSRAPI
 showTopLevelSignatures: true
 ---
 
-## Usage
+## Utilisation
 
-Implement any of these APIs by exporting them from a file named `gatsby-ssr.js` in the root of your project.
+Implémentez l'une de ces API en les exportant à partir d'un fichier nommé `gatsby-ssr.js` à la racine de votre projet.
