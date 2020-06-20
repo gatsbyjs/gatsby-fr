@@ -5,7 +5,6 @@ jsdoc: ["gatsby/src/utils/api-node-docs.js"]
 apiCalls: NodeAPI
 ---
 
-
 Gatsby offre aux plugins et aux constructeurs de sites de nombreuses API pour contrôler les données de votre site dans la couche de données GraphQL.
 
 ## Async plugins
