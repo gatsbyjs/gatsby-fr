@@ -1,15 +1,16 @@
 ---
 title: Gatsby Node APIs
-description: Documentation on Node APIs used in Gatsby build process for common uses like creating pages
+description: Documentation sur les API Node utilisées dans le processus de construction de Gatsby pour des utilisations courantes comme la création de pages
 jsdoc: ["gatsby/src/utils/api-node-docs.js"]
 apiCalls: NodeAPI
 ---
 
-Gatsby gives plugins and site builders many APIs for controlling your site's data in the GraphQL data layer.
+
+Gatsby offre aux plugins et aux constructeurs de sites de nombreuses API pour contrôler les données de votre site dans la couche de données GraphQL.
 
 ## Async plugins
 
-If your plugin performs async operations (disk I/O, database access, calling remote APIs, etc.) you must either return a promise or use the callback passed to the 3rd argument. Gatsby needs to know when plugins are finished as some APIs, to work correctly, require previous APIs to be complete first. See [Debugging Async Lifecycles](/docs/debugging-async-lifecycles/) for more info.
+Si votre plugin effectue des opérations asynchrones (disque I/O, accès à la base de données, appel d'API distante, etc.) vous devez soit renvoyer une promesse, soit utiliser le rappel passé au 3e argument. Gatsby doit savoir quand les plugins sont terminés car certaines API, pour fonctionner correctement, nécessitent que les API précédentes soient complètes en premier. Voir [Débogage Async Lifecycles](/docs/debugging-async-lifecycles/) pour plus d'informations.
 
 ```javascript
 // Promise API
@@ -26,8 +27,8 @@ exports.createPages = (_, pluginOptions, cb) => {
 }
 ```
 
-If your plugin does not do async work, you can just return directly.
+Si votre plugin ne fait pas de travail asynchrone, vous pouvez simplement retourner directement.
 
 ## Usage
 
-Implement any of these APIs by exporting them from a file named `gatsby-node.js` in the root of your project.
+Implémentez l'une de ces API en les exportant à partir d'un fichier nommé `gatsby-node.js` à la racine de votre projet.
