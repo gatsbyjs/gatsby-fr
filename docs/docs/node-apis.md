@@ -28,6 +28,6 @@ exports.createPages = (_, pluginOptions, cb) => {
 
 Si votre plugin ne fait pas de travail asynchrone, vous pouvez simplement retourner directement.
 
-## Usage
+## Utilisation
 
 Implémentez l'une de ces API en les exportant à partir d'un fichier nommé `gatsby-node.js` à la racine de votre projet.
