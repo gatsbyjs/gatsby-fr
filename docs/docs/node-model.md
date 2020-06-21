@@ -1,14 +1,14 @@
 ---
-title: Node Model
-description: Documentation explaining the model of nodes in Gatsby's GraphQL data layer
+title: Modèle de nœud
+description: Documentation expliquant le modèle de nœuds dans la couche de données GraphQL de Gatsby
 jsdoc: ["gatsby/src/schema/node-model.js"]
 apiCalls: NodeModel
-contentsHeading: Methods
+contentsHeading: Les méthodes
 ---
 
-Gatsby exposes its internal data store and query capabilities to GraphQL field resolvers on `context.nodeModel`.
+Gatsby expose son stockage de données interne et ses capacités de requête aux résolveurs de champ GraphQL sur `context.nodeModel`.
 
-## Example Usage
+## Exemple d'utilisation
 
 ```javascript:title=gatsby-node.js
 createResolvers({
