@@ -12,12 +12,12 @@ Gatsby expose son stockage de données interne et ses capacités de requête aux
 
 ```javascript:title=gatsby-node.js
 createResolvers({
-  Query: {
-    mood: {
+  Requete: {
+    ambiance: {
       type: `String`,
       resolve(source, args, context, info) {
-        const café = context.nodeModel.getAllNodes({ type: `Coffee` })
-        if (!café.length) {
+        const coffee = context.nodeModel.getAllNodes({ type: `Café` })
+        if (!coffee.length) {
           return 😞
         }
         return 😊
