@@ -16,8 +16,8 @@ createResolvers({
     mood: {
       type: `String`,
       resolve(source, args, context, info) {
-        const coffee = context.nodeModel.getAllNodes({ type: `Coffee` })
-        if (!coffee.length) {
+        const café = context.nodeModel.getAllNodes({ type: `Coffee` })
+        if (!café.length) {
           return 😞
         }
         return 😊
