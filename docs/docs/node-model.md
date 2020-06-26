@@ -12,7 +12,7 @@ Gatsby expose son stockage de données interne et ses capacités de requête aux
 
 ```javascript:title=gatsby-node.js
 createResolvers({
-  Requete: {
+  Query: {
     ambiance: {
       type: `String`,
       resolve(source, args, context, info) {
