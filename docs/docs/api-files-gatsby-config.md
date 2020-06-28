@@ -40,7 +40,7 @@ module.exports = {
 
 Il existe [de nombreuses options de configuration](/docs/gatsby-config) disponibles, mais les métadonnées les plus courantes définies pour l'ensemble du site et les plugins d'activation.
 
-### Metadata site
+### Métadonnées du site web
 
 L'objet `siteMetadata` peut contenir toutes les données que vous souhaitez partager sur votre site. Un exemple utile est le titre du site. Si vous stockez le titre dans `siteMetadata`, vous pouvez modifier le titre en un seul endroit, et il sera mis à jour dans tout votre site. Pour ajouter des métadonnées, incluez un objet `siteMetadata` dans votre fichier de configuration:
 
@@ -51,6 +51,7 @@ module.exports = {
   },
 }
 ```
+
 Vous pouvez ensuite [accéder au titre du site à l'aide de GraphQL](/tutorial/part-four/#your-first-graphql-query) n'importe où sur votre site.
 
 ### Plugins
