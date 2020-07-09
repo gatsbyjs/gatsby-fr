@@ -1,24 +1,24 @@
 ---
-title: The gatsby-browser.js API file
+title: Le fichier API gatsby-browser.js
 ---
 
-The file `gatsby-browser.js` lets you respond to actions within the browser, and wrap your site in additional components. The [Gatsby Browser API](/docs/browser-apis) gives you many options for interacting with the [client-side](/docs/glossary#client-side) of Gatsby.
+Le fichier `gatsby-browser.js` vous permet de répondre aux actions dans le navigateur et d'encapsuler votre site dans des composants supplémentaires. Les [APIs navigateur de Gatsby](/docs/browser-apis) vous offre de nombreuses options pour interagir avec le [côté client](/docs/glossary#client-side) de Gatsby.
 
-The APIs `wrapPageElement` and `wrapRootElement` exist in both the browser and [Server-Side Rendering (SSR) APIs](/docs/ssr-apis). If you use one of them, consider if you should implement it in both `gatsby-ssr.js` and `gatsby-browser.js` so that pages generated through SSR with Node.js are the same after being [hydrated](/docs/glossary#hydration) with browser JavaScript.
+Les APIs `wrapPageElement` et `wrapRootElement` existent à la fois dans le navigateur et dans [les APIs de Server-Side Rendering (SSR)](/docs/ssr-apis). Si vous en utilisez un, demandez-vous si vous devez l'implémenter dans `gatsby-ssr.js` et `gatsby-browser.js` afin que les pages générées via SSR avec Node.js soient les mêmes après avoir été [hydratées](/docs/glossary#hydration) avec le navigateur JavaScript.
 
-To use Browser APIs, create a file in the root of your site at `gatsby-browser.js`. Export each API you want to use from this file.
+Pour utiliser les APIs du navigateur, créez un fichier à la racine de votre site à `gatsby-browser.js`. Exportez chaque API que vous souhaitez utiliser à partir de ce fichier.
 
 ```jsx:title=gatsby-browser.js
 const React = require("react")
 const Layout = require("./src/components/layout")
 
-// Logs when the client route changes
+// Affiche un message lorsque la route client change
 exports.onRouteUpdate = ({ location, prevLocation }) => {
-  console.log("new pathname", location.pathname)
-  console.log("old pathname", prevLocation ? prevLocation.pathname : null)
+  console.log("nouveau chemin", location.pathname)
+  console.log("ancien chemin", prevLocation ? prevLocation.pathname : null)
 }
 
-// Wraps every page in a component
+// Encapsule chaque page dans un composant
 exports.wrapPageElement = ({ element, props }) => {
   return <Layout {...props}>{element}</Layout>
 }
