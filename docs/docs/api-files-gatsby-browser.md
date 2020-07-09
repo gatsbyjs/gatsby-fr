@@ -18,7 +18,7 @@ exports.onRouteUpdate = ({ location, prevLocation }) => {
   console.log("ancien chemin", prevLocation ? prevLocation.pathname : null)
 }
 
-// Enveloppe chaque page d'un composant
+// Encapsule chaque page dans un composant
 exports.wrapPageElement = ({ element, props }) => {
   return <Layout {...props}>{element}</Layout>
 }
