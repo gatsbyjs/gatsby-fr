@@ -2,7 +2,7 @@
 title: Le fichier API gatsby-browser.js
 ---
 
-Le fichier `gatsby-browser.js` vous permet de répondre aux actions dans le navigateur et d'envelopper votre site dans des composants supplémentaires. Les [Gatsby Browser API](/docs/browser-apis) vous offre de nombreuses options pour interagir avec [côté client](/docs/glossary#client-side) de Gatsby.
+Le fichier `gatsby-browser.js` vous permet de répondre aux actions dans le navigateur et d'encapsuler votre site dans des composants supplémentaires. Les [APIs navigateur de Gatsby](/docs/browser-apis) vous offre de nombreuses options pour interagir avec le [côté client](/docs/glossary#client-side) de Gatsby.
 
 Les APIs `wrapPageElement` et `wrapRootElement` existent à la fois dans le navigateur et dans [les APIs de Server-Side Rendering (SSR)](/docs/ssr-apis). Si vous en utilisez un, demandez-vous si vous devez l'implémenter dans `gatsby-ssr.js` et `gatsby-browser.js` afin que les pages générées via SSR avec Node.js soient les mêmes après avoir été [hydratées](/docs/glossary#hydration) avec le navigateur JavaScript.
 
