@@ -12,7 +12,7 @@ Pour utiliser les API du navigateur, créez un fichier à la racine de votre sit
 const React = require("react")
 const Layout = require("./src/components/layout")
 
-// Enregistrer lorsque la route client change
+// Affiche un message lorsque la route client change
 exports.onRouteUpdate = ({ location, prevLocation }) => {
   console.log("nouveau chemin", location.pathname)
   console.log("ancien chemin", prevLocation ? prevLocation.pathname : null)
