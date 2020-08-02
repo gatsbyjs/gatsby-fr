@@ -1,5 +1,5 @@
 ---
-title: The gatsby-node.js API file
+title: Le fichier API gatsby-node.js
 ---
 
 Le code du fichier `gatsby-node.js` est exécuté une fois dans le processus de création de votre site. Vous pouvez l'utiliser pour créer des pages de manière dynamique, ajouter des nœuds dans GraphQL ou répondre à des événements pendant le cycle de vie de la construction. Pour utiliser les [APIs Gatsby Node](/docs/node-apis/), créez un fichier nommé `gatsby-node.js` à la racine de votre site. Exportez l'une des API que vous souhaitez utiliser dans ce fichier.
