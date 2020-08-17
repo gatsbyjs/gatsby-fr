@@ -1,74 +1,74 @@
 ---
-title: API Specification
+title: Spécification API
 ---
 
-Gatsby's APIs are tailored conceptually to some extent after React.js to improve the coherence between the two systems.
+Les API de Gatsby sont conçues conceptuellement dans une certaine mesure après React.js pour améliorer la cohérence entre les deux systèmes.
 
-The two top priorities of the API are a) enable a broad and robust plugin ecosystem and b) on top of that a broad and robust theme ecosystem.
+Les deux principales priorités de l'API sont a) permettre un écosystème de plugins large et robuste et b) en plus de cela, un écosystème de thèmes large et robuste.
 
-## Prerequisites
+## Conditions préalables
 
-If you’re not familiar with Gatsby’s lifecycle, see the overview [Gatsby Lifecycle APIs](/docs/gatsby-lifecycle-apis/).
+Si vous ne connaissez pas le cycle de vie de Gatsby, consultez la présentation [Gatsby Lifecycle APIs](/docs/gatsby-lifecycle-apis/).
 
 ## Plugins
 
-Plugins can extend Gatsby in many ways:
+Les plugins peuvent étendre Gatsby de plusieurs manières:
 
-- Sourcing data (e.g. from the filesystem or an API or a database)
-- Transforming data from one type to another (e.g. a markdown file to HTML)
-- Creating pages (e.g. a directory of markdown files all gets turned into pages with URLs derived from their file names).
-- Modifying webpack config (e.g. for styling options, adding support for other compile-to-js languages)
-- Adding things to the rendered HTML (e.g. meta tags, analytics JS snippets like Google Analytics)
-- Writing out things to build directory based on site data (e.g. service worker, sitemap, RSS feed)
+- Recherche de données (par exemple à partir du système de fichiers ou d'une API ou d'une base de données)
+- Transformer des données d'un type à un autre (par exemple, un fichier de démarque en HTML)
+- Création de pages (par exemple, un répertoire de fichiers markdown est tous transformé en pages avec des URL dérivées de leurs noms de fichiers).
+- Modification de la configuration du webpack (par exemple pour les options de style, ajout de la prise en charge d'autres langages de compilation vers js)
+- Ajouter des éléments au HTML rendu (par exemple, des balises meta, des extraits de code JS analytiques comme Google Analytics)
+- Rédaction d'éléments pour créer un répertoire en fonction des données du site (par exemple, technicien de service, plan du site, flux RSS)
 
-A single plugin can use multiple APIs to accomplish its purpose. E.g. the plugin for the CSS-in-JS library [Glamor](/packages/gatsby-plugin-glamor/):
+Un seul plugin peut utiliser plusieurs API pour atteindre son objectif. Par exemple. le plugin pour la bibliothèque CSS-in-JS [Glamor](/packages/gatsby-plugin-glamor/):
 
-1.  modifies the webpack config to add its plugin
-2.  adds a Babel plugin to replace React's default createElement
-3.  modifies server rendering to extract out the critical CSS for each rendered page and inline the CSS in the `<head>` of that HTML page.
+1.  modifie la configuration du webpack pour ajouter son plugin
+2.  ajoute un plugin Babel pour remplacer le createElement par défaut de React
+3.  modifie le rendu du serveur pour extraire le CSS critique pour chaque page rendue et intégrer le CSS dans le `<head>` de cette page HTML.
 
-Plugins can also depend on other plugins. [The Sharp plugin](/packages/gatsby-plugin-sharp/) exposes a number of high-level APIs for transforming images that several other Gatsby image plugins depend on. [gatsby-transformer-remark](/packages/gatsby-transformer-remark/) does basic markdown->html transformation but exposes an API to allow other plugins to intervene in the conversion process e.g. [gatsby-remark-prismjs](/packages/gatsby-remark-prismjs/) which adds highlighting to code blocks.
+Les plugins peuvent également dépendre d'autres plugins. [The Sharp plugin](/packages/gatsby-plugin-sharp/) expose un certain nombre d'API de haut niveau pour transformer des images que plusieurs autres les plugins d'image Gatsby dépendent de. [gatsby-transformer-remark](/packages/gatsby-transformer-remark/) effectue une transformation basique markdown-> html mais expose une API à permettre à d'autres plugins d'intervenir dans le processus de conversion, par ex. [gatsby-remark-prismjs](/packages/gatsby-remark-prismjs/) ce qui ajoute une mise en évidence aux blocs de code.
 
-Transformer plugins are decoupled from source plugins. Transformer plugins look at the media type of new nodes created by source plugins to decide if they can transform it or not. Which means that a markdown transformer plugin can transform markdown from any source without any other configuration e.g. from a file, a code comment, or external service like Trello which supports markdown in some of its data fields.
+Les plugins Transformer sont découplés des plugins source. Les plugins Transformer examinent le type de média des nouveaux nœuds créés par les plugins source pour décider s'ils peuvent le transformer ou non. Ce qui signifie qu'un plugin de transformateur de démarque peut transformer le démarquage de n'importe quelle source sans aucune autre configuration, par exemple. à partir d'un fichier, d'un commentaire de code ou d'un service externe comme Trello qui prend en charge le démarquage dans certains de ses champs de données.
 
-See [the full list of (official only for now — adding support for community plugins later) plugins](/docs/plugins/).
+Voir [the full list of (official only for now — adding support for community plugins later) plugins](/docs/plugins/).
 
 ## API
 
 ### Concepts
 
-- _Page_ — a site page with a pathname, a template component, and optional GraphQL query.
-- _Page Component_ — React.js component that renders a page and can optionally specify a GraphQL query
-- _Component extensions_ — extensions that are resolvable as components. `.js` and `.jsx` are supported by core. But plugins can add support for other compile-to-js languages.
-- _Dependency_ — Gatsby automatically tracks dependencies between different objects e.g. a page can depend on certain nodes. This allows for hot reloading, caching, incremental rebuilds, etc.
-- _Node_ — a data object
-- _Node Field_ — a field added by a plugin to a node that it doesn't control
-- _Node Link_ — a connection between nodes that gets converted to GraphQL relationships. Can be created in a variety of ways as well as automatically inferred. Parent/child links from nodes and their transformed derivative nodes are first class links.
+- _Page_ - une page de site avec un chemin, un composant de modèle et une requête GraphQL facultative.
+- _Page Component_ - Composant React.js qui rend une page et peut éventuellement spécifier une requête GraphQL
+- _Component extensions_ —  extensions qui peuvent être résolues en tant que composants. `.js` et `.jsx` sont pris en charge par core. Mais les plugins peuvent ajouter la prise en charge d'autres langages de compilation en js.
+- _Dependency_ — Gatsby suit automatiquement les dépendances entre différents objets, par ex. une page peut dépendre de certains nœuds. Cela permet le rechargement à chaud, la mise en cache, les reconstructions incrémentielles, etc.
+- _Node_ — un objet de données
+- _Node Field_ — un champ ajouté par un plugin à un nœud qu'il ne contrôle pas
+- _Node Link_ — une connexion entre les nœuds qui est convertie en relations GraphQL. Peut être créé de différentes manières et automatiquement déduit. Les liens parent / enfant des nœuds et leurs nœuds dérivés transformés sont des liens de première classe.
 
-_More definitions and terms are defined in the [Glossary](/docs/glossary/)_
+_D'autres définitions et termes sont définis dans le [Glossary](/docs/glossary/)_
 
-### Operators
+### Les opérateurs
 
-- _Create_ — make a new thing
-- _Get_ — get an existing thing
-- _Delete_ — remove an existing thing
-- _Replace_ — replace an existing thing
-- _Set_ — merge into an existing thing
+- _Create_ — faire une nouvelle chose
+- _Get_ — obtenir une chose existante
+- _Delete_ — supprimer un élément existant
+- _Replace_ — remplacer une chose existante
+- _Set_ — fusionner dans une chose existante
 
-### Extension APIs
+### API d'extension
 
-Gatsby has multiple processes. The most prominent is the "bootstrap" process. It has several subprocesses. One tricky part to their design is that they run both once during the initial bootstrap but also stay alive during development to continue to respond to changes. This is what drives hot reloading that all Gatsby data is "alive" and reacts to changes in the environment.
+Gatsby a plusieurs processus. Le plus important est le processus de "bootstrap". Il comporte plusieurs sous-processus. Une partie délicate de leur conception est qu'ils s'exécutent une fois pendant le bootstrap initial, mais restent également en vie pendant le développement pour continuer à répondre aux changements. C'est ce qui pousse au rechargement à chaud que toutes les données Gatsby sont «vivantes» et réagissent aux changements de l'environnement.
 
-The bootstrap process is as follows:
+Le processus d'amorçage est le suivant:
 
-load site config -> load plugins -> source nodes -> transform nodes -> create graphql schema -> create pages -> compile component queries -> run queries -> fin
+charger la configuration du site -> charger des plugins -> nœuds source -> transformer les nœuds -> créer un schéma graphql -> créer des pages -> compiler des requêtes de composants -> exécuter des requêtes -> fin
 
-Once the initial bootstrap is finished, a `webpack-dev-server` and express server are started for serving files for the development workflow with live updates. For a production build, Gatsby skips the development server and instead builds the CSS, then JavaScript, then static HTML with webpack.
+Une fois le bootstrap initial terminé, un `webpack-dev-server` et un serveur express sont démarrés pour servir les fichiers pour le workflow de développement avec des mises à jour en direct. Pour une version de production, Gatsby ignore le serveur de développement et construit à la place le CSS, puis le JavaScript, puis le HTML statique avec webpack.
 
-During these processes there are various extension points where plugins can intervene. All major processes have an `onPre` and `onPost` e.g. `onPreBootstrap` and `onPostBootstrap` or `onPreBuild` or `onPostBuild`. During bootstrap plugins can respond at various stages to APIs like `onCreatePages`, `onCreateBabelConfig`, and `onSourceNodes`.
+Au cours de ces processus, il existe différents points d'extension où les plugins peuvent intervenir. Tous les processus majeurs ont un `onPre` et `onPost` par exemple `onPreBootstrap` et `onPostBootstrap` ou `onPreBuild` ou `onPostBuild`. Pendant le bootstrap, les plugins peuvent répondre à différentes étapes aux API telles que `onCreatePages`, `onCreateBabelConfig`, et `onSourceNodes`.
 
-At each extension point, Gatsby identifies the plugins which implement the API and calls them in serial following their order in the site's `gatsby-config.js`.
+A chaque point d'extension, Gatsby identifie les plugins qui implémentent l'API et les appelle en série en suivant leur ordre dans le site `gatsby-config.js`.
 
-In addition to extension APIs in a node, plugins can also implement extension APIs in the server rendering process and the browser e.g. `onClientEntry` or `onRouteUpdate`.
+En plus des API d'extension dans un nœud, les plugins peuvent également implémenter des API d'extension dans le processus de rendu du serveur et le navigateur, par exemple `onClientEntry` ou `onRouteUpdate`.
 
-The three main inspirations for this API and spec are React.js' API specifically [@leebyron's email on the React API](https://gist.github.com/vjeux/f2b015d230cc1ab18ed1df30550495ed), this talk ["How to Design a Good API and Why it Matters" by Joshua Bloch](https://www.youtube.com/watch?v=heh4OeB9A-c&app=desktop) who designed many parts of Java, and [Hapi.js](https://hapijs.com/api)' plugin design.
+Les trois principales inspirations pour cette API et cette spécification sont l'API de React.js spécifiquement [@leebyron's email on the React API](https://gist.github.com/vjeux/f2b015d230cc1ab18ed1df30550495ed), ce discours ["How to Design a Good API and Why it Matters" by Joshua Bloch](https://www.youtube.com/watch?v=heh4OeB9A-c&app=desktop) qui a conçu de nombreuses parties de Java, et [Hapi.js](https://hapijs.com/api)' conception de plugin.
