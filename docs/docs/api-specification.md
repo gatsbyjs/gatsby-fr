@@ -2,7 +2,7 @@
 title: Spécification API
 ---
 
-Les API de Gatsby sont conçues conceptuellement dans une certaine mesure après React.js pour améliorer la cohérence entre les deux systèmes.
+Les API de Gatsby sont conçues conceptuellement dans une certaine mesure d'après React.js pour améliorer la cohérence entre les deux systèmes.
 
 Les deux principales priorités de l'API sont a) permettre un écosystème de plugins large et robuste et b) en plus de cela, un écosystème de thèmes large et robuste.
 
@@ -16,7 +16,7 @@ Les plugins peuvent étendre Gatsby de plusieurs manières:
 
 - Recherche de données (par exemple à partir du système de fichiers ou d'une API ou d'une base de données)
 - Transformer des données d'un type à un autre (par exemple, un fichier de démarque en HTML)
-- Création de pages (par exemple, un répertoire de fichiers markdown est tous transformé en pages avec des URL dérivées de leurs noms de fichiers).
+- Création de pages (par exemple, un répertoire de fichiers markdown qui est intégralement transformé en pages avec des URL dérivées de leurs noms de fichiers).
 - Modification de la configuration du webpack (par exemple pour les options de style, ajout de la prise en charge d'autres langages de compilation vers js)
 - Ajouter des éléments au HTML rendu (par exemple, des balises meta, des extraits de code JS analytiques comme Google Analytics)
 - Rédaction d'éléments pour créer un répertoire en fonction des données du site (par exemple, technicien de service, plan du site, flux RSS)
@@ -27,9 +27,9 @@ Un seul plugin peut utiliser plusieurs API pour atteindre son objectif. Par exem
 2.  ajoute un plugin Babel pour remplacer le createElement par défaut de React
 3.  modifie le rendu du serveur pour extraire le CSS critique pour chaque page rendue et intégrer le CSS dans le `<head>` de cette page HTML.
 
-Les plugins peuvent également dépendre d'autres plugins. [The Sharp plugin](/packages/gatsby-plugin-sharp/) expose un certain nombre d'API de haut niveau pour transformer des images que plusieurs autres les plugins d'image Gatsby dépendent de. [gatsby-transformer-remark](/packages/gatsby-transformer-remark/) effectue une transformation basique markdown-> html mais expose une API à permettre à d'autres plugins d'intervenir dans le processus de conversion, par ex. [gatsby-remark-prismjs](/packages/gatsby-remark-prismjs/) ce qui ajoute une mise en évidence aux blocs de code.
+Les plugins peuvent également dépendre d'autres plugins. [The Sharp plugin](/packages/gatsby-plugin-sharp/) expose un certain nombre d'API de haut niveau pour transformer des images dont d'autres plugins dépendent. [gatsby-transformer-remark](/packages/gatsby-transformer-remark/) effectue une transformation basique markdown-> html mais expose une API permettant à d'autres plugins d'intervenir dans le processus de conversion, par ex. [gatsby-remark-prismjs](/packages/gatsby-remark-prismjs/) ce qui ajoute une coloration syntaxique aux blocs de code.
 
-Les plugins Transformer sont découplés des plugins source. Les plugins Transformer examinent le type de média des nouveaux nœuds créés par les plugins source pour décider s'ils peuvent le transformer ou non. Ce qui signifie qu'un plugin de transformateur de démarque peut transformer le démarquage de n'importe quelle source sans aucune autre configuration, par exemple. à partir d'un fichier, d'un commentaire de code ou d'un service externe comme Trello qui prend en charge le démarquage dans certains de ses champs de données.
+Les plugins Transformer sont découplés des plugins source. Les plugins Transformer examinent le type de média des nouveaux nœuds créés par les plugins source pour décider s'ils peuvent le transformer ou non. Ce qui signifie qu'un plugin transformer markdown peut transformer le markdown de n'importe quelle source sans aucune autre configuration, par exemple à partir d'un fichier, d'un commentaire de code ou d'un service externe comme Trello qui prend en charge le markdown dans certains de ses champs de données.
 
 Voir [the full list of (official only for now — adding support for community plugins later) plugins](/docs/plugins/).
 
@@ -59,7 +59,7 @@ _D'autres définitions et termes sont définis dans le [Glossary](/docs/glossary
 
 Gatsby a plusieurs processus. Le plus important est le processus de "bootstrap". Il comporte plusieurs sous-processus. Une partie délicate de leur conception est qu'ils s'exécutent une fois pendant le bootstrap initial, mais restent également en vie pendant le développement pour continuer à répondre aux changements. C'est ce qui pousse au rechargement à chaud que toutes les données Gatsby sont «vivantes» et réagissent aux changements de l'environnement.
 
-Le processus d'amorçage est le suivant:
+Le processus de bootstrap est le suivant:
 
 charger la configuration du site -> charger des plugins -> nœuds source -> transformer les nœuds -> créer un schéma graphql -> créer des pages -> compiler des requêtes de composants -> exécuter des requêtes -> fin
 
