@@ -8,7 +8,7 @@ Les deux principales priorités de l'API sont a) permettre un écosystème de pl
 
 ## Conditions préalables
 
-Si vous ne connaissez pas le cycle de vie de Gatsby, consultez la présentation [Gatsby Lifecycle APIs](/docs/gatsby-lifecycle-apis/).
+Si vous ne connaissez pas le cycle de vie de Gatsby, consultez la présentation [API Gatsby Lifecycle](/docs/gatsby-lifecycle-apis/).
 
 ## Plugins
 
@@ -21,17 +21,17 @@ Les plugins peuvent étendre Gatsby de plusieurs manières:
 - Ajouter des éléments au HTML rendu (par exemple, des balises meta, des extraits de code JS analytiques comme Google Analytics)
 - Rédaction d'éléments pour créer un répertoire en fonction des données du site (par exemple, technicien de service, plan du site, flux RSS)
 
-Un seul plugin peut utiliser plusieurs API pour atteindre son objectif. Par exemple. le plugin pour la bibliothèque CSS-in-JS [Glamor](/packages/gatsby-plugin-glamor/):
+Un seul plugin peut utiliser plusieurs API pour atteindre son objectif. Par exemple. le plugin pour la bibliothèque CSS-in-JS [Charme](/packages/gatsby-plugin-glamor/):
 
 1.  modifie la configuration du webpack pour ajouter son plugin
 2.  ajoute un plugin Babel pour remplacer le createElement par défaut de React
 3.  modifie le rendu du serveur pour extraire le CSS critique pour chaque page rendue et intégrer le CSS dans le `<head>` de cette page HTML.
 
-Les plugins peuvent également dépendre d'autres plugins. [The Sharp plugin](/packages/gatsby-plugin-sharp/) expose un certain nombre d'API de haut niveau pour transformer des images dont d'autres plugins dépendent. [gatsby-transformer-remark](/packages/gatsby-transformer-remark/) effectue une transformation basique markdown-> html mais expose une API permettant à d'autres plugins d'intervenir dans le processus de conversion, par ex. [gatsby-remark-prismjs](/packages/gatsby-remark-prismjs/) ce qui ajoute une coloration syntaxique aux blocs de code.
+Les plugins peuvent également dépendre d'autres plugins. [Le plugin Sharp](/packages/gatsby-plugin-sharp/) expose un certain nombre d'API de haut niveau pour transformer des images dont d'autres plugins dépendent. [gatsby-transformer-remarque](/packages/gatsby-transformer-remark/) effectue une transformation basique markdown-> html mais expose une API permettant à d'autres plugins d'intervenir dans le processus de conversion, par ex. [gatsby-remarque-prismjs](/packages/gatsby-remark-prismjs/) ce qui ajoute une coloration syntaxique aux blocs de code.
 
 Les plugins Transformer sont découplés des plugins source. Les plugins Transformer examinent le type de média des nouveaux nœuds créés par les plugins source pour décider s'ils peuvent le transformer ou non. Ce qui signifie qu'un plugin transformer markdown peut transformer le markdown de n'importe quelle source sans aucune autre configuration, par exemple à partir d'un fichier, d'un commentaire de code ou d'un service externe comme Trello qui prend en charge le markdown dans certains de ses champs de données.
 
-Voir [the full list of (official only for now — adding support for community plugins later) plugins](/docs/plugins/).
+Voir [la liste complète des plugins (officiels uniquement pour le moment - ajout de la prise en charge des plugins communautaires plus tard)](/docs/plugins/).
 
 ## API
 
@@ -45,7 +45,7 @@ Voir [the full list of (official only for now — adding support for community p
 - _Node Field_ — un champ ajouté par un plugin à un nœud qu'il ne contrôle pas
 - _Node Link_ — une connexion entre les nœuds qui est convertie en relations GraphQL. Peut être créé de différentes manières et automatiquement déduit. Les liens parent / enfant des nœuds et leurs nœuds dérivés transformés sont des liens de première classe.
 
-_D'autres définitions et termes sont définis dans le [Glossary](/docs/glossary/)_
+_D'autres définitions et termes sont définis dans le [Glossaire](/docs/glossary/)_
 
 ### Les opérateurs
 
@@ -71,4 +71,4 @@ A chaque point d'extension, Gatsby identifie les plugins qui implémentent l'API
 
 En plus des API d'extension dans un nœud, les plugins peuvent également implémenter des API d'extension dans le processus de rendu du serveur et le navigateur, par exemple `onClientEntry` ou `onRouteUpdate`.
 
-Les trois principales inspirations pour cette API et cette spécification sont l'API de React.js spécifiquement [@leebyron's email on the React API](https://gist.github.com/vjeux/f2b015d230cc1ab18ed1df30550495ed), ce discours ["How to Design a Good API and Why it Matters" by Joshua Bloch](https://www.youtube.com/watch?v=heh4OeB9A-c&app=desktop) qui a conçu de nombreuses parties de Java, et [Hapi.js](https://hapijs.com/api)' conception de plugin.
+Les trois principales inspirations pour cette API et cette spécification sont l'API de React.js spécifiquement [Courriel de @ leebyron sur l'API React](https://gist.github.com/vjeux/f2b015d230cc1ab18ed1df30550495ed), ce discours ["Comment concevoir une bonne API et pourquoi c'est important" par Joshua Bloch](https://www.youtube.com/watch?v=heh4OeB9A-c&app=desktop) qui a conçu de nombreuses parties de Java, et [Hapi.js](https://hapijs.com/api)' conception de plugin.
