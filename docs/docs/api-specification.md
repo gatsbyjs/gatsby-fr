@@ -8,7 +8,7 @@ Les deux principales priorités de l'API sont a) permettre un écosystème de pl
 
 ## Conditions préalables
 
-Si vous ne connaissez pas le cycle de vie de Gatsby, consultez la présentation [API Gatsby Lifecycle](/docs/gatsby-lifecycle-apis/).
+Si vous ne connaissez pas le cycle de vie de Gatsby, consultez la présentation [Cycle de vie de l'API Gatsby](/docs/gatsby-lifecycle-apis/).
 
 ## Plugins
 
@@ -57,18 +57,18 @@ _D'autres définitions et termes sont définis dans le [Glossaire](/docs/glossar
 
 ### API d'extension
 
-Gatsby a plusieurs processus. Le plus important est le processus de "bootstrap". Il comporte plusieurs sous-processus. Une partie délicate de leur conception est qu'ils s'exécutent une fois pendant le bootstrap initial, mais restent également en vie pendant le développement pour continuer à répondre aux changements. C'est ce qui pousse au rechargement à chaud que toutes les données Gatsby sont «vivantes» et réagissent aux changements de l'environnement.
+Gatsby a plusieurs processus. Le plus important est le processus de "bootstrap". Il comporte plusieurs sous-processus. Une partie délicate de leur conception est qu'ils s'exécutent une fois pendant le bootstrap initial, mais restent également en vie pendant le développement pour continuer à répondre aux changements. C'est ce qui pousse au rechargement à chaud que toutes les données Gatsby sont "vivantes" et réagissent aux changements de l'environnement.
 
 Le processus de bootstrap est le suivant:
 
-charger la configuration du site -> charger des plugins -> nœuds source -> transformer les nœuds -> créer un schéma graphql -> créer des pages -> compiler des requêtes de composants -> exécuter des requêtes -> fin
+charger la configuration du site -> charger les plugins -> nœuds source -> transformer les nœuds -> créer un schéma graphql -> créer des pages -> compiler des requêtes de composants -> exécuter des requêtes -> fin
 
 Une fois le bootstrap initial terminé, un `webpack-dev-server` et un serveur express sont démarrés pour servir les fichiers pour le workflow de développement avec des mises à jour en direct. Pour une version de production, Gatsby ignore le serveur de développement et construit à la place le CSS, puis le JavaScript, puis le HTML statique avec webpack.
 
 Au cours de ces processus, il existe différents points d'extension où les plugins peuvent intervenir. Tous les processus majeurs ont un `onPre` et `onPost` par exemple `onPreBootstrap` et `onPostBootstrap` ou `onPreBuild` ou `onPostBuild`. Pendant le bootstrap, les plugins peuvent répondre à différentes étapes aux API telles que `onCreatePages`, `onCreateBabelConfig`, et `onSourceNodes`.
 
-A chaque point d'extension, Gatsby identifie les plugins qui implémentent l'API et les appelle en série en suivant leur ordre dans le site `gatsby-config.js`.
+A chaque point d'extension, Gatsby identifie les plugins qui implémentent l'API et les appelle en série en suivant leur ordre dans le fichier de configuration `gatsby-config.js`.
 
 En plus des API d'extension dans un nœud, les plugins peuvent également implémenter des API d'extension dans le processus de rendu du serveur et le navigateur, par exemple `onClientEntry` ou `onRouteUpdate`.
 
-Les trois principales inspirations pour cette API et cette spécification sont l'API de React.js spécifiquement [Courriel de @ leebyron sur l'API React](https://gist.github.com/vjeux/f2b015d230cc1ab18ed1df30550495ed), ce discours ["Comment concevoir une bonne API et pourquoi c'est important" par Joshua Bloch](https://www.youtube.com/watch?v=heh4OeB9A-c&app=desktop) qui a conçu de nombreuses parties de Java, et [Hapi.js](https://hapijs.com/api)' conception de plugin.
+Les trois principales inspirations pour cette API et cette spécification sont l'API de React.js spécifiquement [Mail de @leebyron sur l'API React](https://gist.github.com/vjeux/f2b015d230cc1ab18ed1df30550495ed), ce discours ["How to Design a Good API and Why it Matters" par Joshua Bloch](https://www.youtube.com/watch?v=heh4OeB9A-c&app=desktop) qui a conçu de nombreuses parties de Java, et [Hapi.js](https://hapijs.com/api)' conception de plugin.
