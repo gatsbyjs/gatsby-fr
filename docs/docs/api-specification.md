@@ -37,7 +37,7 @@ Voir [la liste complète des plugins (officiels uniquement pour le moment - ajou
 
 ### Concepts
 
-- _Page_ - une page de site avec un chemin, un composant de modèle et une requête GraphQL facultative.
+- _Page_ — une page de site avec un chemin, un composant de modèle et une requête GraphQL facultative.
 - _Page Component_ - Composant React.js qui rend une page et peut éventuellement spécifier une requête GraphQL
 - _Component extensions_ — extensions qui peuvent être résolues en tant que composants. `.js` et `.jsx` sont pris en charge par core. Mais les plugins peuvent ajouter la prise en charge d'autres langages de compilation en js.
 - _Dependency_ — Gatsby suit automatiquement les dépendances entre différents objets, par ex. une page peut dépendre de certains nœuds. Cela permet le rechargement à chaud, la mise en cache, les reconstructions incrémentielles, etc.
