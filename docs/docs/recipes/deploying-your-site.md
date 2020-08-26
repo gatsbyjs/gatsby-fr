@@ -1,28 +1,28 @@
 ---
-title: "Recipes: Deploying Your Site"
+title: "Recettes: déployer votre site"
 tableOfContentsDepth: 1
 ---
 
-Showtime. Once you are happy with your site, you are ready to go live with it!
+Afficher l'heure. Une fois que vous êtes satisfait de votre site, vous êtes prêt à l'utiliser!
 
-## Preparing for deployment
+## Préparation du déploiement
 
-### Prerequisites
+### Conditions préalables
 
-- A [Gatsby site](/docs/quick-start)
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- Un [site Gatsby](/docs/quick-start)
+- La [CLI Gatsby](/docs/gatsby-cli) installé
 
 ### Directions
 
-1. Stop your development server if it is running (`Ctrl + C` on your command line in most cases)
+1. Arrêtez votre serveur de développement s'il est en cours d'exécution (`Ctrl + C` sur votre ligne de commande dans la plupart des cas)
 
-2. For the standard site path at the root directory (`/`), run `gatsby build` using the Gatsby CLI on the command line. The built files will now be in the `public` folder.
+2. Pour le chemin du site standard dans le répertoire racine (`/`), courir `gatsby build` à l'aide de l'interface de ligne de commande Gatsby sur la ligne de commande. Les fichiers créés seront désormais dans le `public` dossier.
 
 ```shell
 gatsby build
 ```
 
-3. To include a site path other than `/` (such as `/site-name/`), set a path prefix by adding the following to your `gatsby-config.js` and replacing `yourpathprefix` with your desired path prefix:
+3. Pour inclure un chemin d'accès au site autre que `/` (such as `/site-name/`), définissez un préfixe de chemin en ajoutant ce qui suit à votre `gatsby-config.js` et remplacer `yourpathprefix` avec le préfixe de chemin souhaité:
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -30,103 +30,103 @@ module.exports = {
 }
 ```
 
-There are a few reasons to do this -- for instance, hosting a blog built with Gatsby on a domain with another site not built on Gatsby. The main site would direct to `example.com`, and the Gatsby site with a path prefix could live at `example.com/blog`.
+Il y a plusieurs raisons de le faire -- par exemple, héberger un blog construit avec Gatsby sur un domaine avec un autre site non construit sur Gatsby. Le site principal dirigerait vers `example.com`, et le site Gatsby avec un préfixe de chemin pourrait vivre à `example.com/blog`.
 
-4. With a path prefix set in `gatsby-config.js`, run `gatsby build` with the `--prefix-paths` flag to automatically add the prefix to the beginning of all Gatsby site URLs and `<Link>` tags.
+4. Avec un préfixe de chemin défini dans `gatsby-config.js`, courir `gatsby build` avec le `--prefix-paths` flag pour ajouter automatiquement le préfixe au début de toutes les URL des sites Gatsby et `<Link>` mots clés.
 
 ```shell
 gatsby build --prefix-paths
 ```
 
-5. Make sure that your site looks the same when running `gatsby build` as with `gatsby develop`. By running `gatsby serve` when you build your site, you can test out (and debug if necessary) the finished product before deploying it live.
+5. Assurez-vous que votre site a la même apparence lors de l'exécution `gatsby build` comme avec `gatsby develop`. En exécutant `gatsby serve` lorsque vous créez votre site, vous pouvez tester (et déboguer si nécessaire) le produit fini avant de le déployer en direct.
 
 ```shell
 gatsby build && gatsby serve
 ```
 
-### Additional resources
+### Ressources supplémentaires
 
-- Walk through building and deploying an example site in [tutorial part one](/tutorial/part-one/#deploying-a-gatsby-site)
-- Learn about [performance optimization](/docs/performance/)
-- Read about [other deployment related topics](/docs/preparing-for-deployment/)
-- Check out the [deployment docs](/docs/deploying-and-hosting/) for specific hosting platforms and how to deploy to them
+- Présentation de la création et du déploiement d'un exemple de site dans [première partie du didacticiel](/tutorial/part-one/#deploying-a-gatsby-site)
+- En savoir plus sur [l'optimisation des performances](/docs/performance/)
+- En savoir plus sur [autres sujets liés au déploiement](/docs/preparing-for-deployment/)
+- Consultez la [documentation de déploiement](/docs/deploying-and-hosting/) pour des plates-formes d'hébergement spécifiques et comment les déployer
 
-## Deploying to Netlify
+## Déploiement sur Netlify
 
-Use [`netlify-cli`](https://www.netlify.com/docs/cli/) to deploy your Gatsby application without leaving the command-line interface.
+Utilisation [`netlify-cli`](https://www.netlify.com/docs/cli/) pour déployer votre application Gatsby sans quitter l'interface de ligne de commande.
 
-### Prerequisites
+### Conditions préalables
 
-- A [Gatsby site](/docs/quick-start) with a single component `index.js`
-- The [netlify-cli](https://www.npmjs.com/package/netlify-cli) package installed
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- Un [site Gatsby](/docs/quick-start) avec un seul composant `index.js`
+- Le [netlify-cli](https://www.npmjs.com/package/netlify-cli) package installé
+- La [CLI Gatsby](/docs/gatsby-cli) installé
 
-### Directions
+### Instructions
 
-1. Build your gatsby application using `gatsby build`
+1. Créez votre application Gatsby en utilisant `gatsby build`
 
-2. Login into Netlify using `netlify login`
+2. Connectez-vous à Netlify en utilisant `netlify login`
 
-3. Run the command `netlify init`. Select the "Create & configure a new site" option.
+3. Exécutez la commande `netlify init`. Sélectionnez l'option "Créer et configurer un nouveau site".
 
-4. Choose a custom website name if you want or press enter to receive a random one.
+4. Choisissez un nom de site Web personnalisé si vous le souhaitez ou appuyez sur Entrée pour en recevoir un au hasard.
 
-5. Choose your [Team](https://www.netlify.com/docs/teams/).
+5. Choisissez votre [Équipe](https://www.netlify.com/docs/teams/).
 
-6. Change the deploy path to `public/`
+6. Modifiez le chemin de déploiement en `public/`
 
-7. Make sure that everything looks fine before deploying to production using `netlify deploy -d . --prod`
+7. Assurez-vous que tout va bien avant de déployer en production en utilisant `netlify deploy -d . --prod`
 
-### Additional resources
+### Ressources supplémentaires
 
-- [Hosting on Netlify](/docs/hosting-on-netlify)
+- [Hébergement sur Netlify](/docs/hosting-on-netlify)
 - [gatsby-plugin-netlify](/packages/gatsby-plugin-netlify)
 
-## Deploying to ZEIT Now
+## Déployer sur ZEIT maintenant
 
-Use [Now CLI](https://zeit.co/download) to deploy your Gatsby application without leaving the command-line interface.
+Utiliser [Now CLI](https://zeit.co/download) pour déployer votre application Gatsby sans quitter l'interface de ligne de commande.
 
-### Prerequisites
+### Conditions préalables
 
-- A [ZEIT Now](https://zeit.co/signup) account
-- A [Gatsby site](/docs/quick-start) with a single component `index.js`
-- [Now CLI](https://zeit.co/download) package installed
-- [Gatsby CLI](/docs/gatsby-cli) installed
+- Un [ZEIT Now](https://zeit.co/signup) compte
+- Un [Gatsby site](/docs/quick-start) avec un seul composant `index.js`
+- [Now CLI](https://zeit.co/download) package installé
+- [Gatsby CLI](/docs/gatsby-cli) installé
 
-### Directions
+### Instructions
 
-1. Login into Now CLI using `now login`
+1. Connectez-vous à Now CLI en utilisant `now login`
 
-2. Change to the directory of your Gatsby.js application in the Terminal if you aren't already there
+2. Accédez au répertoire de votre application Gatsby.js dans le Terminal si vous n'y êtes pas déjà
 
-3. Run `now` to deploy it
+3. Courir `now` pour le déployer
 
-### Additional resources
+### Ressources supplémentaires
 
-- [Deploying to ZEIT Now](/docs/deploying-to-zeit-now/)
+- [Déploiement sur ZEIT maintenant](/docs/deploying-to-zeit-now/)
 
-## Deploying to Cloudflare Workers
+## Déploiement sur Cloudflare Workers
 
-Use [`wrangler`](https://developers.cloudflare.com/workers/tooling/wrangler/) to deploy your Gatsby application globally without leaving the command-line interface.
+Utilisation [`wrangler`](https://developers.cloudflare.com/workers/tooling/wrangler/) pour déployer votre application Gatsby à l'échelle mondiale sans quitter l'interface de ligne de commande.
 
-### Prerequisites
+### Conditions préalables
 
-- An account on [Cloudflare](https://dash.cloudflare.com/sign-up)
-- A [Workers Unlimited plan](https://developers.cloudflare.com/workers/about/pricing/) for \$5/month to enable the KV store, which is required to serve the Gatsby files.
-- A [Gatsby site](/docs/quick-start) set up with Gatsby's CLI
-- [wrangler](https://developers.cloudflare.com/workers/tooling/wrangler/install/) installed globally (`npm i -g @cloudflare/wrangler`)
+- Un compte sur [Cloudflare](https://dash.cloudflare.com/sign-up)
+- UN [Plan Travailleurs Illimité](https://developers.cloudflare.com/workers/about/pricing/) pour \$5/ mois pour activer le magasin KV, qui est nécessaire pour servir les fichiers Gatsby.
+- UN [Site de Gatsby](/docs/quick-start) configurer avec la CLI de Gatsby
+- [wrangler](https://developers.cloudflare.com/workers/tooling/wrangler/install/) installé dans le monde (`npm i -g @cloudflare/wrangler`)
 
-### Directions
+### Instructions
 
-1. Build your Gatsby application using `gatsby build`
-2. Run `wrangler config` where you'll be prompted for your [Cloudflare API token](https://developers.cloudflare.com/workers/quickstart/#api-token)
-3. Run `wrangler init --site`
-4. Configure `wrangler.toml`. First add [account ID](https://developers.cloudflare.com/workers/quickstart/#account-id-and-zone-id) field and then either
-   1. A free workers.dev domain by setting `workers_dev = true`
-   2. A custom domain on Cloudflare by setting `workers_dev = false`, `zone_id = "abdc..` and `route = customdomain.com/*`
-5. In `wrangler.toml` set `bucket = "./public"`
-6. Run `wrangler publish` and your site will be deployed in seconds!
+1. Créez votre application Gatsby en utilisant `gatsby build`
+2. Courir `wrangler config` où vous serez invité à entrer votre [jeton d'API Cloudflare](https://developers.cloudflare.com/workers/quickstart/#api-token)
+3. Courir `wrangler init --site`
+4. Configurer `wrangler.toml`. Ajoutez d'abord [numéro de compte](https://developers.cloudflare.com/workers/quickstart/#account-id-and-zone-id) champ puis soit
+   1. Un domaine workers.dev gratuit en définissant `workers_dev = true`
+   2. Un domaine personnalisé sur Cloudflare en définissant `workers_dev = false`, `zone_id = "abdc..` et `route = customdomain.com/*`
+5. Dans `wrangler.toml` ensemble `bucket = "./public"`
+6. Courir `wrangler publish` et votre site sera déployé en quelques secondes!
 
-### Additional resources
+### Ressources supplémentaires
 
-- [Hosting on Cloudflare](/docs/deploying-to-cloudflare-workers)
+- [Hébergement sur Cloudflare](/docs/deploying-to-cloudflare-workers)
