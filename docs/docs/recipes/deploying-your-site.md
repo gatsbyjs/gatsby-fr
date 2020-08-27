@@ -3,7 +3,7 @@ title: "Recettes: déployer votre site"
 tableOfContentsDepth: 1
 ---
 
-Afficher l'heure. Une fois que vous êtes satisfait de votre site, vous êtes prêt à l'utiliser!
+Showtime. Une fois que vous êtes satisfait de votre site, vous êtes prêt à l'utiliser!
 
 ## Préparation du déploiement
 
@@ -16,13 +16,13 @@ Afficher l'heure. Une fois que vous êtes satisfait de votre site, vous êtes pr
 
 1. Arrêtez votre serveur de développement s'il est en cours d'exécution (`Ctrl + C` sur votre terminal dans la plupart des cas)
 
-2. Pour le chemin du site standard dans le répertoire racine (`/`), lancez `gatsby build` à l'aide de l'interface de ligne de commande Gatsby sur la ligne de commande. Les fichiers créés seront désormais dans le dossier `public`.
+2. Pour un chemin de site standard dans le répertoire racine (`/`), lancez `gatsby build` à l'aide de l'interface de ligne de commande Gatsby sur la ligne de commande. Les fichiers créés seront désormais dans le dossier `public`.
 
 ```shell
 gatsby build
 ```
 
-3. Pour inclure un chemin d'accès au site autre que `/` (comme `/site-name/`), définissez un préfixe de chemin en ajoutant ce qui suit à votre `gatsby-config.js` et remplacer `yourpathprefix` avec le préfixe de chemin souhaité:
+3. Pour inclure un chemin d'accès au site autre que `/` (comme `/site-name/`), définissez un préfixe de chemin en ajoutant ce qui suit à votre `gatsby-config.js` et remplacer `yourpathprefix` par le préfixe de chemin souhaité:
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -32,7 +32,7 @@ module.exports = {
 
 Il y a plusieurs raisons de le faire -- par exemple, héberger un blog construit avec Gatsby sur un domaine avec un autre site non construit sur Gatsby. Le site principal dirigerait vers `example.com`, et le site Gatsby avec un préfixe de chemin pourrait être à `example.com/blog`.
 
-4. Avec un préfixe de chemin défini dans `gatsby-config.js`, lancez `gatsby build` avec le `--prefix-paths` flag pour ajouter automatiquement le préfixe au début de toutes les URL des sites Gatsby et balises `<Link>`.
+4. Avec un préfixe de chemin défini dans `gatsby-config.js`, lancez `gatsby build` avec le flag `--prefix-paths` pour ajouter automatiquement le préfixe au début de toutes les URLs des sites Gatsby et balises `<Link>`.
 
 ```shell
 gatsby build --prefix-paths
@@ -47,9 +47,9 @@ gatsby build && gatsby serve
 ### Ressources supplémentaires
 
 - Présentation de la création et du déploiement d'un exemple de site dans [première partie du didacticiel](/tutorial/part-one/#deploying-a-gatsby-site)
-- En savoir plus sur [l'optimisation des performances](/docs/performance/)
+- En savoir plus sur l'[optimisation des performances](/docs/performance/)
 - En savoir plus sur d'[autres sujets liés au déploiement](/docs/preparing-for-deployment/)
-- Consultez la [documentation de déploiement](/docs/deploying-and-hosting/) pour des plates-formes d'hébergement spécifiques et comment les déployer
+- Consultez la [documentation de déploiement](/docs/deploying-and-hosting/) pour des plates-formes d'hébergement spécifiques et comment y déployer 
 
 ## Déploiement sur Netlify
 
@@ -58,7 +58,7 @@ Utilisation [`netlify-cli`](https://www.netlify.com/docs/cli/) pour déployer vo
 ### Conditions préalables
 
 - Un [site Gatsby](/docs/quick-start) avec un seul composant `index.js`
-- Le [netlify-cli](https://www.npmjs.com/package/netlify-cli) package installé
+- Le paquet [netlify-cli](https://www.npmjs.com/package/netlify-cli) installé
 - La [CLI Gatsby](/docs/gatsby-cli) installé
 
 ### Instructions
@@ -90,7 +90,7 @@ Utilisez [Now CLI](https://zeit.co/download) pour déployer votre application Ga
 
 - Un compte [ZEIT Now](https://zeit.co/signup)
 - Un [site Gatsby](/docs/quick-start) avec un seul composant `index.js`
-- [Now CLI](https://zeit.co/download) package installé
+- [Now CLI](https://zeit.co/download) installé
 - [Gatsby CLI](/docs/gatsby-cli) installé
 
 ### Instructions
@@ -112,7 +112,7 @@ Utilisez [`wrangler`](https://developers.cloudflare.com/workers/tooling/wrangler
 ### Conditions préalables
 
 - Un compte sur [Cloudflare](https://dash.cloudflare.com/sign-up)
-- Un [Plan Travailleurs Illimité](https://developers.cloudflare.com/workers/about/pricing/) pour \$5/mois pour activer le magasin KV, qui est nécessaire pour servir les fichiers Gatsby.
+- Un [Plan Travailleurs Illimité](https://developers.cloudflare.com/workers/about/pricing/) pour \$5/mois afin d'activer le magasin KV, qui est nécessaire pour servir les fichiers Gatsby.
 - Un [site Gatsby](/docs/quick-start) configuré avec la CLI de Gatsby
 - [wrangler](https://developers.cloudflare.com/workers/tooling/wrangler/install/) installé globalement (`npm i -g @cloudflare/wrangler`)
 
