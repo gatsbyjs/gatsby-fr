@@ -22,7 +22,7 @@ Afficher l'heure. Une fois que vous êtes satisfait de votre site, vous êtes pr
 gatsby build
 ```
 
-3. Pour inclure un chemin d'accès au site autre que `/` (such as `/site-name/`), définissez un préfixe de chemin en ajoutant ce qui suit à votre `gatsby-config.js` et remplacer `yourpathprefix` avec le préfixe de chemin souhaité:
+3. Pour inclure un chemin d'accès au site autre que `/` (comme `/site-name/`), définissez un préfixe de chemin en ajoutant ce qui suit à votre `gatsby-config.js` et remplacer `yourpathprefix` avec le préfixe de chemin souhaité:
 
 ```js:title=gatsby-config.js
 module.exports = {
