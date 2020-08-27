@@ -30,7 +30,7 @@ module.exports = {
 }
 ```
 
-Il y a plusieurs raisons de le faire -- par exemple, héberger un blog construit avec Gatsby sur un domaine avec un autre site non construit sur Gatsby. Le site principal dirigerait vers `example.com`, et le site Gatsby avec un préfixe de chemin pourrait vivre à `example.com/blog`.
+Il y a plusieurs raisons de le faire -- par exemple, héberger un blog construit avec Gatsby sur un domaine avec un autre site non construit sur Gatsby. Le site principal dirigerait vers `example.com`, et le site Gatsby avec un préfixe de chemin pourrait être à `example.com/blog`.
 
 4. Avec un préfixe de chemin défini dans `gatsby-config.js`, courir `gatsby build` avec le `--prefix-paths` flag pour ajouter automatiquement le préfixe au début de toutes les URL des sites Gatsby et `<Link>` mots clés.
 
