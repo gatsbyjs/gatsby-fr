@@ -48,7 +48,7 @@ gatsby build && gatsby serve
 
 - Présentation de la création et du déploiement d'un exemple de site dans [première partie du didacticiel](/tutorial/part-one/#deploying-a-gatsby-site)
 - En savoir plus sur [l'optimisation des performances](/docs/performance/)
-- En savoir plus sur [autres sujets liés au déploiement](/docs/preparing-for-deployment/)
+- En savoir plus sur d'[autres sujets liés au déploiement](/docs/preparing-for-deployment/)
 - Consultez la [documentation de déploiement](/docs/deploying-and-hosting/) pour des plates-formes d'hébergement spécifiques et comment les déployer
 
 ## Déploiement sur Netlify
@@ -82,14 +82,14 @@ Utilisation [`netlify-cli`](https://www.netlify.com/docs/cli/) pour déployer vo
 - [Hébergement sur Netlify](/docs/hosting-on-netlify)
 - [gatsby-plugin-netlify](/packages/gatsby-plugin-netlify)
 
-## Déployer sur ZEIT maintenant
+## Déployer sur ZEIT Now
 
-Utiliser [Now CLI](https://zeit.co/download) pour déployer votre application Gatsby sans quitter l'interface de ligne de commande.
+Utilisez [Now CLI](https://zeit.co/download) pour déployer votre application Gatsby sans quitter l'interface de ligne de commande.
 
 ### Conditions préalables
 
-- Un [ZEIT Now](https://zeit.co/signup) compte
-- Un [Gatsby site](/docs/quick-start) avec un seul composant `index.js`
+- Un compte [ZEIT Now](https://zeit.co/signup)
+- Un [site Gatsby](/docs/quick-start) avec un seul composant `index.js`
 - [Now CLI](https://zeit.co/download) package installé
 - [Gatsby CLI](/docs/gatsby-cli) installé
 
@@ -99,33 +99,33 @@ Utiliser [Now CLI](https://zeit.co/download) pour déployer votre application Ga
 
 2. Accédez au répertoire de votre application Gatsby.js dans le Terminal si vous n'y êtes pas déjà
 
-3. Courir `now` pour le déployer
+3. Lancez `now` pour le déployer
 
 ### Ressources supplémentaires
 
-- [Déploiement sur ZEIT maintenant](/docs/deploying-to-zeit-now/)
+- [Déploiement sur ZEIT Now](/docs/deploying-to-zeit-now/)
 
 ## Déploiement sur Cloudflare Workers
 
-Utilisation [`wrangler`](https://developers.cloudflare.com/workers/tooling/wrangler/) pour déployer votre application Gatsby à l'échelle mondiale sans quitter l'interface de ligne de commande.
+Utilisez [`wrangler`](https://developers.cloudflare.com/workers/tooling/wrangler/) pour déployer votre application Gatsby à l'échelle mondiale sans quitter l'interface de ligne de commande.
 
 ### Conditions préalables
 
 - Un compte sur [Cloudflare](https://dash.cloudflare.com/sign-up)
-- UN [Plan Travailleurs Illimité](https://developers.cloudflare.com/workers/about/pricing/) pour \$5/ mois pour activer le magasin KV, qui est nécessaire pour servir les fichiers Gatsby.
-- UN [Site de Gatsby](/docs/quick-start) configurer avec la CLI de Gatsby
-- [wrangler](https://developers.cloudflare.com/workers/tooling/wrangler/install/) installé dans le monde (`npm i -g @cloudflare/wrangler`)
+- Un [Plan Travailleurs Illimité](https://developers.cloudflare.com/workers/about/pricing/) pour \$5/mois pour activer le magasin KV, qui est nécessaire pour servir les fichiers Gatsby.
+- Un [site Gatsby](/docs/quick-start) configuré avec la CLI de Gatsby
+- [wrangler](https://developers.cloudflare.com/workers/tooling/wrangler/install/) installé globalement (`npm i -g @cloudflare/wrangler`)
 
 ### Instructions
 
 1. Créez votre application Gatsby en utilisant `gatsby build`
-2. Courir `wrangler config` où vous serez invité à entrer votre [jeton d'API Cloudflare](https://developers.cloudflare.com/workers/quickstart/#api-token)
-3. Courir `wrangler init --site`
-4. Configurer `wrangler.toml`. Ajoutez d'abord [numéro de compte](https://developers.cloudflare.com/workers/quickstart/#account-id-and-zone-id) champ puis soit
+2. Lancez `wrangler config` où vous serez invité à entrer votre [jeton d'API Cloudflare](https://developers.cloudflare.com/workers/quickstart/#api-token)
+3. Lancez `wrangler init --site`
+4. Configurez `wrangler.toml`. Ajoutez d'abord un [numéro de compte](https://developers.cloudflare.com/workers/quickstart/#account-id-and-zone-id) champ puis soit
    1. Un domaine workers.dev gratuit en définissant `workers_dev = true`
    2. Un domaine personnalisé sur Cloudflare en définissant `workers_dev = false`, `zone_id = "abdc..` et `route = customdomain.com/*`
-5. Dans `wrangler.toml` ensemble `bucket = "./public"`
-6. Courir `wrangler publish` et votre site sera déployé en quelques secondes!
+5. Dans `wrangler.toml` définissez `bucket = "./public"`
+6. Lancez `wrangler publish` et votre site sera déployé en quelques secondes!
 
 ### Ressources supplémentaires
 
