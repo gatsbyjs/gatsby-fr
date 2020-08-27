@@ -14,7 +14,7 @@ Afficher l'heure. Une fois que vous êtes satisfait de votre site, vous êtes pr
 
 ### Directions
 
-1. Arrêtez votre serveur de développement s'il est en cours d'exécution (`Ctrl + C` sur votre ligne de commande dans la plupart des cas)
+1. Arrêtez votre serveur de développement s'il est en cours d'exécution (`Ctrl + C` sur votre terminal dans la plupart des cas)
 
 2. Pour le chemin du site standard dans le répertoire racine (`/`), courir `gatsby build` à l'aide de l'interface de ligne de commande Gatsby sur la ligne de commande. Les fichiers créés seront désormais dans le `public` dossier.
 
