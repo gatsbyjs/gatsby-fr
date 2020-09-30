@@ -82,7 +82,6 @@ const HomePage = ({ data }) => {
 
 StaticQuery est un composant intégré permettant de récupérer des données de la couche de données de Gatsby dans des composants autres que des pages, tels qu'un en-tête, une navigation ou tout autre composant enfant.
 
-
 Vous ne pouvez avoir qu'une seule `StaticQuery` par page: pour inclure les données dont vous avez besoin à partir de plusieurs sources, vous pouvez utiliser une requête avec plusieurs [champs racine](/docs/graphql-concepts/#query-fields). Il ne peut pas prendre de variables comme arguments.
 
 Reportez-vous également au [guide sur l'interrogation de données dans les composants avec requête statique](/docs/static-query/).
