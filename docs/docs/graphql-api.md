@@ -3,49 +3,49 @@ title: GraphQL API
 tableOfContentsDepth: 2
 ---
 
-A great advantage of Gatsby is a built-in data layer that combines all data sources you configure. Data is collected at [build time](/docs/glossary#build) and automatically assembled into a [schema](/docs/glossary#schema) that defines how data can be queried throughout your site.
+Un grand avantage de Gatsby est une couche de données intégrée qui combine toutes les sources de données que vous configurez. Les données sont collectées au [moment de la construction](/docs/glossary#build) et automatiquement assemblées dans un [schéma](/docs/glossary#schema) qui définit comment les données peuvent être interrogées sur votre site.
 
-This doc serves as a reference for GraphQL features built into Gatsby, including methods for querying and sourcing data, and customizing GraphQL for your site's needs.
+Ce document sert de référence pour les fonctionnalités GraphQL intégrées à Gatsby, y compris les méthodes d'interrogation et de recherche de données, et la personnalisation de GraphQL pour les besoins de votre site.
 
-## Getting started with GraphQL
+## Premiers pas avec GraphQL
 
-GraphQL is available in Gatsby without a special install: a schema is automatically inferred and created when you run `gatsby develop` or `gatsby build`. When the site compiles, the data layer can be [explored](/docs/running-queries-with-graphiql/) at: `http://localhost:8000/___graphql`
+Lorsque le site se compile, la couche de données peut être [explorée](/docs/running-queries-with-graphiql/) à: `http://localhost:8000/___graphql`
 
-## Sourcing data
+## Sourcing de données
 
-Data needs to be [sourced](/docs/content-and-data/) — or added to the GraphQL schema — to be queried and pulled into pages using GraphQL. Gatsby uses [source plugins](/plugins/?=gatsby-source) to pull in data.
+Les données doivent être [sourcées](/docs/content-and-data/) -- ou ajoutées au schéma GraphQL -- pour être interrogées et extraites dans les pages à l'aide de GraphQL. Gatsby utilise [plugins source](/plugins/?=Gatsby-source) pour extraire les données.
 
-**Note**: GraphQL isn't required: you can still [use Gatsby without GraphQL](/docs/using-gatsby-without-graphql/).
+**Remarque**: GraphQL n'est pas nécessaire: vous pouvez toujours [utiliser Gatsby sans GraphQL](/docs/using-gatsby-without-graphql/).
 
-To source data with an existing plugin you have to install all needed packages. Furthermore you have to add the plugin to the plugins array in the `gatsby-config` with any optional configurations. If you want to source data from the filesystem for use with GraphQL, such as Markdown files, images, and more, refer to the [filesystem data sourcing docs](/docs/sourcing-from-the-filesystem/) and [recipes](/docs/recipes/sourcing-data).
+Pour obtenir des données avec un plugin existant, vous devez installer tous les packages nécessaires. De plus, vous devez ajouter le plugin au tableau des plugins dans `gatsby-config` avec toutes les configurations optionnelles. Si vous souhaitez extraire des données du système de fichiers pour une utilisation avec GraphQL, telles que des fichiers Markdown, des images, etc., reportez-vous à la [documentation sur la source de données du système de fichiers](/docs/sourcing-from-the-filesystem/) and [recipes](/docs/recipes/sourcing-data).
 
-For instructions on installing plugins from npm, take a look at the instructions in the docs on [using a plugin](/docs/using-a-plugin-in-your-site/).
+Pour obtenir des instructions sur l'installation de plugins à partir de npm, consultez les instructions dans la documentation sur [utilisation d'un plugin](/docs/using-a-plugin-in-your-site/).
 
-You can also [create custom plugins](/docs/creating-plugins/) to fit your own use cases and pull in data however you want.
+Vous pouvez également [créer des plugins personnalisés](/docs/creating-plugins/) pour s'adapter à vos propres cas d'utilisation et extraire les données comme vous le souhaitez.
 
-## Query components and hooks
+## Composants de requête et hooks
 
-Data can be queried inside pages, components, or the `gatsby-node.js` file, using one of these options:
+Les données peuvent être interrogées à l'intérieur des pages, des composants ou du fichier `gatsby-node.js`, en utilisant l'une de ces options:
 
-- The `pageQuery` component
-- The `StaticQuery` component
-- The `useStaticQuery` hook
+- Le composant `pageQuery`
+- Le component `StaticQuery`
+- Le hook `useStaticQuery`
 
-**Note**: Because of how Gatsby processes GraphQL queries, you can't mix page queries and static queries in the same file. You also can't have multiple page queries or static queries in one file.
+**Remarque**: En raison de la façon dont Gatsby traite les requêtes GraphQL, vous ne pouvez pas mélanger les requêtes de page et les requêtes statiques dans le même fichier. Vous ne pouvez pas non plus avoir plusieurs requêtes de page ou requêtes statiques dans un fichier.
 
-For information on page and non-page components as they relate to queries, check out the docs guide on [building with components](/docs/building-with-components/#how-does-gatsby-use-react-components)
+Pour plus d’informations sur les composants de page et autres que de page en ce qui concerne les requêtes, consultez le guide de documentation sur [création avec des composants](/docs/building-with-components/#how-does-gatsby-use-react-components)
 
 ### `pageQuery`
 
-`pageQuery` is a built-in component that retrieves information from the data layer in Gatsby pages. You can have one page query per page. It can take GraphQL arguments for variables in your queries.
+`pageQuery` est un composant intégré qui récupère les informations de la couche de données dans les pages Gatsby. Vous pouvez avoir une requête de page par page. Il peut prendre des arguments GraphQL pour les variables de vos requêtes.
 
-A [page is made in Gatsby](/docs/page-creation/) by any React component in the `src/pages` folder, or by calling the `createPage` action and using a component in the `createPage` options -- meaning a `pageQuery` won't work in any component, only in components which meet this criteria.
+Une [page est créée dans Gatsby](/docs/page-creation/) par n'importe quel composant React dans le dossier `src / pages`, ou en appelant l'action` createPage` et en utilisant un composant dans les options `createPage` -- ce qui signifie qu'une` pageQuery` ne fonctionnera pas dans n'importe quel composant, uniquement dans les composants qui répondent à ces critères.
 
-Also, refer to the [guide on querying data in pages with page query](/docs/page-query/).
+Reportez-vous également au [guide sur l'interrogation de données dans les pages avec requête de page](/docs/page-query/).
 
 #### Params
 
-A page query isn't a method, but rather an exported variable that's assigned a `graphql` string and a valid query block as its value:
+Une requête de page n'est pas une méthode, mais plutôt une variable exportée à laquelle une chaîne `graphql` et un bloc de requête valide sont attribués comme valeur:
 
 ```javascript
 export const pageQuery = graphql`
@@ -59,11 +59,11 @@ export const pageQuery = graphql`
 `
 ```
 
-**Note**: the query exported in a `const` doesn't need to be named `pageQuery`. More importantly, Gatsby looks for an exported `graphql` string from the file.
+**Remarque**: la requête exportée dans un `const` n'a pas besoin d'être nommée` pageQuery`. Plus important encore, Gatsby recherche une chaîne `graphql` exportée à partir du fichier.
 
-#### Returns
+#### Retour
 
-When included in a page component file, a page query returns a data object that is passed automatically to the component as a prop.
+Lorsqu'elle est incluse dans un fichier de composant de page, une requête de page renvoie un objet de données qui est passé automatiquement au composant en tant que accessoire.
 
 ```jsx
 // highlight-start
@@ -71,7 +71,7 @@ const HomePage = ({ data }) => {
   // highlight-end
   return (
     <div>
-      Hello!
+      Bonjour!
       {data.site.siteMetadata.description} // highlight-line
     </div>
   )
@@ -80,18 +80,19 @@ const HomePage = ({ data }) => {
 
 ### `StaticQuery`
 
-StaticQuery is a built-in component for retrieving data from Gatsby’s data layer in non-page components, such as a header, navigation, or any other child component.
+StaticQuery est un composant intégré permettant de récupérer des données de la couche de données de Gatsby dans des composants autres que des pages, tels qu'un en-tête, une navigation ou tout autre composant enfant.
 
-You can only have one `StaticQuery` per page: in order to include the data you need from multiple sources, you can use one query with multiple [root fields](/docs/graphql-concepts/#query-fields). It cannot take variables as arguments.
 
-Also, refer to the [guide on querying data in components with static query](/docs/static-query/).
+Vous ne pouvez avoir qu'une seule `StaticQuery` par page: pour inclure les données dont vous avez besoin à partir de plusieurs sources, vous pouvez utiliser une requête avec plusieurs [champs racine](/docs/graphql-concepts/#query-fields). Il ne peut pas prendre de variables comme arguments.
+
+Reportez-vous également au [guide sur l'interrogation de données dans les composants avec requête statique](/docs/static-query/).
 
 #### Params
 
-The `StaticQuery` component takes two values as props in JSX:
+Le composant `StaticQuery` prend deux valeurs comme accessoires dans JSX:
 
-- `query`: a `graphql` query string
-- `render`: a component with access to the data returned
+- `query`: une chaîne de requête `graphql`
+- `render`: un composant avec accès aux données renvoyées
 
 ```jsx
 <StaticQuery
@@ -114,9 +115,9 @@ The `StaticQuery` component takes two values as props in JSX:
 />
 ```
 
-#### Returns
+#### Retour
 
-The StaticQuery component returns `data` in a `render` prop:
+Le composant StaticQuery renvoie `data` dans un prop `render`:
 
 ```jsx
 <StaticQuery
@@ -133,17 +134,17 @@ The StaticQuery component returns `data` in a `render` prop:
 
 ### `useStaticQuery`
 
-The `useStaticQuery` hook can be used similar to `StaticQuery` in any component or page, but doesn't require the use of a component and render prop.
+Le hook `useStaticQuery` peut être utilisé comme` StaticQuery` dans n'importe quel composant ou page, mais ne nécessite pas l'utilisation d'un composant et d'un accessoire de rendu.
 
-Because it is a React hook, the [rules of hooks](https://reactjs.org/docs/hooks-rules.html) apply and you'll need to use it with React and ReactDOM version 16.8.0 or later. Because of how queries currently work in Gatsby, only one instance of `useStaticQuery` is supported in each file.
+Comme il s'agit d'un hook React, les [règles des hooks](https://reactjs.org/docs/hooks-rules.html) s'appliquent et vous devrez l'utiliser avec React et ReactDOM version 16.8.0 ou ultérieure. En raison du fonctionnement actuel des requêtes dans Gatsby, une seule instance de `useStaticQuery` est prise en charge dans chaque fichier.
 
-Also, refer to the [guide on querying data in components with useStaticQuery](/docs/use-static-query/).
+Reportez-vous également au [guide sur l'interrogation de données dans les composants avec useStaticQuery](/docs/use-static-query/).
 
 #### Params
 
-The `useStaticQuery` hook takes one argument:
+Le hook `useStaticQuery` prend un argument:
 
-- `query`: a `graphql` query string
+- `query`: une chaîne de requête `graphql`
 
 ```javascript
 const data = useStaticQuery(graphql`
@@ -159,7 +160,7 @@ const data = useStaticQuery(graphql`
 
 #### Returns
 
-The `useStaticQuery` hook returns data in an object:
+Le hook `useStaticQuery` renvoie des données dans un objet:
 
 ```jsx
 const data = useStaticQuery(graphql`
@@ -180,56 +181,56 @@ return (
 )
 ```
 
-## Query structure
+## Structure de la requête
 
-Queries are written in the same shape you want data returned in. How you source data will determine the names of fields that you can query on, based on the nodes they add to the GraphQL schema.
+Les requêtes sont écrites dans la même forme que celle dans laquelle vous souhaitez renvoyer les données. La manière dont vous sourcez les données déterminera les noms des champs sur lesquels vous pouvez effectuer des requêtes, en fonction des nœuds qu'elles ajoutent au schéma GraphQL.
 
-For understanding the parts of a query refer to the [conceptual guide](/docs/graphql-concepts/#understanding-the-parts-of-a-query).
+Pour comprendre les parties d'une requête, reportez-vous au [guide conceptuel](/docs/graphql-concepts/#understanding-the-parts-of-a-query).
 
-### GraphQL query arguments
+### Arguments de requête GraphQL
 
-GraphQL queries can take arguments to alter how the data is returned. The logic for these arguments is handled internally by Gatsby. Arguments can be passed into fields at any level of the query.
+Les requêtes GraphQL peuvent prendre des arguments pour modifier la manière dont les données sont renvoyées. La logique de ces arguments est gérée en interne par Gatsby. Les arguments peuvent être passés dans des champs à n'importe quel niveau de la requête.
 
-Different nodes can take different arguments based off of the nature of the node.
+Différents nœuds peuvent accepter différents arguments en fonction de la nature du nœud.
 
-The arguments you can pass to collections (like arrays or long lists of data - ex. `allFile`, or `allMdx`) are:
+Les arguments que vous pouvez passer aux collections (comme les tableaux ou les longues listes de données - par exemple `allFile` ou` allMdx`) sont:
 
 - [`filter`](/docs/graphql-reference#filter)
 - [`limit`](/docs/graphql-reference#limit)
 - [`sort`](/docs/graphql-reference#sort)
 - [`skip`](/docs/graphql-reference#skip)
 
-The arguments you can pass to a `date` field are:
+Les arguments que vous pouvez passer à un champ `date` sont:
 
 - [`formatString`](/docs/graphql-reference#dates)
 - [`locale`](/docs/graphql-reference#dates)
 
-The arguments you can pass to an `excerpt` field are:
+Les arguments que vous pouvez passer à un champ `excerpt` sont:
 
 - [`pruneLength`](/docs/graphql-reference#excerpt)
 - [`truncate`](/docs/graphql-reference#excerpt)
 
-### Graphql query operations
+### Opérations de requête Graphql
 
-Other built-in configurations can be used in queries
+D'autres configurations intégrées peuvent être utilisées dans les requêtes
 
 - [`Alias`](/docs/graphql-reference#alias)
 - [`Group`](/docs/graphql-reference#group)
 
-For examples, refer to the [query recipes](/docs/recipes/querying-data) and [GraphQL query options reference guide](/docs/graphql-reference/).
+Pour des exemples, reportez-vous aux [recettes de requête](/docs/recipes/querying-data) et au [guide de référence des options de requête GraphQL](/docs/graphql-reference/).
 
-## Query fragments
+## Requête fragments
 
-Fragments allow you to reuse parts of GraphQL queries. They also allow you to split up complex queries into smaller, easier to understand components.
+Les fragments vous permettent de réutiliser des parties de requêtes GraphQL. Ils vous permettent également de diviser les requêtes complexes en composants plus petits et plus faciles à comprendre.
 
-For more information, check out the docs guide on [using fragments in Gatsby](/docs/using-graphql-fragments/).
+FPour plus d'informations, consultez le guide de la documentation sur [l'utilisation de fragments dans Gatsby](/docs/using-graphql-fragments/).
 
-### Gatsby fragments
+### Fragments de Gatsby
 
-Some fragments come included in Gatsby plugins, such as fragments for returning optimized image data in various formats with `gatsby-image` and `gatsby-transformer-sharp`, or data fragments with `gatsby-source-contentful`. For more information on what plugins include fragments, see the [`gatsby-image` README](/packages/gatsby-image#fragments).
+Certains fragments sont inclus dans les plugins Gatsby, tels que des fragments pour renvoyer des données d'image optimisées dans divers formats avec `gatsby-image` et` gatsby-transformer-sharp`, ou des fragments de données avec `gatsby-source-contentful`. Pour plus d'informations sur les plugins contenant des fragments, consultez le [`gatsby-image` README](/packages/gatsby-image#fragments).
 
-## Advanced customizations
+## Personnalisations avancées
 
-You can customize sourced data in the GraphQL layer and create relationships between nodes with the [Gatsby Node APIs](/docs/node-apis/).
+Vous pouvez personnaliser les données d'origine dans la couche GraphQL et créer des relations entre les nœuds avec les [API Gatsby Node](/docs/node-apis/).
 
-The GraphQL schema can be customized for more advanced use cases: read more about it in the [schema customization API docs](/docs/schema-customization/).
+Le schéma GraphQL peut être personnalisé pour des cas d'utilisation plus avancés: en savoir plus à ce sujet dans la [documentation de l'API de personnalisation du schéma](/docs/schema-customization/).
