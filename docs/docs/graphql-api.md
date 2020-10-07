@@ -9,7 +9,7 @@ Ce document sert de référence pour les fonctionnalités GraphQL intégrées à
 
 ## Premiers pas avec GraphQL
 
-Lorsque le site se compile, la couche de données peut être [explorée](/docs/running-queries-with-graphiql/) à: `http://localhost:8000/___graphql`
+GraphQL est disponible dans Gatsby sans installation spéciale: un schéma est automatiquement déduit et créé lorsque vous exécutez `gatsby develop` ou` gatsby build`. Lorsque le site se compile, la couche de données peut être [explorée](/docs/running-queries-with-graphiql/) à: `http://localhost:8000/___graphql`
 
 ## Sourcing de données
 
