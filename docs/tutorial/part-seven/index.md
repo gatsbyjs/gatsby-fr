@@ -107,7 +107,7 @@ un par fichier markdown.
 
 Nous allons directement ajouter ces nouveaux slugs aux nœuds `MarkdownRemark`. C'est très astucieux, 
 car toutes les données que vous ajoutez aux nœuds seront accessibles plus tard via des 
-requêtes GraphQL. Ainsi, il sera facile de recuperer le slug quand il faudra créer les pages.
+requêtes GraphQL. Ainsi, il sera facile de récupérer le slug quand il faudra créer les pages.
 
 Pour faire cela, vous devez passer à votre implementation de l'API une fonction appelée
 [`createNodeField`](/docs/actions/#createNodeField). Cette fonction vous permet d'ajouter 
