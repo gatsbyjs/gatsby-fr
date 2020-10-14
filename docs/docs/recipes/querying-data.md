@@ -7,7 +7,7 @@ Gatsby vous permet d'accéder aux données de toutes vos sources en utilisant un
 
 ## Récupérer les données via une requête de page (Page Query)
 
-Vous pouvez utiliser l'étiquette `graphql` pour récupérer des données dans les pages de votre site Gatsby. Cela vous permet d'avoir accès à tout ce qui est inclus dans la couche de données Gatsby (par exemple, les métadonnées de votre site, les plugins source, les images et bien plus encore).  
+Vous pouvez utiliser le tag `graphql` pour récupérer des données dans les pages de votre site Gatsby. Cela vous permet d'avoir accès à tout ce qui est inclus dans la couche de données Gatsby (par exemple, les métadonnées de votre site, les plugins source, les images et bien plus encore).  
 
 ### Instructions
 
@@ -57,7 +57,7 @@ export default IndexPage
 
 ## Récupérer les données via un composant StaticQuery
 
-`StaticQuery` est un composant qui permet à des [composants non-page](/docs/static-query/) (tels qu'un en-tête, un composant de navigation ou tout autre composant enfant) de récupérer les informations de la couche de données Gatsby.
+`StaticQuery` est un composant qui permet à des composants [NonPageComponent](/docs/static-query/) (tels qu'un en-tête, un composant de navigation ou tout autre composant enfant) de récupérer les informations de la couche de données Gatsby.
 
 ### Instructions
 
@@ -82,7 +82,7 @@ const NonPageComponent = () => (
       data // highlight-line
     ) => (
       <h1>
-        Titre récupéré par le composant non-page via une StaticQuery:
+        Titre récupéré par le NonPageComponent via une StaticQuery:
         {data.site.siteMetadata.title}
       </h1>
     )}
@@ -92,7 +92,7 @@ const NonPageComponent = () => (
 export default NonPageComponent
 ```
 
-2. Vous pouvez alors utiliser ce composant comme n'importe quel autre [composant non-page](/docs/building-with-components#non-page-components) en l'important dans une page plus complexe, contenant d'autres composants JSX et des balises HTML.
+2. Vous pouvez alors utiliser ce composant comme n'importe quel autre [NonPageComponent](/docs/building-with-components#non-page-components) en l'important dans une page plus complexe, contenant d'autres composants JSX et des balises HTML.
 
 ## Récupérer les données via un hook useStaticQuery
 
