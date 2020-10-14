@@ -142,7 +142,7 @@ export default NonPageComponent
 
 ### Ressources additionnelles
 
-- Plus sur [l'utilisation de StaticQuery dans les composants pour récupérer les données](/docs/static-query/)
+- [Plus sur l'utilisation de StaticQuery dans les composants pour récupérer les données](/docs/static-query/)
 - [Différence entre une StaticQuery et une requête de page](/docs/static-query/#how-staticquery-differs-from-page-query)
 - [Plus d'informations sur le hook useStaticQuery](/docs/use-static-query/)
 - [Visualiser vos données à l'aide de GraphiQL](/docs/introducing-graphiql/)
