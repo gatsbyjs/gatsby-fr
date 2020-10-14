@@ -200,7 +200,7 @@ Vous avez ajouté une implementation de [`createPages`](/docs/node-apis/#createP
 Comme nous l'avons déjà dit dans l'introduction à ce tutoriel, pour créer des pages 
 de façon dynamique, il faut:
 
-1.  Récupèrer les données avec GraphQL
+1.  Récupérer les données avec GraphQL
 2.  Affectez les résultats des requêtes aux pages 
 
 Le code précédent est la première étape pour créer des pages à partir de vos fichiers
