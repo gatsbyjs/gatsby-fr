@@ -1,27 +1,27 @@
 ---
-title: "Recipes: Working with Images"
+title: "Recettes: travailler avec des images"
 tableOfContentsDepth: 1
 ---
 
-Access images as static resources, or automate the process of optimizing them through powerful plugins.
+Accédez aux images en tant que ressources statiques ou automatisez le processus d'optimisation grâce à de puissants plugins.
 
-## Import an image into a component with webpack
+## Importer une image dans un composant avec webpack
 
-Images can be imported right into a JavaScript module with webpack. This process automatically minifies and copies the image to your site's `public` folder, providing a dynamic image URL for you to pass to an HTML `<img>` element like a regular file path.
+Les images peuvent être importées directement dans un module JavaScript avec webpack. Ce processus réduit et copie automatiquement l'image sur votre site `public` dossier, fournir une URL d'image dynamique à transmettre à un code HTML `<img>` élément comme un chemin de fichier normal.
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-import-a-local-image-into-a-gatsby-component-with-webpack"
   lessonTitle="Import a Local Image into a Gatsby Component with webpack"
 />
 
-### Prerequisites
+### Conditions préalables
 
-- A [Gatsby Site](/docs/quick-start) with a `.js` file exporting a React component
-- an image (`.jpg`, `.png`, `.gif`, `.svg`, etc.) in the `src` folder
+- Une [Gatsby Site](/docs/quick-start) avec un `.js` fichier exportation d'un composant React
+- une image (`.jpg`, `.png`, `.gif`, `.svg`, etc.) dans le `src` dossier
 
 ### Directions
 
-1. Import your file from its path in the `src` folder:
+1. Importez votre fichier à partir de son chemin dans le `src` dossier:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -29,7 +29,7 @@ import React from "react"
 import FiestaImg from "../assets/fiesta.jpg" // highlight-line
 ```
 
-2. In `index.js`, add an `<img>` tag with the `src` as the name of the import you used from webpack (in this case `FiestaImg`), and add an `alt` attribute [describing the image](https://webaim.org/techniques/alttext/):
+2. Dans `index.js`, ajouter un `<img>` tag avec le `src` comme nom de l'importation que vous avez utilisé à partir de webpack (dans ce cas `FiestaImg`), et ajoutez un `alt` attribut [décrivant l'image](https://webaim.org/techniques/alttext/):
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -41,33 +41,33 @@ export default () => (
 )
 ```
 
-3. Run `gatsby develop` to start the development server.
-4. View your image in the browser: `http://localhost:8000/`
+3. Courir `gatsby develop` pour démarrer le serveur de développement.
+4. Affichez votre image dans le navigateur: `http://localhost:8000/`
 
-### Additional resources
+### Ressources additionnelles
 
-- [Example repo importing an image with webpack](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-webpack-image)
-- [More on all image techniques in Gatsby](/docs/images-and-files/)
+- [Exemple de référentiel d'importation d'une image avec webpack](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-webpack-image)
+- [En savoir plus sur toutes les techniques d'image dans Gatsby](/docs/images-and-files/)
 
-## Reference an image from the `static` folder
+## Référencez une image du `static` dossier
 
-As an alternative to importing assets with webpack, the `static` folder allows access to content that gets automatically copied into the `public` folder when built.
+Comme alternative à l'importation d'actifs avec webpack, le dossier `static` permet d'accéder au contenu qui est automatiquement copié dans le dossier `public` une fois construit.
 
-This is an **escape route** for [specific use cases](/docs/static-folder/#when-to-use-the-static-folder), and other methods like [importing with webpack](#import-an-image-into-a-component-with-webpack) are recommended to leverage optimizations made by Gatsby.
+C'est un **sortie de secours** pour [cas d'utilisation spécifiques](/docs/static-folder/#when-to-use-the-static-folder), et d'autres méthodes comme [importation avec webpack](#import-an-image-into-a-component-with-webpack) sont recommandés pour tirer parti des optimisations faites par Gatsby.
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-use-a-local-image-from-the-static-folder-in-a-gatsby-component"
   lessonTitle="Use a local image from the static folder in a Gatsby component"
 />
 
-### Prerequisites
+### Conditions préalables
 
-- A [Gatsby Site](/docs/quick-start) with a `.js` file exporting a React component
-- An image (`.jpg`, `.png`, `.gif`, `.svg`, etc.) in the `static` folder
+- Une [Gatsby Site](/docs/quick-start) avec un `.js` fichier exportation d'un composant React
+- Une image (`.jpg`, `.png`, `.gif`, `.svg`, etc.) dans le `static` dossier
 
 ### Directions
 
-1. Ensure that the image is in your `static` folder at the root of the project. Your project structure might look something like this:
+1. Assurez-vous que l'image se trouve dans votre dossier `static` à la racine du projet. La structure de votre projet pourrait ressembler à ceci:
 
 ```text
 ├── gatsby-config.js
@@ -78,7 +78,7 @@ This is an **escape route** for [specific use cases](/docs/static-folder/#when-t
 │       └── fiesta.jpg
 ```
 
-2. In `index.js`, add an `<img>` tag with the `src` as the relative path of the file from the `static` folder, and add an `alt` attribute [describing the image](https://webaim.org/techniques/alttext/):
+2. Dans `index.js`, ajoutez une balise `<img>` avec le `src` comme chemin relatif du fichier depuis le dossier `static`, et ajoutez un attribut `alt` [décrivant l'image](https://webaim.org/techniques/alttext/):
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -88,13 +88,13 @@ export default () => (
 )
 ```
 
-3. Run `gatsby develop` to start the development server.
-4. View your image in the browser: `http://localhost:8000/`
+3. Exécutez `gatsby develop` pour démarrer le serveur de développement.
+4. Affichez votre image dans le navigateur: `http://localhost:8000/`
 
-### Additional resources
+### Ressources additionnelles
 
-- [Example repo referencing an image from the static folder](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-static-image)
-- [Using the Static Folder](/docs/static-folder/)
+- [Exemple de référentiel référençant une image du dossier statique](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-static-image)
+- [Utilisation du dossier statique](/docs/static-folder/)
 - [More on all image techniques in Gatsby](/docs/images-and-files/)
 
 ## Optimizing and querying local images with gatsby-image
