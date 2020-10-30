@@ -7,7 +7,7 @@ Gatsby vous permet d'accéder aux données de toutes vos sources en utilisant un
 
 ## Récupérer les données via une requête de page (Page Query)
 
-Vous pouvez utiliser le tag `graphql` pour récupérer des données dans les pages de votre site Gatsby. Cela vous permet d'avoir accès à tout ce qui est inclus dans la couche de données Gatsby (par exemple, les métadonnées de votre site, les plugins source, les images et bien plus encore).  
+Vous pouvez utiliser l'étiquette _(tag, NdT)_ `graphql` pour récupérer des données dans les pages de votre site Gatsby. Cela vous permet d'avoir accès à tout ce qui est inclus dans la couche de données Gatsby (par exemple, les métadonnées de votre site, les plugins source, les images et bien plus encore).  
 
 ### Instructions
 
