@@ -8,7 +8,7 @@ Merci d'aller jeter un oeil ici  [Translation Progress Issue](https://github.com
 Quelques liens utiles :
 
 * [Style Guide](/style-guide.md)
-* [Gatsby Translation Guide](https://www.gatsbyjs.org/contributing/gatsby-docs-translation-guide/) : idéalement à lire avant de vous lancer dans l'aventure. 
+* [Gatsby Translation Guide](https://www.gatsbyjs.com/contributing/gatsby-docs-translation-guide/) : idéalement à lire avant de vous lancer dans l'aventure. 
 * [Liste des termes communs](/common-terms.md) : liste évolutive des termes qui peuvent poser un problème de traduction. 
 * [Gatsby Discord](https://gatsby.dev/discord) : rejoignez-nous pour discuter librement dans le salon dédié : `translation-fr`. 
 
