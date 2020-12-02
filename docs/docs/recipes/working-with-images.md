@@ -1,5 +1,5 @@
 ---
-Titre: "Recettes: travailler avec des images"
+title: "Recipes: Working with Images"
 tableOfContentsDepth: 1
 ---
 
@@ -44,7 +44,7 @@ export default function Home() {
 ```
 
 3. Exécutez `gatsby develop` pour démarrer le serveur de développement.
-4. Affichez votre image dans le navigateur: `http: // localhost: 8000 /`
+4. Affichez votre image dans le navigateur: `http://localhost:8000/`
 
 ### Ressources additionnelles
 
@@ -64,7 +64,7 @@ Il s'agit d'une **route d'échappement** pour [cas d'utilisation spécifiques](/
 
 ### Conditions préalables
 
-- Un [Site Gatsby](/docs/quick-start) avec un fichier `.js` exportant un composant React
+- Un [site Gatsby](/docs/quick-start) avec un fichier `.js` exportant un composant React
 - Une image (`.jpg`, `.png`, `.gif`, `.svg`, etc.) dans le dossier `static`
 
 ### Les directions
@@ -125,7 +125,7 @@ import Img from "gatsby-image" // to take image data and render it
 
 Choisissez l'une des options suivantes ou une combinaison d'entre elles.
 
-une. une seule image interrogée par son fichier [chemin] (/docs/content-and-data/) (Exemple: `images/corgi.jpg`)
+a. une seule image interrogée par son fichier [chemin] (/docs/content-and-data/) (Exemple: `images/corgi.jpg`)
 
 ```jsx
 const data = useStaticQuery(graphql`
@@ -212,7 +212,7 @@ return (
 
 **Remarque**: Cette méthode peut rendre difficile la correspondance des images avec le texte `alt` pour l'accessibilité. Cet exemple utilise des images avec le texte `alt` inclus dans le nom de fichier, comme `dog in a party hat.jpg`.
 
-ré. une image de taille fixe utilisant le champ `fixed` au lieu de `fluid`
+d. une image de taille fixe utilisant le champ `fixed` au lieu de `fluid`
 
 ```jsx
 const data = useStaticQuery(graphql`
@@ -250,7 +250,7 @@ return (
 )
 ```
 
-F. une image remplissant un récipient de fluide avec une largeur max (en pixels) et une qualité supérieure (la valeur par défaut est 50 soit 50%)
+f. une image remplissant un récipient de fluide avec une largeur max (en pixels) et une qualité supérieure (la valeur par défaut est 50 soit 50%)
 
 ```jsx
 const data = useStaticQuery(graphql`
@@ -350,7 +350,7 @@ exports.createPages = async ({ graphql, actions }) => {
 }
 ```
 
-3. Maintenant, importez `Img` de `gatsby-image` et `graphql` de `gatsby` dans le composant de modèle, écrivez une [pageQuery](/docs/page-query/) pour obtenir des données d'image basées sur les dans `slug` et transmettez ces données au composant` <Img /> `:
+3. Maintenant, importez `Img` de `gatsby-image` et `graphql` de `gatsby` dans le composant de modèle , écrivez une [pageQuery](/docs/page-query/) pour obtenir des données d'image basées sur le `slug` passé et passer ces données au composant `<Img />`:
 
 ```jsx:title=markdown-layout.jsx
 import React from "react"
