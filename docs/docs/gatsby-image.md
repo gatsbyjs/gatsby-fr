@@ -2,17 +2,17 @@
 title: Gatsby Image API
 ---
 
-Part of what makes Gatsby sites so fast is its recommended approach to handling images. `gatsby-image` is a React component designed to work seamlessly with Gatsby’s [native image processing](https://image-processing.gatsbyjs.org/) capabilities powered by GraphQL and [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/) to easily and completely optimize image loading for your sites.
+Une partie de ce qui rend les sites Gatsby si rapides est son approche recommandée pour la gestion des images. `gatsby-image` est un composant React conçu pour fonctionner de manière transparente avec les capacités de [native image processing](https://image-processing.gatsbyjs.org/) de Gatsby optimisées par GraphQL et [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/) pour optimiser facilement et complètement le chargement d'images pour vos sites.
 
-> _Note: gatsby-image is **not** a drop-in replacement for `<img />`. It’s optimized for responsive fixed width/height images and images that stretch the full-width of a container. There are also other ways to [work with images](/docs/images-and-files/) in Gatsby that don't require GraphQL._
+> _Remarque: gatsby-image n'est **pas** un remplacement instantané de `<img />`. Il est optimisé pour les images réactives de largeur / hauteur fixe et les images qui s'étendent sur toute la largeur d'un conteneur. Il existe également d'autres façons de [work with images](/docs/images-and-files/) dans Gatsby qui ne nécessitent pas GraphQL._
 
 Demo: [https://using-gatsby-image.gatsbyjs.org/](https://using-gatsby-image.gatsbyjs.org/)
 
 ## Setting up Gatsby Image
 
-To start working with Gatsby Image, install the `gatsby-image` package along with necessary plugins `gatsby-transformer-sharp` and `gatsby-plugin-sharp`. Reference the packages in your `gatsby-config.js` file. You can also provide additional options to [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp/) in your config file.
+Pour commencer à travailler avec Gatsby Image, installez le package `gatsby-image` avec les plugins nécessaires` gatsby-transformer-sharp` et `gatsby-plugin-sharp`. Faites référence aux packages dans votre fichier `gatsby-config.js`. Vous pouvez également fournir des options supplémentaires à [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp/) dans votre fichier de configuration.
 
-A common way to source images is to install and use `gatsby-source-filesystem` to connect your local files, but other source plugins can be used as well, such as `gatsby-source-contentful`, `gatsby-source-datocms` and `gatsby-source-sanity`.
+Une façon courante de générer des images est d'installer et d'utiliser `gatsby-source-filesystem` pour connecter vos fichiers locaux, mais d'autres plugins sources peuvent également être utilisés, tels que` gatsby-source-contentful`, `gatsby-source-datocms `et` gatsby-source-sanity`.
 
 ```bash
 npm install --save gatsby-image gatsby-plugin-sharp gatsby-transformer-sharp
@@ -33,27 +33,27 @@ module.exports = {
 }
 ```
 
-_For in-depth install instructions, check out the docs on [Using Gatsby Image](/docs/using-gatsby-image/)._
+_Pour des instructions d'installation détaillées, consultez la documentation sur [Using Gatsby Image](/docs/using-gatsby-image/)._
 
 ### Gatsby image starts with a query
 
-To feed file data in to Gatsby Image, set up a [GraphQL query](/docs/graphql-reference/) and either pass it into a component as props or write it directly in the component. One technique is to leverage the [`useStaticQuery`](/docs/use-static-query/) hook.
+Pour alimenter les données du fichier dans Gatsby Image, configurez une [GraphQL query](/docs/graphql-reference/) et transmettez-la dans un composant en tant qu'accessoires ou écrivez-la directement dans le composant. Une technique consiste à tirer parti du hook [`useStaticQuery`](/docs/use-static-query/).
 
-Common GraphQL queries for sourcing images include `file` from [gatsby-source-filesystem](/packages/gatsby-source-filesystem/), and both `imageSharp` and `allImageSharp` from [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/), but ultimately the options available to you will depend on your content sources.
+Les requêtes GraphQL courantes pour la recherche d'images incluent `file` de [gatsby-source-filesystem](/packages/gatsby-source-filesystem/), ainsi que` imageSharp` et `allImageSharp` de [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/), mais en fin de compte, les options disponibles dépendront de vos sources de contenu.
 
-> Note: you can also use [GraphQL aliases](/docs/graphql-reference/#aliasing) for querying multiple images of the same type.
+> Remarque: vous pouvez également utiliser les [alias GraphQL](/docs/graphql-reference/#aliasing) pour interroger plusieurs images du même type.
 
-See below for code examples of queries and how to use them in components.
+Voir ci-dessous pour des exemples de code de requêtes et comment les utiliser dans les composants.
 
 ## Types of images with `gatsby-image`
 
-Gatsby image objects are created through GraphQL methods. There are two types of image optimizations available, _fixed_ and _fluid_, which create multiple image sizes (1x, 1.5x, etc.). There is also the _resize_ method, which returns a single image.
+Les objets image Gatsby sont créés via les méthodes GraphQL. Il existe deux types d'optimisations d'image disponibles, _fixed_ et _fluid_, qui créent plusieurs tailles d'image (1x, 1,5x, etc.). Il existe également la méthode _resize_, qui renvoie une seule image.
 
 ### Images with a _fixed_ width and height
 
-Automatically create images for different resolutions at a set width or height — Gatsby creates responsive images for 1x, 1.5x, and 2x pixel densities using the `<picture>` element.
+Créez automatiquement des images pour différentes résolutions à une largeur ou une hauteur définie - Gatsby crée des images réactives pour des densités de pixels 1x, 1,5x et 2x à l'aide de l'élément `<picture>`.
 
-Once you've queried for a `fixed` image to retrieve its data, you can pass that data into the `Img` component:
+Une fois que vous avez demandé une image `fixed` pour récupérer ses données, vous pouvez passer ces données dans le composant `Img`:
 
 ```jsx
 import { useStaticQuery, graphql } from "gatsby"
@@ -89,7 +89,7 @@ export default () => {
 
 #### Fixed image query parameters
 
-In a query, you can specify options for fixed images.
+Dans une requête, vous pouvez spécifier des options pour les images fixes.
 
 - `width` (int, default: 400)
 - `height` (int)
@@ -104,7 +104,7 @@ In a query, you can specify options for fixed images.
 - `src` (string)
 - `srcSet` (string)
 
-This is where fragments like `GatsbyImageSharpFixed` come in handy, as they'll return all the above items in one line without having to type them all out:
+C'est là que des fragments comme `GatsbyImageSharpFixed` sont utiles, car ils renverront tous les éléments ci-dessus sur une ligne sans avoir à tous les taper:
 
 ```graphql
 file(relativePath: { eq: "images/default.jpg" }) {
@@ -118,13 +118,13 @@ file(relativePath: { eq: "images/default.jpg" }) {
 }
 ```
 
-Read more about fixed image queries in the [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/#fixed) README.
+En savoir plus sur les requêtes d'images fixes dans le README [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/#fixed).
 
 ### Images that stretch across a _fluid_ container
 
-Create flexible sizes for an image that stretches to fill its container. E.g. for a container whose max width is 800px, the automatic sizes would be: 200px, 400px, 800px, 1200px and 1600px – enough to provide close to the optimal image size for every device size / screen resolution. If you want more control over which sizes are output you can use the `srcSetBreakpoints` parameter.
+Créez des tailles flexibles pour une image qui s'étire pour remplir son conteneur. Par exemple. pour un conteneur dont la largeur maximale est de 800px, les tailles automatiques seraient: 200px, 400px, 800px, 1200px et 1600px - suffisamment pour fournir une taille d'image proche de la taille optimale pour chaque taille de périphérique / résolution d'écran. Si vous voulez plus de contrôle sur les tailles produites, vous pouvez utiliser le paramètre `srcSetBreakpoints`.
 
-Once you've queried for a `fluid` image to retrieve its data, you can pass that data into the `Img` component:
+Une fois que vous avez demandé une image `fluid` pour récupérer ses données, vous pouvez passer ces données dans le composant` Img`:
 
 ```jsx
 import { useStaticQuery, graphql } from "gatsby"
@@ -160,7 +160,7 @@ export default () => {
 
 #### Fluid image query parameters
 
-In a query, you can specify options for fluid images.
+Dans une requête, vous pouvez spécifier des options pour les images fluides.
 
 - `maxWidth` (int, default: 800)
 - `maxHeight`(int)
@@ -178,7 +178,7 @@ In a query, you can specify options for fluid images.
 - `sizes` (string)
 - `originalImg` (string)
 
-This is where fragments like `GatsbyImageSharpFluid` come in handy, as they'll return all the above items in one line without having to type them all out:
+C'est là que des fragments comme `GatsbyImageSharpFluid` sont utiles, car ils renverront tous les éléments ci-dessus sur une ligne sans avoir à tous les taper:
 
 ```graphql
 file(relativePath: { eq: "images/default.jpg" }) {
@@ -192,11 +192,11 @@ file(relativePath: { eq: "images/default.jpg" }) {
 }
 ```
 
-Read more about fluid image queries in the [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/#fluid) README.
+En savoir plus sur les requêtes d'images fluides dans le README [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/#fluid).
 
 ### Resized images
 
-In addition to _fixed_ and _fluid_ images, the gatsby-image API allows you to call a `resize` method with `gatsby-plugin-sharp` to return a single image as opposed to multiple sizes. There are no default fragments available for the resize method.
+En plus des images _fixed_ et _fluid_, l'API gatsby-image vous permet d'appeler une méthode `resize` avec `gatsby-plugin-sharp` pour renvoyer une seule image par opposition à plusieurs tailles. Aucun fragment par défaut n'est disponible pour la méthode de redimensionnement.
 
 #### Parameters
 
@@ -209,7 +209,7 @@ In addition to _fixed_ and _fluid_ images, the gatsby-image API allows you to ca
 
 #### Returns
 
-Resize returns an object with the following items:
+Resize renvoie un objet avec les éléments suivants:
 
 - `src` (string)
 - `width` (int)
@@ -228,11 +228,11 @@ allImageSharp {
 }
 ```
 
-Read more about resized image queries in the [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/#resize) README.
+En savoir plus sur les requêtes d'images redimensionnées dans le README [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/#resize).
 
 ### Shared query parameters
 
-In addition to `gatsby-plugin-sharp` settings in `gatsby-config.js`, there are additional query options that apply to _fluid_, _fixed_, and _resized_ images:
+En plus des paramètres `gatsby-plugin-sharp` dans `gatsby-config.js`, il existe des options de requête supplémentaires qui s'appliquent aux images _fluid_, _fixed_ et _resized_:
 
 - [`grayscale`](/packages/gatsby-plugin-sharp/#grayscale) (bool, default: false)
 - [`duotone`](/packages/gatsby-plugin-sharp/#duotone) (bool|obj, default: false)
@@ -242,7 +242,7 @@ In addition to `gatsby-plugin-sharp` settings in `gatsby-config.js`, there are a
 - [`pngCompressionSpeed`](/packages/gatsby-plugin-sharp/#pngcompressionspeed) (int, default: 4)
 - [`rotate`](/packages/gatsby-plugin-sharp/#rotate) (int, default: 0)
 
-Here's an example of using the `duotone` option with a fixed image:
+Voici un exemple d'utilisation de l'option `duotone` avec une image fixe:
 
 ```graphql
 fixed(
@@ -262,7 +262,7 @@ fixed(
   <figcaption>Duotone | Before - After</figcaption>
 </figure>
 
-And an example of using the `grayscale` option with a fixed image:
+Et un exemple d'utilisation de l'option `grayscale` avec une image fixe:
 
 ```graphql
 fixed(
@@ -278,13 +278,13 @@ fixed(
   <figcaption>Grayscale | Before - After</figcaption>
 </figure>
 
-Read more about shared image query parameters in the [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp/#shared-options) README.
+En savoir plus sur les paramètres de requête d'image partagée dans le fichier README [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp/#shared-options).
 
 ## Image query fragments
 
-GraphQL includes a concept called "query fragments", which are a part of a query that can be reused. To ease building with `gatsby-image`, Gatsby image processing plugins which support `gatsby-image` ship with fragments which you can easily include in your queries.
+GraphQL inclut un concept appelé "fragments de requête", qui font partie d'une requête qui peut être réutilisée. Pour faciliter la construction avec `gatsby-image`, les plugins de traitement d'image Gatsby qui prennent en charge `gatsby-image` sont livrés avec des fragments que vous pouvez facilement inclure dans vos requêtes.
 
-> Note: using fragments in your queries depends on which data source(s) you have configured. Read more about image query fragments in the [gatsby-image](/packages/gatsby-image/#fragments) README.
+> Remarque: l'utilisation de fragments dans vos requêtes dépend de la ou des sources de données que vous avez configurées. En savoir plus sur les fragments de requête d'image dans le fichier README [gatsby-image](/packages/gatsby-image/#fragments).
 
 ### Common fragments with `gatsby-transformer-sharp`
 
@@ -308,17 +308,17 @@ GraphQL includes a concept called "query fragments", which are a part of a query
 
 #### About `noBase64`
 
-If you don't want to use the [blur-up effect](https://using-gatsby-image.gatsbyjs.org/blur-up/), choose the fragment with `noBase64` at the end.
+Si vous ne voulez pas utiliser l '[blur-up effect](https://using-gatsby-image.gatsbyjs.org/blur-up/), choisissez le fragment avec `noBase64` à la fin.
 
 #### About `tracedSVG`
 
-If you want to use the [traced placeholder SVGs](https://using-gatsby-image.gatsbyjs.org/traced-svg/), choose the fragment with `tracedSVG` at the end.
+Si vous voulez utiliser les [traced placeholder SVGs](https://using-gatsby-image.gatsbyjs.org/traced-svg/), choisissez le fragment avec `tracedSVG` à la fin.
 
 #### About `withWebP`
 
-If you want to automatically use [WebP images](https://developers.google.com/speed/webp/) when the browser supports the file format, use the `withWebp` fragments. If the browser doesn't support WebP, `gatsby-image` will fall back to the default image format.
+Si vous souhaitez utiliser automatiquement [images WebP](https://developers.google.com/speed/webp/) lorsque le navigateur prend en charge le format de fichier, utilisez les fragments `withWebp`. Si le navigateur ne prend pas en charge WebP, `gatsby-image` reviendra au format d'image par défaut.
 
-Here's an example of using a non-default fragment from `gatsby-transformer-sharp`. Be sure to pick one that matches your desired image type (_fixed_ or _fluid_):
+Voici un exemple d'utilisation d'un fragment autre que celui par défaut de `gatsby-transformer-sharp`. Assurez-vous d'en choisir une qui correspond au type d'image souhaité (_fixed_ ou _fluid_):
 
 ```graphql
 file(relativePath: { eq: "images/default.jpg" }) {
@@ -331,15 +331,15 @@ file(relativePath: { eq: "images/default.jpg" }) {
 }
 ```
 
-For more info on how these options work, check out the Gatsby Image demo: [https://using-gatsby-image.gatsbyjs.org/](https://using-gatsby-image.gatsbyjs.org/)
+Pour plus d'informations sur le fonctionnement de ces options, consultez la démo de Gatsby Image: [https://using-gatsby-image.gatsbyjs.org/](https://using-gatsby-image.gatsbyjs.org/)
 
 #### Additional plugin fragments
 
-Additionally, plugins supporting `gatsby-image` currently include [gatsby-source-contentful](/packages/gatsby-source-contentful/), [gatsby-source-datocms](https://github.com/datocms/gatsby-source-datocms) and [gatsby-source-sanity](https://github.com/sanity-io/gatsby-source-sanity). See the [gatsby-image](/packages/gatsby-image/#fragments) README for more details.
+De plus, les plugins prenant en charge `gatsby-image` incluent actuellement [gatsby-source-contentful](/packages/gatsby-source-contentful/), [gatsby-source-datocms](https://github.com/datocms/gatsby- source-datocms) et [gatsby-source-sanity](https://github.com/sanity-io/gatsby-source-sanity). Voir le README [gatsby-image](/packages/gatsby-image/#fragments) pour plus de détails.
 
 ## Gatsby-image props
 
-After you've made a query, you can pass additional options to the gatsby-image component.
+Après avoir effectué une requête, vous pouvez transmettre des options supplémentaires au composant gatsby-image.
 
 | Name                   | Type                | Description                                                                                                                   |
 | ---------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
