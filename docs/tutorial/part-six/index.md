@@ -26,15 +26,15 @@ Ajoutez un fichier markdown à votre site à l'emplacement suivant :
 en markdown) et apprenez comment _transformer_ cela en HTML à l'aide de plugins transformateur et de
 GraphQL.
 
-```markdown:title=src/pages/sweet-pandas-eating-sweets.md
----
-title: "Sweet Pandas Eating Sweets"
-date: "2017-08-10"
+```markdown:title=src/pages/sweet-pandas-eating-sweets.m
+titre : "Sweet Pandas mangeant des bonbons"
+date : "2017-08-10"
 ---
 
-Pandas are really sweet.
+Les pandas sont vraiment adorables.
 
-Here's a video of a panda eating sweets.
+Voici une vidéo d'un panda mangeant des bonbons.
+
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>
 ```
@@ -174,12 +174,13 @@ Mais votre seul article du blog semble un peu isolé. Ajoutons-en un autre à l'
 
 ```markdown:title=src/pages/pandas-and-bananas.md
 ---
-title: "Pandas and Bananas"
+titre : "Pandas et bananes"
 date: "2017-08-21"
 ---
-
-Do Pandas eat bananas? Check out this short video that shows that yes! pandas do
-seem to really enjoy bananas!
+Les pandas mangent-ils des bananes ? Regardez cette courte vidéo qui montre que oui ! les pandas font
+semblent vraiment apprécier les bananes!
+Les pandas mangent-ils des bananes ? Regardez cette courte vidéo qui montre que oui ! les pandas font
+semblent vraiment apprécier les bananes!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4SZl1r2O_bY" frameborder="0" allowfullscreen></iframe>
 ```
