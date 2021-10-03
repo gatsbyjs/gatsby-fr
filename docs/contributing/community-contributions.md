@@ -2,7 +2,7 @@
 title: Contributions de la Communauté
 ---
 
-Une grande part de ce qui rend Gatsby aussi formidable sont vous, les membres de notre Communauté. Tous les jours, votre aide contribue à l'améliorer Gatsby et rendre l'expèrience utilisateur plus riche.
+Une grande part de ce qui rend Gatsby aussi formidable sont vous, les membres de notre Communauté. Tous les jours, votre aide contribue à améliorer Gatsby et rendre l'expèrience utilisateur plus riche.
 
 Toutes les contributions de la communauté sont les bienvenues et nous seront ravis "d'amplifier" votre voix.
 Contribuer ne se limite pas à écrire du code et peut prendre toutes sortes de formes: 
